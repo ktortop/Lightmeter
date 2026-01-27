@@ -1,3 +1,7 @@
+//Key: 
+//NOTES -> reference notes for future reference
+//TESTING -> changes made just for testing, revert after
+//TODO -> things to do/impl in the near future
 
 //library setup
 
@@ -153,7 +157,6 @@ uint32_t timer = millis();
 
 
 void loop()                     // The meat and potatoes. This runs constantly after the above code has been processed. 
-
 {
   advancedRead(); //each loop we get a new light value. 
   char c = GPS.read();//read the gps status
@@ -205,6 +208,9 @@ void loop()                     // The meat and potatoes. This runs constantly a
       dataString += String(tsl.calculateLux(full, ir), 2); //references the function. I am not sure if it runs the function again to get this. Regardless, it works
       dataString += ",";
 
+      //TODO: add longitude latitude stuff directly to datastring
+      //NOTE: current method of accessing longitude latitude is inefficient; use GPS.latitudeDegrees, GPS.longitudeDegrees
+
       Serial.println(dataString);
 
       /* TESTING: remove SD card dependancy
@@ -236,6 +242,8 @@ void loop()                     // The meat and potatoes. This runs constantly a
         Serial.println("error opening DATALOG.csv");
       }
       */
+    }else{
+      Serial.println("No GPS fix found");
     }
     //if there is no FIX, we can make the code do something here, hint:lights or sounds would go here
     
