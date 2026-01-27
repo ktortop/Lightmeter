@@ -22,7 +22,7 @@ Adafruit_GPS GPS(&mySerial);
 // setup code runs once
 void setup()
 {
-  Serial.begin(115200);                 // set baud rate to 115200
+  Serial.begin(9600);                 // set baud rate to 115200
   delay(1000);                          // wait
   Serial.println("GPS SD LIGHT METER"); // print startup and fun dots
   delay(200);
