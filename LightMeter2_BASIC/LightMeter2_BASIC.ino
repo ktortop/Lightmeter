@@ -2,6 +2,7 @@
 // library setup
 
 #include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 #include <Adafruit_Sensor.h>
 #include "Adafruit_TSL2591.h"
 #include <Adafruit_GPS.h>
@@ -9,10 +10,12 @@
 #include <SPI.h>
 #include <SD.h>
 
+
 // constants
 
 const int chipSelect = 53;
 
+LiquidCrystal_I2C lcd(0x27, 32, 4);
 Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591); // establishes a light sensor code, required if there are multiple sensors
 SoftwareSerial mySerial(11, 10);
 Adafruit_GPS GPS(&mySerial);
@@ -22,8 +25,12 @@ Adafruit_GPS GPS(&mySerial);
 // setup code runs once
 void setup()
 {
-  Serial.begin(115200);                 // set baud rate to 115200
+  Serial.begin(115200);                 // set baud rate to 115200 
+  lcd.init();                           // start up the lcd
+  lcd.backlight();
+  lcd.setCursor(0,0);
   delay(1000);                          // wait
+  lcd.print("GPS SD LIGHT METER");
   Serial.println("GPS SD LIGHT METER"); // print startup and fun dots
   delay(200);
   Serial.print(".");
@@ -171,6 +178,21 @@ void loop() // The meat and potatoes. This runs constantly after the above code 
       uint16_t ir, full;
       ir = lum >> 16;
       full = lum & 0xFFFF;
+
+      // battery read
+      /**/
+
+      lcd.clear();
+
+      lcd.setCursor(0,0); //luminosity display
+      lcd.print("Lux: ");
+      lcd.print(tsl.calculateLux(full, ir));
+      
+      lcd.setCursor(0,1); //coordinate display
+      lcd.print("Lat: ");
+      lcd.print(GPS.latitude, 3);
+      lcd.setCursor(0,2);
+      lcd.print(GPS.longitude);
 
       // establish a string of data to be put into CSV format. Strings are basically just excell files that the computer can reference.
 
