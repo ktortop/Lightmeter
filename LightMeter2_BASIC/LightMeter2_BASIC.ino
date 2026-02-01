@@ -14,6 +14,10 @@
 // constants
 
 const int chipSelect = 53;
+const int battery Pin = A0;
+float batteryMax = 4.35;
+float batteryMin = 3.30;
+
 
 LiquidCrystal_I2C lcd(0x27, 32, 4);
 Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591); // establishes a light sensor code, required if there are multiple sensors
@@ -179,19 +183,25 @@ void loop() // The meat and potatoes. This runs constantly after the above code 
       ir = lum >> 16;
       full = lum & 0xFFFF;
 
-      // battery read
-      /**/
-
       lcd.clear();
 
-      lcd.setCursor(0,0); //luminosity display
+      // battery read
+      int raw = analogRead(A0);
+      float batteryVoltage = (raw*5.0)/1023.0;
+      float batteryPct = constrain((batteryVoltage-batteryMin)/(batteryMax-batteryMin)*100,0,100);
+
+      lcd.setCursor(0,0);
+      lcd.print("%: ");
+      lcd.print((int)batteryPct);
+
+      lcd.setCursor(0,1); //luminosity display
       lcd.print("Lux: ");
       lcd.print(tsl.calculateLux(full, ir));
       
-      lcd.setCursor(0,1); //coordinate display
+      lcd.setCursor(0,2); //coordinate display
       lcd.print("Lat: ");
       lcd.print(GPS.latitude, 3);
-      lcd.setCursor(0,2);
+      lcd.setCursor(0,3);
       lcd.print(GPS.longitude);
 
       // establish a string of data to be put into CSV format. Strings are basically just excell files that the computer can reference.
