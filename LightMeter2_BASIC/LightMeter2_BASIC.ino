@@ -43,6 +43,7 @@ void setup()
   delay(200);
   Serial.println(".");
 
+  /*
   Serial.println("SD.CHECK"); // begins check for SD card Reader
 
   if (!SD.begin(chipSelect))
@@ -56,6 +57,7 @@ void setup()
   // if an SD card is present, the program continues
 
   Serial.println("SD.PASS");
+  */
 
   delay(5000);
 
