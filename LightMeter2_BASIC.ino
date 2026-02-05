@@ -21,6 +21,8 @@ Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591); // establishes a light sensor cod
 SoftwareSerial mySerial(11, 10);
 Adafruit_GPS GPS(&mySerial);
 
+//uncomment only if testing SD card 
+// #define TESTSD
 
 #define GPSECHO  true     // sends data to Serial Monitor
 
@@ -38,7 +40,6 @@ void setup()
   delay(200);
   Serial.println(".");
 
-/* TESTING: remove SD card dependancy
   Serial.println("SD.CHECK"); //begins check for SD card Reader
 
   if (!SD.begin(chipSelect)) {
@@ -46,11 +47,21 @@ void setup()
     //dititalWrite(5) = HIGH; // if connnected at pin 5, an LED light turns on
     while (1); // don't do anything more:
   }
-*/
   //if an SD card is not present, the program halts here.
   //if an SD card is present, the program continues
 
   Serial.println("SD.PASS");
+
+  #ifdef TESTSD
+    File dataFile = SD.open("testing.txt", FILE_WRITE);
+    if(dataFile){
+      dataFile.print("SD card logging working.");
+      dataFile.close();
+      Serial.println("Wrote to SD card.");
+    }else{
+      Serial.println("Failed to open 'testing.txt'");
+    }
+  #endif
 
 
   delay(5000);
@@ -152,10 +163,6 @@ void configureSensor(void) {
 
 uint32_t timer = millis();
 
-
-
-
-
 void loop()                     // The meat and potatoes. This runs constantly after the above code has been processed. 
 {
   advancedRead(); //each loop we get a new light value. 
@@ -208,12 +215,10 @@ void loop()                     // The meat and potatoes. This runs constantly a
       dataString += String(tsl.calculateLux(full, ir), 2); //references the function. I am not sure if it runs the function again to get this. Regardless, it works
       dataString += ",";
 
-      //TODO: add longitude latitude stuff directly to datastring
-      //NOTE: current method of accessing longitude latitude is inefficient; use GPS.latitudeDegrees, GPS.longitudeDegrees
+      //NOTE: current method of accessing longitude latitude might be inefficient; use GPS.latitudeDegrees, GPS.longitudeDegrees
 
       Serial.println(dataString);
 
-      /* TESTING: remove SD card dependancy
       File dataFile = SD.open("datalog.csv", FILE_WRITE); // this writes to a particular file on the SD card
       //there can be multiple files set up on this, so if you would like to make a USER HISTORY, another file could write the start time and then overwrite an end time until the unit shuts off. 
       //then annother entry can start up when you begin. 
@@ -241,9 +246,10 @@ void loop()                     // The meat and potatoes. This runs constantly a
       else {
         Serial.println("error opening DATALOG.csv");
       }
-      */
     }else{
-      Serial.println("No GPS fix found");
+      Serial.print("No GPS fix found. ");
+      Serial.print("Satellites in view: ");
+      Serial.println(GPS.satellites);
     }
     //if there is no FIX, we can make the code do something here, hint:lights or sounds would go here
     
