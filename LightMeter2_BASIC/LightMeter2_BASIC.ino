@@ -14,12 +14,12 @@
 // constants
 
 const int chipSelect = 53;
-const int battery Pin = A0;
+const int batteryPin = A0;
 float batteryMax = 4.35;
 float batteryMin = 3.30;
 
 
-LiquidCrystal_I2C lcd(0x27, 32, 4);
+
 Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591); // establishes a light sensor code, required if there are multiple sensors
 SoftwareSerial mySerial(11, 10);
 Adafruit_GPS GPS(&mySerial);
@@ -188,14 +188,15 @@ void loop() // The meat and potatoes. This runs constantly after the above code 
       lcd.clear();
 
       // battery read
+      /*
       int raw = analogRead(A0);
       float batteryVoltage = (raw*5.0)/1023.0;
       float batteryPct = constrain((batteryVoltage-batteryMin)/(batteryMax-batteryMin)*100,0,100);
-
+      
       lcd.setCursor(0,0);
       lcd.print("%: ");
       lcd.print((int)batteryPct);
-
+      */
       lcd.setCursor(0,1); //luminosity display
       lcd.print("Lux: ");
       lcd.print(tsl.calculateLux(full, ir));
