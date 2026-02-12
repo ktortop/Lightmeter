@@ -14,6 +14,12 @@ const int batteryPin = A0;
 const float fc_conversion = 10.764;
 const float batteryMax = 4.35;
 const float batteryMin = 3.30;
+/*LED CODE
+const int gps_red = 2;
+//const int gps_green = 3;
+//const int lux_red = 5;
+const int lux_green = 6;
+*/
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591); // establishes a light sensor code, required if there are multiple sensors
@@ -51,8 +57,39 @@ void configureSensor()
   }
 }
 
+/* LED CODE
+void setLED(int rPin, int gPin, String color) {
+  if (color == "RED") {
+    digitalWrite(rPin, LOW);
+    digitalWrite(gPin, HIGH);
+  }
+  else if (color == "GREEN") {
+    digitialWrite(rPin, HIGH);
+    digitalWrite(rPin, LOW);
+  }
+  else if (color == "YELLOW") {
+    digitalWrite(rPin, LOW);
+    digitalWrite(gPin, LOW);
+  }
+  else {
+    digitalWrite(rPin, HIGH);
+    digitalWrite(gPin, HIGH);
+  }
+}
+*/
+
 void setup()
 {
+  /* LED CODE
+  pinMode(gps_red, OUTPUT);
+  pinMode(gps_green, OUTPUT);
+  pinMode(lux_red, OUTPUT);
+  pinMode(lux_green, OUTPUT);
+
+  setLED(gps_red, gps_green, "OFF");
+  setLED(lux_red, lux_green, "OFF");
+  */
+
   Serial.begin(9600);
   delay(500);
 
@@ -76,12 +113,13 @@ void setup()
   if (tsl.begin())
   {
     Serial.println(F("Found a TSL2591 sensor"));
+    //setLED(lux_red, lux_green, "GREEN"); LED CODE
   }
   else
   {
     Serial.println(F("No sensor found ... check wiring"));
-    while (1)
-      ;
+    //setLED(lux_red, lux_green, "RED"); LED CODE
+    while (1);
   }
 
   if (!SD.begin(chipSelect)){
@@ -149,6 +187,14 @@ void loop()
 
     if (GPS.fix)
     {
+      /*
+      if (GPS.satellites >= 4); {
+        setLED(gps_red, gps_green, "GREEN");
+      }
+      else {
+        setLED(gps_red, gps_green, "YELLOW");
+      }
+      */
       lcd.setCursor(0, 2); // coordinate display
       lcd.print("Lat: ");
       lcd.print(GPS.latitude, 4);
@@ -236,6 +282,7 @@ void loop()
     else
     {
       Serial.print("  NO FIX (go outside / near window)");
+      //setLED(gps_led, gps_green, "RED"); LED CODE
     }
     // we only want the meter to plot when there is a GPS fix, otherwise we can make it do something else by writing some code.
     // there are other GPS parameters, like the number of satilites termed "quality". you can find the return code for that in the GPS testing file.
