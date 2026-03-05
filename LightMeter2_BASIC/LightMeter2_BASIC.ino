@@ -57,6 +57,10 @@ bool inCalMode = false;
 
 uint32_t timer = 0;
 
+float luxSum = 0;     // sum of all lux reading values
+unsigned long luxCount = 0;   // number of readings taken
+float luxAvg = 0;     
+
 void configureSensor()
 {
   tsl.setGain(TSL2591_GAIN_MED);
@@ -245,7 +249,7 @@ void loop()
   }
 
   // ---- Print status every 2 seconds ----
-  if (millis() - timer >= 2000)
+  if (millis() - timer >= 1000)
   {
     timer = millis();
 
@@ -261,6 +265,10 @@ void loop()
     uint16_t ir = lum >> 16;
     uint16_t full = lum & 0xFFFF;
     float lux = tsl.calculateLux(full, ir);
+
+    luxSum += Lux;
+    luxCount++;
+    luxAvg = LuxSum / LuxCount;
 
     Serial.print("lux=");
     Serial.print(lux);
