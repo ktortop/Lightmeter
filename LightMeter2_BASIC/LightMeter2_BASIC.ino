@@ -16,11 +16,23 @@ const int batteryPin = A0;
 const float fc_conversion = 10.764;
 const float batteryMax = 4.35;
 const float batteryMin = 3.30;
+const float spacingThreshold = 1.524;  // 5 feet in meters
 
 // Distance tracking 
+double absLat = 0;
+double absLon = 0;
 
+double currentLat = 0;
+double currentLon = 0;
+
+float northOffset = 0;   
+float eastOffset  = 0;  
+
+float velocity = 0;      // forward velocity (m/s)
 float distanceAccumulated = 0.0;
-float lastLat, lastLon;
+
+unsigned long lastIMUTime = 0;
+bool hasAnchor = false;
 bool hasLastFix = false;
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
@@ -134,16 +146,28 @@ float getDisplacement(float lat1, float lon1, float lat2, float lon2)
   return R * c;
 }
 //Uses the IMU to determine if the cart is moving
-bool isMoving()
+bool isMoving(float accForward, float velocity, float dt)
 {
-  imu::Vector<3> linAccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-  float mag = sqrt(
-    linAccel.x()*linAccel.x() +
-    linAccel.y()*linAccel.y() +
-    linAccel.z()*linAccel.z()
-  );
+  static float stationaryTime = 0;
 
-  return mag > 0.15;  // threshold (tune this)
+  // If acceleration is very small AND velocity is small,
+  // we might be stopped
+  if (abs(accForward) < 0.05 && abs(velocity) < 0.05)
+  {
+    stationaryTime += dt;
+  }
+  else
+  {
+    stationaryTime = 0;
+  }
+
+  // If we’ve been “quiet” for 0.5 seconds → stopped
+  if (stationaryTime > 0.5)
+  {
+    return false;
+  }
+
+  return true;
 }
 
 void loop()
@@ -161,62 +185,219 @@ void loop()
       return; // wait for another sentence
     }
   }
-//Tracks distance using GPS & IMU
+//Tracks distance using GPS 
   if (GPS.fix)
-{
-  float lat = GPS.latitudeDegrees;
-  float lon = GPS.longitudeDegrees;
-
-  // First fix initialization
-  if (!hasLastFix)
   {
-    lastLat = lat;
-    lastLon = lon;
-    hasLastFix = true;
-  }
-  else
-  {
+    float gpslat = GPS.latitudeDegrees;
+    float gpslon = GPS.longitudeDegrees;
 
-    if (isMoving())   // walking threshold (tune later)
+    if (!hasAnchor)
     {
-      float d = getDisplacement(lastLat, lastLon, lat, lon);
+      absLat = gpslat;
+      absLon = gpslon;
+      hasAnchor = true;
+      lastIMUTime = millis();
+    }
+    else 
+    {
+      absLat = gpslat;
+      absLon = gpslon;
+      northOffset = 0;
+      eastOffset = 0;
+      // --- GPS-based velocity correction ---
+      static float lastGpsLat = 0;
+      static float lastGpsLon = 0;
 
-      // Reject GPS glitches
-      if (d > 0.05 && d < 10.0)
+      if (hasLastFix)
       {
-        distanceAccumulated += d;
+        float gpsDist = getDisplacement(lastGpsLat, lastGpsLon, gpslat, gpslon);
+
+        // GPS is 1 Hz, so speed same as distance per second
+        float gpsVelocity = gpsDist;
+
+        // Soft correction toward GPS velocity
+        float gain = 0.3;   // tune 0.2–0.5
+        velocity = velocity + gain * (gpsVelocity - velocity);
       }
 
-      lastLat = lat;
-      lastLon = lon;
+      lastGpsLat = gpslat;
+      lastGpsLon = gpslon;
+      hasLastFix = true;
     }
   }
+  // If no fix, dont track with IMU yet
+  if (!hasAnchor)
+  {
+    return;
+  }
+  //IMU tracking
+  unsigned long now = millis();
+  float dt = (now - lastIMUTime) / 1000.0;
+  lastIMUTime = now;
+
+  if (dt <= 0 || dt > 0.5)
+  {
+    return; 
   }
 
-  // Print light sensor data every 5 meters
-  if (distanceAccumulated >= 5.0)
+  // Get linear acceleration
+  imu::Vector<3> linAccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+  float accForward = linAccel.x();   // make sure x-axis is forward
+
+  // Get heading 
+  imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
+  float headingDeg = euler.x();      // yaw
+  float headingRad = headingDeg * PI / 180.0;
+
+   // Integrate acceleration to  velocity
+  velocity += accForward * dt;
+
+  // Reduces drift from integration
+  if (!isMoving(accForward, velocity, dt))
   {
-    distanceAccumulated -= 5.0;
+    velocity = 0;
+  }
 
-    // Light read
-    uint32_t lum = tsl.getFullLuminosity();
-    uint16_t ir = lum >> 16;
-    uint16_t full = lum & 0xFFFF;
-    float lux = tsl.calculateLux(full, ir);
+   // Integrate velocity to displacement
+  float d = velocity * dt;
 
-    Serial.print("lux=");
-    Serial.print(lux);
-    Serial.print("  sats=");
-    Serial.print(GPS.satellites);
-    Serial.print("  fix=");
-    Serial.print(GPS.fix);
+  distanceAccumulated += abs(d);
+  // Break into North and South components to compute longitude and latitude
+  float dNorth = d * cos(headingRad);
+  float dEast  = d * sin(headingRad);
+  northOffset += dNorth;
+  eastOffset  += dEast;
+    // Print light sensor data every 5 meters
+    if (distanceAccumulated >= spacingThreshold)
+    {
+      distanceAccumulated = 0;
+      //Converts the north/east offsets to longitude and latitude
+      double metersPerDegLat = 111111.0;
+      double metersPerDegLon = 111111.0 * cos(absLat * PI / 180.0);
 
-    lcd.clear();
+      currentLat = absLat + (northOffset / metersPerDegLat);
+      currentLon = absLon + (eastOffset  / metersPerDegLon);
+      // Light read
+      uint32_t lum = tsl.getFullLuminosity();
+      uint16_t ir = lum >> 16;
+      uint16_t full = lum & 0xFFFF;
+      float lux = tsl.calculateLux(full, ir);
 
-    // battery read
-    /*
-    int raw = analogRead(A0);
-    float batteryVoltage = (raw*5.0)/1023.0;
+      Serial.print("lux=");
+      Serial.print(lux);
+      Serial.print("  sats=");
+      Serial.print(GPS.satellites);
+      Serial.print("  fix=");
+      Serial.print(GPS.fix);
+
+      lcd.clear();
+
+      // battery read
+      /*
+      int raw = analogRead(A0);
+      float batteryVoltage = (raw*5.0)/1023.0;
+      float batteryPct = constrain((batteryVoltage-batteryMin)/(batteryMax-batteryMin)*100,0,100);
+      lcd.setCursor(0,0);
+      lcd.print("Batt: ");
+      lcd.print((int)batteryPct);
+      lcd.print("%");
+      */
+
+      lcd.setCursor(0, 1); // luminosity display
+      lcd.print("Footcandles: ");
+      lcd.print(lux/fc_conversion);
+
+      
+      lcd.setCursor(0, 2); // coordinate display
+      lcd.print("Lat: ");
+      lcd.print(currentLat, 4);
+      lcd.setCursor(0, 3);
+      lcd.print("Long:");
+      lcd.print(currentLon, 4);
+
+      /*
+      Serial.print("  ");
+      Serial.print(GPS.month);
+      Serial.print("/");
+      Serial.print(GPS.day);
+      Serial.print("/20");
+      Serial.print(GPS.year);
+      Serial.print("  ");
+
+      Serial.print(GPS.hour);
+      Serial.print(":");
+      Serial.print(GPS.minute);
+      Serial.print(":");
+      Serial.print(GPS.seconds);
+
+      Serial.print("  lat=");
+      Serial.print(GPS.latitude, 4);
+      Serial.print(GPS.lat);
+
+      Serial.print("  lon=");
+      Serial.print(GPS.longitude, 4);
+      Serial.print(GPS.lon);
+      */
+
+      String dataString = "";
+
+      // date input
+      // the format for input to a particular string is type the string name.
+      // type up to the (
+      // type the varaible name OR any text in ""
+      // to create a CSV, you must Separate Values by Commas, so end by adding each field with a comma
+
+      dataString += String(GPS.day);
+      dataString += String("/");
+      dataString += String(GPS.month);
+      dataString += String("/");
+      dataString += String(GPS.year);
+      dataString += ",";
+
+      // time input
+
+      dataString += String(GPS.hour);
+      dataString += String(':');
+      dataString += String(GPS.minute);
+      dataString += String(':');
+      dataString += String(GPS.seconds);
+      dataString += ",";
+
+      dataString += String(lux, 2); // references the function. I am not sure if it runs the function again to get this. Regardless, it works
+      dataString += ",";
+
+      File dataFile = SD.open("datalog.csv", FILE_WRITE); // this writes to a particular file on the SD card
+      // there can be multiple files set up on this, so if you would like to make a USER HISTORY, another file could write the start time and then overwrite an end time until the unit shuts off.
+      // then annother entry can start up when you begin.
+
+      if (dataFile)
+      {
+        // print the string made above
+        dataFile.print(dataString);
+        // lat and lon must be printed directly to the SD file because of some dumb
+        // way the machine stores the number of decimal points.
+        dataFile.print(currentLat, 4);
+        dataFile.print(",");
+        // separated by a comma
+        dataFile.println(currentLon, 4);
+        // NOT separated by a comma, but added a new line (nl)
+        // the 4 is for the number of decimal points
+        
+        dataFile.close();
+        // print to the serial port too:
+        Serial.print("SD Write OK");
+      }
+      // if the file isn't open or available, pop up an error:
+      else
+      {
+        Serial.println("error opening DATALOG.csv");
+      }
+      
+
+    // we only want the meter to plot when there is a GPS fix, otherwise we can make it do something else by writing some code.
+    // there are other GPS parameters, like the number of satilites termed "quality". you can find the return code for that in the GPS testing file.
+  }
+}    float batteryVoltage = (raw*5.0)/1023.0;
     float batteryPct = constrain((batteryVoltage-batteryMin)/(batteryMax-batteryMin)*100,0,100);
     lcd.setCursor(0,0);
     lcd.print("Batt: ");
