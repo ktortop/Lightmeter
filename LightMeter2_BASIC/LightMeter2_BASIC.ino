@@ -7,18 +7,26 @@
 #include <SD.h>
 #include <LiquidCrystal_I2C.h>
 
-  // constants
+// constants
 
 const int chipSelect = 53;
 const int batteryPin = A0;
-const float fc_conversion = 10.764;
+const float fc_conversion = 10.76391;
 const float batteryMax = 4.35;
 const float batteryMin = 3.30;
-/*LED CODE
+
+
 const int gps_red = 2;
-//const int gps_green = 3;
-//const int lux_red = 5;
+const int gps_green = 3;
+const int lux_red = 5;
 const int lux_green = 6;
+
+
+/* BUTTON CODE
+const int BTN_POWER = 5;
+const int BTN_PLOT = 6;
+const int BTN_CAL = 7;
+const unsigned long DEBOUNCE_MS = 60;
 */
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
@@ -29,6 +37,23 @@ SoftwareSerial mySerial(11, 10);
 Adafruit_GPS GPS(&mySerial);
 
 #define GPSECHO false // set true ONLY if you want raw NMEA spam
+
+struct Button {
+  int pin;
+  bool lastStable;
+  bool lastReading;
+  unsigned long lastChangeMs;
+};
+
+/* BUTTON CODE
+Button bPower {BTN_POWER, true, true, 0};
+Button bPlot {BTN_PLOT, true, true,0};
+Button bCal {BTN_CAL, true, true, 0};
+
+bool deviceAwake = true;
+bool loggingOn = true;
+bool inCalMode = false;
+*/
 
 uint32_t timer = 0;
 
@@ -56,16 +81,36 @@ void configureSensor()
     break;
   }
 }
+/* BUTTON CODE
+bool buttonPressed(Button &b){
+  bool reading = digitalRead(b.pin);
 
-/* LED CODE
+  if (reading != b.lastReading){
+    b.lastChangeMs = millis();
+    b.lastReading = reading;
+  }
+
+  if ((millis() - b.lastChangeMs) > DEBOUNCE_MS){
+    if (reading != b.lastStable){
+      b.lastStable = reading;
+      if (b.lastStable == LOW){
+        return true;
+      }
+    }
+  }
+  return false;
+}
+*/
+
+
 void setLED(int rPin, int gPin, String color) {
   if (color == "RED") {
     digitalWrite(rPin, LOW);
     digitalWrite(gPin, HIGH);
   }
   else if (color == "GREEN") {
-    digitialWrite(rPin, HIGH);
-    digitalWrite(rPin, LOW);
+    digitalWrite(rPin, HIGH);
+    digitalWrite(gPin, LOW);
   }
   else if (color == "YELLOW") {
     digitalWrite(rPin, LOW);
@@ -76,11 +121,14 @@ void setLED(int rPin, int gPin, String color) {
     digitalWrite(gPin, HIGH);
   }
 }
-*/
+
 
 void setup()
 {
-  /* LED CODE
+  Serial.begin(9600);
+  Wire.begin();
+  delay(500);
+
   pinMode(gps_red, OUTPUT);
   pinMode(gps_green, OUTPUT);
   pinMode(lux_red, OUTPUT);
@@ -88,12 +136,15 @@ void setup()
 
   setLED(gps_red, gps_green, "OFF");
   setLED(lux_red, lux_green, "OFF");
+
+
+  /* BUTTON CODE
+  pinMode(BTN_POWER, INPUT_PULLUP);
+  pinMode(BTN_PLOT, INPUT_PULLUP);
+  pinMode(BTN_CAL, INPUT_PULLUP);
   */
 
-  Serial.begin(9600);
-  delay(500);
-
-  Serial.println("LCD STARTUP")
+  Serial.println("LCD STARTUP");
   lcd.init();
   lcd.backlight();
   lcd.setCursor(0,0);
@@ -113,13 +164,12 @@ void setup()
   if (tsl.begin())
   {
     Serial.println(F("Found a TSL2591 sensor"));
-    //setLED(lux_red, lux_green, "GREEN"); LED CODE
+    setLED(lux_red, lux_green, "GREEN");
   }
   else
   {
     Serial.println(F("No sensor found ... check wiring"));
-    //setLED(lux_red, lux_green, "RED"); LED CODE
-    while (1);
+    setLED(lux_red, lux_green, "RED");
   }
 
   if (!SD.begin(chipSelect)){
@@ -136,6 +186,50 @@ void setup()
 
 void loop()
 {
+/* BUTTON CODE
+  if (buttonPressed(bPower)){
+    deviceAwake = !deviceAwake;
+      
+    if (!deviceAwake){
+    loggingOn = false;
+    }
+
+    Serial.println(deviceAwake ? "POWER: WAKE" : "POWER: SLEEP");
+  }
+
+  if (buttonPressed(bPlot)) {
+    // Only allow plot toggle if awake
+    if (deviceAwake) {
+      loggingOn = !loggingOn;
+      Serial.println(loggingOn ? "LOGGING: ON" : "LOGGING: OFF");
+    }
+  }
+
+  if (buttonPressed(bCal)) {
+    if (deviceAwake) {
+      inCalMode = true;
+
+      configureSensor();
+      resetIMUPlaceholder();
+
+      Serial.println("CAL: SENSOR CONFIG RESET");
+    }
+  }
+
+  if (!deviceAwake) {
+    display.clearDisplay();
+    display.setCursor(0, 0);
+    display.println("SLEEP MODE");
+    display.println("Press POWER to wake");
+    display.print("SD: "); display.println(sdOK ? "OK" : "FAIL");
+    display.print("LOG: "); display.println(loggingOn ? "ON" : "OFF");
+    display.display();
+    }
+  delay(100); // reduce CPU churn
+  return;
+  }
+  */  
+
   // ---- Read GPS characters continuously ----
   char c = GPS.read();
   if (GPSECHO && c)
@@ -157,6 +251,13 @@ void loop()
 
     // Light read
     uint32_t lum = tsl.getFullLuminosity();
+    if (lum >= 0.01){
+      setLED(lux_red, lux_green, "GREEN");
+    }
+    else{
+      setLED(lux_red, lux_green, "RED");
+      Serial.println("Light senor disconnected");
+    }
     uint16_t ir = lum >> 16;
     uint16_t full = lum & 0xFFFF;
     float lux = tsl.calculateLux(full, ir);
@@ -167,25 +268,15 @@ void loop()
     Serial.print(GPS.satellites);
     Serial.print("  fix=");
     Serial.print(GPS.fix);
+    Serial.print("\n");
 
     lcd.clear();
 
-    // battery read
-    /*
-    int raw = analogRead(A0);
-    float batteryVoltage = (raw*5.0)/1023.0;
-    float batteryPct = constrain((batteryVoltage-batteryMin)/(batteryMax-batteryMin)*100,0,100);
-    lcd.setCursor(0,0);
-    lcd.print("Batt: ");
-    lcd.print((int)batteryPct);
-    lcd.print("%");
-    */
-
     lcd.setCursor(0, 1); // luminosity display
-    lcd.print("Footcandles: ");
+    lcd.print("Footcandles:");
     lcd.print(lux/fc_conversion);
 
-    if (GPS.fix)
+    if (GPS.fix /*&& BUTTON CODE loggingOn*/)
     {
       /*
       if (GPS.satellites >= 4); {
@@ -197,7 +288,7 @@ void loop()
       */
       lcd.setCursor(0, 2); // coordinate display
       lcd.print("Lat: ");
-      lcd.print(GPS.latitude, 4);
+      lcd.print(GPS.latitude, 4);                
       lcd.setCursor(0, 3);
       lcd.print("Long:");
       lcd.print(GPS.longitude, 4);
@@ -250,7 +341,7 @@ void loop()
       dataString += String(GPS.seconds);
       dataString += ",";
 
-      dataString += String(lux, 2); // references the function. I am not sure if it runs the function again to get this. Regardless, it works
+      dataString += String(lux/fc_conversion, 2); // references the function. I am not sure if it runs the function again to get this. Regardless, it works
       dataString += ",";
 
       File dataFile = SD.open("datalog.csv", FILE_WRITE); // this writes to a particular file on the SD card
@@ -263,10 +354,10 @@ void loop()
         dataFile.print(dataString);
         // lat and lon must be printed directly to the SD file because of some dumb
         // way the machine stores the number of decimal points.
-        dataFile.print(GPS.latitude, 4);
+        dataFile.print(GPS.latitudeDegrees, 6);
         dataFile.print(",");
         // separated by a comma
-        dataFile.println(GPS.longitude, 4);
+        dataFile.println(GPS.longitudeDegrees, 6);
         // NOT separated by a comma, but added a new line (nl)
         // the 4 is for the number of decimal points
         dataFile.close();
@@ -282,7 +373,7 @@ void loop()
     else
     {
       Serial.print("  NO FIX (go outside / near window)");
-      //setLED(gps_led, gps_green, "RED"); LED CODE
+      setLED(gps_red, gps_green, "RED");
     }
     // we only want the meter to plot when there is a GPS fix, otherwise we can make it do something else by writing some code.
     // there are other GPS parameters, like the number of satilites termed "quality". you can find the return code for that in the GPS testing file.
