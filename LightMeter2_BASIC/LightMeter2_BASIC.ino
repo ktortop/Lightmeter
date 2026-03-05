@@ -248,30 +248,33 @@ void loop()
     }
   }
 
+  // Light read
+  
+  uint32_t lum = tsl.getFullLuminosity();
+  if (lum >= 0.01){
+    setLED(lux_red, lux_green, "GREEN");
+  }
+  else{
+    setLED(lux_red, lux_green, "RED");
+    Serial.println("Light senor disconnected");
+  }
+  uint16_t ir = lum >> 16;
+  uint16_t full = lum & 0xFFFF;
+  float lux = tsl.calculateLux(full, ir);
+
+  luxSum += Lux;
+  luxCount++;
+
   // ---- Print status every 2 seconds ----
   if (millis() - timer >= 1000)
   {
-    timer = millis();
 
-    // Light read
-    uint32_t lum = tsl.getFullLuminosity();
-    if (lum >= 0.01){
-      setLED(lux_red, lux_green, "GREEN");
-    }
-    else{
-      setLED(lux_red, lux_green, "RED");
-      Serial.println("Light senor disconnected");
-    }
-    uint16_t ir = lum >> 16;
-    uint16_t full = lum & 0xFFFF;
-    float lux = tsl.calculateLux(full, ir);
-
-    luxSum += Lux;
-    luxCount++;
     luxAvg = LuxSum / LuxCount;
 
+    timer = millis();
+
     Serial.print("lux=");
-    Serial.print(lux);
+    Serial.print(luxAvg);
     Serial.print("  sats=");
     Serial.print(GPS.satellites);
     Serial.print("  fix=");
@@ -282,7 +285,7 @@ void loop()
 
     lcd.setCursor(0, 1); // luminosity display
     lcd.print("Footcandles:");
-    lcd.print(lux/fc_conversion);
+    lcd.print(luxAvg/fc_conversion);
 
     if (GPS.fix /*&& BUTTON CODE loggingOn*/)
     {
@@ -349,7 +352,7 @@ void loop()
       dataString += String(GPS.seconds);
       dataString += ",";
 
-      dataString += String(lux/fc_conversion, 2); // references the function. I am not sure if it runs the function again to get this. Regardless, it works
+      dataString += String(luxAvg/fc_conversion, 2); // references the function. I am not sure if it runs the function again to get this. Regardless, it works
       dataString += ",";
 
       File dataFile = SD.open("datalog.csv", FILE_WRITE); // this writes to a particular file on the SD card
