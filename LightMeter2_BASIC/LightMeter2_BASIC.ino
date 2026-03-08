@@ -269,9 +269,9 @@ void loop()
   if (millis() - timer >= 1000)
   {
 
-    luxAvg = LuxSum / LuxCount;
+    luxAvg = LuxSum / LuxCount / fc_conversion;
 
-    timer = millis();
+    timer = millis(); 
 
     Serial.print("lux=");
     Serial.print(luxAvg);
@@ -298,10 +298,10 @@ void loop()
       }
       */
       lcd.setCursor(0, 2); // coordinate display
-      lcd.print("Lat: ");
+      lcd.print("X: ");
       lcd.print(GPS.latitude, 4);                
       lcd.setCursor(0, 3);
-      lcd.print("Long:");
+      lcd.print("Y:");
       lcd.print(GPS.longitude, 4);
 
       /*
