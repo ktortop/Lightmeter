@@ -25,15 +25,27 @@ double absLon = 0;
 double currentLat = 0;
 double currentLon = 0;
 
+double lastLoggedLat = 0;
+double lastLoggedLon = 0;
+bool hasLoggedFirstPoint = false;
+
 float northOffset = 0;
 float eastOffset = 0;
 
 float velocity = 0; // forward velocity (m/s)
-float distanceAccumulated = 0.0;
+unsigned long lastIMUTime = 0;
+bool hasAnchor = false;
+
+//float distanceAccumulated = 0.0;
 
 unsigned long lastIMUTime = 0;
 bool hasAnchor = false;
 bool hasLastFix = false;
+
+const int GPS_ARRAY_SIZE = 30;
+double latArray[GPS_ARRAY_SIZE];
+double lonArray[GPS_ARRAY_SIZE];
+int gpsCount = 0;
 
 const int gps_red = 2;
 const int gps_green = 3;
@@ -52,7 +64,6 @@ Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591);   // establishes a light sensor c
 Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28); // establishes IMU
 SoftwareSerial mySerial(11, 10);
 // SoftwareSerial mySerial(11, 10);    RX=11, TX=10 (to GPS TX/RX appropriately)
-
 Adafruit_GPS GPS(&mySerial);
 
 #define GPSECHO false // set true ONLY if you want raw NMEA spam
@@ -252,6 +263,57 @@ bool isMoving(float accForward, float velocity, float dt)
   return true;
 }
 
+void processGPSData() {
+  double sumLat = 0, sumLon = 0;
+  
+  // 1. Calculate Mean
+  for (int i = 0; i < GPS_ARRAY_SIZE; i++) {
+    sumLat += latArray[i];
+    sumLon += lonArray[i];
+  }
+  double meanLat = sumLat / GPS_ARRAY_SIZE;
+  double meanLon = sumLon / GPS_ARRAY_SIZE;
+
+  // 2. Calculate Standard Deviation
+  double varLat = 0, varLon = 0;
+  for (int i = 0; i < GPS_ARRAY_SIZE; i++) {
+    varLat += pow(latArray[i] - meanLat, 2);
+    varLon += pow(lonArray[i] - meanLon, 2);
+  }
+  double stdLat = sqrt(varLat / GPS_ARRAY_SIZE);
+  double stdLon = sqrt(varLon / GPS_ARRAY_SIZE);
+
+  // 3. Filter outliers (> 2 std dev) and calculate new anchor
+  double finalSumLat = 0, finalSumLon = 0;
+  int validCount = 0;
+  
+  for (int i = 0; i < GPS_ARRAY_SIZE; i++) {
+    if (abs(latArray[i] - meanLat) <= (2 * stdLat) && abs(lonArray[i] - meanLon) <= (2 * stdLon)) {
+      finalSumLat += latArray[i];
+      finalSumLon += lonArray[i];
+      validCount++;
+    }
+  }
+
+  if (validCount > 0) {
+    absLat = finalSumLat / validCount;
+    absLon = finalSumLon / validCount;
+    
+    // Reset IMU relative offsets because the absolute origin has been updated
+    northOffset = 0;
+    eastOffset = 0;
+    
+    if (!hasAnchor) {
+      hasAnchor = true;
+      lastIMUTime = millis();
+    }
+  }
+  
+  // Reset array counter
+  gpsCount = 0; 
+}
+
+/*
 void loop()
 {
   /* BUTTON CODE
@@ -296,7 +358,7 @@ void loop()
     delay(100); // reduce CPU churn
     return;
     }
-    */
+    
 
   // ---- Read GPS characters continuously ----
   char c = GPS.read();
@@ -427,7 +489,7 @@ void loop()
     lcd.print("Batt: ");
     lcd.print((int)batteryPct);
     lcd.print("%");
-    */
+    
 
     lcd.setCursor(0, 1); // luminosity display
     lcd.print("Footcandles: ");
@@ -462,7 +524,7 @@ void loop()
     Serial.print("  lon=");
     Serial.print(GPS.longitude, 4);
     Serial.print(GPS.lon);
-    */
+    
 
     String dataString = "";
 
@@ -520,5 +582,107 @@ void loop()
 
     // we only want the meter to plot when there is a GPS fix, otherwise we can make it do something else by writing some code.
     // there are other GPS parameters, like the number of satilites termed "quality". you can find the return code for that in the GPS testing file.
+  }
+}
+*/
+
+void loop() {
+  char c = GPS.read();
+  
+  // Parse new GPS data
+  if (GPS.newNMEAreceived()) {
+    if (GPS.parse(GPS.lastNMEA())) {
+      if (GPS.fix) {
+        latArray[gpsCount] = GPS.latitudeDegrees;
+        lonArray[gpsCount] = GPS.longitudeDegrees;
+        gpsCount++;
+
+        // When array is full, process data to find the new anchor
+        if (gpsCount >= GPS_ARRAY_SIZE) {
+          processGPSData();
+        }
+      }
+    }
+  }
+
+  // If we don't have a valid anchor yet, don't calculate IMU displacement or log
+  if (!hasAnchor) {
+    return;
+  }
+
+  // IMU tracking
+  unsigned long now = millis();
+  float dt = (now - lastIMUTime) / 1000.0;
+  lastIMUTime = now;
+
+  if (dt > 0 && dt <= 0.5) {
+    imu::Vector<3> linAccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+    float accForward = linAccel.x();
+    imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
+    float headingRad = euler.x() * PI / 180.0;
+
+    velocity += accForward * dt;
+    if (!isMoving(accForward, velocity, dt)) {
+      velocity = 0;
+    }
+
+    float d = velocity * dt;
+    northOffset += d * cos(headingRad);
+    eastOffset += d * sin(headingRad);
+  }
+
+  // Calculate current exact location
+  double metersPerDegLat = 111111.0;
+  double metersPerDegLon = 111111.0 * cos(absLat * PI / 180.0);
+  currentLat = absLat + (northOffset / metersPerDegLat);
+  currentLon = absLon + (eastOffset / metersPerDegLon);
+
+  // Check if we need to log to CSV (5 feet distance check)
+  float distFromLastLog = getDisplacement(lastLoggedLat, lastLoggedLon, currentLat, currentLon);
+  
+  if (!hasLoggedFirstPoint || distFromLastLog >= spacingThreshold) {
+    
+    uint32_t lum = tsl.getFullLuminosity();
+    uint16_t ir = lum >> 16;
+    uint16_t full = lum & 0xFFFF;
+    float lux = tsl.calculateLux(full, ir);
+    luxAvg = lux; // Storing for logging
+
+    // Update LCD
+    lcd.clear();
+    lcd.setCursor(0, 1);
+    lcd.print("Footcandles: ");
+    lcd.print(lux / fc_conversion);
+    lcd.setCursor(0, 2);
+    lcd.print("Lat: ");
+    lcd.print(currentLat, 4);
+    lcd.setCursor(0, 3);
+    lcd.print("Long:");
+    lcd.print(currentLon, 4);
+
+    // Build CSV String [cite: 83]
+    String dataString = "";
+    dataString += String(GPS.day) + "/" + String(GPS.month) + "/" + String(GPS.year) + ",";
+    dataString += String(GPS.hour) + ":" + String(GPS.minute) + ":" + String(GPS.seconds) + ",";
+    dataString += String(luxAvg / fc_conversion, 2) + ",";
+
+    // Write to SD 
+    File dataFile = SD.open("datalog.csv", FILE_WRITE);
+    if (dataFile) {
+      dataFile.print(dataString);
+      dataFile.print(currentLat, 6); // Increased precision for better map plotting
+      dataFile.print(",");
+      dataFile.println(currentLon, 6);
+      dataFile.close();
+      
+      // Update last logged position
+      lastLoggedLat = currentLat;
+      lastLoggedLon = currentLon;
+      hasLoggedFirstPoint = true;
+      
+      Serial.println("SD Write OK");
+    } else {
+      Serial.println("error opening DATALOG.csv");
+    }
   }
 }
