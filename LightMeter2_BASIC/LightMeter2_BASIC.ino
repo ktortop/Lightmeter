@@ -17,6 +17,7 @@ const float fc_conversion = 10.76391;
 const float batteryMax = 4.35;
 const float batteryMin = 3.30;
 const float spacingThreshold = 1.524; // 5 feet in meters
+const float levelTolerance = 5.0; // degrees allowed tilt
 
 // Distance tracking
 double absLat = 0;
@@ -374,6 +375,10 @@ void loop()
   imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   float headingDeg = euler.x(); // yaw
   float headingRad = headingDeg * PI / 180.0;
+  float rollDeg = euler.y();
+  float pitchDeg = euler.z();
+
+  bool level = (abs(rollDeg) < levelTolerance && abs(pitchDeg) < levelTolerance);
 
   // Integrate acceleration to  velocity
   velocity += accForward * dt;
@@ -396,6 +401,25 @@ void loop()
   // Print light sensor data every 5 meters
   if (distanceAccumulated >= spacingThreshold)
   {
+    // Check if sensor is level before taking measurement
+    if (!level)
+    {
+      lcd.clear();
+      lcd.setCursor(0,0);
+      lcd.print("SENSOR NOT LEVEL");
+    
+      lcd.setCursor(0,1);
+      lcd.print("Roll:");
+      lcd.print(rollDeg,1);
+    
+      lcd.setCursor(0,2);
+      lcd.print("Pitch:");
+      lcd.print(pitchDeg,1);
+    
+      Serial.println("Tilt detected - level sensor");
+    
+      return; // skip this reading
+    }
     distanceAccumulated = 0;
     // Converts the north/east offsets to longitude and latitude
     double metersPerDegLat = 111111.0;
