@@ -229,7 +229,7 @@ void loop()
     display.print("LOG: "); display.println(loggingOn ? "ON" : "OFF");
     display.display();
     }
-  delay(100); // reduce CPU churn
+  delay(100);
   return;
   }
   */  
