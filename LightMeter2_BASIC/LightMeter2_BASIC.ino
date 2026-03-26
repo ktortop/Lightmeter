@@ -61,6 +61,18 @@ float luxSum = 0;     // sum of all lux reading values
 unsigned long luxCount = 0;   // number of readings taken
 float luxAvg = 0;     
 
+// GPS outlier tracking
+const int GPS_WINDOW = 10;           // rolling window size
+const float GPS_OUTLIER_THRESH = 0.0005; // ~50m deviation in degrees
+const int GPS_OUTLIER_LIMIT = 4;     // warn if this many outliers in window
+
+float latHistory[GPS_WINDOW] = {0};
+float lonHistory[GPS_WINDOW] = {0};
+int gpsHistoryIndex = 0;
+int gpsHistoryCount = 0;
+int gpsOutlierCount = 0;
+bool gpsWarning = false;
+
 void configureSensor()
 {
   tsl.setGain(TSL2591_GAIN_MED);
@@ -262,14 +274,14 @@ void loop()
   uint16_t full = lum & 0xFFFF;
   float lux = tsl.calculateLux(full, ir);
 
-  luxSum += Lux;
+  luxSum += lux;
   luxCount++;
 
   // ---- Print status every 2 seconds ----
   if (millis() - timer >= 1000)
   {
 
-    luxAvg = LuxSum / LuxCount / fc_conversion;
+    luxAvg = luxSum / luxCount / fc_conversion;
 
     timer = millis(); 
 
@@ -283,9 +295,61 @@ void loop()
 
     lcd.clear();
 
+// --- GPS outlier check (only when we have a fix) ---
+if (GPS.fix && gpsHistoryCount > 0) {
+  // compute average of history window
+  float latSum = 0, lonSum = 0;
+  int validCount = min(gpsHistoryCount, GPS_WINDOW);
+  for (int i = 0; i < validCount; i++) {
+    latSum += latHistory[i];
+    lonSum += lonHistory[i];
+  }
+  float latMean = latSum / validCount;
+  float lonMean = lonSum / validCount;
+
+  // is the current reading an outlier?
+  bool isOutlier = (abs(GPS.latitudeDegrees - latMean) > GPS_OUTLIER_THRESH ||
+                    abs(GPS.longitudeDegrees - lonMean) > GPS_OUTLIER_THRESH);
+
+  // store current reading into rolling window
+  latHistory[gpsHistoryIndex] = GPS.latitudeDegrees;
+  lonHistory[gpsHistoryIndex] = GPS.longitudeDegrees;
+  gpsHistoryIndex = (gpsHistoryIndex + 1) % GPS_WINDOW;
+  if (gpsHistoryCount < GPS_WINDOW) gpsHistoryCount++;
+
+  // rolling outlier count: recount from scratch each cycle
+  gpsOutlierCount = 0;
+  float latSum2 = 0, lonSum2 = 0;
+  int n = min(gpsHistoryCount, GPS_WINDOW);
+  for (int i = 0; i < n; i++) { latSum2 += latHistory[i]; lonSum2 += lonHistory[i]; }
+  float lm2 = latSum2 / n, lnm2 = lonSum2 / n;
+  for (int i = 0; i < n; i++) {
+    if (abs(latHistory[i] - lm2) > GPS_OUTLIER_THRESH ||
+        abs(lonHistory[i] - lnm2) > GPS_OUTLIER_THRESH) {
+      gpsOutlierCount++;
+    }
+  }
+
+  gpsWarning = (gpsOutlierCount >= GPS_OUTLIER_LIMIT);
+} else if (GPS.fix) {
+  // first fix reading — just seed the history
+  latHistory[0] = GPS.latitudeDegrees;
+  lonHistory[0] = GPS.longitudeDegrees;
+  gpsHistoryIndex = 1;
+  gpsHistoryCount = 1;
+}
+
+// --- LCD row 0: warning or blank ---
+lcd.setCursor(0, 0);
+if (gpsWarning) {
+  lcd.print("! GPS INACCURATE    ");
+} else {
+  lcd.print("                    "); // clear row
+}
+
     lcd.setCursor(0, 1); // luminosity display
     lcd.print("Footcandles:");
-    lcd.print(luxAvg/fc_conversion);
+    lcd.print(luxAvg);
 
     if (GPS.fix /*&& BUTTON CODE loggingOn*/)
     {
