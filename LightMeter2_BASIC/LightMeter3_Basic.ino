@@ -22,6 +22,8 @@ const int gps_red   = 2;
 const int gps_green = 3;
 const int lux_red   = 5;
 const int lux_green = 6;
+const int imu_red   = 7;
+const int imu_green = 8;
 
 // ── GPS Averaging / Outlier Filtering ────────────────────────────────────────
 // Collects GPS_ARRAY_SIZE fixes, removes outliers beyond 2 standard deviations,
@@ -210,6 +212,7 @@ void setup()
   pinMode(lux_green, OUTPUT);
   setLED(gps_red, gps_green, "RED");   // red until anchor acquired
   setLED(lux_red, lux_green, "RED");   // red until light sensor confirmed
+  setLED(imu_red, imu_green, "RED");   // red until IMU reading is obtained
 
   // LCD
   Serial.println(F("LCD STARTUP"));
@@ -234,6 +237,7 @@ void setup()
     while (1);
   }
   Serial.println(F("IMU found"));
+  setLED(imu_red, imu_green, "GREEN");
 
   // Light sensor
   Serial.println(F("LIGHT SENSOR CHECK"));
