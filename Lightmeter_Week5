@@ -1,0 +1,801 @@
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include "Adafruit_TSL2591.h"
+#include <Adafruit_GPS.h>
+#include <SPI.h>
+#include <SD.h>
+#include <LiquidCrystal_I2C.h>
+#include <string.h>
+#include <math.h>
+
+// ─────────────────────────────────────────────
+// CONSTANTS
+// ─────────────────────────────────────────────
+const int   chipSelect         = 53;
+const float fc_conversion      = 10.76391f;
+const float spacingThreshold   = 1.524f;   // 5 ft in metres
+const float logTriggerDistance = 1.60f;    // small hysteresis above 5 ft
+const float levelTolerance     = 5.0f;     // degrees
+const int   MIN_SATS           = 4;
+
+// LED pins
+const int gps_red   = 2;
+const int gps_green = 3;
+const int lux_red   = 5;
+const int lux_green = 6;
+const int imu_red   = 8;
+const int imu_green = 9;
+
+// Buttons
+const int BTN_SLEEP      = 10;
+const int BTN_LOG_TOGGLE = 11;
+const int BTN_FORCE_LOG  = 12;
+
+bool isSleeping     = false;
+bool loggingEnabled = true;
+bool forceLog       = false;
+
+unsigned long lastBtnSleepTime = 0;
+unsigned long lastBtnLogTime   = 0;
+unsigned long lastBtnForceTime = 0;
+const unsigned long debounceDelay = 250;
+bool prevSleepBtn = HIGH;
+bool prevLogBtn   = HIGH;
+bool prevForceBtn = HIGH;
+
+// GPS speed conversion
+const float KNOTS_TO_MPS = 0.514444f;
+const float MIN_GPS_VEL_FUSE_MPS = 0.80f;     // ignore low-speed GPS course jitter
+const unsigned long GPS_FIX_FRESH_MS = 1500;  // require recent GPS anchor before logging
+
+// GPS measurement noise
+const float R_GPS_POS = 4.0f;   // m^2
+const float R_GPS_VEL = 1.0f;   // (m/s)^2
+
+// Process noise heuristics
+const float Q_POS = 0.05f;
+const float Q_VEL = 0.20f;
+
+// Rate limit for repeated Serial / LCD status messages
+const unsigned long STATUS_INTERVAL_MS = 1000;
+
+unsigned long lastIMUTime        = 0;
+unsigned long lastGoodGPSFixTime = 0;
+unsigned long gpsSetupTime       = 0;
+unsigned long lastFixTime        = 0;
+
+float lastGpsSpeedMps = 0.0f;   // most recent RMC ground speed
+
+// ─────────────────────────────────────────────
+// SENSOR OBJECTS
+// ─────────────────────────────────────────────
+LiquidCrystal_I2C lcd(0x27, 20, 4);
+Adafruit_TSL2591  tsl = Adafruit_TSL2591(2591);
+Adafruit_GPS      GPS(&Serial1);
+
+// ─────────────────────────────────────────────
+// GPS BACKGROUND READER
+// Timer0 compare interrupt fires ~every 1 ms and drains Serial1 into the
+// GPS parser. Without this, the 64-byte Serial1 buffer overflows during
+// blocking calls (light sensor ~120 ms, SD writes, LCD, BNO timeouts) and
+// NMEA sentences get corrupted.
+// ─────────────────────────────────────────────
+ISR(TIMER0_COMPA_vect) {
+  while (Serial1.available()) GPS.read();
+}
+
+// ─────────────────────────────────────────────
+// BNO055 UART REGISTERS
+// ─────────────────────────────────────────────
+#define BNO_REG_CHIP_ID       0x00
+#define BNO_REG_PAGE_ID       0x07
+#define BNO_REG_EULER_H_LSB   0x1A
+#define BNO_REG_LIN_ACC_X_LSB 0x28
+#define BNO_REG_OPR_MODE      0x3D
+#define BNO_REG_PWR_MODE      0x3E
+#define BNO_REG_SYS_TRIGGER   0x3F
+
+#define BNO_CHIP_ID         0xA0
+#define BNO_OPR_MODE_CONFIG 0x00
+#define BNO_OPR_MODE_NDOF   0x0C
+#define BNO_PWR_MODE_NORMAL 0x00
+
+// ─────────────────────────────────────────────
+// EKF STATE  [x_north, y_east, vx, vy]
+// ─────────────────────────────────────────────
+struct KalmanState {
+  float x  = 0;
+  float y  = 0;
+  float vx = 0;
+  float vy = 0;
+};
+
+KalmanState kf;
+
+float P[4][4] = {
+  {10,  0,  0,  0},
+  { 0, 10,  0,  0},
+  { 0,  0,  5,  0},
+  { 0,  0,  0,  5}
+};
+
+double originLat = 0;
+double originLon = 0;
+bool   kfInitialized = false;
+
+// ─────────────────────────────────────────────
+// LOGGING STATE
+// ─────────────────────────────────────────────
+float lastLogX = 0;
+float lastLogY = 0;
+
+// ─────────────────────────────────────────────
+// LED HELPER — RED / YELLOW / GREEN / OFF
+// FIX: YELLOW and OFF were swapped. YELLOW = both on, OFF = both off.
+// ─────────────────────────────────────────────
+void setLED(int r, int g, const char* color) {
+  if      (strcmp(color, "GREEN")  == 0) { digitalWrite(r, LOW);  digitalWrite(g, HIGH); }
+  else if (strcmp(color, "RED")    == 0) { digitalWrite(r, HIGH); digitalWrite(g, LOW);  }
+  else if (strcmp(color, "YELLOW") == 0) { digitalWrite(r, HIGH); digitalWrite(g, HIGH); }
+  else                                   { digitalWrite(r, LOW);  digitalWrite(g, LOW);  }
+}
+
+float distanceMeters(float x1, float y1, float x2, float y2) {
+  float dx = x2 - x1;
+  float dy = y2 - y1;
+  return sqrt(dx * dx + dy * dy);
+}
+
+// ─────────────────────────────────────────────
+// BNO055 UART HELPERS
+// FIX: error responses (0xEE xx, e.g. bus over-run) are now detected right
+// away instead of stalling 100 ms waiting for bytes that never come, and
+// reads/writes are retried because BNO055 UART errors are common.
+// ─────────────────────────────────────────────
+bool bnoReadOnce(uint8_t reg, uint8_t len, uint8_t* buf) {
+  while (Serial2.available()) Serial2.read();
+
+  Serial2.write(0xAA);
+  Serial2.write(0x01);
+  Serial2.write(reg);
+  Serial2.write(len);
+
+  unsigned long t = millis();
+  while (Serial2.available() < 2) {
+    if (millis() - t > 100) return false;
+  }
+
+  uint8_t hdr = Serial2.read();
+  uint8_t cnt = Serial2.read();
+  if (hdr == 0xEE) return false;               // error/status response
+  if (hdr != 0xBB || cnt != len) return false;
+
+  while (Serial2.available() < len) {
+    if (millis() - t > 100) return false;
+  }
+  for (int i = 0; i < len; i++) buf[i] = Serial2.read();
+  return true;
+}
+
+bool bnoRead(uint8_t reg, uint8_t len, uint8_t* buf) {
+  for (int attempt = 0; attempt < 3; attempt++) {
+    if (bnoReadOnce(reg, len, buf)) return true;
+    delay(2);
+  }
+  return false;
+}
+
+bool bnoWriteOnce(uint8_t reg, uint8_t val) {
+  while (Serial2.available()) Serial2.read();
+
+  Serial2.write(0xAA);
+  Serial2.write(0x00);
+  Serial2.write(reg);
+  Serial2.write(0x01);
+  Serial2.write(val);
+
+  unsigned long t = millis();
+  while (Serial2.available() < 2) {
+    if (millis() - t > 100) return false;
+  }
+
+  uint8_t hdr    = Serial2.read();
+  uint8_t status = Serial2.read();
+  return (hdr == 0xEE && status == 0x01);
+}
+
+bool bnoWrite(uint8_t reg, uint8_t val) {
+  for (int attempt = 0; attempt < 3; attempt++) {
+    if (bnoWriteOnce(reg, val)) return true;
+    delay(5);
+  }
+  return false;
+}
+
+bool bnoReadVector(uint8_t reg, float scale, float& x, float& y, float& z) {
+  uint8_t buf[6];
+  if (!bnoRead(reg, 6, buf)) return false;
+
+  x = (int16_t)(buf[0] | (buf[1] << 8)) / scale;
+  y = (int16_t)(buf[2] | (buf[3] << 8)) / scale;
+  z = (int16_t)(buf[4] | (buf[5] << 8)) / scale;
+  return true;
+}
+
+// ─────────────────────────────────────────────
+// IMU INIT
+// FIX: write results are now checked. Previously a silently failed write
+// to OPR_MODE could leave the chip in CONFIG mode, where every fusion
+// register (Euler, linear accel) reads 0 while the code reports PASS.
+// ─────────────────────────────────────────────
+bool bnoBegin() {
+  Serial2.begin(115200);
+  delay(1000);
+
+  uint8_t id = 0;
+  bool found = false;
+  for (int i = 0; i < 5 && !found; i++) {
+    if (bnoRead(BNO_REG_CHIP_ID, 1, &id) && id == BNO_CHIP_ID) found = true;
+    else delay(200);
+  }
+  if (!found) return false;
+
+  if (!bnoWrite(BNO_REG_OPR_MODE, BNO_OPR_MODE_CONFIG)) return false; delay(30);
+  bnoWrite(BNO_REG_PAGE_ID, 0x00);                                  delay(10);
+  if (!bnoWrite(BNO_REG_PWR_MODE, BNO_PWR_MODE_NORMAL)) return false; delay(10);
+  bnoWrite(BNO_REG_SYS_TRIGGER, 0x80);  /* use external crystal */  delay(10);
+  if (!bnoWrite(BNO_REG_OPR_MODE, BNO_OPR_MODE_NDOF)) return false;  delay(50);
+
+  // Confirm the mode actually changed
+  uint8_t mode = 0;
+  if (!bnoRead(BNO_REG_OPR_MODE, 1, &mode)) return false;
+  return (mode & 0x0F) == BNO_OPR_MODE_NDOF;
+}
+
+// ─────────────────────────────────────────────
+// LIGHT SENSOR CONFIG
+// ─────────────────────────────────────────────
+void configureSensor() {
+  tsl.setGain(TSL2591_GAIN_LOW);
+  tsl.setTiming(TSL2591_INTEGRATIONTIME_100MS);
+
+  Serial.println(F("------------------------------------"));
+  Serial.print(F("Gain: "));
+  switch (tsl.getGain()) {
+    case TSL2591_GAIN_LOW:  Serial.println(F("1x (Low)"));     break;
+    case TSL2591_GAIN_MED:  Serial.println(F("25x (Medium)")); break;
+    case TSL2591_GAIN_HIGH: Serial.println(F("428x (High)"));  break;
+    case TSL2591_GAIN_MAX:  Serial.println(F("9876x (Max)"));  break;
+  }
+}
+
+// ─────────────────────────────────────────────
+// KALMAN INIT
+// FIX: initial position variance was 1 m^2, tighter than the GPS itself
+// (R = 4 m^2), so a bad first fix was trusted too much and corrected slowly.
+// ─────────────────────────────────────────────
+void initKalman(double lat, double lon) {
+  originLat = lat;
+  originLon = lon;
+
+  kf.x = 0;  kf.y = 0;
+  kf.vx = 0; kf.vy = 0;
+
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      P[i][j] = 0.0f;
+  P[0][0] = R_GPS_POS;
+  P[1][1] = R_GPS_POS;
+  P[2][2] = 1.0f;
+  P[3][3] = 1.0f;
+
+  lastLogX = 0;
+  lastLogY = 0;
+
+  kfInitialized = true;
+  lastIMUTime   = millis();
+
+  // FIX: clear the "SEARCHING FOR ANCHOR" screen once the anchor is set
+  lcd.clear();
+  lcd.setCursor(0, 0); lcd.print("ANCHOR SET");
+  lcd.setCursor(0, 1); lcd.print("Move to start logging");
+
+  Serial.println(F("KF origin set"));
+}
+
+// ─────────────────────────────────────────────
+// EKF scalar update helpers
+// ─────────────────────────────────────────────
+float getStateByIndex(int measIndex) {
+  if (measIndex == 0) return kf.x;
+  if (measIndex == 1) return kf.y;
+  if (measIndex == 2) return kf.vx;
+  return kf.vy;
+}
+
+void kalmanUpdateScalar(int measIndex, float z, float R) {
+  float hx = getStateByIndex(measIndex);
+  float y = z - hx;
+
+  float S = P[measIndex][measIndex] + R;
+  if (S <= 0.0f) return;
+
+  float K[4];
+  for (int i = 0; i < 4; i++) K[i] = P[i][measIndex] / S;
+
+  kf.x  += K[0] * y;
+  kf.y  += K[1] * y;
+  kf.vx += K[2] * y;
+  kf.vy += K[3] * y;
+
+  float Pold[4][4];
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      Pold[i][j] = P[i][j];
+
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      P[i][j] = Pold[i][j] - K[i] * Pold[measIndex][j];
+}
+
+// ─────────────────────────────────────────────
+// EKF PREDICT using IMU acceleration + heading
+// ─────────────────────────────────────────────
+void kalmanPredict(float linXForward, float headingRad) {
+  if (!kfInitialized) return;
+
+  unsigned long now = millis();
+  float dt = (now - lastIMUTime) / 1000.0f;
+  lastIMUTime = now;
+
+  if (dt <= 0.0f || dt > 0.5f) return;
+
+  float ax = linXForward * cos(headingRad);   // north
+  float ay = linXForward * sin(headingRad);   // east
+
+  // FIX: previously velocity was decayed whenever forward acceleration was
+  // near zero — which is also true when walking at a steady pace, so the
+  // filter kept braking itself between GPS fixes. Now we only damp when
+  // GPS also says we're (nearly) stopped.
+  if (fabsf(linXForward) < 0.05f) {
+    ax = 0.0f;
+    ay = 0.0f;
+    if (lastGpsSpeedMps < MIN_GPS_VEL_FUSE_MPS) {
+      kf.vx *= 0.85f;
+      kf.vy *= 0.85f;
+    }
+  }
+
+  kf.x  += kf.vx * dt + 0.5f * ax * dt * dt;
+  kf.y  += kf.vy * dt + 0.5f * ay * dt * dt;
+  kf.vx += ax * dt;
+  kf.vy += ay * dt;
+
+  float F[4][4] = {
+    {1.0f, 0.0f, dt,   0.0f},
+    {0.0f, 1.0f, 0.0f, dt  },
+    {0.0f, 0.0f, 1.0f, 0.0f},
+    {0.0f, 0.0f, 0.0f, 1.0f}
+  };
+
+  float Q[4][4] = {
+    {Q_POS * dt * dt, 0, 0, 0},
+    {0, Q_POS * dt * dt, 0, 0},
+    {0, 0, Q_VEL * dt, 0},
+    {0, 0, 0, Q_VEL * dt}
+  };
+
+  float FP[4][4];
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++) {
+      FP[i][j] = 0.0f;
+      for (int k = 0; k < 4; k++) FP[i][j] += F[i][k] * P[k][j];
+    }
+
+  float Pnew[4][4];
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++) {
+      Pnew[i][j] = 0.0f;
+      for (int k = 0; k < 4; k++) Pnew[i][j] += FP[i][k] * F[j][k];
+      Pnew[i][j] += Q[i][j];
+    }
+
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      P[i][j] = Pnew[i][j];
+}
+
+// ─────────────────────────────────────────────
+// GPS UPDATES
+// FIX: position used to be fused from BOTH the RMC and GGA sentence of
+// each 10 Hz epoch — the same measurement twice, which made the filter
+// overconfident. Now position comes from GGA only, velocity from RMC only.
+// ─────────────────────────────────────────────
+void kalmanUpdateGPSPosition(double lat, double lon) {
+  if (!kfInitialized) {
+    initKalman(lat, lon);
+    lastGoodGPSFixTime = millis();
+    return;
+  }
+
+  double mPerDegLat = 111111.0;
+  double mPerDegLon = 111111.0 * cos(originLat * PI / 180.0);
+
+  float zx = (float)((lat - originLat) * mPerDegLat);
+  float zy = (float)((lon - originLon) * mPerDegLon);
+
+  kalmanUpdateScalar(0, zx, R_GPS_POS);
+  kalmanUpdateScalar(1, zy, R_GPS_POS);
+  lastGoodGPSFixTime = millis();
+}
+
+void kalmanUpdateGPSVelocity(float speedKnots, float courseDeg) {
+  float speedMps = speedKnots * KNOTS_TO_MPS;
+  lastGpsSpeedMps = speedMps;
+
+  if (!kfInitialized) return;
+  if (speedMps < MIN_GPS_VEL_FUSE_MPS) return;
+
+  float courseRad = courseDeg * PI / 180.0f;
+  kalmanUpdateScalar(2, speedMps * cos(courseRad), R_GPS_VEL);
+  kalmanUpdateScalar(3, speedMps * sin(courseRad), R_GPS_VEL);
+}
+
+void getLatLon(double& lat, double& lon) {
+  double mPerDegLat = 111111.0;
+  double mPerDegLon = 111111.0 * cos(originLat * PI / 180.0);
+
+  lat = originLat + (kf.x / mPerDegLat);
+  lon = originLon + (kf.y / mPerDegLon);
+}
+
+// ─────────────────────────────────────────────
+// SETUP
+// ─────────────────────────────────────────────
+void setup() {
+  // FIX: 9600 baud was too slow for the debug output and blocked the loop
+  // once the TX buffer filled. Set Serial Monitor to 115200.
+  Serial.begin(115200);
+  Wire.begin();
+  delay(1000);
+
+  pinMode(gps_red,   OUTPUT);
+  pinMode(gps_green, OUTPUT);
+  pinMode(lux_red,   OUTPUT);
+  pinMode(lux_green, OUTPUT);
+  pinMode(imu_red,   OUTPUT);
+  pinMode(imu_green, OUTPUT);
+  setLED(gps_red, gps_green, "RED");
+  setLED(lux_red, lux_green, "RED");
+  setLED(imu_red, imu_green, "RED");
+
+  pinMode(BTN_SLEEP,      INPUT_PULLUP);
+  pinMode(BTN_LOG_TOGGLE, INPUT_PULLUP);
+  pinMode(BTN_FORCE_LOG,  INPUT_PULLUP);
+
+  // ── LCD ─────────────────────────────────────────────────────────────
+  Serial.println(F("LCD STARTUP"));
+  lcd.init();
+  lcd.backlight();
+  lcd.display();
+  lcd.home();
+
+  // ── IMU ─────────────────────────────────────────────────────────────
+  lcd.setCursor(0, 0); lcd.print("IMU: ");
+  Serial.println(F("IMU CHECK"));
+  if (!bnoBegin()) {
+    Serial.println(F("IMU FAIL - halting"));
+    lcd.print("FAIL - HALTED");
+    setLED(imu_red, imu_green, "RED");
+    while (1) ;
+  }
+  Serial.println(F("IMU found"));
+  lcd.print("PASS");
+  setLED(imu_red, imu_green, "GREEN");
+
+  // ── GPS ─────────────────────────────────────────────────────────────
+  lcd.setCursor(0, 1); lcd.print("GPS: ");
+  Serial.println(F("GPS CHECK"));
+  GPS.begin(9600);
+  delay(500);
+  GPS.sendCommand("$PMTK251,38400*27");
+  delay(500);
+  GPS.begin(38400);
+  GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
+  GPS.sendCommand(PMTK_SET_NMEA_UPDATE_10HZ);
+  GPS.sendCommand(PGCMD_ANTENNA);
+
+  // Start background GPS reading (Timer0 compare A, ~1 kHz; Timer0
+  // overflow is still used by millis(), compare A is free)
+  OCR0A = 0xAF;
+  TIMSK0 |= _BV(OCIE0A);
+
+  delay(1000);
+  Serial.println(F("GPS configured"));
+  lcd.print("CONFIGURED");     // no real check is done here, so don't claim PASS
+  setLED(gps_red, gps_green, "YELLOW");
+  gpsSetupTime = millis();
+
+  // ── Light sensor ────────────────────────────────────────────────────
+  lcd.setCursor(0, 2); lcd.print("LUX: ");
+  Serial.println(F("LIGHT SENSOR CHECK"));
+  if (!tsl.begin()) {
+    Serial.println(F("TSL2591 not found - halting"));
+    lcd.print("FAIL - HALTED");
+    setLED(lux_red, lux_green, "RED");
+    while (1) ;
+  }
+  Serial.println(F("TSL2591 found"));
+  lcd.print("PASS");
+  setLED(lux_red, lux_green, "GREEN");
+  configureSensor();
+
+  // ── SD ──────────────────────────────────────────────────────────────
+  lcd.setCursor(0, 3); lcd.print("SD:  ");
+  Serial.println(F("SD CHECK"));
+  if (!SD.begin(chipSelect)) {
+    Serial.println(F("SD FAIL - halting"));
+    lcd.print("FAIL - HALTED");
+    while (1) ;
+  }
+  // Write a CSV header the first time the file is created
+  if (!SD.exists("datalog.csv")) {
+    File f = SD.open("datalog.csv", FILE_WRITE);
+    if (f) { f.println(F("date,time_utc,fc,lat,lon")); f.close(); }
+  }
+  Serial.println(F("SD OK"));
+  lcd.print("PASS");
+
+  delay(2500);
+  lcd.clear();
+  Serial.println(F("STARTING LOOP..."));
+}
+
+// ─────────────────────────────────────────────
+// LOOP
+// ─────────────────────────────────────────────
+void loop() {
+  unsigned long now = millis();
+
+  // ── 0. Buttons ──────────────────────────────────────────────────────
+  bool sleepBtn = digitalRead(BTN_SLEEP);
+  if (sleepBtn == LOW && prevSleepBtn == HIGH) {
+    if (now - lastBtnSleepTime > debounceDelay) {
+      isSleeping = !isSleeping;
+      if (isSleeping) {
+        lcd.noBacklight();
+        lcd.clear();
+        setLED(gps_red, gps_green, "OFF");
+        setLED(lux_red, lux_green, "OFF");
+        setLED(imu_red, imu_green, "OFF");
+        Serial.println(F("Sleep Mode: ON"));
+      } else {
+        lcd.backlight();
+        lcd.clear();
+        lcd.print("Waking up...");
+        // FIX: lux LED was never turned back on after waking
+        setLED(lux_red, lux_green, "GREEN");
+        // Avoid one huge dt in the predictor after sleeping
+        lastIMUTime = millis();
+        Serial.println(F("Sleep Mode: OFF"));
+      }
+      lastBtnSleepTime = now;
+    }
+  }
+  prevSleepBtn = sleepBtn;
+
+  // GPS is drained by the timer interrupt, so nothing to do while asleep
+  if (isSleeping) {
+    if (GPS.newNMEAreceived()) GPS.lastNMEA();   // discard
+    return;
+  }
+
+  bool logBtn = digitalRead(BTN_LOG_TOGGLE);
+  if (logBtn == LOW && prevLogBtn == HIGH) {
+    if (now - lastBtnLogTime > debounceDelay) {
+      loggingEnabled = !loggingEnabled;
+      lcd.setCursor(0, 3);
+      if (loggingEnabled) lcd.print("Logging: ON         ");
+      else                lcd.print("Logging: OFF        ");
+      Serial.print(F("Data Logging: "));
+      Serial.println(loggingEnabled ? "ON" : "OFF");
+      lastBtnLogTime = now;
+    }
+  }
+  prevLogBtn = logBtn;
+
+  bool forceBtn = digitalRead(BTN_FORCE_LOG);
+  if (forceBtn == LOW && prevForceBtn == HIGH) {
+    if (now - lastBtnForceTime > debounceDelay) {
+      forceLog = true;
+      Serial.println(F("Force Log Requested"));
+      lastBtnForceTime = now;
+    }
+  }
+  prevForceBtn = forceBtn;
+
+  // ── 1. Handle any complete NMEA sentence ────────────────────────────
+  if (GPS.newNMEAreceived()) {
+    // Copy the sentence with interrupts off so the ISR can't overwrite it
+    char nmea[128];
+    noInterrupts();
+    strncpy(nmea, GPS.lastNMEA(), sizeof(nmea) - 1);
+    interrupts();
+    nmea[sizeof(nmea) - 1] = '\0';
+
+    bool isRMC = (strstr(nmea, "RMC") != NULL);
+    bool isGGA = (strstr(nmea, "GGA") != NULL);
+
+    if (GPS.parse(nmea) && GPS.fix) {
+      if (isGGA) {
+        lastFixTime = millis();
+        if (GPS.satellites >= MIN_SATS) {
+          kalmanUpdateGPSPosition(GPS.latitudeDegrees, GPS.longitudeDegrees);
+        }
+      } else if (isRMC) {
+        kalmanUpdateGPSVelocity(GPS.speed, GPS.angle);
+      }
+    }
+  }
+
+  // Rate-limited GPS status (used to print ~20x per second)
+  static unsigned long lastStatusPrint = 0;
+  if (millis() - lastStatusPrint >= STATUS_INTERVAL_MS) {
+    Serial.print(F("Fix: "));    Serial.print(GPS.fix);
+    Serial.print(F("  Sats: ")); Serial.println(GPS.satellites);
+    if (GPS.fix && GPS.satellites < MIN_SATS)
+      Serial.println(F("GPS fix rejected - low satellite count"));
+    lastStatusPrint = millis();
+  }
+
+  // GPS LED
+  bool recentFix     = (lastFixTime > 0) && (millis() - lastFixTime <= 30000);
+  bool recentlySetup = (millis() - gpsSetupTime <= 30000);
+
+  if (recentFix) {
+    if (GPS.satellites < MIN_SATS) setLED(gps_red, gps_green, "YELLOW");
+    else                           setLED(gps_red, gps_green, "GREEN");
+  } else if (recentlySetup) {
+    setLED(gps_red, gps_green, "YELLOW");   // FIX: still searching, not "good"
+  } else {
+    setLED(gps_red, gps_green, "RED");
+  }
+
+  // ── 2. Wait for first good GPS fix ──────────────────────────────────
+  if (!kfInitialized) {
+    static unsigned long lastSearchUpdate = 0;
+    if (millis() - lastSearchUpdate > 1000) {
+      lcd.setCursor(0, 0); lcd.print("SEARCHING FOR ANCHOR");
+      lcd.setCursor(0, 1); lcd.print("Sats Found: ");
+      lcd.print(GPS.satellites);
+      lcd.print("   ");
+      lastSearchUpdate = millis();
+    }
+    return;
+  }
+
+  // ── 3. EKF predict using IMU ────────────────────────────────────────
+  float linX, linY, linZ;
+  float eulX, eulY, eulZ;
+
+  bool imuOk = bnoReadVector(BNO_REG_LIN_ACC_X_LSB, 100.0f, linX, linY, linZ) &&
+               bnoReadVector(BNO_REG_EULER_H_LSB,   16.0f,  eulX, eulY, eulZ);
+  if (imuOk) {
+    setLED(imu_red, imu_green, "GREEN");
+    kalmanPredict(linX, eulX * PI / 180.0f);
+  } else {
+    setLED(imu_red, imu_green, "RED");
+  }
+
+  // ── 4. Fused lat/lon ────────────────────────────────────────────────
+  double lat, lon;
+  getLatLon(lat, lon);
+
+  // ── 5. Spacing check ────────────────────────────────────────────────
+  float dist = distanceMeters(lastLogX, lastLogY, kf.x, kf.y);
+  bool gpsFixFresh = (millis() - lastGoodGPSFixTime) <= GPS_FIX_FRESH_MS;
+
+  if (dist >= logTriggerDistance || forceLog) {
+    static unsigned long lastWaitMsg = 0;
+
+    if (!gpsFixFresh && !forceLog) {
+      // FIX: this used to print every loop pass and flood Serial
+      if (millis() - lastWaitMsg >= STATUS_INTERVAL_MS) {
+        Serial.println(F("Log delayed - waiting for fresh GPS anchor"));
+        lastWaitMsg = millis();
+      }
+      return;
+    }
+
+    // ── 6. Tilt check (reuses the Euler angles read in step 3) ────────
+    if (!imuOk) {
+      if (millis() - lastWaitMsg >= STATUS_INTERVAL_MS) {
+        Serial.println(F("IMU read failed during tilt check"));
+        lastWaitMsg = millis();
+      }
+      return;
+    }
+
+    float rollDeg  = eulY;
+    float pitchDeg = eulZ;
+    bool  level    = (fabsf(rollDeg)  < levelTolerance &&
+                      fabsf(pitchDeg) < levelTolerance);
+
+    if (!level) {
+      // FIX: rate-limited — clearing the LCD every pass made it flicker
+      if (millis() - lastWaitMsg >= 500) {
+        lcd.clear();
+        lcd.setCursor(0, 0); lcd.print("SENSOR NOT LEVEL");
+        lcd.setCursor(0, 1); lcd.print("Roll:  ");  lcd.print(rollDeg,  1);
+        lcd.setCursor(0, 2); lcd.print("Pitch: "); lcd.print(pitchDeg, 1);
+        lcd.setCursor(0, 3); lcd.print("Re-level and move");
+        Serial.println(F("Tilt detected - waiting for level"));
+        lastWaitMsg = millis();
+      }
+      return;
+    }
+
+    // ── 7. Light sensor (blocks ~120 ms; GPS keeps reading via ISR) ──
+    uint32_t lum  = tsl.getFullLuminosity();
+    uint16_t ir   = lum >> 16;
+    uint16_t full = lum & 0xFFFF;
+    float    lux  = tsl.calculateLux(full, ir);
+    float    fc   = lux / fc_conversion;
+
+    // ── 8. LCD ──────────────────────────────────────────────────────
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Sats:");
+    lcd.print(GPS.satellites);
+
+    float kfstdev    = sqrt(P[0][0] + P[1][1]);
+    float confidence = 100.0f * (1.0f - (kfstdev / 15.24f));
+    if (confidence < 0)   confidence = 0;
+    if (confidence > 100) confidence = 100;
+    lcd.print(" Conf:");
+    lcd.print((int)confidence);
+    lcd.print("%");
+
+    lcd.setCursor(0, 1); lcd.print("FC: ");  lcd.print(fc, 2);
+    lcd.setCursor(0, 2); lcd.print("Lat: "); lcd.print(lat, 5);
+    lcd.setCursor(0, 3); lcd.print("Lon: "); lcd.print(lon, 5);
+
+    // ── 9. CSV row ──────────────────────────────────────────────────
+    if (loggingEnabled) {
+      File f = SD.open("datalog.csv", FILE_WRITE);
+      if (f) {
+        f.print(GPS.day);   f.print("/");
+        f.print(GPS.month); f.print("/");
+        f.print(2000 + GPS.year); f.print(",");   // GPS.year is 2-digit
+
+        if (GPS.hour    < 10) f.print("0");
+        f.print(GPS.hour);    f.print(":");
+        if (GPS.minute  < 10) f.print("0");
+        f.print(GPS.minute);  f.print(":");
+        if (GPS.seconds < 10) f.print("0");
+        f.print(GPS.seconds); f.print(",");
+
+        f.print(fc, 2);  f.print(",");
+        f.print(lat, 6); f.print(",");
+        f.println(lon, 6);
+        f.close();
+
+        Serial.print(F("Logged  fc="));  Serial.print(fc, 2);
+        Serial.print(F("  lat="));       Serial.print(lat, 6);
+        Serial.print(F("  lon="));       Serial.println(lon, 6);
+
+        lastLogX = kf.x;
+        lastLogY = kf.y;
+      } else {
+        Serial.println(F("ERROR: could not open datalog.csv"));
+      }
+    } else {
+      // FIX: spacing wasn't advanced when logging was off, so this branch
+      // re-ran (LCD clear + light read + Serial print) on every loop pass.
+      Serial.println(F("Logging disabled - measurement not written"));
+      lastLogX = kf.x;
+      lastLogY = kf.y;
+    }
+    forceLog = false;
+  }
+}
