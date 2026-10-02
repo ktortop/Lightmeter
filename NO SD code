@@ -1,0 +1,787 @@
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include "Adafruit_TSL2591.h"
+#include <Adafruit_GPS.h>
+#include <LiquidCrystal_I2C.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+// ***** NO-SD CHANGE ***** SD card removed completely (no SD.h, no SPI.h,
+// no chip select). Readings go to the LCD live, and each 5 ft "log point"
+// is printed to Serial Monitor as a CSV line instead of written to a card.
+// You can copy/paste those lines from Serial Monitor into Excel.
+
+// ─────────────────────────────────────────────
+// CONSTANTS
+// ─────────────────────────────────────────────
+const float fc_conversion      = 10.76391f;   // lux -> foot-candles
+const float logTriggerDistance = 1.60f;       // ~5.25 ft between log points
+const float levelTolerance     = 5.0f;        // degrees
+const int   MIN_SATS           = 4;
+
+// ***** NO-SD CHANGE ***** how often the LCD lux reading refreshes
+const unsigned long LUX_UPDATE_MS = 500;
+const unsigned long LUX_RETRY_MS  = 5000;     // retry a missing sensor this often
+
+// LED pins
+const int gps_red   = 2;
+const int gps_green = 3;
+const int lux_red   = 5;
+const int lux_green = 6;
+const int imu_red   = 8;
+const int imu_green = 9;
+
+// Buttons
+const int BTN_SLEEP      = 10;
+const int BTN_LOG_TOGGLE = 11;   // now turns Serial CSV output on/off
+const int BTN_FORCE_LOG  = 12;   // prints a CSV line right now
+
+bool isSleeping     = false;
+bool loggingEnabled = true;
+bool forceLog       = false;
+
+unsigned long lastBtnSleepTime = 0;
+unsigned long lastBtnLogTime   = 0;
+unsigned long lastBtnForceTime = 0;
+const unsigned long debounceDelay = 250;
+
+// GPS speed conversion
+const float KNOTS_TO_MPS = 0.514444f;
+const float MIN_GPS_VEL_FUSE_MPS = 0.80f;
+
+// GPS measurement noise
+const float R_GPS_POS = 4.0f;   // m^2
+const float R_GPS_VEL = 1.0f;   // (m/s)^2
+
+// Process noise heuristics
+const float Q_POS = 0.05f;
+const float Q_VEL = 0.20f;
+
+unsigned long lastIMUTime        = 0;
+unsigned long lastGoodGPSFixTime = 0;
+unsigned long gpsSetupTime       = 0;
+unsigned long lastFixTime        = 0;
+
+// ***** NO-SD CHANGE ***** latest light reading, shared by LCD + Serial
+bool          luxOk         = false;
+bool          luxValid      = false;   // false if saturated / not read yet
+float         lastLux       = 0.0f;
+float         lastFc        = 0.0f;
+unsigned long lastLuxRead   = 0;
+unsigned long lastLuxRetry  = 0;
+
+// ***** SATURATION FIX *****
+// At 100 ms integration the sensor's counts top out at 36863 (NOT 65535).
+// In bright light both channels hit that ceiling, and the library's formula
+// (full - ir) * (1 - ir/full) then gives ~0 -> the stuck "0.1 lux".
+// Now saturated readings are detected, and the gain steps down/up
+// automatically so the reading stays in range.
+// ***** FIXED GAIN ***** gain stays at LOW (1x) all the time.
+// Set this to true to turn automatic gain switching back on.
+const bool AUTO_GAIN = false;
+
+const uint16_t TSL_MAX_COUNT  = 36863;
+const uint16_t TSL_HIGH_LIMIT = 33000;   // ~90% of max: too bright, lower gain
+const uint16_t TSL_LOW_LIMIT  = 200;     // too dark, raise gain
+
+const tsl2591Gain_t GAIN_STEPS[] = { TSL2591_GAIN_LOW, TSL2591_GAIN_MED, TSL2591_GAIN_HIGH };
+const char*         GAIN_NAMES[] = { "1x", "25x", "428x" };
+uint8_t  gainIndex = 0;          // starts at LOW (set in configureSensor)
+uint16_t lastFull  = 0;          // raw counts, shown for troubleshooting
+uint16_t lastIr    = 0;
+
+// ─────────────────────────────────────────────
+// SENSOR OBJECTS
+// ─────────────────────────────────────────────
+LiquidCrystal_I2C lcd(0x27, 20, 4);
+Adafruit_TSL2591  tsl = Adafruit_TSL2591(2591);
+Adafruit_GPS      GPS(&Serial1);
+
+// ***** NO-SD CHANGE ***** background GPS reader. Reading the light sensor
+// blocks for ~110 ms, which is long enough for GPS data to overflow the
+// Serial1 buffer. This timer interrupt (~1 kHz) keeps draining Serial1.
+// It is switched on at the END of setup(), after the I2C devices start.
+ISR(TIMER0_COMPA_vect) {
+  while (Serial1.available()) GPS.read();
+}
+
+// ─────────────────────────────────────────────
+// BNO055 UART REGISTERS
+// ─────────────────────────────────────────────
+#define BNO_REG_CHIP_ID       0x00
+#define BNO_REG_OPR_MODE      0x3D
+#define BNO_REG_PWR_MODE      0x3E
+#define BNO_REG_PAGE_ID       0x07
+#define BNO_REG_SYS_TRIGGER   0x3F
+#define BNO_REG_EULER_H_LSB   0x1A
+#define BNO_REG_LIN_ACC_X_LSB 0x28
+
+#define BNO_CHIP_ID         0xA0
+#define BNO_OPR_MODE_CONFIG 0x00
+#define BNO_OPR_MODE_NDOF   0x0C
+#define BNO_PWR_MODE_NORMAL 0x00
+
+// ─────────────────────────────────────────────
+// EKF STATE [x_north, y_east, vx, vy]
+// ─────────────────────────────────────────────
+struct KalmanState {
+  float x  = 0;
+  float y  = 0;
+  float vx = 0;
+  float vy = 0;
+};
+
+KalmanState kf;
+
+float P[4][4] = {
+  {10,  0,  0,  0},
+  { 0, 10,  0,  0},
+  { 0,  0,  5,  0},
+  { 0,  0,  0,  5}
+};
+
+double originLat = 0;
+double originLon = 0;
+bool   kfInitialized = false;
+
+float lastLogX = 0;
+float lastLogY = 0;
+
+// ─────────────────────────────────────────────
+// LED HELPER
+// ─────────────────────────────────────────────
+void setLED(int r, int g, const char* color) {
+  if      (strcmp(color, "GREEN")  == 0) { digitalWrite(r, LOW);  digitalWrite(g, HIGH); }
+  else if (strcmp(color, "RED")    == 0) { digitalWrite(r, HIGH); digitalWrite(g, LOW);  }
+  else if (strcmp(color, "YELLOW") == 0) { digitalWrite(r, LOW);  digitalWrite(g, LOW);  }
+  else                                   { digitalWrite(r, HIGH); digitalWrite(g, HIGH); }
+}
+
+float distanceMeters(float x1, float y1, float x2, float y2) {
+  float dx = x2 - x1;
+  float dy = y2 - y1;
+  return sqrt(dx * dx + dy * dy);
+}
+
+// ***** NO-SD CHANGE ***** write one full LCD row, padded with spaces so
+// old characters never stay behind (no lcd.clear() flicker)
+void lcdRow(uint8_t row, const char* text) {
+  char buf[21];
+  uint8_t i = 0;
+  while (text[i] != '\0' && i < 20) { buf[i] = text[i]; i++; }
+  while (i < 20) buf[i++] = ' ';
+  buf[20] = '\0';
+  lcd.setCursor(0, row);
+  lcd.print(buf);
+}
+
+// ─────────────────────────────────────────────
+// BNO055 UART HELPERS
+// ─────────────────────────────────────────────
+bool bnoRead(uint8_t reg, uint8_t len, uint8_t* buf) {
+  while (Serial2.available()) Serial2.read();
+
+  Serial2.write(0xAA);
+  Serial2.write(0x01);
+  Serial2.write(reg);
+  Serial2.write(len);
+
+  unsigned long t = millis();
+  while (Serial2.available() < (int)(len + 2)) {
+    if (millis() - t > 100) return false;
+  }
+
+  uint8_t hdr = Serial2.read();
+  uint8_t cnt = Serial2.read();
+  if (hdr != 0xBB || cnt != len) return false;
+
+  for (int i = 0; i < len; i++) buf[i] = Serial2.read();
+  return true;
+}
+
+bool bnoWrite(uint8_t reg, uint8_t val) {
+  while (Serial2.available()) Serial2.read();
+
+  Serial2.write(0xAA);
+  Serial2.write(0x00);
+  Serial2.write(reg);
+  Serial2.write(0x01);
+  Serial2.write(val);
+
+  unsigned long t = millis();
+  while (Serial2.available() < 2) {
+    if (millis() - t > 100) return false;
+  }
+
+  uint8_t hdr    = Serial2.read();
+  uint8_t status = Serial2.read();
+  return (hdr == 0xEE && status == 0x01);
+}
+
+bool bnoReadVector(uint8_t reg, float scale, float& x, float& y, float& z) {
+  uint8_t buf[6];
+  if (!bnoRead(reg, 6, buf)) return false;
+
+  x = (int16_t)(buf[0] | (buf[1] << 8)) / scale;
+  y = (int16_t)(buf[2] | (buf[3] << 8)) / scale;
+  z = (int16_t)(buf[4] | (buf[5] << 8)) / scale;
+  return true;
+}
+
+// ─────────────────────────────────────────────
+// IMU INIT
+// ─────────────────────────────────────────────
+bool bnoBegin() {
+  Serial2.begin(115200);
+  delay(1000);
+
+  uint8_t id;
+  for (int i = 0; i < 5; i++) {
+    if (bnoRead(BNO_REG_CHIP_ID, 1, &id) && id == BNO_CHIP_ID) break;
+    if (i == 4) return false;
+    delay(200);
+  }
+
+  bnoWrite(BNO_REG_OPR_MODE, BNO_OPR_MODE_CONFIG); delay(30);
+  bnoWrite(BNO_REG_PWR_MODE, BNO_PWR_MODE_NORMAL);  delay(10);
+  bnoWrite(BNO_REG_SYS_TRIGGER, 0x80);              delay(10);
+  bnoWrite(BNO_REG_OPR_MODE, BNO_OPR_MODE_NDOF);    delay(50);
+
+  return true;
+}
+
+// ─────────────────────────────────────────────
+// LIGHT SENSOR
+// ─────────────────────────────────────────────
+void configureSensor() {
+  tsl.setGain(TSL2591_GAIN_LOW);
+  tsl.setTiming(TSL2591_INTEGRATIONTIME_100MS);
+  gainIndex = 0;
+}
+
+// ***** NO-SD CHANGE ***** retried init instead of halting forever
+bool initLuxSensor(int attempts) {
+  for (int i = 0; i < attempts; i++) {
+    if (tsl.begin()) {
+      configureSensor();
+      return true;
+    }
+    delay(150);
+  }
+  return false;
+}
+
+// ***** SATURATION FIX ***** take one reading and store it for the LCD
+// (auto-gain settings are declared near the top of the file)
+void readLux() {
+  if (!luxOk) { luxValid = false; return; }
+
+  // Up to 3 tries: if the reading is saturated or too dark, change the gain
+  // and read again.
+  for (uint8_t attempt = 0; attempt < 3; attempt++) {
+    uint32_t lum  = tsl.getFullLuminosity();   // blocks ~110 ms
+    uint16_t ir   = lum >> 16;
+    uint16_t full = lum & 0xFFFF;
+    lastFull = full;
+    lastIr   = ir;
+
+    bool tooBright = (full >= TSL_HIGH_LIMIT || ir >= TSL_HIGH_LIMIT);
+    bool tooDark   = (full <  TSL_LOW_LIMIT);
+
+    if (AUTO_GAIN && tooBright && gainIndex > 0) {
+      gainIndex--;
+      tsl.setGain(GAIN_STEPS[gainIndex]);
+      continue;                                  // re-read at lower gain
+    }
+    if (AUTO_GAIN && tooDark && gainIndex < 2) {
+      gainIndex++;
+      tsl.setGain(GAIN_STEPS[gainIndex]);
+      continue;                                  // re-read at higher gain
+    }
+
+    if (full >= TSL_MAX_COUNT || ir >= TSL_MAX_COUNT || full == 0) {
+      // saturated even at the lowest gain (or no light at all)
+      luxValid = (full == 0);                    // 0 counts = genuinely dark
+      lastLux  = 0.0f;
+      lastFc   = 0.0f;
+      return;
+    }
+
+    float lux = tsl.calculateLux(full, ir);      // uses the current gain
+    if (lux < 0 || isnan(lux)) { luxValid = false; return; }
+
+    luxValid = true;
+    lastLux  = lux;
+    lastFc   = lux / fc_conversion;
+    return;
+  }
+  luxValid = false;    // couldn't settle on a gain this time; next read retries
+}
+
+// ***** VIS/IR CHANGE ***** two LCD rows:
+//   luxRow: "Lux:1234.5 FC:114.7"   (lux + foot-candles, visible light only)
+//   rawRow: "Vis:12345 IR:2345"     (visible and infrared counts, separately)
+// Visible = Full - IR, because the sensor's two channels are
+// "full spectrum" (visible + IR) and "IR only".
+void showLight(uint8_t luxRow, uint8_t rawRow) {
+  char line[21];
+  char luxStr[12];
+  char fcStr[12];
+
+  if (!luxOk) {
+    lcdRow(luxRow, "Lux: NO SENSOR");
+    lcdRow(rawRow, "Vis:--  IR:--");
+    return;
+  }
+
+  uint16_t visible = (lastFull > lastIr) ? (lastFull - lastIr) : 0;
+  snprintf(line, sizeof(line), "Vis:%u IR:%u", visible, lastIr);
+  lcdRow(rawRow, line);
+
+  if (!luxValid) {
+    lcdRow(luxRow, "Lux: TOO BRIGHT");
+    return;
+  }
+
+  // fewer decimals for big numbers so the row stays within 20 characters
+  dtostrf(lastLux, 0, (lastLux < 1000.0f) ? 1 : 0, luxStr);
+  dtostrf(lastFc,  0, (lastFc  < 100.0f)  ? 2 : ((lastFc < 1000.0f) ? 1 : 0), fcStr);
+  snprintf(line, sizeof(line), "Lux:%s FC:%s", luxStr, fcStr);
+  lcdRow(luxRow, line);
+}
+
+// ─────────────────────────────────────────────
+// KALMAN
+// ─────────────────────────────────────────────
+void initKalman(double lat, double lon) {
+  originLat = lat;
+  originLon = lon;
+
+  kf.x = 0;  kf.y = 0;
+  kf.vx = 0; kf.vy = 0;
+
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      P[i][j] = (i == j) ? 1.0f : 0.0f;
+
+  lastLogX = 0;
+  lastLogY = 0;
+
+  kfInitialized = true;
+  lastIMUTime   = millis();
+
+  setLED(gps_red, gps_green, "GREEN");
+  Serial.println(F("KF origin set"));
+}
+
+float getStateByIndex(int measIndex) {
+  if (measIndex == 0) return kf.x;
+  if (measIndex == 1) return kf.y;
+  if (measIndex == 2) return kf.vx;
+  return kf.vy;
+}
+
+void kalmanUpdateScalar(int measIndex, float z, float R) {
+  float hx = getStateByIndex(measIndex);
+  float y = z - hx;
+
+  float S = P[measIndex][measIndex] + R;
+  if (S <= 0.0f) return;
+
+  float K[4];
+  for (int i = 0; i < 4; i++) K[i] = P[i][measIndex] / S;
+
+  kf.x  += K[0] * y;
+  kf.y  += K[1] * y;
+  kf.vx += K[2] * y;
+  kf.vy += K[3] * y;
+
+  float Pold[4][4];
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      Pold[i][j] = P[i][j];
+
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      P[i][j] = Pold[i][j] - K[i] * Pold[measIndex][j];
+}
+
+void kalmanPredict(float linXForward, float headingRad) {
+  if (!kfInitialized) return;
+
+  unsigned long now = millis();
+  float dt = (now - lastIMUTime) / 1000.0f;
+  lastIMUTime = now;
+
+  if (dt <= 0.0f || dt > 0.5f) return;
+
+  float ax = linXForward * cos(headingRad);   // north
+  float ay = linXForward * sin(headingRad);   // east
+
+  if (fabsf(linXForward) < 0.05f) {
+    ax = 0.0f;
+    ay = 0.0f;
+    kf.vx *= 0.85f;
+    kf.vy *= 0.85f;
+  }
+
+  kf.x  += kf.vx * dt + 0.5f * ax * dt * dt;
+  kf.y  += kf.vy * dt + 0.5f * ay * dt * dt;
+  kf.vx += ax * dt;
+  kf.vy += ay * dt;
+
+  float F[4][4] = {
+    {1.0f, 0.0f, dt,   0.0f},
+    {0.0f, 1.0f, 0.0f, dt  },
+    {0.0f, 0.0f, 1.0f, 0.0f},
+    {0.0f, 0.0f, 0.0f, 1.0f}
+  };
+
+  float Q[4][4] = {
+    {Q_POS * dt * dt, 0, 0, 0},
+    {0, Q_POS * dt * dt, 0, 0},
+    {0, 0, Q_VEL * dt, 0},
+    {0, 0, 0, Q_VEL * dt}
+  };
+
+  float FP[4][4];
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++) {
+      FP[i][j] = 0.0f;
+      for (int k = 0; k < 4; k++) FP[i][j] += F[i][k] * P[k][j];
+    }
+
+  float Pnew[4][4];
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++) {
+      Pnew[i][j] = 0.0f;
+      for (int k = 0; k < 4; k++) Pnew[i][j] += FP[i][k] * F[j][k];
+      Pnew[i][j] += Q[i][j];
+    }
+
+  for (int i = 0; i < 4; i++)
+    for (int j = 0; j < 4; j++)
+      P[i][j] = Pnew[i][j];
+}
+
+void kalmanUpdateGPS(double lat, double lon, bool useVel, float speedKnots, float courseDeg) {
+  if (!kfInitialized) {
+    initKalman(lat, lon);
+    lastGoodGPSFixTime = millis();
+    return;
+  }
+
+  double mPerDegLat = 111111.0;
+  double mPerDegLon = 111111.0 * cos(originLat * PI / 180.0);
+
+  float zx = (float)((lat - originLat) * mPerDegLat);
+  float zy = (float)((lon - originLon) * mPerDegLon);
+
+  kalmanUpdateScalar(0, zx, R_GPS_POS);
+  kalmanUpdateScalar(1, zy, R_GPS_POS);
+  lastGoodGPSFixTime = millis();
+
+  if (!useVel) return;
+
+  float speedMps = speedKnots * KNOTS_TO_MPS;
+  if (speedMps < MIN_GPS_VEL_FUSE_MPS) return;
+  float courseRad = courseDeg * PI / 180.0f;
+
+  kalmanUpdateScalar(2, speedMps * cos(courseRad), R_GPS_VEL);
+  kalmanUpdateScalar(3, speedMps * sin(courseRad), R_GPS_VEL);
+}
+
+void getLatLon(double& lat, double& lon) {
+  double mPerDegLat = 111111.0;
+  double mPerDegLon = 111111.0 * cos(originLat * PI / 180.0);
+
+  lat = originLat + (kf.x / mPerDegLat);
+  lon = originLon + (kf.y / mPerDegLon);
+}
+
+// ─────────────────────────────────────────────
+// SETUP
+// ─────────────────────────────────────────────
+void setup() {
+  Serial.begin(9600);
+  Wire.begin();
+  delay(1000);
+
+  pinMode(gps_red,   OUTPUT);
+  pinMode(gps_green, OUTPUT);
+  pinMode(lux_red,   OUTPUT);
+  pinMode(lux_green, OUTPUT);
+  pinMode(imu_red,   OUTPUT);
+  pinMode(imu_green, OUTPUT);
+  setLED(gps_red, gps_green, "RED");
+  setLED(lux_red, lux_green, "RED");
+  setLED(imu_red, imu_green, "RED");
+
+  pinMode(BTN_SLEEP,      INPUT_PULLUP);
+  pinMode(BTN_LOG_TOGGLE, INPUT_PULLUP);
+  pinMode(BTN_FORCE_LOG,  INPUT_PULLUP);
+
+  // ── LCD ─────────────────────────────────────────────────────────────
+  Serial.println(F("LCD STARTUP"));
+  lcd.init();
+  lcd.backlight();
+  lcd.display();
+  lcd.home();
+
+  // ── IMU ─────────────────────────────────────────────────────────────
+  lcd.setCursor(0, 0); lcd.print("IMU: ");
+  Serial.println(F("IMU CHECK"));
+  if (!bnoBegin()) {
+    Serial.println(F("IMU FAIL - halting"));
+    lcd.print("FAIL - HALTED");
+    setLED(imu_red, imu_green, "RED");
+    while (1) ;
+  }
+  Serial.println(F("IMU found"));
+  lcd.print("PASS");
+  setLED(imu_red, imu_green, "GREEN");
+
+  // ── GPS ─────────────────────────────────────────────────────────────
+  lcd.setCursor(0, 1); lcd.print("GPS: ");
+  Serial.println(F("GPS CHECK"));
+  GPS.begin(9600);
+  delay(500);
+  GPS.sendCommand("$PMTK251,38400*27");
+  delay(500);
+  GPS.begin(38400);
+  GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
+  GPS.sendCommand(PMTK_SET_NMEA_UPDATE_10HZ);
+  GPS.sendCommand(PGCMD_ANTENNA);
+  delay(1000);
+  Serial.println(F("GPS OK"));
+  lcd.print("PASS");
+  setLED(gps_red, gps_green, "GREEN");
+
+  // ── Light sensor ────────────────────────────────────────────────────
+  // ***** NO-SD CHANGE ***** no halt; keeps retrying in loop() if missing
+  lcd.setCursor(0, 2); lcd.print("LUX: ");
+  Serial.println(F("LIGHT SENSOR CHECK"));
+  luxOk = initLuxSensor(5);
+  if (luxOk) {
+    Serial.println(F("TSL2591 found"));
+    lcd.print("PASS");
+    setLED(lux_red, lux_green, "GREEN");
+  } else {
+    Serial.println(F("TSL2591 not found - will keep retrying"));
+    lcd.print("NOT FOUND");
+    setLED(lux_red, lux_green, "RED");
+  }
+  lastLuxRetry = millis();
+
+  // ***** NO-SD CHANGE ***** SD check removed
+  lcd.setCursor(0, 3); lcd.print("SD:  NOT USED");
+
+  // Start background GPS reading now that every I2C device is set up
+  OCR0A = 0xAF;
+  TIMSK0 |= _BV(OCIE0A);
+  gpsSetupTime = millis();
+
+  delay(2500);
+  lcd.clear();
+
+  // CSV header for Serial Monitor output
+  Serial.println(F("date,time_utc,lux,fc,visible,ir,lat,lon"));
+  Serial.println(F("STARTING LOOP..."));
+}
+
+// ─────────────────────────────────────────────
+// LOOP
+// ─────────────────────────────────────────────
+void loop() {
+  // ── 0. Buttons ──────────────────────────────────────────────────────
+  if (digitalRead(BTN_SLEEP) == LOW) {
+    if (millis() - lastBtnSleepTime > debounceDelay) {
+      isSleeping = !isSleeping;
+      if (isSleeping) {
+        lcd.noBacklight();
+        lcd.clear();
+        setLED(gps_red, gps_green, "OFF");
+        setLED(lux_red, lux_green, "OFF");
+        setLED(imu_red, imu_green, "OFF");
+        Serial.println(F("Sleep Mode: ON"));
+      } else {
+        lcd.backlight();
+        lcd.clear();
+        setLED(lux_red, lux_green, luxOk ? "GREEN" : "RED");
+        lastIMUTime = millis();
+        Serial.println(F("Sleep Mode: OFF"));
+      }
+      lastBtnSleepTime = millis();
+    }
+  }
+
+  if (isSleeping) {
+    if (GPS.newNMEAreceived()) GPS.lastNMEA();   // discard while asleep
+    return;
+  }
+
+  if (digitalRead(BTN_LOG_TOGGLE) == LOW) {
+    if (millis() - lastBtnLogTime > debounceDelay) {
+      loggingEnabled = !loggingEnabled;
+      Serial.print(F("Serial logging: "));
+      Serial.println(loggingEnabled ? "ON" : "OFF");
+      lastBtnLogTime = millis();
+    }
+  }
+
+  if (digitalRead(BTN_FORCE_LOG) == LOW) {
+    if (millis() - lastBtnForceTime > debounceDelay) {
+      forceLog = true;
+      Serial.println(F("Force Log Requested"));
+      lastBtnForceTime = millis();
+    }
+  }
+
+  // ***** NO-SD CHANGE ***** retry a missing light sensor
+  if (!luxOk && millis() - lastLuxRetry >= LUX_RETRY_MS) {
+    lastLuxRetry = millis();
+    luxOk = initLuxSensor(1);
+    if (luxOk) Serial.println(F("TSL2591 recovered"));
+    setLED(lux_red, lux_green, luxOk ? "GREEN" : "RED");
+  }
+
+  // ── 1. GPS (bytes are read by the timer interrupt) ──────────────────
+  if (GPS.newNMEAreceived()) {
+    char nmea[128];
+    noInterrupts();
+    strncpy(nmea, GPS.lastNMEA(), sizeof(nmea) - 1);
+    interrupts();
+    nmea[sizeof(nmea) - 1] = '\0';
+
+    bool gotRMC = (strstr(nmea, "RMC") != NULL);
+
+    if (GPS.parse(nmea) && GPS.fix) {
+      lastFixTime = millis();
+      if (GPS.satellites >= MIN_SATS) {
+        kalmanUpdateGPS(GPS.latitudeDegrees, GPS.longitudeDegrees,
+                        gotRMC, GPS.speed, GPS.angle);
+      }
+    }
+  }
+
+  bool recentFix     = (lastFixTime > 0) && (millis() - lastFixTime <= 30000);
+  bool recentlySetup = (millis() - gpsSetupTime <= 30000);
+
+  if (recentFix) {
+    if (GPS.satellites < MIN_SATS) setLED(gps_red, gps_green, "YELLOW");
+    else                           setLED(gps_red, gps_green, "GREEN");
+  } else if (recentlySetup) {
+    setLED(gps_red, gps_green, "GREEN");
+  } else {
+    setLED(gps_red, gps_green, "RED");
+  }
+
+  // ── 2. Light reading (every 500 ms) ─────────────────────────────────
+  // ***** NO-SD CHANGE ***** lux is read on a timer, not only every 5 ft
+  bool luxUpdated = false;
+  if (millis() - lastLuxRead >= LUX_UPDATE_MS) {
+    readLux();
+    lastLuxRead = millis();
+    luxUpdated  = true;
+  }
+
+  // ── 3. Before the first GPS fix: show search status + live lux ──────
+  if (!kfInitialized) {
+    if (luxUpdated) {
+      char line[21];
+      // ***** VIS/IR CHANGE *****
+      //   Row 0: GPS Sats:5 Gain:25x
+      //   Row 1: Lux:1234.5 FC:114.7
+      //   Row 2: Vis:12345 IR:2345
+      //   Row 3: Waiting for GPS...
+      snprintf(line, sizeof(line), "GPS Sats:%d Gain:%s",
+               (int)GPS.satellites, GAIN_NAMES[gainIndex]);
+      lcdRow(0, line);
+      showLight(1, 2);
+      lcdRow(3, "Waiting for GPS...");
+
+      uint16_t visible = (lastFull > lastIr) ? (lastFull - lastIr) : 0;
+      Serial.print(F("raw full=")); Serial.print(lastFull);
+      Serial.print(F(" ir="));      Serial.print(lastIr);
+      Serial.print(F(" visible=")); Serial.print(visible);
+      Serial.print(F(" gain="));    Serial.print(GAIN_NAMES[gainIndex]);
+      Serial.print(F(" lux="));     Serial.println(lastLux, 1);
+    }
+    forceLog = false;
+    return;
+  }
+
+  // ── 4. EKF predict using IMU ────────────────────────────────────────
+  float linX, linY, linZ;
+  float eulX = 0, eulY = 0, eulZ = 0;
+
+  bool imuOk = bnoReadVector(BNO_REG_LIN_ACC_X_LSB, 100.0f, linX, linY, linZ) &&
+               bnoReadVector(BNO_REG_EULER_H_LSB,   16.0f,  eulX, eulY, eulZ);
+  if (imuOk) {
+    setLED(imu_red, imu_green, "GREEN");
+    kalmanPredict(linX, eulX * PI / 180.0f);
+  } else {
+    setLED(imu_red, imu_green, "RED");
+  }
+
+  bool level = imuOk &&
+               fabsf(eulY) < levelTolerance &&
+               fabsf(eulZ) < levelTolerance;
+
+  double lat, lon;
+  getLatLon(lat, lon);
+
+  // ── 5. LCD (refreshes with every lux reading) ───────────────────────
+  //   Row 0: S:9 C:87%  [TILT]
+  //   Row 1: Lux:1234.5 FC:114.7
+  //   Row 2: Vis:12345 IR:2345
+  //   Row 3: 40.43069,-86.91537
+  if (luxUpdated) {
+    char line[21];
+    char latStr[12], lonStr[12];
+
+    float kfstdev    = sqrt(P[0][0] + P[1][1]);
+    float confidence = 100.0f * (1.0f - (kfstdev / 15.24f));
+    if (confidence < 0)   confidence = 0;
+    if (confidence > 100) confidence = 100;
+
+    snprintf(line, sizeof(line), "S:%d C:%d%%%s",
+             (int)GPS.satellites, (int)confidence, level ? "" : "  TILT");
+    lcdRow(0, line);
+
+    showLight(1, 2);
+
+    dtostrf(lat, 0, 5, latStr);
+    dtostrf(lon, 0, 5, lonStr);
+    snprintf(line, sizeof(line), "%s,%s", latStr, lonStr);
+    lcdRow(3, line);
+  }
+
+  // ── 6. Every 5 ft (or Force Log button): CSV line to Serial ─────────
+  // ***** NO-SD CHANGE ***** replaces the SD card write
+  float dist = distanceMeters(lastLogX, lastLogY, kf.x, kf.y);
+  if ((dist >= logTriggerDistance || forceLog) && level && luxOk && luxValid) {
+    if (loggingEnabled) {
+      Serial.print(GPS.day);   Serial.print("/");
+      Serial.print(GPS.month); Serial.print("/");
+      Serial.print(GPS.year);  Serial.print(",");
+
+      Serial.print(GPS.hour);  Serial.print(":");
+      if (GPS.minute  < 10) Serial.print("0");
+      Serial.print(GPS.minute); Serial.print(":");
+      if (GPS.seconds < 10) Serial.print("0");
+      Serial.print(GPS.seconds); Serial.print(",");
+
+      Serial.print(lastLux, 1); Serial.print(",");
+      Serial.print(lastFc, 2);  Serial.print(",");
+      Serial.print((lastFull > lastIr) ? (lastFull - lastIr) : 0); Serial.print(",");
+      Serial.print(lastIr);     Serial.print(",");
+      Serial.print(lat, 6);     Serial.print(",");
+      Serial.println(lon, 6);
+    }
+    lastLogX = kf.x;
+    lastLogY = kf.y;
+    forceLog = false;
+  }
+}
