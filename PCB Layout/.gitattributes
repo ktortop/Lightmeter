@@ -1,0 +1,14 @@
+# keep fabrication and CAD files byte-for-byte
+*.gbr -text
+*.drl -text
+*.gbrjob -text
+*.step -text
+*.wrl -text
+*.kicad_pcb -text
+*.kicad_sch -text
+*.kicad_pro -text
+*.kicad_sym -text
+*.kicad_mod -text
+*.kicad_dru -text
+*-lib-table -text
+*.csv -text

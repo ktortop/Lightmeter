@@ -1,0 +1,1702 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-01T10:11:52",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'Arduino Mega 2560 (shield headers, board plugs on top)')",
+            "items": [
+                {
+                    "description": "Footprint A1",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "uuid": "9bea041a-2ac8-4605-8b12-a647e0beabec"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-Pad3V3))",
+            "items": [
+                {
+                    "description": "PTH pad 3V3 [<no net>] of A1",
+                    "pos": {
+                        "x": 35.56,
+                        "y": -2.54
+                    },
+                    "uuid": "718ca766-c2a3-4586-b87d-ebfb02708dba"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-ICSP_5V-Pad5V2))",
+            "items": [
+                {
+                    "description": "PTH pad 5V2 [<no net>] of A1",
+                    "pos": {
+                        "x": 66.167,
+                        "y": -30.48
+                    },
+                    "uuid": "c21f7a12-3b93-461c-8d22-c9f88c4d903d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA0))",
+            "items": [
+                {
+                    "description": "PTH pad A0 [<no net>] of A1",
+                    "pos": {
+                        "x": 50.8,
+                        "y": -2.54
+                    },
+                    "uuid": "c5ab6c7f-19be-4074-a114-326549703f37"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA1))",
+            "items": [
+                {
+                    "description": "PTH pad A1 [<no net>] of A1",
+                    "pos": {
+                        "x": 53.34,
+                        "y": -2.54
+                    },
+                    "uuid": "c7211794-4279-4e03-bb91-82321b562e38"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA2))",
+            "items": [
+                {
+                    "description": "PTH pad A2 [<no net>] of A1",
+                    "pos": {
+                        "x": 55.88,
+                        "y": -2.54
+                    },
+                    "uuid": "2abf6d2f-30df-4c15-be62-3cb749c78a94"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA3))",
+            "items": [
+                {
+                    "description": "PTH pad A3 [<no net>] of A1",
+                    "pos": {
+                        "x": 58.42,
+                        "y": -2.54
+                    },
+                    "uuid": "04e2e877-0349-40f3-b0a4-e28269bc4a4c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA4))",
+            "items": [
+                {
+                    "description": "PTH pad A4 [<no net>] of A1",
+                    "pos": {
+                        "x": 60.96,
+                        "y": -2.54
+                    },
+                    "uuid": "07bd11fe-201f-49b4-8d34-9949598cb1bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA5))",
+            "items": [
+                {
+                    "description": "PTH pad A5 [<no net>] of A1",
+                    "pos": {
+                        "x": 63.5,
+                        "y": -2.54
+                    },
+                    "uuid": "5be77599-b933-469f-ab92-a28121a522b0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA6))",
+            "items": [
+                {
+                    "description": "PTH pad A6 [<no net>] of A1",
+                    "pos": {
+                        "x": 66.04,
+                        "y": -2.54
+                    },
+                    "uuid": "609802a9-a01d-4622-94a4-932e37abb3c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA7))",
+            "items": [
+                {
+                    "description": "PTH pad A7 [<no net>] of A1",
+                    "pos": {
+                        "x": 68.58,
+                        "y": -2.54
+                    },
+                    "uuid": "eeaca566-e651-4732-b6be-198b8b36d7bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA8))",
+            "items": [
+                {
+                    "description": "PTH pad A8 [<no net>] of A1",
+                    "pos": {
+                        "x": 73.66,
+                        "y": -2.54
+                    },
+                    "uuid": "fa5e5195-607d-4e53-8f89-e9290ca29ddf"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA9))",
+            "items": [
+                {
+                    "description": "PTH pad A9 [<no net>] of A1",
+                    "pos": {
+                        "x": 76.2,
+                        "y": -2.54
+                    },
+                    "uuid": "70ef944d-3515-4e3c-b8a9-5ffab9d459d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA10))",
+            "items": [
+                {
+                    "description": "PTH pad A10 [<no net>] of A1",
+                    "pos": {
+                        "x": 78.74,
+                        "y": -2.54
+                    },
+                    "uuid": "bace3bab-bc90-4f46-9834-bec2bb9dffd8"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA11))",
+            "items": [
+                {
+                    "description": "PTH pad A11 [<no net>] of A1",
+                    "pos": {
+                        "x": 81.28,
+                        "y": -2.54
+                    },
+                    "uuid": "3c41f797-aca5-4245-98a4-7dad12c1660f"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA12))",
+            "items": [
+                {
+                    "description": "PTH pad A12 [<no net>] of A1",
+                    "pos": {
+                        "x": 83.82,
+                        "y": -2.54
+                    },
+                    "uuid": "696918cf-f5f3-4c6f-abf2-64ad1e4deb2b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA13))",
+            "items": [
+                {
+                    "description": "PTH pad A13 [<no net>] of A1",
+                    "pos": {
+                        "x": 86.36,
+                        "y": -2.54
+                    },
+                    "uuid": "17292c10-32e4-4e5d-a061-9ef2f8e33b85"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA14))",
+            "items": [
+                {
+                    "description": "PTH pad A14 [<no net>] of A1",
+                    "pos": {
+                        "x": 88.9,
+                        "y": -2.54
+                    },
+                    "uuid": "189c9513-c68c-433b-9641-25073cec7f8c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadA15))",
+            "items": [
+                {
+                    "description": "PTH pad A15 [<no net>] of A1",
+                    "pos": {
+                        "x": 91.44,
+                        "y": -2.54
+                    },
+                    "uuid": "89d85edd-8863-4f96-a9c6-30c65e4493a7"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadAREF))",
+            "items": [
+                {
+                    "description": "PTH pad AREF [<no net>] of A1",
+                    "pos": {
+                        "x": 23.876,
+                        "y": -50.8
+                    },
+                    "uuid": "6e4685b4-47c4-47d0-8719-79b94b7c3e09"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-D0{slash}RX0-PadD0))",
+            "items": [
+                {
+                    "description": "PTH pad D0 [<no net>] of A1",
+                    "pos": {
+                        "x": 63.5,
+                        "y": -50.8
+                    },
+                    "uuid": "fd761a86-3c56-43aa-90a4-4ba7768c7150"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-D1{slash}TX0-PadD1))",
+            "items": [
+                {
+                    "description": "PTH pad D1 [<no net>] of A1",
+                    "pos": {
+                        "x": 60.96,
+                        "y": -50.8
+                    },
+                    "uuid": "7175763f-d764-4232-acb4-c2a56dd29aa8"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD4))",
+            "items": [
+                {
+                    "description": "PTH pad D4 [<no net>] of A1",
+                    "pos": {
+                        "x": 53.34,
+                        "y": -50.8
+                    },
+                    "uuid": "45855260-1f49-4f13-b0d0-89ad6b87b344"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD7))",
+            "items": [
+                {
+                    "description": "PTH pad D7 [<no net>] of A1",
+                    "pos": {
+                        "x": 45.72,
+                        "y": -50.8
+                    },
+                    "uuid": "55d15c29-0088-46d7-a405-5fd2fdded5e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD13))",
+            "items": [
+                {
+                    "description": "PTH pad D13 [<no net>] of A1",
+                    "pos": {
+                        "x": 28.956,
+                        "y": -50.8
+                    },
+                    "uuid": "bd2cea21-28a7-4c67-9f03-a28fefd6516e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-D14{slash}TX3-PadD14))",
+            "items": [
+                {
+                    "description": "PTH pad D14 [<no net>] of A1",
+                    "pos": {
+                        "x": 68.58,
+                        "y": -50.8
+                    },
+                    "uuid": "fa7beea6-208c-4dce-ad40-36d4b770471b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-D15{slash}RX3-PadD15))",
+            "items": [
+                {
+                    "description": "PTH pad D15 [<no net>] of A1",
+                    "pos": {
+                        "x": 71.12,
+                        "y": -50.8
+                    },
+                    "uuid": "33ea4c4a-5010-4905-9cfa-085398cfe62c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD22))",
+            "items": [
+                {
+                    "description": "PTH pad D22 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -48.26
+                    },
+                    "uuid": "536a751f-9c9f-4775-bf09-d4172592c68c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD23))",
+            "items": [
+                {
+                    "description": "PTH pad D23 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -48.26
+                    },
+                    "uuid": "1f2abc9a-52a6-4cf8-a4fd-9c82ad07b61f"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD24))",
+            "items": [
+                {
+                    "description": "PTH pad D24 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -45.72
+                    },
+                    "uuid": "02e0bc1d-e037-4b0c-a318-013fffa94564"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD25))",
+            "items": [
+                {
+                    "description": "PTH pad D25 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -45.72
+                    },
+                    "uuid": "fbf9fe4f-4542-4897-b376-cca9825d289c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD26))",
+            "items": [
+                {
+                    "description": "PTH pad D26 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -43.18
+                    },
+                    "uuid": "dd1e7420-8175-4ddf-9f67-6c0bdf07a56c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD27))",
+            "items": [
+                {
+                    "description": "PTH pad D27 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -43.18
+                    },
+                    "uuid": "f525cc3e-2c80-4635-94a7-6b3cf3a286b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD28))",
+            "items": [
+                {
+                    "description": "PTH pad D28 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -40.64
+                    },
+                    "uuid": "f42ef2ed-51d8-457b-aee5-e6f0dde856fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD29))",
+            "items": [
+                {
+                    "description": "PTH pad D29 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -40.64
+                    },
+                    "uuid": "85443b89-2ddf-4acc-acd9-7fa645b094ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD30))",
+            "items": [
+                {
+                    "description": "PTH pad D30 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -38.1
+                    },
+                    "uuid": "da72baf2-bbd9-44d9-a762-8a00353f8982"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD31))",
+            "items": [
+                {
+                    "description": "PTH pad D31 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -38.1
+                    },
+                    "uuid": "f964c50c-98eb-42da-8e4c-e2f0f6a5338e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD32))",
+            "items": [
+                {
+                    "description": "PTH pad D32 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -35.56
+                    },
+                    "uuid": "b8550cef-05b0-4783-8e01-92aec330598e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD33))",
+            "items": [
+                {
+                    "description": "PTH pad D33 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -35.56
+                    },
+                    "uuid": "485ed832-e14b-4b8d-8fb2-dc2bf5ac0e82"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD34))",
+            "items": [
+                {
+                    "description": "PTH pad D34 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -33.02
+                    },
+                    "uuid": "9b06665e-0a7a-460d-a249-758c9dac6308"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD35))",
+            "items": [
+                {
+                    "description": "PTH pad D35 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -33.02
+                    },
+                    "uuid": "e93546eb-2d36-4de4-aff9-342a7a75d3d5"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD36))",
+            "items": [
+                {
+                    "description": "PTH pad D36 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -30.48
+                    },
+                    "uuid": "b700f04a-220d-457c-b34f-98eb26056c6e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD37))",
+            "items": [
+                {
+                    "description": "PTH pad D37 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -30.48
+                    },
+                    "uuid": "40760e9a-74c4-44c5-8291-77a0cbefba51"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD38))",
+            "items": [
+                {
+                    "description": "PTH pad D38 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -27.94
+                    },
+                    "uuid": "31fddd69-07bc-47e3-b0b8-497527a94663"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD39))",
+            "items": [
+                {
+                    "description": "PTH pad D39 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -27.94
+                    },
+                    "uuid": "97677513-c7bd-40af-9553-c32f106b73af"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD40))",
+            "items": [
+                {
+                    "description": "PTH pad D40 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -25.4
+                    },
+                    "uuid": "edf391a1-6b30-4017-b426-c63a4cee5b77"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD41))",
+            "items": [
+                {
+                    "description": "PTH pad D41 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -25.4
+                    },
+                    "uuid": "3735e0c0-f93c-4ee0-a26f-53036e66a9dc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD42))",
+            "items": [
+                {
+                    "description": "PTH pad D42 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -22.86
+                    },
+                    "uuid": "9a917d89-7b17-450d-867e-76924c42c52e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD43))",
+            "items": [
+                {
+                    "description": "PTH pad D43 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -22.86
+                    },
+                    "uuid": "78ac453b-1339-4b4b-b396-e8cfb586590a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD44))",
+            "items": [
+                {
+                    "description": "PTH pad D44 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -20.32
+                    },
+                    "uuid": "a22bb37d-5f40-403b-b88e-858e19d5b267"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD45))",
+            "items": [
+                {
+                    "description": "PTH pad D45 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -20.32
+                    },
+                    "uuid": "90771d7b-16de-4ac9-8470-569374546121"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD46))",
+            "items": [
+                {
+                    "description": "PTH pad D46 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -17.78
+                    },
+                    "uuid": "689b6d86-4c7a-45a2-ab9b-90507b2f60f9"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD47))",
+            "items": [
+                {
+                    "description": "PTH pad D47 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -17.78
+                    },
+                    "uuid": "a8bbaee3-1b94-4181-95fc-5aaccbc2b6f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD48))",
+            "items": [
+                {
+                    "description": "PTH pad D48 [<no net>] of A1",
+                    "pos": {
+                        "x": 93.98,
+                        "y": -15.24
+                    },
+                    "uuid": "45513b14-9264-45c4-b7e4-a122b4037657"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadD49))",
+            "items": [
+                {
+                    "description": "PTH pad D49 [<no net>] of A1",
+                    "pos": {
+                        "x": 96.52,
+                        "y": -15.24
+                    },
+                    "uuid": "0c183aa8-b26d-4edc-8224-6ec2a88360d2"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-ICSP_GND-PadGND4))",
+            "items": [
+                {
+                    "description": "PTH pad GND4 [<no net>] of A1",
+                    "pos": {
+                        "x": 66.167,
+                        "y": -25.4
+                    },
+                    "uuid": "2871ebe7-08cf-4545-88a1-8044cc8eeedc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-IOREF-PadIORF))",
+            "items": [
+                {
+                    "description": "PTH pad IORF [<no net>] of A1",
+                    "pos": {
+                        "x": 30.48,
+                        "y": -2.54
+                    },
+                    "uuid": "acd676a7-cabe-42cf-91ae-ef7ec3704bd0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-ICSP_MISO-PadMISO))",
+            "items": [
+                {
+                    "description": "PTH pad MISO [<no net>] of A1",
+                    "pos": {
+                        "x": 63.627,
+                        "y": -30.48
+                    },
+                    "uuid": "131216cc-43c2-42f2-b5d9-3ea9b5aa186e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-ICSP_MOSI-PadMOSI))",
+            "items": [
+                {
+                    "description": "PTH pad MOSI [<no net>] of A1",
+                    "pos": {
+                        "x": 66.167,
+                        "y": -27.94
+                    },
+                    "uuid": "b45efce1-c470-455a-ba36-bebd60830929"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-RESET-PadRST1))",
+            "items": [
+                {
+                    "description": "PTH pad RST1 [<no net>] of A1",
+                    "pos": {
+                        "x": 33.02,
+                        "y": -2.54
+                    },
+                    "uuid": "0fcf2ce6-334a-4632-b663-d9cb73f20c60"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-ICSP_RESET-PadRST2))",
+            "items": [
+                {
+                    "description": "PTH pad RST2 [<no net>] of A1",
+                    "pos": {
+                        "x": 63.627,
+                        "y": -25.4
+                    },
+                    "uuid": "8c547b3b-6756-4b55-acb7-4367c379fa4f"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-ICSP_SCK-PadSCK))",
+            "items": [
+                {
+                    "description": "PTH pad SCK [<no net>] of A1",
+                    "pos": {
+                        "x": 63.627,
+                        "y": -27.94
+                    },
+                    "uuid": "59de131e-af27-47fe-b6d3-b2f6ac0ae23a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-SCL_(hdr_dup)-PadSCL))",
+            "items": [
+                {
+                    "description": "PTH pad SCL [<no net>] of A1",
+                    "pos": {
+                        "x": 18.796,
+                        "y": -50.8
+                    },
+                    "uuid": "a0e41998-a3da-4735-84c6-69402bff8c16"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-SDA_(hdr_dup)-PadSDA))",
+            "items": [
+                {
+                    "description": "PTH pad SDA [<no net>] of A1",
+                    "pos": {
+                        "x": 21.336,
+                        "y": -50.8
+                    },
+                    "uuid": "b8875c50-ad3c-4366-9e5c-3d7b32d1a96c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(A1-PadVIN))",
+            "items": [
+                {
+                    "description": "PTH pad VIN [<no net>] of A1",
+                    "pos": {
+                        "x": 45.72,
+                        "y": -2.54
+                    },
+                    "uuid": "a7746cc4-468d-41c6-959f-69208ead1df1"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LDO input')",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 52.0,
+                        "y": -74.5
+                    },
+                    "uuid": "5eebef6a-933e-4496-8592-9787491590cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LDO output')",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 64.0,
+                        "y": -74.5
+                    },
+                    "uuid": "8dd23b27-97b3-479d-9a2e-68607a1b8a0b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'U1 decoupling')",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 78.0,
+                        "y": -66.0
+                    },
+                    "uuid": "dac2549c-fc5c-42be-8052-d72ba65a41ed"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'SD VDD decoupling')",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -71.0
+                    },
+                    "uuid": "5af3abd3-9edf-4c77-8644-3d2d3b666a85"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: '5V bulk')",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 48.0,
+                        "y": -82.0
+                    },
+                    "uuid": "bc779166-8e0c-455f-b46b-cf00e286c2c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'BTN sleep debounce')",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -9.0
+                    },
+                    "uuid": "f4c4219d-e76f-4242-bf7e-4e8a76d18ef7"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'BTN log debounce')",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -12.5
+                    },
+                    "uuid": "9416076c-1f9a-4b58-bfee-8dd1cff976d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'BTN force debounce')",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -16.0
+                    },
+                    "uuid": "cf81f382-a4d5-4019-b219-99989e61699d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'GPS breakout soldered to board via 1x9 header')",
+            "items": [
+                {
+                    "description": "Footprint GPS1",
+                    "pos": {
+                        "x": 27.0,
+                        "y": -27.5
+                    },
+                    "uuid": "99d50e12-8a47-4183-b202-69fe979b123c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(GPS1-3.3V_out-Pad3V3))",
+            "items": [
+                {
+                    "description": "PTH pad 3V3 [<no net>] of GPS1",
+                    "pos": {
+                        "x": 16.84,
+                        "y": -12.387
+                    },
+                    "uuid": "219582d2-2b39-4442-9546-36f591645e85"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(GPS1-PadEN))",
+            "items": [
+                {
+                    "description": "PTH pad EN [<no net>] of GPS1",
+                    "pos": {
+                        "x": 19.38,
+                        "y": -12.387
+                    },
+                    "uuid": "1aaec7cf-7f7e-42ff-9c92-baba206287d4"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(GPS1-PadFIX))",
+            "items": [
+                {
+                    "description": "PTH pad FIX [<no net>] of GPS1",
+                    "pos": {
+                        "x": 24.46,
+                        "y": -12.387
+                    },
+                    "uuid": "fffbde06-9e45-4163-ae90-9db5c74504ed"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(GPS1-PadPPS))",
+            "items": [
+                {
+                    "description": "PTH pad PPS [<no net>] of GPS1",
+                    "pos": {
+                        "x": 37.16,
+                        "y": -12.387
+                    },
+                    "uuid": "aad08f1e-132c-42cd-8bbc-e4f42b84163d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(GPS1-PadVBAT))",
+            "items": [
+                {
+                    "description": "PTH pad VBAT [<no net>] of GPS1",
+                    "pos": {
+                        "x": 21.92,
+                        "y": -12.387
+                    },
+                    "uuid": "11b38612-da0c-4a12-a16a-28627fa75ccd"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 16.0,
+                        "y": -84.5
+                    },
+                    "uuid": "9abecab4-d2ed-4530-a19f-86aab7ed355a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 98.0,
+                        "y": -60.0
+                    },
+                    "uuid": "7b7a4fd5-796b-4ef7-bee6-6d747d9b2cb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'IMU breakout soldered to board, UART mode')",
+            "items": [
+                {
+                    "description": "Footprint IMU1",
+                    "pos": {
+                        "x": 51.5,
+                        "y": -27.0
+                    },
+                    "uuid": "61361365-83b5-4221-8416-fa14b26bf2d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(IMU1-PadADR))",
+            "items": [
+                {
+                    "description": "PTH pad ADR [<no net>] of IMU1",
+                    "pos": {
+                        "x": 42.61,
+                        "y": -30.81
+                    },
+                    "uuid": "41c3d03e-0ede-45e0-9d7e-3bc0b0fa4a30"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(IMU1-PadINT))",
+            "items": [
+                {
+                    "description": "PTH pad INT [<no net>] of IMU1",
+                    "pos": {
+                        "x": 42.61,
+                        "y": -28.27
+                    },
+                    "uuid": "1dd07e00-6c2d-46f7-a5d5-a8a115a4bfc0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(IMU1-PadPS0))",
+            "items": [
+                {
+                    "description": "PTH pad PS0 [<no net>] of IMU1",
+                    "pos": {
+                        "x": 42.61,
+                        "y": -23.19
+                    },
+                    "uuid": "716c777b-6c69-408f-b6a1-331c36ff25c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(IMU1-PadRST))",
+            "items": [
+                {
+                    "description": "PTH pad RST [<no net>] of IMU1",
+                    "pos": {
+                        "x": 60.39,
+                        "y": -33.35
+                    },
+                    "uuid": "5cdee45d-d0b5-470d-bfc9-709b024bc805"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'microSD socket, push-push')",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 89.0,
+                        "y": -79.0
+                    },
+                    "uuid": "884297ad-6bcc-4af8-a800-7da5af6c9c74"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(J1-DET_A-Pad10))",
+            "items": [
+                {
+                    "description": "Pad 10 [<no net>] of J1 on F.Cu",
+                    "pos": {
+                        "x": 95.825,
+                        "y": -81.775
+                    },
+                    "uuid": "15babc07-dcf6-46cd-b599-432893e5482a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 4p: GND 5V SDA SCL')",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 16.5,
+                        "y": -60.0
+                    },
+                    "uuid": "2cb7c8cf-44e3-40f2-a4ff-f8b1842051ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 4p: GND 5V SDA SCL')",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 30.5,
+                        "y": -60.0
+                    },
+                    "uuid": "d9356b9f-8819-4fd9-9d98-4e2a5faddc8f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 3p: 5V(anode) R G')",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 44.5,
+                        "y": -60.0
+                    },
+                    "uuid": "718b3be2-d84a-4e4d-bc80-25d6925ac9e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 3p: 5V(anode) R G')",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 56.0,
+                        "y": -60.0
+                    },
+                    "uuid": "7466d533-dbd0-4ed8-a654-30b9a8d36d2e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 3p: 5V(anode) R G')",
+            "items": [
+                {
+                    "description": "Footprint J6",
+                    "pos": {
+                        "x": 67.5,
+                        "y": -60.0
+                    },
+                    "uuid": "e8c30212-cbb5-4ca9-860f-3ab679917864"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 3p: GND SW 5V(lamp)')",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 16.5,
+                        "y": -76.0
+                    },
+                    "uuid": "76a1f4e3-b0a1-4bac-a369-f4644786d9f0"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 3p: GND SW 5V(lamp)')",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 28.5,
+                        "y": -76.0
+                    },
+                    "uuid": "3bb34be3-b444-4fdf-b8bb-2ffb529ad894"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'JST-XH 3p: GND SW 5V(lamp)')",
+            "items": [
+                {
+                    "description": "Footprint J9",
+                    "pos": {
+                        "x": 40.5,
+                        "y": -76.0
+                    },
+                    "uuid": "966768d7-9f28-464e-a3fd-d307f6b29be6"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint JP1",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -22.0
+                    },
+                    "uuid": "abbaf9a3-0fae-450e-b5f4-e464c9b4c2a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'cut to leave IMU in I2C mode')",
+            "items": [
+                {
+                    "description": "Footprint JP1",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -22.0
+                    },
+                    "uuid": "abbaf9a3-0fae-450e-b5f4-e464c9b4c2a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LED1 red series')",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -9.0
+                    },
+                    "uuid": "a20f5b77-e2c8-4211-93e0-7b7f89b4a72c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LED1 green series')",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -12.5
+                    },
+                    "uuid": "d7efc7d2-6183-484c-8f26-9866d465b916"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LED2 red series')",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -16.0
+                    },
+                    "uuid": "c61e7288-6d69-498a-aa07-7a42df824c6d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LED2 green series')",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -19.5
+                    },
+                    "uuid": "d919c800-cb1c-4a46-83dc-07e2be0e6c97"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LED3 red series')",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -23.0
+                    },
+                    "uuid": "aa1e2ab3-1eb1-4f92-a470-97f4210ecebc"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'LED3 green series')",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 76.0,
+                        "y": -26.5
+                    },
+                    "uuid": "6cc77e96-a0dc-4aa4-ad40-b0094d420f5b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'SD CS pull-up')",
+            "items": [
+                {
+                    "description": "Footprint R7",
+                    "pos": {
+                        "x": 70.0,
+                        "y": -70.0
+                    },
+                    "uuid": "78a571b2-ea83-4ac2-9362-6cf86ede5818"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'SD DAT0/MISO pull-up')",
+            "items": [
+                {
+                    "description": "Footprint R8",
+                    "pos": {
+                        "x": 70.0,
+                        "y": -73.5
+                    },
+                    "uuid": "7f5b40c1-7dfa-4cef-be6b-e02298230738"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'SD DAT1 pull-up')",
+            "items": [
+                {
+                    "description": "Footprint R9",
+                    "pos": {
+                        "x": 70.0,
+                        "y": -77.0
+                    },
+                    "uuid": "0e381a99-8d54-4f9d-beb9-4f709a0382c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: 'SD DAT2 pull-up')",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 70.0,
+                        "y": -80.5
+                    },
+                    "uuid": "5a22a330-f6db-4ad9-bef7-7adff47a1e96"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: '5V->3.3V level shifter for SD MOSI/SCK/CS')",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -60.5
+                    },
+                    "uuid": "2caacd80-0efd-4e48-957b-f3ae26d22a2b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Pad missing net given by schematic (unconnected-(U1-Pad11))",
+            "items": [
+                {
+                    "description": "Pad 11 [<no net>] of U1 on F.Cu",
+                    "pos": {
+                        "x": 84.0,
+                        "y": -62.975
+                    },
+                    "uuid": "f733647d-0220-479d-b7f9-955973ae576a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Field 'Description' differs (PCB: '', Schematic: '3.3V LDO for microSD')",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 58.0,
+                        "y": -80.0
+                    },
+                    "uuid": "ffc2a10c-f891-46e4-aff5-87bb86b1a094"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        }
+    ],
+    "source": "LightMeter_MegaShield.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

@@ -1,0 +1,218 @@
+(footprint "Adafruit_UltimateGPS_v3"
+  (version 20240108)
+  (generator "gen_sch")
+  (layer "F.Cu")
+  (descr "Adafruit Ultimate GPS Breakout v3 (PID 746) soldered on 1x9 0.1in header; M2.5 holes")
+  (tags "adafruit breakout")
+  (property "Reference" "REF**"
+    (at 0 -19 0)
+    (layer "F.SilkS")
+    (uuid "26f55b91-620d-4a50-b0d2-52f3aee0ae8a")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Value" "Adafruit_UltimateGPS_v3"
+    (at 0 19 0)
+    (layer "F.Fab")
+    (uuid "2ee6378d-4472-4207-b56b-a252f8985728")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Footprint" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "44d6f158-96a5-478f-b09f-e4032cc260d2")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Datasheet" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "d714fc66-9e65-44f2-8127-792fc073c9a9")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (property "Description" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "e5f861b3-fa7a-45ea-bf3f-386343131dfa")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15)
+      )
+    )
+  )
+  (attr through_hole)
+  (fp_rect
+    (start -12.7 -17.145)
+    (end 12.7 17.145)
+    (stroke
+      (width 0.15)
+      (type default)
+    )
+    (fill none)
+    (layer "F.SilkS")
+    (uuid "a740963f-993d-4974-8567-8d8ca4cc1ce2")
+  )
+  (fp_rect
+    (start -12.7 -17.145)
+    (end 12.7 17.145)
+    (stroke
+      (width 0.1)
+      (type default)
+    )
+    (fill none)
+    (layer "F.Fab")
+    (uuid "2c6b412a-1568-43b1-a036-5d02c507eae0")
+  )
+  (fp_rect
+    (start -13.2 -17.645)
+    (end 13.2 17.645)
+    (stroke
+      (width 0.05)
+      (type default)
+    )
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "a292d820-b6af-40f4-98ba-49b02fece015")
+  )
+  (fp_text user "GPS v3  antenna UP"
+    (at 0 -6 0)
+    (layer "F.SilkS")
+    (uuid "e0a970f4-18e9-4be0-8641-05203a966d44")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.12)
+      )
+    )
+  )
+  (fp_text user "PPS"
+    (at 10.16 12.6 0)
+    (layer "F.SilkS")
+    (uuid "456d9f4c-d495-4618-8656-7ad9a3bf0ff7")
+    (effects
+      (font
+        (size 0.8 0.8)
+        (thickness 0.12)
+      )
+    )
+  )
+  (fp_text user "3V3"
+    (at -10.16 12.6 0)
+    (layer "F.SilkS")
+    (uuid "e9243c93-9474-4df4-a6fa-ac15dd991f76")
+    (effects
+      (font
+        (size 0.8 0.8)
+        (thickness 0.12)
+      )
+    )
+  )
+  (pad "PPS" thru_hole rect
+    (at 10.16 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "0106a4fa-dad3-4064-b6dc-d6761f0b71ba")
+  )
+  (pad "VIN" thru_hole circle
+    (at 7.62 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "2272e81a-62e9-4bd7-838e-306e61d9406c")
+  )
+  (pad "GND" thru_hole circle
+    (at 5.08 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "670fd7d1-1cc1-48f0-8618-8e12866f7548")
+  )
+  (pad "RX" thru_hole circle
+    (at 2.54 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "048fce62-e200-47ec-baf3-492cb34f9b9b")
+  )
+  (pad "TX" thru_hole circle
+    (at 0 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "d740d805-2fb2-4c75-a86c-bc38701ee31e")
+  )
+  (pad "FIX" thru_hole circle
+    (at -2.54 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "0cef02a6-8152-4ee4-bb87-b697f49bd8b7")
+  )
+  (pad "VBAT" thru_hole circle
+    (at -5.08 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "de5664c6-4cc7-47b5-976c-abebf82db47a")
+  )
+  (pad "EN" thru_hole circle
+    (at -7.62 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "5e6f8a82-627d-4457-879e-b16bfdbb3b6a")
+  )
+  (pad "3V3" thru_hole circle
+    (at -10.16 15.113)
+    (size 1.7 1.7)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (remove_unused_layers no)
+    (uuid "7a6f4f60-7250-4518-823a-3a7d8ffedb76")
+  )
+  (pad "" np_thru_hole circle
+    (at -10.16 -14.605)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+    (uuid "7320850c-af5c-441d-9b4d-0b8918b16ff6")
+  )
+  (pad "" np_thru_hole circle
+    (at 10.16 -14.605)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+    (uuid "141af027-8bbc-4e49-aa95-0261edfe24d2")
+  )
+)
