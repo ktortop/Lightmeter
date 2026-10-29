@@ -199,8 +199,8 @@ def text(s, x, y, size=2.0):
     items.append([S("text"), s, [S("exclude_from_sim"), S("no")], [S("at"), x, y, 0],
                   [S("effects"), [S("font"), [S("size"), size, size]], [S("justify"), S("left"), S("bottom")]], [S("uuid"), U()]])
 text("EVEI LIGHT METER - Arduino Mega 2560 carrier shield", 20, 20, 3.5)
-text("Pin map from latest_version_of_lightmeter.ino: SD CS=D53 (HW SPI 50/51/52), GPS=Serial1 (D18/D19), IMU=Serial2 (D16/D17), I2C=D20/D21,\n"
-     "LEDs common-anode to 5V, active LOW. setLED(GREEN) pulls the *_red pin LOW, so *_red pins drive the GREEN die: GPS G=D4 R=D7, LUX G=D5 R=D6, IMU G=D8 R=D9, LUX D5/D6, IMU D8/D9; buttons to GND with INPUT_PULLUP: sleep D10, log toggle D11, force log D12.", 20, 28, 1.5)
+text("Pin map from the team sketch (Lightmeter_Week8.ino): SD CS=D53 (HW SPI 50/51/52), GPS=Serial1 (D18/D19), IMU=Serial2 (D16/D17), I2C=D20/D21,\n"
+     "LEDs common-cathode to GND, active HIGH (setLED() in Week 5-8 sketches: YELLOW = both HIGH): GPS R=D4 G=D7, LUX R=D5 G=D6, IMU R=D8 G=D9; buttons to GND with INPUT_PULLUP: sleep D10, log toggle D11, force log D12.", 20, 28, 1.5)
 text("microSD: on-board socket, 3.3V LDO, 74LVC125 shifts MOSI/SCK/CS 5V->3.3V; MISO (3.3V) goes straight to D50 (same as Adafruit 254 breakout).", 130, 20, 1.5)
 text("IMU in UART mode: PS1 tied to breakout 3Vo via JP1. BNO SDA pin = UART TX -> Mega RX2 (D17); BNO SCL pin = UART RX -> Mega TX2 (D16).", 130, 165, 1.5)
 text("REV B ADDITIONS", 430, 30, 3.0)
@@ -208,7 +208,7 @@ text("Second TSL2591 (J10): fixed I2C address 0x29 clashes with LUX1, so it sits
      "Mux powers up with all channels off, so LUX1 on the main bus works with unchanged firmware. To read LUX2: write 0x01 to 0x70, read, write 0x00.", 430, 38, 1.5)
 text("Encoder (J11): A -> D2 (INT4), B -> D3 (INT5). 10k pull-ups for open-collector encoders, 1k + 1nF filter and pin protection.\n"
      "GPS LED moved from D2/D3 to D4/D7 to free both interrupt pins: change gps_red = 4, gps_green = 7 in the sketch.", 430, 140, 1.5)
-text("Connector pinouts (JST-XH): LCD/LUX = GND,5V,SDA,SCL   LEDx = 5V(common anode),RED,GREEN   BTNx = GND,SW,5V(lamp)", 300, 35, 1.5)
+text("Connector pinouts (JST-XH): LCD/LUX = GND,5V,SDA,SCL   LEDx = GND(common cathode),RED,GREEN   BTNx = GND,SW,5V(lamp)", 300, 35, 1.5)
 
 sch = [S("kicad_sch"), [S("version"), 20231120], [S("generator"), "gen_sch"], [S("generator_version"), "8.0"],
        [S("uuid"), ROOT_UUID], [S("paper"), "A2"],

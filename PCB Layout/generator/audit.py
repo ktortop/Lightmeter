@@ -42,7 +42,8 @@ def dist(x,y): return round((x.GetPosition()-y.GetPosition()).EuclideanNorm()/1e
 print("decoupling: C3-U1", dist(pad("C3","1"),pad("U1","14")), "| C9-U3", dist(pad("C9","1"),pad("U3","24")), "| C4-SD", dist(pad("C4","1"),pad("J1","4")), "| C2-U2 tab", min(dist(pad("C2","1"),p) for p in b.FindFootprintByReference("U2").Pads() if p.GetNumber()=="2"), "| C1-U2 in", dist(pad("C1","1"),pad("U2","3")), "| R18-U1.9", dist(pad("R18","2"),pad("U1","9")))
 for led,(rn,gn) in {"J4 GPS":("LED1_R_MCU","LED1_G_MCU"),"J5 LUX":("LED2_R_MCU","LED2_G_MCU"),"J6 IMU":("LED3_R_MCU","LED3_G_MCU")}.items():
     m={p.GetNetname():p.GetNumber() for p in a1.Pads() if p.GetNetname() in (rn,gn)}
-    print(" ",led,"red die <-",m.get(rn)," green die <-",m.get(gn))
+    c=[p.GetNetname() for p in b.FindFootprintByReference(led.split()[0]).Pads() if p.GetNumber()=="1"][0]
+    print(" ",led,"pin1",c," red die <-",m.get(rn)," green die <-",m.get(gn))
 ds=b.GetDesignSettings(); print("tent vias:", ds.m_TentViasFront, ds.m_TentViasBack)
 thin=sum(1 for d in b.GetDrawings() if d.GetLayer() in (pcbnew.F_SilkS,pcbnew.B_SilkS) and d.GetClass()=="PCB_TEXT" and ToMM(d.GetTextThickness())<0.149)
 thin+=sum(1 for fp in b.GetFootprints() for f in fp.GetFields() if f.IsVisible() and f.GetLayer() in (pcbnew.F_SilkS,pcbnew.B_SilkS) and ToMM(f.GetTextThickness())<0.149)

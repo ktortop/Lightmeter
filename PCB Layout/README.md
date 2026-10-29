@@ -1,8 +1,9 @@
-# EVEI Light Meter – Arduino Mega 2560 shield (rev B, preliminary)
+# EVEI Light Meter – Arduino Mega 2560 shield (rev B)
 
 Two-layer carrier shield that replaces the hand-wired proto shield. Generated from
-`latest_version_of_lightmeter.ino` (pin map) and the Final Design Review slides (part list, wiring).
-The sketch was not modified. Rev B needs a two-line firmware change for the GPS LED (see "Rev B changes"). Rev A is kept in `archive/revA/`.
+`latest_version_of_lightmeter.ino` (pin map) and the Final Design Review slides (part list, wiring), and
+checked against the team's current sketch, `Lightmeter_Week8.ino` in this repo (same pins; its `setLED()` sets the LED wiring).
+No sketch was modified. Rev B needs a two-line firmware change for the GPS LED (see "Rev B changes"). Rev A is kept in `archive/revA/`.
 
 Board: 90.7 x 102.1 mm with a 1.9 x 14 mm notch over the Mega's barrel jack, 2 layers, 1 oz copper, min track 0.3 mm (signals) / 0.6 mm (power), vias 0.8/0.4 mm (tented), copper at least 0.4 mm from every edge.
 ERC: 0 violations. DRC: 0 errors, 0 warnings, 0 unconnected (schematic parity checked).
@@ -16,7 +17,7 @@ ERC: 0 violations. DRC: 0 errors, 0 warnings, 0 unconnected (schematic parity ch
 | Encoder port | J11, JST-XH 4 pin: GND · 5V · A · B. A goes to D2 (INT4), B to D3 (INT5), the two free hardware interrupts. |
 | Encoder input conditioning | 10k pull-ups (R14, R15) so open-collector hall encoders work; 1k series + 1nF (R16/C10, R17/C11) filters cable noise and limits current if a pin is ever driven by mistake. |
 | GPS status LED moved | D2/D3 to D4/D7, to free the interrupt pins for the encoder. |
-| LED colours fixed | `setLED("GREEN")` pulls the `*_red` pin LOW. With common-anode LEDs the die on the LOW pin lights, so each `*_red` pin now drives the GREEN die and each `*_green` pin the RED die. All four states (green, red, yellow, off) now show correctly with the sketch as written. Rev A would have shown red for "GREEN". |
+| LEDs are common-cathode | Since Week 5 the sketch's `setLED()` drives a die by writing its pin HIGH (YELLOW = both HIGH, OFF = both LOW; the Week 5 comment says this fixed YELLOW and OFF being swapped on the real LEDs). So the LED connectors now give GND on pin 1 (common cathode), and each `*_red` pin drives the red die, each `*_green` pin the green die. All four states (green, red, yellow, off) show correctly with Week 8 as written. Rev A had 5V on pin 1 (common anode), which would have swapped YELLOW and OFF. |
 | Barrel-jack notch | The Mega's DC jack (11 mm tall) reaches 0.4 mm under the rev A edge, higher than the 8.5 mm header gap. The bottom-left corner is notched to x = 12.9 mm, and the Mega hole beside the jack is left off (five Mega holes plus H1/H2 remain). |
 | Regulator output cap | C2 is a 22 µF tantalum (EIA-3528-B). The AMS1117 needs some output-capacitor ESR to stay stable; a plain ceramic can make it oscillate. |
 | SD chip-select pull-up | R18, 10k to 5V on the Mega side of the level shifter, so the card stays deselected while the Mega resets or is being programmed. |
@@ -62,8 +63,8 @@ LUX1 stays on the main I2C bus. The mux powers up with every channel off, so LUX
 ## How the Mega is "embedded"
 
 The Arduino Mega 2560 plugs into the underside of this board through the standard Mega
-stacking-header pattern (all 98 pads incl. the 2x18 header, exact coordinates from the
-Arduino Mega drawing). Five of the Mega's six mounting holes are duplicated on the shield so the two
+stacking-header pattern (all 92 header and ICSP pads, checked pad by pad against KiCad's own
+Arduino Mega template). Five of the Mega's six mounting holes are duplicated on the shield so the two
 boards can be bolted together with M3 standoffs. The board is wider than the Mega on top (a
 35 mm extension above the top header row) where all the cable connectors and the microSD live,
 so no cable crosses the Mega. The left edge stops at x = 11 mm to clear the USB-B jack, and steps to 12.9 mm over the barrel jack.
@@ -80,14 +81,14 @@ footprint but are left unconnected; do not fit a header there.
 | Adafruit BNO055 (2472, non-STEMMA) | Soldered onto the board (1x6 + 1x4 headers, positions from Adafruit's board file) + four M2.5 holes. UART mode: PS1 tied to breakout 3Vo through solder jumper JP1 (bridged by default) | Serial2: D16→BNO SCL pin (UART RX), D17←BNO SDA pin (UART TX) |
 | 20x4 LCD (I2C backpack) | J2, JST-XH 4 pin: GND · 5V · SDA · SCL | D20/D21 |
 | TSL2591 lux sensor | J3, JST-XH 4 pin: GND · 5V · SDA · SCL (same pinout as LCD, cables interchangeable) | D20/D21 |
-| Status LED 1 (GPS) | J4, JST-XH 3 pin: 5V (common anode) · RED die · GREEN die, 220 Ω series resistors on board | green die D4 (`gps_red`), red die D7 (`gps_green`) |
-| Status LED 2 (LUX) | J5, same | green die D5 (`lux_red`), red die D6 (`lux_green`) |
-| Status LED 3 (IMU) | J6, same | green die D8 (`imu_red`), red die D9 (`imu_green`) |
+| Status LED 1 (GPS) | J4, JST-XH 3 pin: GND (common cathode) · RED · GREEN, 220 Ω series resistors on board | red D4 (`gps_red`), green D7 (`gps_green`) |
+| Status LED 2 (LUX) | J5, same | red D5 (`lux_red`), green D6 (`lux_green`) |
+| Status LED 3 (IMU) | J6, same | red D8 (`imu_red`), green D9 (`imu_green`) |
 | Sleep button | J7, JST-XH 3 pin: GND · SW · 5V (5V for the arcade-button lamp, optional). 100 nF debounce cap on board, uses INPUT_PULLUP | D10 |
 | Log-toggle button | J8, same | D11 |
 | Force-log button | J9, same | D12 |
 
-LED polarity matches `setLED()`: outputs LOW = LED on, both LOW = yellow, both HIGH = off. Wire each LED's common anode to pin 1, its red leg to pin 2 and its green leg to pin 3, exactly as the silkscreen says. The swap between the sketch's variable names and the dies is done on the board.
+LED polarity matches `setLED()` in Week 5-8: output HIGH = die on, both HIGH = yellow, both LOW = off. Wire each LED's common cathode (usually the middle leg of a 3-leg bi-colour LED; check its datasheet) to pin 1, its red leg to pin 2 and its green leg to pin 3, as the silkscreen says (`GND R G`). Two separate red and green LEDs work too: both cathodes to pin 1. Common-anode LEDs will not work on this board.
 Buttons go to GND (active LOW), matching `digitalRead(...) == LOW`.
 
 ## Assembly and soldering
@@ -127,7 +128,8 @@ USB-chip ICSP pins. A "Mega stacking header set" also fits; no part is in the wa
     put the 1x9 header through the shield and the GPS, then solder both ends. Antenna faces up.
 11. **IMU breakout.** Same method with nylon or brass hardware (steel affects the compass). Align its +X
     axis with the cart's direction of travel when the board is mounted.
-12. **Trim** every header pin that sticks out under the shield flush, so nothing can touch the Mega.
+12. **Trim** the GPS and IMU header pins that stick out under the shield flush, so they cannot touch the Mega.
+    Do **not** trim the Mega header pins: they are what plugs into the Mega.
 
 JP1 needs no soldering: it ships bridged by a copper trace. Only cut it to move the IMU to I2C.
 
@@ -137,12 +139,15 @@ JP1 needs no soldering: it ships bridged by a copper trace. Only cut it to move 
 2. Feel U2, U1 and U3: none should be warm.
 3. Change `gps_red = 4` and `gps_green = 7` in the sketch, upload, then plug in the LEDs, LCD, lux
    sensor and buttons. Insert the SD card last.
-4. Expected at boot: all three LEDs red, then green as each check passes.
+4. Expected at boot (Week 8): all three LEDs red; IMU turns green when the BNO055 answers, GPS turns yellow while it
+   waits for a fix, LUX turns green when the TSL2591 answers.
 
 ### Other notes
 
-- IMU is rotated 90° on the board. The tilt check uses both roll and pitch, so it works either way;
-  the heading and forward acceleration assume the BNO's +X axis points forward (the silkscreen says so).
+- IMU orientation matters. Week 8's level check uses roll only (`eulY`, rotation about the BNO's Y axis), and the
+  heading and forward acceleration (`linX`) assume the BNO's +X axis points along the cart's travel. Mount the board
+  so the +X arrow printed on the BNO055 breakout points forward (the shield silkscreen says so). If the board has to be
+  mounted 90° off, swap roll and pitch (and use `linY`) in the sketch instead.
 - MISO comes back to D50 at 3.3 V without shifting, the same as the Adafruit SD breakout used today.
 - Power: about 300 mA worst case from the Mega's 5 V rail. Use USB or at most 9 V on the barrel jack.
 
@@ -150,7 +155,7 @@ JP1 needs no soldering: it ships bridged by a copper trace. Only cut it to move 
 
 - "Embedded Arduino" was implemented as a shield the Mega plugs into, not a bare ATmega2560 on
   the board. That keeps the USB bootloader, uses the Mega the team already has and is buildable
-  by hand. A bare-chip version would be rev B once this one is proven.
+  by hand. A bare-chip version could follow once this one is proven.
 - The IMU was placed on the board (not on a connector) because it must be rigidly fixed to the
   cart for the tilt check and it removes six jumper wires. If you want it remote, the header
   footprint accepts a cable instead.
@@ -169,7 +174,7 @@ Automated: ERC 0, DRC 0 errors / 0 warnings, 0 unconnected, schematic-parity 0, 
 
 Against OSH Park's 2-layer rules: track 0.30 mm (min 0.152), clearance 0.20 mm (min 0.152), drill 0.40 mm (min 0.33),
 annular ring 0.20 mm (min 0.178), copper to edge 0.40 mm (min 0.38). Gerber mask and drill files cross-checked against the board:
-274 pad openings, 192 plated holes, 13 unplated holes.
+274 pad openings, 193 plated holes (147 pins + 46 vias), 13 unplated holes.
 
 Check during the 1:1 paper test-fit, because only the physical parts can confirm them:
 - the Mega's barrel jack clears the notch and the USB jack clears the left edge;

@@ -44,7 +44,7 @@ m.m_Offset = pcbnew.VECTOR3D(0, 0, -10.1)   # 1.6 mm shield + 8.5 mm Mega female
 a1.Models().push_back(m)
 # bottom-silk note where the Mega sits
 t = pcbnew.PCB_TEXT(board)
-t.SetText("ARDUINO MEGA 2560 PLUGS IN HERE (stacking headers)")
+t.SetText("ARDUINO MEGA 2560 PLUGS IN HERE")
 t.SetPosition(pcbnew.VECTOR2I_MM(56, -47.2)); t.SetLayer(pcbnew.B_SilkS); t.SetMirrored(True)
 t.SetTextSize(pcbnew.VECTOR2I(pcbnew.FromMM(1.0), pcbnew.FromMM(1.0))); t.SetTextThickness(pcbnew.FromMM(0.15))
 board.Add(t)

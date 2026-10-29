@@ -156,7 +156,7 @@ def text(s, x, y, size=1.0, layer=pcbnew.F_SilkS, rot=0, bold=False):
 
 text("EVEI LIGHT METER  -  MEGA 2560 SHIELD", 56, -53.2, 1.3, bold=True)
 text("LCD G 5V SDA SCL", 20.3, -65.3, 0.8); text("LUX1 G 5V SDA SCL", 34.3, -65.3, 0.8)
-text("LED1 GPS 5V R G", 47.5, -65.3, 0.8); text("LED2 LUX 5V R G", 59.0, -65.3, 0.8); text("LED3 IMU 5V R G", 70.5, -65.3, 0.8)
+text("GPS LED GND R G", 47.5, -65.3, 0.8); text("LUX LED GND R G", 59.0, -66.6, 0.8); text("IMU LED GND R G", 70.5, -65.3, 0.8)
 text("SLEEP G SW 5V", 19.5, -70.5, 0.8); text("LOG G SW 5V", 31.0, -70.5, 0.8); text("FORCE G SW 5V", 43.0, -70.5, 0.8)
 text("microSD", 89.0, -82.5, 0.9)
 text("LUX2 G 5V SDA SCL", 25.75, -88.6, 0.8); text("ENCODER G 5V A B", 39.75, -88.6, 0.8)
