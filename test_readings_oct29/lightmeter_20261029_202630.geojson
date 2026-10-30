@@ -1,0 +1,1696 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916114,
+     40.430957
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:27:08",
+    "pc_time": "2026-10-29T20:27:08",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916114,
+     40.430942
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:10",
+    "pc_time": "2026-10-29T20:27:11",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916107,
+     40.430919
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:27:13",
+    "pc_time": "2026-10-29T20:27:14",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916091,
+     40.430904
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:27:15",
+    "pc_time": "2026-10-29T20:27:15",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916076,
+     40.430892
+    ]
+   },
+   "properties": {
+    "fc": 2.32,
+    "lux": 24.97,
+    "date": "2026-10-30",
+    "time_utc": "00:27:16",
+    "pc_time": "2026-10-29T20:27:17",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916061,
+     40.430885
+    ]
+   },
+   "properties": {
+    "fc": 1.95,
+    "lux": 20.99,
+    "date": "2026-10-30",
+    "time_utc": "00:27:18",
+    "pc_time": "2026-10-29T20:27:18",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916046,
+     40.430873
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:27:21",
+    "pc_time": "2026-10-29T20:27:21",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916038,
+     40.430862
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:27:22",
+    "pc_time": "2026-10-29T20:27:23",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91603,
+     40.43085
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:24",
+    "pc_time": "2026-10-29T20:27:25",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.916015,
+     40.430839
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:26",
+    "pc_time": "2026-10-29T20:27:26",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915985,
+     40.43082
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:28",
+    "pc_time": "2026-10-29T20:27:28",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915977,
+     40.430809
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:29",
+    "pc_time": "2026-10-29T20:27:29",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915954,
+     40.43077
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:35",
+    "pc_time": "2026-10-29T20:27:35",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915939,
+     40.430759
+    ]
+   },
+   "properties": {
+    "fc": 2.32,
+    "lux": 24.97,
+    "date": "2026-10-30",
+    "time_utc": "00:27:37",
+    "pc_time": "2026-10-29T20:27:37",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915924,
+     40.430759
+    ]
+   },
+   "properties": {
+    "fc": 1.52,
+    "lux": 16.36,
+    "date": "2026-10-30",
+    "time_utc": "00:27:40",
+    "pc_time": "2026-10-29T20:27:41",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915832,
+     40.430706
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:47",
+    "pc_time": "2026-10-29T20:27:48",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915771,
+     40.430664
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:50",
+    "pc_time": "2026-10-29T20:27:51",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91571,
+     40.430606
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:27:54",
+    "pc_time": "2026-10-29T20:27:55",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915695,
+     40.430595
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:27:55",
+    "pc_time": "2026-10-29T20:27:56",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915679,
+     40.430583
+    ]
+   },
+   "properties": {
+    "fc": 1.95,
+    "lux": 20.99,
+    "date": "2026-10-30",
+    "time_utc": "00:27:56",
+    "pc_time": "2026-10-29T20:27:57",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915672,
+     40.430576
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:27:57",
+    "pc_time": "2026-10-29T20:27:58",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915657,
+     40.430564
+    ]
+   },
+   "properties": {
+    "fc": 2.32,
+    "lux": 24.97,
+    "date": "2026-10-30",
+    "time_utc": "00:27:58",
+    "pc_time": "2026-10-29T20:27:59",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915641,
+     40.430553
+    ]
+   },
+   "properties": {
+    "fc": 2.32,
+    "lux": 24.97,
+    "date": "2026-10-30",
+    "time_utc": "00:28:00",
+    "pc_time": "2026-10-29T20:28:00",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915618,
+     40.430534
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:02",
+    "pc_time": "2026-10-29T20:28:03",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915588,
+     40.430511
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:05",
+    "pc_time": "2026-10-29T20:28:05",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91558,
+     40.4305
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:06",
+    "pc_time": "2026-10-29T20:28:06",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91558,
+     40.430484
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:28:07",
+    "pc_time": "2026-10-29T20:28:08",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91558,
+     40.430473
+    ]
+   },
+   "properties": {
+    "fc": 0.19,
+    "lux": 2.05,
+    "date": "2026-10-30",
+    "time_utc": "00:28:09",
+    "pc_time": "2026-10-29T20:28:09",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915603,
+     40.430446
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:11",
+    "pc_time": "2026-10-29T20:28:11",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915618,
+     40.430419
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:28:14",
+    "pc_time": "2026-10-29T20:28:14",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915611,
+     40.430377
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:18",
+    "pc_time": "2026-10-29T20:28:18",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915588,
+     40.430355
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:20",
+    "pc_time": "2026-10-29T20:28:20",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91558,
+     40.430343
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:21",
+    "pc_time": "2026-10-29T20:28:21",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915573,
+     40.430328
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:22",
+    "pc_time": "2026-10-29T20:28:22",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91555,
+     40.430305
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:24",
+    "pc_time": "2026-10-29T20:28:24",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915534,
+     40.430294
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:25",
+    "pc_time": "2026-10-29T20:28:26",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915527,
+     40.430282
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:26",
+    "pc_time": "2026-10-29T20:28:27",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915512,
+     40.430274
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:27",
+    "pc_time": "2026-10-29T20:28:28",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915496,
+     40.430263
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:29",
+    "pc_time": "2026-10-29T20:28:29",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915473,
+     40.430244
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:28:31",
+    "pc_time": "2026-10-29T20:28:31",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91542,
+     40.430198
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:28:36",
+    "pc_time": "2026-10-29T20:28:36",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915382,
+     40.430152
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:28:40",
+    "pc_time": "2026-10-29T20:28:40",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915298,
+     40.430068
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:48",
+    "pc_time": "2026-10-29T20:28:48",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915283,
+     40.430061
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:49",
+    "pc_time": "2026-10-29T20:28:50",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915245,
+     40.43003
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:28:53",
+    "pc_time": "2026-10-29T20:28:53",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915229,
+     40.430019
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:28:54",
+    "pc_time": "2026-10-29T20:28:54",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915214,
+     40.430011
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:28:55",
+    "pc_time": "2026-10-29T20:28:55",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915206,
+     40.43
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:28:56",
+    "pc_time": "2026-10-29T20:28:56",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915092,
+     40.429924
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:05",
+    "pc_time": "2026-10-29T20:29:05",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915054,
+     40.429893
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:08",
+    "pc_time": "2026-10-29T20:29:09",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.915039,
+     40.429866
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:29:23",
+    "pc_time": "2026-10-29T20:29:24",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914916,
+     40.429763
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:29:40",
+    "pc_time": "2026-10-29T20:29:41",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914878,
+     40.429729
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:44",
+    "pc_time": "2026-10-29T20:29:45",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914871,
+     40.429718
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:45",
+    "pc_time": "2026-10-29T20:29:46",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914855,
+     40.429702
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:47",
+    "pc_time": "2026-10-29T20:29:47",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914848,
+     40.429691
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:48",
+    "pc_time": "2026-10-29T20:29:48",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914833,
+     40.429679
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:29:49",
+    "pc_time": "2026-10-29T20:29:49",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914749,
+     40.429607
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:29:58",
+    "pc_time": "2026-10-29T20:29:58",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914741,
+     40.429595
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:29:59",
+    "pc_time": "2026-10-29T20:29:59",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.91471,
+     40.429561
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:03",
+    "pc_time": "2026-10-29T20:30:03",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914695,
+     40.429546
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:04",
+    "pc_time": "2026-10-29T20:30:05",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914688,
+     40.429534
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:05",
+    "pc_time": "2026-10-29T20:30:06",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914657,
+     40.4295
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:09",
+    "pc_time": "2026-10-29T20:30:10",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914588,
+     40.429431
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:17",
+    "pc_time": "2026-10-29T20:30:17",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914558,
+     40.429409
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:21",
+    "pc_time": "2026-10-29T20:30:21",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914535,
+     40.429389
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:24",
+    "pc_time": "2026-10-29T20:30:24",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914527,
+     40.429374
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:25",
+    "pc_time": "2026-10-29T20:30:25",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914505,
+     40.429351
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:27",
+    "pc_time": "2026-10-29T20:30:27",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914474,
+     40.429313
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:30",
+    "pc_time": "2026-10-29T20:30:31",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914443,
+     40.429294
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:33",
+    "pc_time": "2026-10-29T20:30:33",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914428,
+     40.42929
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:34",
+    "pc_time": "2026-10-29T20:30:34",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914413,
+     40.429279
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:35",
+    "pc_time": "2026-10-29T20:30:35",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914405,
+     40.429267
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:36",
+    "pc_time": "2026-10-29T20:30:37",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914352,
+     40.429225
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:30:41",
+    "pc_time": "2026-10-29T20:30:41",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914344,
+     40.429214
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:42",
+    "pc_time": "2026-10-29T20:30:43",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914314,
+     40.429195
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:30:45",
+    "pc_time": "2026-10-29T20:30:45",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914184,
+     40.429088
+    ]
+   },
+   "properties": {
+    "fc": 0.76,
+    "lux": 8.18,
+    "date": "2026-10-30",
+    "time_utc": "00:30:56",
+    "pc_time": "2026-10-29T20:30:57",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914176,
+     40.429077
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:30:58",
+    "pc_time": "2026-10-29T20:30:58",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914154,
+     40.429039
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:01",
+    "pc_time": "2026-10-29T20:31:02",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914154,
+     40.429023
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:02",
+    "pc_time": "2026-10-29T20:31:03",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914146,
+     40.429008
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:03",
+    "pc_time": "2026-10-29T20:31:04",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914146,
+     40.428997
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:04",
+    "pc_time": "2026-10-29T20:31:05",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.9141,
+     40.428947
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:09",
+    "pc_time": "2026-10-29T20:31:09",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.914062,
+     40.428913
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:12",
+    "pc_time": "2026-10-29T20:31:13",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.913955,
+     40.428813
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:31:21",
+    "pc_time": "2026-10-29T20:31:22",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.913925,
+     40.428794
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:24",
+    "pc_time": "2026-10-29T20:31:24",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.913909,
+     40.428791
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:31:25",
+    "pc_time": "2026-10-29T20:31:25",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.913871,
+     40.428775
+    ]
+   },
+   "properties": {
+    "fc": 0.0,
+    "lux": 0.0,
+    "date": "2026-10-30",
+    "time_utc": "00:31:28",
+    "pc_time": "2026-10-29T20:31:28",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.913856,
+     40.428771
+    ]
+   },
+   "properties": {
+    "fc": 0.38,
+    "lux": 4.09,
+    "date": "2026-10-30",
+    "time_utc": "00:31:29",
+    "pc_time": "2026-10-29T20:31:30",
+    "run": "lightmeter_20261029_202630",
+    "valid": 1
+   }
+  }
+ ]
+}

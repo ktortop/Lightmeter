@@ -1,0 +1,817 @@
+20:26:32 LCD STARTUP
+20:26:33 IMU CHECK
+20:26:34 IMU found
+20:26:34 GPS CHECK
+20:26:36 GPS configured
+20:26:36 LIGHT SENSOR CHECK
+20:26:36 TSL2591 found
+20:26:36 ------------------------------------
+20:26:36 Gain: 1x (Low)
+20:26:36 SD CHECK
+20:26:38 SD FAIL - logging over USB only
+20:26:38 CSVHDR,date_yyyy-mm-dd,time_utc,fc,lat,lon
+20:26:41 STARTING LOOP...
+20:26:41 STATUS fix=0 sats=0 anchor=0 speed_mps=0.00 sd=0 log=1
+20:26:41 KF origin set
+20:26:41 Tilt detected - waiting for level
+20:26:42 STATUS fix=1 sats=8 anchor=1 speed_mps=0.82 sd=0 log=1
+20:26:42 Tilt detected - waiting for level
+20:26:43 Tilt detected - waiting for level
+20:26:43 STATUS fix=1 sats=8 anchor=1 speed_mps=1.02 sd=0 log=1
+20:26:43 Tilt detected - waiting for level
+20:26:44 Tilt detected - waiting for level
+20:26:44 STATUS fix=1 sats=8 anchor=1 speed_mps=0.66 sd=0 log=1
+20:26:44 Tilt detected - waiting for level
+20:26:45 STATUS fix=1 sats=8 anchor=1 speed_mps=0.26 sd=0 log=1
+20:26:46 CSV,2026-10-30,00:26:45,nan,40.430976,-86.916000
+20:26:46 Logged  fc=nan  lat=40.430976  lon=-86.916000
+20:26:46 STATUS fix=1 sats=8 anchor=1 speed_mps=0.41 sd=0 log=1
+20:26:47 STATUS fix=1 sats=8 anchor=1 speed_mps=0.07 sd=0 log=1
+20:26:48 STATUS fix=1 sats=8 anchor=1 speed_mps=0.14 sd=0 log=1
+20:26:49 STATUS fix=1 sats=8 anchor=1 speed_mps=0.21 sd=0 log=1
+20:26:50 STATUS fix=1 sats=8 anchor=1 speed_mps=0.08 sd=0 log=1
+20:26:51 STATUS fix=1 sats=8 anchor=1 speed_mps=0.07 sd=0 log=1
+20:26:52 STATUS fix=1 sats=8 anchor=1 speed_mps=0.12 sd=0 log=1
+20:26:53 STATUS fix=1 sats=8 anchor=1 speed_mps=0.06 sd=0 log=1
+20:26:53 CSV,2026-10-30,00:26:53,nan,40.431007,-86.916030
+20:26:53 Logged  fc=nan  lat=40.431007  lon=-86.916030
+20:26:54 STATUS fix=1 sats=8 anchor=1 speed_mps=0.23 sd=0 log=1
+20:26:55 STATUS fix=1 sats=8 anchor=1 speed_mps=0.05 sd=0 log=1
+20:26:56 STATUS fix=1 sats=8 anchor=1 speed_mps=0.12 sd=0 log=1
+20:26:57 STATUS fix=1 sats=8 anchor=1 speed_mps=0.03 sd=0 log=1
+20:26:57 CSV,2026-10-30,00:26:57,nan,40.431007,-86.915992
+20:26:57 Logged  fc=nan  lat=40.431007  lon=-86.915992
+20:26:58 STATUS fix=1 sats=8 anchor=1 speed_mps=0.13 sd=0 log=1
+20:26:59 STATUS fix=1 sats=8 anchor=1 speed_mps=0.07 sd=0 log=1
+20:27:00 STATUS fix=1 sats=8 anchor=1 speed_mps=0.31 sd=0 log=1
+20:27:01 STATUS fix=1 sats=8 anchor=1 speed_mps=0.10 sd=0 log=1
+20:27:02 STATUS fix=1 sats=8 anchor=1 speed_mps=0.13 sd=0 log=1
+20:27:03 Tilt detected - waiting for level
+20:27:03 STATUS fix=1 sats=8 anchor=1 speed_mps=0.45 sd=0 log=1
+20:27:03 Tilt detected - waiting for level
+20:27:04 Tilt detected - waiting for level
+20:27:04 STATUS fix=1 sats=8 anchor=1 speed_mps=1.08 sd=0 log=1
+20:27:04 Tilt detected - waiting for level
+20:27:05 Tilt detected - waiting for level
+20:27:05 STATUS fix=1 sats=8 anchor=1 speed_mps=1.16 sd=0 log=1
+20:27:06 Tilt detected - waiting for level
+20:27:06 CSV,2026-10-30,00:27:06,nan,40.430976,-86.916091
+20:27:06 Logged  fc=nan  lat=40.430976  lon=-86.916091
+20:27:06 STATUS fix=1 sats=8 anchor=1 speed_mps=1.08 sd=0 log=1
+20:27:07 Tilt detected - waiting for level
+20:27:07 STATUS fix=1 sats=8 anchor=1 speed_mps=1.08 sd=0 log=1
+20:27:08 Tilt detected - waiting for level
+20:27:08 CSV,2026-10-30,00:27:08,0.76,40.430957,-86.916114
+20:27:08 Logged  fc=0.76  lat=40.430957  lon=-86.916114
+20:27:08 STATUS fix=1 sats=8 anchor=1 speed_mps=0.97 sd=0 log=1
+20:27:09 STATUS fix=1 sats=8 anchor=1 speed_mps=0.65 sd=0 log=1
+20:27:10 STATUS fix=1 sats=8 anchor=1 speed_mps=0.81 sd=0 log=1
+20:27:11 CSV,2026-10-30,00:27:10,0.38,40.430942,-86.916114
+20:27:11 Logged  fc=0.38  lat=40.430942  lon=-86.916114
+20:27:11 STATUS fix=1 sats=8 anchor=1 speed_mps=0.99 sd=0 log=1
+20:27:12 Tilt detected - waiting for level
+20:27:12 STATUS fix=1 sats=8 anchor=1 speed_mps=1.19 sd=0 log=1
+20:27:13 Tilt detected - waiting for level
+20:27:14 CSV,2026-10-30,00:27:13,0.76,40.430919,-86.916107
+20:27:14 Logged  fc=0.76  lat=40.430919  lon=-86.916107
+20:27:14 STATUS fix=1 sats=8 anchor=1 speed_mps=1.21 sd=0 log=1
+20:27:15 STATUS fix=1 sats=8 anchor=1 speed_mps=0.99 sd=0 log=1
+20:27:15 Tilt detected - waiting for level
+20:27:15 CSV,2026-10-30,00:27:15,0.76,40.430904,-86.916091
+20:27:15 Logged  fc=0.76  lat=40.430904  lon=-86.916091
+20:27:16 STATUS fix=1 sats=8 anchor=1 speed_mps=1.11 sd=0 log=1
+20:27:17 CSV,2026-10-30,00:27:16,2.32,40.430892,-86.916076
+20:27:17 Logged  fc=2.32  lat=40.430892  lon=-86.916076
+20:27:17 STATUS fix=1 sats=8 anchor=1 speed_mps=1.17 sd=0 log=1
+20:27:18 STATUS fix=1 sats=8 anchor=1 speed_mps=1.12 sd=0 log=1
+20:27:18 CSV,2026-10-30,00:27:18,1.95,40.430885,-86.916061
+20:27:18 Logged  fc=1.95  lat=40.430885  lon=-86.916061
+20:27:19 STATUS fix=1 sats=8 anchor=1 speed_mps=0.86 sd=0 log=1
+20:27:20 STATUS fix=1 sats=8 anchor=1 speed_mps=0.65 sd=0 log=1
+20:27:21 CSV,2026-10-30,00:27:21,0.00,40.430873,-86.916046
+20:27:21 Logged  fc=0.00  lat=40.430873  lon=-86.916046
+20:27:21 STATUS fix=1 sats=8 anchor=1 speed_mps=0.80 sd=0 log=1
+20:27:22 STATUS fix=1 sats=8 anchor=1 speed_mps=0.77 sd=0 log=1
+20:27:23 CSV,2026-10-30,00:27:22,0.00,40.430862,-86.916038
+20:27:23 Logged  fc=0.00  lat=40.430862  lon=-86.916038
+20:27:23 STATUS fix=1 sats=8 anchor=1 speed_mps=0.82 sd=0 log=1
+20:27:24 STATUS fix=1 sats=8 anchor=1 speed_mps=0.82 sd=0 log=1
+20:27:25 CSV,2026-10-30,00:27:24,0.38,40.430850,-86.916030
+20:27:25 Logged  fc=0.38  lat=40.430850  lon=-86.916030
+20:27:25 STATUS fix=1 sats=8 anchor=1 speed_mps=0.83 sd=0 log=1
+20:27:26 CSV,2026-10-30,00:27:26,0.38,40.430839,-86.916015
+20:27:26 Logged  fc=0.38  lat=40.430839  lon=-86.916015
+20:27:26 STATUS fix=1 sats=8 anchor=1 speed_mps=1.17 sd=0 log=1
+20:27:27 CSV,2026-10-30,00:27:27,nan,40.430828,-86.916000
+20:27:27 Logged  fc=nan  lat=40.430828  lon=-86.916000
+20:27:27 STATUS fix=1 sats=8 anchor=1 speed_mps=1.21 sd=0 log=1
+20:27:28 CSV,2026-10-30,00:27:28,0.38,40.430820,-86.915985
+20:27:28 Logged  fc=0.38  lat=40.430820  lon=-86.915985
+20:27:28 STATUS fix=1 sats=8 anchor=1 speed_mps=1.41 sd=0 log=1
+20:27:29 CSV,2026-10-30,00:27:29,0.38,40.430809,-86.915977
+20:27:29 Logged  fc=0.38  lat=40.430809  lon=-86.915977
+20:27:29 STATUS fix=1 sats=8 anchor=1 speed_mps=1.23 sd=0 log=1
+20:27:30 STATUS fix=1 sats=8 anchor=1 speed_mps=1.05 sd=0 log=1
+20:27:31 CSV,2026-10-30,00:27:30,nan,40.430797,-86.915962
+20:27:31 Logged  fc=nan  lat=40.430797  lon=-86.915962
+20:27:31 STATUS fix=1 sats=8 anchor=1 speed_mps=0.95 sd=0 log=1
+20:27:32 STATUS fix=1 sats=8 anchor=1 speed_mps=0.89 sd=0 log=1
+20:27:33 CSV,2026-10-30,00:27:33,nan,40.430782,-86.915962
+20:27:33 Logged  fc=nan  lat=40.430782  lon=-86.915962
+20:27:33 STATUS fix=1 sats=8 anchor=1 speed_mps=1.41 sd=0 log=1
+20:27:34 STATUS fix=1 sats=8 anchor=1 speed_mps=0.94 sd=0 log=1
+20:27:35 CSV,2026-10-30,00:27:35,0.38,40.430770,-86.915954
+20:27:35 Logged  fc=0.38  lat=40.430770  lon=-86.915954
+20:27:35 STATUS fix=1 sats=8 anchor=1 speed_mps=0.93 sd=0 log=1
+20:27:36 STATUS fix=1 sats=8 anchor=1 speed_mps=1.09 sd=0 log=1
+20:27:37 CSV,2026-10-30,00:27:37,2.32,40.430759,-86.915939
+20:27:37 Logged  fc=2.32  lat=40.430759  lon=-86.915939
+20:27:37 STATUS fix=1 sats=8 anchor=1 speed_mps=1.04 sd=0 log=1
+20:27:38 STATUS fix=1 sats=8 anchor=1 speed_mps=1.09 sd=0 log=1
+20:27:39 STATUS fix=1 sats=8 anchor=1 speed_mps=0.66 sd=0 log=1
+20:27:40 STATUS fix=1 sats=8 anchor=1 speed_mps=0.65 sd=0 log=1
+20:27:41 CSV,2026-10-30,00:27:40,1.52,40.430759,-86.915924
+20:27:41 Logged  fc=1.52  lat=40.430759  lon=-86.915924
+20:27:41 STATUS fix=1 sats=8 anchor=1 speed_mps=0.76 sd=0 log=1
+20:27:42 CSV,2026-10-30,00:27:42,nan,40.430751,-86.915901
+20:27:42 Logged  fc=nan  lat=40.430751  lon=-86.915901
+20:27:42 STATUS fix=1 sats=8 anchor=1 speed_mps=1.33 sd=0 log=1
+20:27:43 CSV,2026-10-30,00:27:43,nan,40.430740,-86.915893
+20:27:43 Logged  fc=nan  lat=40.430740  lon=-86.915893
+20:27:43 STATUS fix=1 sats=8 anchor=1 speed_mps=1.24 sd=0 log=1
+20:27:44 CSV,2026-10-30,00:27:44,nan,40.430728,-86.915885
+20:27:44 Logged  fc=nan  lat=40.430728  lon=-86.915885
+20:27:44 STATUS fix=1 sats=8 anchor=1 speed_mps=1.10 sd=0 log=1
+20:27:45 CSV,2026-10-30,00:27:45,nan,40.430721,-86.915870
+20:27:45 Logged  fc=nan  lat=40.430721  lon=-86.915870
+20:27:46 STATUS fix=1 sats=8 anchor=1 speed_mps=1.12 sd=0 log=1
+20:27:47 CSV,2026-10-30,00:27:46,nan,40.430713,-86.915847
+20:27:47 Logged  fc=nan  lat=40.430713  lon=-86.915847
+20:27:47 STATUS fix=1 sats=8 anchor=1 speed_mps=1.23 sd=0 log=1
+20:27:48 CSV,2026-10-30,00:27:47,0.38,40.430706,-86.915832
+20:27:48 Logged  fc=0.38  lat=40.430706  lon=-86.915832
+20:27:48 STATUS fix=1 sats=8 anchor=1 speed_mps=1.27 sd=0 log=1
+20:27:48 CSV,2026-10-30,00:27:48,nan,40.430694,-86.915817
+20:27:48 Logged  fc=nan  lat=40.430694  lon=-86.915817
+20:27:49 STATUS fix=1 sats=9 anchor=1 speed_mps=1.16 sd=0 log=1
+20:27:49 CSV,2026-10-30,00:27:49,nan,40.430686,-86.915802
+20:27:49 Logged  fc=nan  lat=40.430686  lon=-86.915802
+20:27:50 STATUS fix=1 sats=9 anchor=1 speed_mps=1.20 sd=0 log=1
+20:27:50 CSV,2026-10-30,00:27:49,nan,40.430675,-86.915786
+20:27:50 Logged  fc=nan  lat=40.430675  lon=-86.915786
+20:27:51 CSV,2026-10-30,00:27:50,0.38,40.430664,-86.915771
+20:27:51 Logged  fc=0.38  lat=40.430664  lon=-86.915771
+20:27:51 STATUS fix=1 sats=9 anchor=1 speed_mps=1.18 sd=0 log=1
+20:27:51 CSV,2026-10-30,00:27:51,nan,40.430652,-86.915756
+20:27:51 Logged  fc=nan  lat=40.430652  lon=-86.915756
+20:27:52 STATUS fix=1 sats=9 anchor=1 speed_mps=1.13 sd=0 log=1
+20:27:52 Tilt detected - waiting for level
+20:27:52 CSV,2026-10-30,00:27:52,nan,40.430641,-86.915748
+20:27:52 Logged  fc=nan  lat=40.430641  lon=-86.915748
+20:27:53 STATUS fix=1 sats=9 anchor=1 speed_mps=1.10 sd=0 log=1
+20:27:53 CSV,2026-10-30,00:27:52,nan,40.430629,-86.915733
+20:27:53 Logged  fc=nan  lat=40.430629  lon=-86.915733
+20:27:54 CSV,2026-10-30,00:27:53,nan,40.430618,-86.915718
+20:27:54 Logged  fc=nan  lat=40.430618  lon=-86.915718
+20:27:54 STATUS fix=1 sats=9 anchor=1 speed_mps=1.05 sd=0 log=1
+20:27:55 CSV,2026-10-30,00:27:54,0.76,40.430606,-86.915710
+20:27:55 Logged  fc=0.76  lat=40.430606  lon=-86.915710
+20:27:55 STATUS fix=1 sats=9 anchor=1 speed_mps=1.16 sd=0 log=1
+20:27:56 CSV,2026-10-30,00:27:55,0.38,40.430595,-86.915695
+20:27:56 Logged  fc=0.38  lat=40.430595  lon=-86.915695
+20:27:56 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:27:57 CSV,2026-10-30,00:27:56,1.95,40.430583,-86.915679
+20:27:57 Logged  fc=1.95  lat=40.430583  lon=-86.915679
+20:27:57 STATUS fix=1 sats=9 anchor=1 speed_mps=1.20 sd=0 log=1
+20:27:58 CSV,2026-10-30,00:27:57,0.76,40.430576,-86.915672
+20:27:58 Logged  fc=0.76  lat=40.430576  lon=-86.915672
+20:27:58 STATUS fix=1 sats=9 anchor=1 speed_mps=1.06 sd=0 log=1
+20:27:59 CSV,2026-10-30,00:27:58,2.32,40.430564,-86.915657
+20:27:59 Logged  fc=2.32  lat=40.430564  lon=-86.915657
+20:27:59 STATUS fix=1 sats=9 anchor=1 speed_mps=1.17 sd=0 log=1
+20:28:00 CSV,2026-10-30,00:28:00,2.32,40.430553,-86.915641
+20:28:00 Logged  fc=2.32  lat=40.430553  lon=-86.915641
+20:28:00 STATUS fix=1 sats=9 anchor=1 speed_mps=1.13 sd=0 log=1
+20:28:01 CSV,2026-10-30,00:28:01,nan,40.430545,-86.915626
+20:28:01 Logged  fc=nan  lat=40.430545  lon=-86.915626
+20:28:01 STATUS fix=1 sats=9 anchor=1 speed_mps=1.17 sd=0 log=1
+20:28:02 STATUS fix=1 sats=9 anchor=1 speed_mps=1.16 sd=0 log=1
+20:28:03 CSV,2026-10-30,00:28:02,0.38,40.430534,-86.915618
+20:28:03 Logged  fc=0.38  lat=40.430534  lon=-86.915618
+20:28:03 STATUS fix=1 sats=9 anchor=1 speed_mps=1.17 sd=0 log=1
+20:28:04 CSV,2026-10-30,00:28:03,nan,40.430522,-86.915603
+20:28:04 Logged  fc=nan  lat=40.430522  lon=-86.915603
+20:28:04 STATUS fix=1 sats=9 anchor=1 speed_mps=1.19 sd=0 log=1
+20:28:05 CSV,2026-10-30,00:28:05,0.38,40.430511,-86.915588
+20:28:05 Logged  fc=0.38  lat=40.430511  lon=-86.915588
+20:28:05 STATUS fix=1 sats=9 anchor=1 speed_mps=1.15 sd=0 log=1
+20:28:06 CSV,2026-10-30,00:28:06,0.38,40.430500,-86.915580
+20:28:06 Logged  fc=0.38  lat=40.430500  lon=-86.915580
+20:28:06 STATUS fix=1 sats=9 anchor=1 speed_mps=1.10 sd=0 log=1
+20:28:07 STATUS fix=1 sats=9 anchor=1 speed_mps=1.07 sd=0 log=1
+20:28:08 CSV,2026-10-30,00:28:07,0.76,40.430484,-86.915580
+20:28:08 Logged  fc=0.76  lat=40.430484  lon=-86.915580
+20:28:08 STATUS fix=1 sats=9 anchor=1 speed_mps=1.12 sd=0 log=1
+20:28:09 CSV,2026-10-30,00:28:09,0.19,40.430473,-86.915580
+20:28:09 Logged  fc=0.19  lat=40.430473  lon=-86.915580
+20:28:09 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:28:10 CSV,2026-10-30,00:28:10,nan,40.430458,-86.915588
+20:28:10 Logged  fc=nan  lat=40.430458  lon=-86.915588
+20:28:10 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:28:11 CSV,2026-10-30,00:28:11,0.38,40.430446,-86.915603
+20:28:11 Logged  fc=0.38  lat=40.430446  lon=-86.915603
+20:28:11 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:28:12 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:28:13 CSV,2026-10-30,00:28:12,nan,40.430435,-86.915611
+20:28:13 Logged  fc=nan  lat=40.430435  lon=-86.915611
+20:28:13 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:28:14 CSV,2026-10-30,00:28:14,0.00,40.430419,-86.915618
+20:28:14 Logged  fc=0.00  lat=40.430419  lon=-86.915618
+20:28:14 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:28:15 CSV,2026-10-30,00:28:15,nan,40.430408,-86.915618
+20:28:15 Logged  fc=nan  lat=40.430408  lon=-86.915618
+20:28:15 STATUS fix=1 sats=9 anchor=1 speed_mps=1.34 sd=0 log=1
+20:28:16 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:28:17 CSV,2026-10-30,00:28:16,nan,40.430393,-86.915618
+20:28:17 Logged  fc=nan  lat=40.430393  lon=-86.915618
+20:28:17 STATUS fix=1 sats=9 anchor=1 speed_mps=1.53 sd=0 log=1
+20:28:18 CSV,2026-10-30,00:28:18,0.38,40.430377,-86.915611
+20:28:18 Logged  fc=0.38  lat=40.430377  lon=-86.915611
+20:28:18 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:28:19 CSV,2026-10-30,00:28:19,nan,40.430366,-86.915603
+20:28:19 Logged  fc=nan  lat=40.430366  lon=-86.915603
+20:28:19 STATUS fix=1 sats=9 anchor=1 speed_mps=1.40 sd=0 log=1
+20:28:20 CSV,2026-10-30,00:28:20,0.38,40.430355,-86.915588
+20:28:20 Logged  fc=0.38  lat=40.430355  lon=-86.915588
+20:28:20 STATUS fix=1 sats=9 anchor=1 speed_mps=1.39 sd=0 log=1
+20:28:21 CSV,2026-10-30,00:28:21,0.38,40.430343,-86.915580
+20:28:21 Logged  fc=0.38  lat=40.430343  lon=-86.915580
+20:28:21 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:28:22 CSV,2026-10-30,00:28:22,0.38,40.430328,-86.915573
+20:28:22 Logged  fc=0.38  lat=40.430328  lon=-86.915573
+20:28:23 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:28:23 CSV,2026-10-30,00:28:23,nan,40.430316,-86.915557
+20:28:23 Logged  fc=nan  lat=40.430316  lon=-86.915557
+20:28:24 STATUS fix=1 sats=9 anchor=1 speed_mps=1.37 sd=0 log=1
+20:28:24 CSV,2026-10-30,00:28:24,0.38,40.430305,-86.915550
+20:28:24 Logged  fc=0.38  lat=40.430305  lon=-86.915550
+20:28:25 STATUS fix=1 sats=9 anchor=1 speed_mps=1.24 sd=0 log=1
+20:28:26 CSV,2026-10-30,00:28:25,0.38,40.430294,-86.915534
+20:28:26 Logged  fc=0.38  lat=40.430294  lon=-86.915534
+20:28:26 STATUS fix=1 sats=9 anchor=1 speed_mps=1.42 sd=0 log=1
+20:28:27 CSV,2026-10-30,00:28:26,0.38,40.430282,-86.915527
+20:28:27 Logged  fc=0.38  lat=40.430282  lon=-86.915527
+20:28:27 STATUS fix=1 sats=9 anchor=1 speed_mps=1.38 sd=0 log=1
+20:28:28 CSV,2026-10-30,00:28:27,0.38,40.430274,-86.915512
+20:28:28 Logged  fc=0.38  lat=40.430274  lon=-86.915512
+20:28:28 STATUS fix=1 sats=9 anchor=1 speed_mps=1.44 sd=0 log=1
+20:28:29 CSV,2026-10-30,00:28:29,0.38,40.430263,-86.915496
+20:28:29 Logged  fc=0.38  lat=40.430263  lon=-86.915496
+20:28:29 STATUS fix=1 sats=9 anchor=1 speed_mps=1.33 sd=0 log=1
+20:28:30 CSV,2026-10-30,00:28:30,nan,40.430255,-86.915481
+20:28:30 Logged  fc=nan  lat=40.430255  lon=-86.915481
+20:28:30 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:28:31 CSV,2026-10-30,00:28:31,0.00,40.430244,-86.915473
+20:28:31 Logged  fc=0.00  lat=40.430244  lon=-86.915473
+20:28:31 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:28:32 CSV,2026-10-30,00:28:32,nan,40.430233,-86.915458
+20:28:32 Logged  fc=nan  lat=40.430233  lon=-86.915458
+20:28:32 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:28:34 CSV,2026-10-30,00:28:33,nan,40.430221,-86.915451
+20:28:34 Logged  fc=nan  lat=40.430221  lon=-86.915451
+20:28:34 STATUS fix=1 sats=9 anchor=1 speed_mps=1.30 sd=0 log=1
+20:28:35 CSV,2026-10-30,00:28:34,nan,40.430210,-86.915435
+20:28:35 Logged  fc=nan  lat=40.430210  lon=-86.915435
+20:28:35 STATUS fix=1 sats=9 anchor=1 speed_mps=1.13 sd=0 log=1
+20:28:36 CSV,2026-10-30,00:28:36,0.00,40.430198,-86.915420
+20:28:36 Logged  fc=0.00  lat=40.430198  lon=-86.915420
+20:28:36 STATUS fix=1 sats=9 anchor=1 speed_mps=1.30 sd=0 log=1
+20:28:37 CSV,2026-10-30,00:28:37,nan,40.430187,-86.915412
+20:28:37 Logged  fc=nan  lat=40.430187  lon=-86.915412
+20:28:37 STATUS fix=1 sats=9 anchor=1 speed_mps=1.30 sd=0 log=1
+20:28:38 CSV,2026-10-30,00:28:38,nan,40.430175,-86.915405
+20:28:38 Logged  fc=nan  lat=40.430175  lon=-86.915405
+20:28:38 STATUS fix=1 sats=9 anchor=1 speed_mps=1.36 sd=0 log=1
+20:28:39 CSV,2026-10-30,00:28:39,nan,40.430164,-86.915390
+20:28:39 Logged  fc=nan  lat=40.430164  lon=-86.915390
+20:28:39 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:28:40 CSV,2026-10-30,00:28:40,0.00,40.430152,-86.915382
+20:28:40 Logged  fc=0.00  lat=40.430152  lon=-86.915382
+20:28:40 STATUS fix=1 sats=9 anchor=1 speed_mps=1.45 sd=0 log=1
+20:28:42 CSV,2026-10-30,00:28:41,nan,40.430141,-86.915367
+20:28:42 Logged  fc=nan  lat=40.430141  lon=-86.915367
+20:28:42 STATUS fix=1 sats=9 anchor=1 speed_mps=1.45 sd=0 log=1
+20:28:43 CSV,2026-10-30,00:28:42,nan,40.430130,-86.915359
+20:28:43 Logged  fc=nan  lat=40.430130  lon=-86.915359
+20:28:43 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:28:44 CSV,2026-10-30,00:28:43,nan,40.430114,-86.915344
+20:28:44 Logged  fc=nan  lat=40.430114  lon=-86.915344
+20:28:44 STATUS fix=1 sats=9 anchor=1 speed_mps=1.31 sd=0 log=1
+20:28:45 CSV,2026-10-30,00:28:44,nan,40.430103,-86.915336
+20:28:45 Logged  fc=nan  lat=40.430103  lon=-86.915336
+20:28:45 STATUS fix=1 sats=9 anchor=1 speed_mps=1.44 sd=0 log=1
+20:28:46 CSV,2026-10-30,00:28:46,nan,40.430091,-86.915328
+20:28:46 Logged  fc=nan  lat=40.430091  lon=-86.915328
+20:28:46 STATUS fix=1 sats=9 anchor=1 speed_mps=1.43 sd=0 log=1
+20:28:47 CSV,2026-10-30,00:28:47,nan,40.430080,-86.915313
+20:28:47 Logged  fc=nan  lat=40.430080  lon=-86.915313
+20:28:47 STATUS fix=1 sats=9 anchor=1 speed_mps=1.37 sd=0 log=1
+20:28:48 CSV,2026-10-30,00:28:48,0.38,40.430068,-86.915298
+20:28:48 Logged  fc=0.38  lat=40.430068  lon=-86.915298
+20:28:48 STATUS fix=1 sats=9 anchor=1 speed_mps=1.46 sd=0 log=1
+20:28:50 CSV,2026-10-30,00:28:49,0.38,40.430061,-86.915283
+20:28:50 Logged  fc=0.38  lat=40.430061  lon=-86.915283
+20:28:50 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:28:51 CSV,2026-10-30,00:28:50,nan,40.430053,-86.915267
+20:28:51 Logged  fc=nan  lat=40.430053  lon=-86.915267
+20:28:51 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:28:52 CSV,2026-10-30,00:28:51,nan,40.430042,-86.915252
+20:28:52 Logged  fc=nan  lat=40.430042  lon=-86.915252
+20:28:52 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:28:53 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:28:53 CSV,2026-10-30,00:28:53,0.76,40.430030,-86.915245
+20:28:53 Logged  fc=0.76  lat=40.430030  lon=-86.915245
+20:28:54 STATUS fix=1 sats=9 anchor=1 speed_mps=1.40 sd=0 log=1
+20:28:54 CSV,2026-10-30,00:28:54,0.38,40.430019,-86.915229
+20:28:54 Logged  fc=0.38  lat=40.430019  lon=-86.915229
+20:28:55 STATUS fix=1 sats=9 anchor=1 speed_mps=1.39 sd=0 log=1
+20:28:55 CSV,2026-10-30,00:28:55,0.00,40.430011,-86.915214
+20:28:55 Logged  fc=0.00  lat=40.430011  lon=-86.915214
+20:28:56 STATUS fix=1 sats=9 anchor=1 speed_mps=1.31 sd=0 log=1
+20:28:56 CSV,2026-10-30,00:28:56,0.00,40.430000,-86.915206
+20:28:56 Logged  fc=0.00  lat=40.430000  lon=-86.915206
+20:28:57 STATUS fix=1 sats=9 anchor=1 speed_mps=1.36 sd=0 log=1
+20:28:57 CSV,2026-10-30,00:28:57,nan,40.429988,-86.915191
+20:28:57 Logged  fc=nan  lat=40.429988  lon=-86.915191
+20:28:58 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:28:59 CSV,2026-10-30,00:28:58,nan,40.429977,-86.915184
+20:28:59 Logged  fc=nan  lat=40.429977  lon=-86.915184
+20:28:59 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:29:00 CSV,2026-10-30,00:28:59,nan,40.429965,-86.915168
+20:29:00 Logged  fc=nan  lat=40.429965  lon=-86.915168
+20:29:00 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:29:01 CSV,2026-10-30,00:29:01,nan,40.429958,-86.915153
+20:29:01 Logged  fc=nan  lat=40.429958  lon=-86.915153
+20:29:01 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:29:02 CSV,2026-10-30,00:29:02,nan,40.429946,-86.915138
+20:29:02 Logged  fc=nan  lat=40.429946  lon=-86.915138
+20:29:02 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:29:03 CSV,2026-10-30,00:29:03,nan,40.429943,-86.915122
+20:29:03 Logged  fc=nan  lat=40.429943  lon=-86.915122
+20:29:03 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:29:04 CSV,2026-10-30,00:29:04,nan,40.429935,-86.915107
+20:29:04 Logged  fc=nan  lat=40.429935  lon=-86.915107
+20:29:04 STATUS fix=1 sats=9 anchor=1 speed_mps=1.30 sd=0 log=1
+20:29:05 CSV,2026-10-30,00:29:05,0.38,40.429924,-86.915092
+20:29:05 Logged  fc=0.38  lat=40.429924  lon=-86.915092
+20:29:05 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:29:06 CSV,2026-10-30,00:29:06,nan,40.429916,-86.915077
+20:29:06 Logged  fc=nan  lat=40.429916  lon=-86.915077
+20:29:06 STATUS fix=1 sats=9 anchor=1 speed_mps=1.29 sd=0 log=1
+20:29:08 CSV,2026-10-30,00:29:07,nan,40.429904,-86.915061
+20:29:08 Logged  fc=nan  lat=40.429904  lon=-86.915061
+20:29:08 STATUS fix=1 sats=9 anchor=1 speed_mps=1.24 sd=0 log=1
+20:29:09 STATUS fix=1 sats=9 anchor=1 speed_mps=1.17 sd=0 log=1
+20:29:09 CSV,2026-10-30,00:29:08,0.38,40.429893,-86.915054
+20:29:09 Logged  fc=0.38  lat=40.429893  lon=-86.915054
+20:29:10 STATUS fix=1 sats=9 anchor=1 speed_mps=1.10 sd=0 log=1
+20:29:11 CSV,2026-10-30,00:29:10,nan,40.429878,-86.915046
+20:29:11 Logged  fc=nan  lat=40.429878  lon=-86.915046
+20:29:11 STATUS fix=1 sats=9 anchor=1 speed_mps=1.13 sd=0 log=1
+20:29:12 STATUS fix=1 sats=9 anchor=1 speed_mps=0.55 sd=0 log=1
+20:29:13 STATUS fix=1 sats=9 anchor=1 speed_mps=0.26 sd=0 log=1
+20:29:14 STATUS fix=1 sats=9 anchor=1 speed_mps=0.18 sd=0 log=1
+20:29:15 STATUS fix=1 sats=9 anchor=1 speed_mps=0.16 sd=0 log=1
+20:29:16 STATUS fix=1 sats=9 anchor=1 speed_mps=0.11 sd=0 log=1
+20:29:17 STATUS fix=1 sats=9 anchor=1 speed_mps=0.05 sd=0 log=1
+20:29:18 STATUS fix=1 sats=9 anchor=1 speed_mps=0.06 sd=0 log=1
+20:29:19 STATUS fix=1 sats=9 anchor=1 speed_mps=0.04 sd=0 log=1
+20:29:20 STATUS fix=1 sats=9 anchor=1 speed_mps=0.03 sd=0 log=1
+20:29:21 STATUS fix=1 sats=9 anchor=1 speed_mps=0.02 sd=0 log=1
+20:29:22 STATUS fix=1 sats=9 anchor=1 speed_mps=0.04 sd=0 log=1
+20:29:23 STATUS fix=1 sats=9 anchor=1 speed_mps=0.38 sd=0 log=1
+20:29:24 CSV,2026-10-30,00:29:23,0.00,40.429866,-86.915039
+20:29:24 Logged  fc=0.00  lat=40.429866  lon=-86.915039
+20:29:24 STATUS fix=1 sats=9 anchor=1 speed_mps=0.47 sd=0 log=1
+20:29:25 STATUS fix=1 sats=9 anchor=1 speed_mps=0.22 sd=0 log=1
+20:29:26 STATUS fix=1 sats=9 anchor=1 speed_mps=0.06 sd=0 log=1
+20:29:27 STATUS fix=1 sats=9 anchor=1 speed_mps=0.22 sd=0 log=1
+20:29:28 STATUS fix=1 sats=9 anchor=1 speed_mps=0.84 sd=0 log=1
+20:29:28 CSV,2026-10-30,00:29:28,nan,40.429859,-86.915023
+20:29:28 Logged  fc=nan  lat=40.429859  lon=-86.915023
+20:29:29 STATUS fix=1 sats=9 anchor=1 speed_mps=0.83 sd=0 log=1
+20:29:30 CSV,2026-10-30,00:29:29,nan,40.429847,-86.915008
+20:29:30 Logged  fc=nan  lat=40.429847  lon=-86.915008
+20:29:30 STATUS fix=1 sats=9 anchor=1 speed_mps=1.09 sd=0 log=1
+20:29:31 STATUS fix=1 sats=9 anchor=1 speed_mps=1.09 sd=0 log=1
+20:29:31 CSV,2026-10-30,00:29:31,nan,40.429836,-86.914993
+20:29:31 Logged  fc=nan  lat=40.429836  lon=-86.914993
+20:29:32 STATUS fix=1 sats=9 anchor=1 speed_mps=1.25 sd=0 log=1
+20:29:32 Tilt detected - waiting for level
+20:29:33 STATUS fix=1 sats=9 anchor=1 speed_mps=1.01 sd=0 log=1
+20:29:33 Tilt detected - waiting for level
+20:29:33 CSV,2026-10-30,00:29:33,nan,40.429821,-86.914978
+20:29:33 Logged  fc=nan  lat=40.429821  lon=-86.914978
+20:29:34 STATUS fix=1 sats=9 anchor=1 speed_mps=1.12 sd=0 log=1
+20:29:35 CSV,2026-10-30,00:29:34,nan,40.429809,-86.914962
+20:29:35 Logged  fc=nan  lat=40.429809  lon=-86.914962
+20:29:35 STATUS fix=1 sats=9 anchor=1 speed_mps=1.20 sd=0 log=1
+20:29:36 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:29:36 CSV,2026-10-30,00:29:36,nan,40.429798,-86.914955
+20:29:36 Logged  fc=nan  lat=40.429798  lon=-86.914955
+20:29:37 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:29:38 Tilt detected - waiting for level
+20:29:38 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:29:38 Tilt detected - waiting for level
+20:29:39 Tilt detected - waiting for level
+20:29:39 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:29:39 Tilt detected - waiting for level
+20:29:40 STATUS fix=1 sats=9 anchor=1 speed_mps=1.12 sd=0 log=1
+20:29:40 Tilt detected - waiting for level
+20:29:41 CSV,2026-10-30,00:29:40,0.00,40.429763,-86.914916
+20:29:41 Logged  fc=0.00  lat=40.429763  lon=-86.914916
+20:29:41 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:29:42 CSV,2026-10-30,00:29:42,nan,40.429752,-86.914901
+20:29:42 Logged  fc=nan  lat=40.429752  lon=-86.914901
+20:29:42 STATUS fix=1 sats=9 anchor=1 speed_mps=1.45 sd=0 log=1
+20:29:43 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:29:43 CSV,2026-10-30,00:29:43,nan,40.429740,-86.914894
+20:29:43 Logged  fc=nan  lat=40.429740  lon=-86.914894
+20:29:44 STATUS fix=1 sats=9 anchor=1 speed_mps=1.38 sd=0 log=1
+20:29:45 CSV,2026-10-30,00:29:44,0.38,40.429729,-86.914878
+20:29:45 Logged  fc=0.38  lat=40.429729  lon=-86.914878
+20:29:45 STATUS fix=1 sats=9 anchor=1 speed_mps=1.66 sd=0 log=1
+20:29:46 CSV,2026-10-30,00:29:45,0.38,40.429718,-86.914871
+20:29:46 Logged  fc=0.38  lat=40.429718  lon=-86.914871
+20:29:46 STATUS fix=1 sats=9 anchor=1 speed_mps=1.33 sd=0 log=1
+20:29:47 Tilt detected - waiting for level
+20:29:47 CSV,2026-10-30,00:29:47,0.38,40.429702,-86.914855
+20:29:47 Logged  fc=0.38  lat=40.429702  lon=-86.914855
+20:29:47 STATUS fix=1 sats=9 anchor=1 speed_mps=1.36 sd=0 log=1
+20:29:48 CSV,2026-10-30,00:29:48,0.38,40.429691,-86.914848
+20:29:48 Logged  fc=0.38  lat=40.429691  lon=-86.914848
+20:29:48 STATUS fix=1 sats=9 anchor=1 speed_mps=1.16 sd=0 log=1
+20:29:49 CSV,2026-10-30,00:29:49,0.76,40.429679,-86.914833
+20:29:49 Logged  fc=0.76  lat=40.429679  lon=-86.914833
+20:29:49 STATUS fix=1 sats=9 anchor=1 speed_mps=1.38 sd=0 log=1
+20:29:51 CSV,2026-10-30,00:29:50,nan,40.429668,-86.914825
+20:29:51 Logged  fc=nan  lat=40.429668  lon=-86.914825
+20:29:51 STATUS fix=1 sats=9 anchor=1 speed_mps=1.40 sd=0 log=1
+20:29:52 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:29:52 CSV,2026-10-30,00:29:52,nan,40.429656,-86.914810
+20:29:52 Logged  fc=nan  lat=40.429656  lon=-86.914810
+20:29:53 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:29:53 Tilt detected - waiting for level
+20:29:54 CSV,2026-10-30,00:29:53,nan,40.429641,-86.914794
+20:29:54 Logged  fc=nan  lat=40.429641  lon=-86.914794
+20:29:54 STATUS fix=1 sats=9 anchor=1 speed_mps=1.16 sd=0 log=1
+20:29:55 STATUS fix=1 sats=9 anchor=1 speed_mps=1.31 sd=0 log=1
+20:29:55 CSV,2026-10-30,00:29:55,nan,40.429634,-86.914779
+20:29:55 Logged  fc=nan  lat=40.429634  lon=-86.914779
+20:29:56 STATUS fix=1 sats=9 anchor=1 speed_mps=1.37 sd=0 log=1
+20:29:56 CSV,2026-10-30,00:29:56,nan,40.429622,-86.914772
+20:29:56 Logged  fc=nan  lat=40.429622  lon=-86.914772
+20:29:57 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:29:57 Tilt detected - waiting for level
+20:29:58 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:29:58 CSV,2026-10-30,00:29:58,0.38,40.429607,-86.914749
+20:29:58 Logged  fc=0.38  lat=40.429607  lon=-86.914749
+20:29:59 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:29:59 CSV,2026-10-30,00:29:59,0.00,40.429595,-86.914741
+20:29:59 Logged  fc=0.00  lat=40.429595  lon=-86.914741
+20:30:00 STATUS fix=1 sats=9 anchor=1 speed_mps=1.29 sd=0 log=1
+20:30:01 CSV,2026-10-30,00:30:00,nan,40.429580,-86.914733
+20:30:01 Logged  fc=nan  lat=40.429580  lon=-86.914733
+20:30:01 STATUS fix=1 sats=9 anchor=1 speed_mps=1.24 sd=0 log=1
+20:30:02 STATUS fix=1 sats=9 anchor=1 speed_mps=1.24 sd=0 log=1
+20:30:02 CSV,2026-10-30,00:30:02,nan,40.429569,-86.914718
+20:30:02 Logged  fc=nan  lat=40.429569  lon=-86.914718
+20:30:03 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:30:03 CSV,2026-10-30,00:30:03,0.38,40.429561,-86.914710
+20:30:03 Logged  fc=0.38  lat=40.429561  lon=-86.914710
+20:30:04 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:30:05 CSV,2026-10-30,00:30:04,0.38,40.429546,-86.914695
+20:30:05 Logged  fc=0.38  lat=40.429546  lon=-86.914695
+20:30:05 STATUS fix=1 sats=9 anchor=1 speed_mps=1.10 sd=0 log=1
+20:30:06 CSV,2026-10-30,00:30:05,0.00,40.429534,-86.914688
+20:30:06 Logged  fc=0.00  lat=40.429534  lon=-86.914688
+20:30:06 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:30:07 STATUS fix=1 sats=9 anchor=1 speed_mps=1.34 sd=0 log=1
+20:30:07 CSV,2026-10-30,00:30:07,nan,40.429523,-86.914680
+20:30:07 Logged  fc=nan  lat=40.429523  lon=-86.914680
+20:30:08 STATUS fix=1 sats=9 anchor=1 speed_mps=1.34 sd=0 log=1
+20:30:08 CSV,2026-10-30,00:30:08,nan,40.429512,-86.914665
+20:30:08 Logged  fc=nan  lat=40.429512  lon=-86.914665
+20:30:09 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:30:10 CSV,2026-10-30,00:30:09,0.38,40.429500,-86.914657
+20:30:10 Logged  fc=0.38  lat=40.429500  lon=-86.914657
+20:30:10 STATUS fix=1 sats=9 anchor=1 speed_mps=1.17 sd=0 log=1
+20:30:11 CSV,2026-10-30,00:30:10,nan,40.429489,-86.914642
+20:30:11 Logged  fc=nan  lat=40.429489  lon=-86.914642
+20:30:11 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:30:12 CSV,2026-10-30,00:30:12,nan,40.429477,-86.914627
+20:30:12 Logged  fc=nan  lat=40.429477  lon=-86.914627
+20:30:12 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:30:13 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:30:13 CSV,2026-10-30,00:30:13,nan,40.429466,-86.914619
+20:30:13 Logged  fc=nan  lat=40.429466  lon=-86.914619
+20:30:14 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:30:15 CSV,2026-10-30,00:30:14,nan,40.429454,-86.914604
+20:30:15 Logged  fc=nan  lat=40.429454  lon=-86.914604
+20:30:15 STATUS fix=1 sats=9 anchor=1 speed_mps=1.20 sd=0 log=1
+20:30:16 CSV,2026-10-30,00:30:16,nan,40.429443,-86.914596
+20:30:16 Logged  fc=nan  lat=40.429443  lon=-86.914596
+20:30:16 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:30:17 CSV,2026-10-30,00:30:17,0.00,40.429431,-86.914588
+20:30:17 Logged  fc=0.00  lat=40.429431  lon=-86.914588
+20:30:17 STATUS fix=1 sats=9 anchor=1 speed_mps=1.44 sd=0 log=1
+20:30:18 STATUS fix=1 sats=9 anchor=1 speed_mps=1.17 sd=0 log=1
+20:30:18 CSV,2026-10-30,00:30:18,nan,40.429420,-86.914573
+20:30:18 Logged  fc=nan  lat=40.429420  lon=-86.914573
+20:30:19 STATUS fix=1 sats=9 anchor=1 speed_mps=0.67 sd=0 log=1
+20:30:20 STATUS fix=1 sats=9 anchor=1 speed_mps=0.68 sd=0 log=1
+20:30:21 CSV,2026-10-30,00:30:21,0.38,40.429409,-86.914558
+20:30:21 Logged  fc=0.38  lat=40.429409  lon=-86.914558
+20:30:21 STATUS fix=1 sats=9 anchor=1 speed_mps=0.83 sd=0 log=1
+20:30:22 STATUS fix=1 sats=9 anchor=1 speed_mps=1.03 sd=0 log=1
+20:30:23 CSV,2026-10-30,00:30:22,nan,40.429401,-86.914543
+20:30:23 Logged  fc=nan  lat=40.429401  lon=-86.914543
+20:30:23 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:30:24 CSV,2026-10-30,00:30:24,0.38,40.429389,-86.914535
+20:30:24 Logged  fc=0.38  lat=40.429389  lon=-86.914535
+20:30:24 STATUS fix=1 sats=9 anchor=1 speed_mps=1.36 sd=0 log=1
+20:30:25 CSV,2026-10-30,00:30:25,0.00,40.429374,-86.914527
+20:30:25 Logged  fc=0.00  lat=40.429374  lon=-86.914527
+20:30:25 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:30:26 CSV,2026-10-30,00:30:26,nan,40.429363,-86.914512
+20:30:26 Logged  fc=nan  lat=40.429363  lon=-86.914512
+20:30:26 STATUS fix=1 sats=9 anchor=1 speed_mps=1.39 sd=0 log=1
+20:30:27 CSV,2026-10-30,00:30:27,0.00,40.429351,-86.914505
+20:30:27 Logged  fc=0.00  lat=40.429351  lon=-86.914505
+20:30:27 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:30:28 CSV,2026-10-30,00:30:28,nan,40.429340,-86.914497
+20:30:28 Logged  fc=nan  lat=40.429340  lon=-86.914497
+20:30:28 STATUS fix=1 sats=9 anchor=1 speed_mps=1.15 sd=0 log=1
+20:30:29 STATUS fix=1 sats=9 anchor=1 speed_mps=1.39 sd=0 log=1
+20:30:30 CSV,2026-10-30,00:30:29,nan,40.429325,-86.914489
+20:30:30 Logged  fc=nan  lat=40.429325  lon=-86.914489
+20:30:30 STATUS fix=1 sats=9 anchor=1 speed_mps=1.15 sd=0 log=1
+20:30:31 CSV,2026-10-30,00:30:30,0.38,40.429313,-86.914474
+20:30:31 Logged  fc=0.38  lat=40.429313  lon=-86.914474
+20:30:31 STATUS fix=1 sats=9 anchor=1 speed_mps=1.47 sd=0 log=1
+20:30:32 CSV,2026-10-30,00:30:31,nan,40.429306,-86.914459
+20:30:32 Logged  fc=nan  lat=40.429306  lon=-86.914459
+20:30:32 STATUS fix=1 sats=9 anchor=1 speed_mps=1.50 sd=0 log=1
+20:30:33 CSV,2026-10-30,00:30:33,0.00,40.429294,-86.914443
+20:30:33 Logged  fc=0.00  lat=40.429294  lon=-86.914443
+20:30:33 STATUS fix=1 sats=9 anchor=1 speed_mps=1.68 sd=0 log=1
+20:30:34 CSV,2026-10-30,00:30:34,0.00,40.429290,-86.914428
+20:30:34 Logged  fc=0.00  lat=40.429290  lon=-86.914428
+20:30:34 STATUS fix=1 sats=9 anchor=1 speed_mps=1.30 sd=0 log=1
+20:30:35 CSV,2026-10-30,00:30:35,0.00,40.429279,-86.914413
+20:30:35 Logged  fc=0.00  lat=40.429279  lon=-86.914413
+20:30:35 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:30:36 STATUS fix=1 sats=9 anchor=1 speed_mps=1.40 sd=0 log=1
+20:30:37 CSV,2026-10-30,00:30:36,0.38,40.429267,-86.914405
+20:30:37 Logged  fc=0.38  lat=40.429267  lon=-86.914405
+20:30:37 STATUS fix=1 sats=9 anchor=1 speed_mps=1.13 sd=0 log=1
+20:30:38 CSV,2026-10-30,00:30:37,nan,40.429256,-86.914390
+20:30:38 Logged  fc=nan  lat=40.429256  lon=-86.914390
+20:30:38 STATUS fix=1 sats=9 anchor=1 speed_mps=1.34 sd=0 log=1
+20:30:39 CSV,2026-10-30,00:30:39,nan,40.429244,-86.914382
+20:30:39 Logged  fc=nan  lat=40.429244  lon=-86.914382
+20:30:39 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:30:40 CSV,2026-10-30,00:30:40,nan,40.429233,-86.914367
+20:30:40 Logged  fc=nan  lat=40.429233  lon=-86.914367
+20:30:40 STATUS fix=1 sats=9 anchor=1 speed_mps=1.20 sd=0 log=1
+20:30:41 CSV,2026-10-30,00:30:41,0.00,40.429225,-86.914352
+20:30:41 Logged  fc=0.00  lat=40.429225  lon=-86.914352
+20:30:41 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:30:43 CSV,2026-10-30,00:30:42,0.38,40.429214,-86.914344
+20:30:43 Logged  fc=0.38  lat=40.429214  lon=-86.914344
+20:30:43 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:30:44 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:30:44 CSV,2026-10-30,00:30:43,nan,40.429203,-86.914329
+20:30:44 Logged  fc=nan  lat=40.429203  lon=-86.914329
+20:30:45 STATUS fix=1 sats=9 anchor=1 speed_mps=1.66 sd=0 log=1
+20:30:45 CSV,2026-10-30,00:30:45,0.76,40.429195,-86.914314
+20:30:45 Logged  fc=0.76  lat=40.429195  lon=-86.914314
+20:30:46 STATUS fix=1 sats=9 anchor=1 speed_mps=1.43 sd=0 log=1
+20:30:46 CSV,2026-10-30,00:30:46,nan,40.429183,-86.914299
+20:30:46 Logged  fc=nan  lat=40.429183  lon=-86.914299
+20:30:47 STATUS fix=1 sats=9 anchor=1 speed_mps=1.40 sd=0 log=1
+20:30:47 CSV,2026-10-30,00:30:47,nan,40.429176,-86.914291
+20:30:47 Logged  fc=nan  lat=40.429176  lon=-86.914291
+20:30:48 STATUS fix=1 sats=9 anchor=1 speed_mps=1.41 sd=0 log=1
+20:30:48 CSV,2026-10-30,00:30:48,nan,40.429164,-86.914276
+20:30:48 Logged  fc=nan  lat=40.429164  lon=-86.914276
+20:30:49 STATUS fix=1 sats=9 anchor=1 speed_mps=1.29 sd=0 log=1
+20:30:50 CSV,2026-10-30,00:30:49,nan,40.429153,-86.914268
+20:30:50 Logged  fc=nan  lat=40.429153  lon=-86.914268
+20:30:50 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:30:51 STATUS fix=1 sats=9 anchor=1 speed_mps=0.93 sd=0 log=1
+20:30:51 CSV,2026-10-30,00:30:51,nan,40.429141,-86.914253
+20:30:51 Logged  fc=nan  lat=40.429141  lon=-86.914253
+20:30:52 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:30:52 CSV,2026-10-30,00:30:52,nan,40.429130,-86.914237
+20:30:52 Logged  fc=nan  lat=40.429130  lon=-86.914237
+20:30:53 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:30:53 CSV,2026-10-30,00:30:53,nan,40.429122,-86.914222
+20:30:53 Logged  fc=nan  lat=40.429122  lon=-86.914222
+20:30:54 STATUS fix=1 sats=9 anchor=1 speed_mps=1.20 sd=0 log=1
+20:30:54 CSV,2026-10-30,00:30:54,nan,40.429111,-86.914215
+20:30:54 Logged  fc=nan  lat=40.429111  lon=-86.914215
+20:30:55 STATUS fix=1 sats=9 anchor=1 speed_mps=1.36 sd=0 log=1
+20:30:56 CSV,2026-10-30,00:30:55,nan,40.429100,-86.914199
+20:30:56 Logged  fc=nan  lat=40.429100  lon=-86.914199
+20:30:56 STATUS fix=1 sats=9 anchor=1 speed_mps=1.27 sd=0 log=1
+20:30:57 CSV,2026-10-30,00:30:56,0.76,40.429088,-86.914184
+20:30:57 Logged  fc=0.76  lat=40.429088  lon=-86.914184
+20:30:57 STATUS fix=1 sats=9 anchor=1 speed_mps=1.56 sd=0 log=1
+20:30:58 STATUS fix=1 sats=9 anchor=1 speed_mps=1.24 sd=0 log=1
+20:30:58 CSV,2026-10-30,00:30:58,0.38,40.429077,-86.914176
+20:30:58 Logged  fc=0.38  lat=40.429077  lon=-86.914176
+20:30:59 STATUS fix=1 sats=9 anchor=1 speed_mps=1.15 sd=0 log=1
+20:30:59 CSV,2026-10-30,00:30:59,nan,40.429065,-86.914169
+20:30:59 Logged  fc=nan  lat=40.429065  lon=-86.914169
+20:31:00 STATUS fix=1 sats=9 anchor=1 speed_mps=1.33 sd=0 log=1
+20:31:01 CSV,2026-10-30,00:31:00,nan,40.429050,-86.914161
+20:31:01 Logged  fc=nan  lat=40.429050  lon=-86.914161
+20:31:01 STATUS fix=1 sats=9 anchor=1 speed_mps=1.33 sd=0 log=1
+20:31:02 CSV,2026-10-30,00:31:01,0.38,40.429039,-86.914154
+20:31:02 Logged  fc=0.38  lat=40.429039  lon=-86.914154
+20:31:02 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:31:03 CSV,2026-10-30,00:31:02,0.38,40.429023,-86.914154
+20:31:03 Logged  fc=0.38  lat=40.429023  lon=-86.914154
+20:31:03 STATUS fix=1 sats=9 anchor=1 speed_mps=1.35 sd=0 log=1
+20:31:04 CSV,2026-10-30,00:31:03,0.38,40.429008,-86.914146
+20:31:04 Logged  fc=0.38  lat=40.429008  lon=-86.914146
+20:31:04 STATUS fix=1 sats=9 anchor=1 speed_mps=1.23 sd=0 log=1
+20:31:05 CSV,2026-10-30,00:31:04,0.38,40.428997,-86.914146
+20:31:05 Logged  fc=0.38  lat=40.428997  lon=-86.914146
+20:31:05 STATUS fix=1 sats=9 anchor=1 speed_mps=1.13 sd=0 log=1
+20:31:06 CSV,2026-10-30,00:31:06,nan,40.428981,-86.914138
+20:31:06 Logged  fc=nan  lat=40.428981  lon=-86.914138
+20:31:06 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:31:07 CSV,2026-10-30,00:31:07,nan,40.428970,-86.914123
+20:31:07 Logged  fc=nan  lat=40.428970  lon=-86.914123
+20:31:07 STATUS fix=1 sats=9 anchor=1 speed_mps=1.28 sd=0 log=1
+20:31:08 CSV,2026-10-30,00:31:08,nan,40.428958,-86.914115
+20:31:08 Logged  fc=nan  lat=40.428958  lon=-86.914115
+20:31:08 STATUS fix=1 sats=9 anchor=1 speed_mps=1.38 sd=0 log=1
+20:31:09 CSV,2026-10-30,00:31:09,0.38,40.428947,-86.914100
+20:31:09 Logged  fc=0.38  lat=40.428947  lon=-86.914100
+20:31:09 STATUS fix=1 sats=9 anchor=1 speed_mps=1.24 sd=0 log=1
+20:31:10 CSV,2026-10-30,00:31:10,nan,40.428936,-86.914093
+20:31:10 Logged  fc=nan  lat=40.428936  lon=-86.914093
+20:31:10 STATUS fix=1 sats=9 anchor=1 speed_mps=1.15 sd=0 log=1
+20:31:12 CSV,2026-10-30,00:31:11,nan,40.428924,-86.914077
+20:31:12 Logged  fc=nan  lat=40.428924  lon=-86.914077
+20:31:12 STATUS fix=1 sats=9 anchor=1 speed_mps=1.22 sd=0 log=1
+20:31:13 CSV,2026-10-30,00:31:12,0.38,40.428913,-86.914062
+20:31:13 Logged  fc=0.38  lat=40.428913  lon=-86.914062
+20:31:13 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:31:14 CSV,2026-10-30,00:31:13,nan,40.428901,-86.914054
+20:31:14 Logged  fc=nan  lat=40.428901  lon=-86.914054
+20:31:14 STATUS fix=1 sats=9 anchor=1 speed_mps=1.30 sd=0 log=1
+20:31:15 CSV,2026-10-30,00:31:14,nan,40.428890,-86.914039
+20:31:15 Logged  fc=nan  lat=40.428890  lon=-86.914039
+20:31:15 STATUS fix=1 sats=9 anchor=1 speed_mps=1.34 sd=0 log=1
+20:31:16 CSV,2026-10-30,00:31:16,nan,40.428882,-86.914024
+20:31:16 Logged  fc=nan  lat=40.428882  lon=-86.914024
+20:31:16 STATUS fix=1 sats=9 anchor=1 speed_mps=1.62 sd=0 log=1
+20:31:17 CSV,2026-10-30,00:31:17,nan,40.428871,-86.914016
+20:31:17 Logged  fc=nan  lat=40.428871  lon=-86.914016
+20:31:17 STATUS fix=1 sats=9 anchor=1 speed_mps=1.39 sd=0 log=1
+20:31:18 CSV,2026-10-30,00:31:18,nan,40.428855,-86.914009
+20:31:18 Logged  fc=nan  lat=40.428855  lon=-86.914009
+20:31:18 STATUS fix=1 sats=9 anchor=1 speed_mps=1.33 sd=0 log=1
+20:31:19 CSV,2026-10-30,00:31:19,nan,40.428848,-86.913993
+20:31:19 Logged  fc=nan  lat=40.428848  lon=-86.913993
+20:31:19 STATUS fix=1 sats=9 anchor=1 speed_mps=1.45 sd=0 log=1
+20:31:20 CSV,2026-10-30,00:31:20,nan,40.428833,-86.913986
+20:31:20 Logged  fc=nan  lat=40.428833  lon=-86.913986
+20:31:20 STATUS fix=1 sats=9 anchor=1 speed_mps=1.48 sd=0 log=1
+20:31:21 CSV,2026-10-30,00:31:21,nan,40.428825,-86.913970
+20:31:21 Logged  fc=nan  lat=40.428825  lon=-86.913970
+20:31:21 STATUS fix=1 sats=9 anchor=1 speed_mps=1.49 sd=0 log=1
+20:31:22 CSV,2026-10-30,00:31:21,0.00,40.428813,-86.913955
+20:31:22 Logged  fc=0.00  lat=40.428813  lon=-86.913955
+20:31:22 STATUS fix=1 sats=9 anchor=1 speed_mps=1.34 sd=0 log=1
+20:31:23 CSV,2026-10-30,00:31:23,nan,40.428806,-86.913940
+20:31:23 Logged  fc=nan  lat=40.428806  lon=-86.913940
+20:31:23 STATUS fix=1 sats=9 anchor=1 speed_mps=1.32 sd=0 log=1
+20:31:24 CSV,2026-10-30,00:31:24,0.38,40.428794,-86.913925
+20:31:24 Logged  fc=0.38  lat=40.428794  lon=-86.913925
+20:31:24 STATUS fix=1 sats=9 anchor=1 speed_mps=1.14 sd=0 log=1
+20:31:25 CSV,2026-10-30,00:31:25,0.00,40.428791,-86.913909
+20:31:25 Logged  fc=0.00  lat=40.428791  lon=-86.913909
+20:31:25 STATUS fix=1 sats=9 anchor=1 speed_mps=1.21 sd=0 log=1
+20:31:26 STATUS fix=1 sats=9 anchor=1 speed_mps=1.19 sd=0 log=1
+20:31:27 CSV,2026-10-30,00:31:26,nan,40.428783,-86.913894
+20:31:27 Logged  fc=nan  lat=40.428783  lon=-86.913894
+20:31:27 STATUS fix=1 sats=9 anchor=1 speed_mps=1.25 sd=0 log=1
+20:31:28 CSV,2026-10-30,00:31:28,0.00,40.428775,-86.913871
+20:31:28 Logged  fc=0.00  lat=40.428775  lon=-86.913871
+20:31:28 STATUS fix=1 sats=9 anchor=1 speed_mps=1.18 sd=0 log=1
+20:31:30 CSV,2026-10-30,00:31:29,0.38,40.428771,-86.913856
+20:31:30 Logged  fc=0.38  lat=40.428771  lon=-86.913856
+20:31:30 STATUS fix=1 sats=9 anchor=1 speed_mps=1.26 sd=0 log=1
+20:31:31 STATUS fix=1 sats=9 anchor=1 speed_mps=1.39 sd=0 log=1
+20:31:31 CSV,2026-10-30,00:31:30,nan,40.428764,-86.913841
+20:31:31 Logged  fc=nan  lat=40.428764  lon=-86.913841
+20:31:32 STATUS fix=1 sats=9 anchor=1 speed_mps=1.29 sd=0 log=1
+20:31:32 CSV,2026-10-30,00:31:32,nan,40.428756,-86.913825
+20:31:32 Logged  fc=nan  lat=40.428756  lon=-86.913825
+20:31:33 STATUS fix=1 sats=9 anchor=1 speed_mps=0.96 sd=0 log=1
+20:31:34 STATUS fix=1 sats=9 anchor=1 speed_mps=0.38 sd=0 log=1
+20:31:35 STATUS fix=1 sats=9 anchor=1 speed_mps=0.11 sd=0 log=1
+20:31:36 STATUS fix=1 sats=8 anchor=1 speed_mps=0.02 sd=0 log=1
+20:31:37 STATUS fix=1 sats=8 anchor=1 speed_mps=0.02 sd=0 log=1
+20:31:38 STATUS fix=1 sats=8 anchor=1 speed_mps=0.00 sd=0 log=1
+20:31:39 STATUS fix=1 sats=8 anchor=1 speed_mps=0.02 sd=0 log=1
+20:31:40 STATUS fix=1 sats=8 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:41 STATUS fix=1 sats=8 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:42 STATUS fix=1 sats=8 anchor=1 speed_mps=0.00 sd=0 log=1
+20:31:43 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:44 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:45 STATUS fix=1 sats=9 anchor=1 speed_mps=0.04 sd=0 log=1
+20:31:46 STATUS fix=1 sats=9 anchor=1 speed_mps=0.02 sd=0 log=1
+20:31:47 STATUS fix=1 sats=9 anchor=1 speed_mps=0.03 sd=0 log=1
+20:31:48 STATUS fix=1 sats=9 anchor=1 speed_mps=0.05 sd=0 log=1
+20:31:49 STATUS fix=1 sats=9 anchor=1 speed_mps=0.08 sd=0 log=1
+20:31:50 STATUS fix=1 sats=9 anchor=1 speed_mps=0.10 sd=0 log=1
+20:31:51 STATUS fix=1 sats=9 anchor=1 speed_mps=0.04 sd=0 log=1
+20:31:52 STATUS fix=1 sats=9 anchor=1 speed_mps=0.04 sd=0 log=1
+20:31:53 STATUS fix=1 sats=9 anchor=1 speed_mps=0.02 sd=0 log=1
+20:31:54 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:55 STATUS fix=1 sats=9 anchor=1 speed_mps=0.04 sd=0 log=1
+20:31:56 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:57 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:58 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:31:59 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:00 STATUS fix=1 sats=9 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:01 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:02 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:03 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:04 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:05 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:06 STATUS fix=1 sats=9 anchor=1 speed_mps=0.00 sd=0 log=1
+20:32:07 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:08 STATUS fix=1 sats=9 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:09 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:10 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:11 STATUS fix=1 sats=9 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:12 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:13 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:14 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:15 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:16 STATUS fix=1 sats=9 anchor=1 speed_mps=0.03 sd=0 log=1
+20:32:17 STATUS fix=1 sats=9 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:18 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:19 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:20 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:21 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:22 STATUS fix=1 sats=10 anchor=1 speed_mps=0.00 sd=0 log=1
+20:32:23 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:24 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:25 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:26 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:27 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:28 STATUS fix=1 sats=10 anchor=1 speed_mps=0.06 sd=0 log=1
+20:32:29 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:31 LCD STARTUP
+20:32:32 IMU CHECK
+20:32:33 IMU found
+20:32:33 GPS CHECK
+20:32:35 GPS configured
+20:32:35 LIGHT SENSOR CHECK
+20:32:35 TSL2591 found
+20:32:35 ------------------------------------
+20:32:35 Gain: 1x (Low)
+20:32:35 SD CHECK
+20:32:37 SD FAIL - logging over USB only
+20:32:37 CSVHDR,date_yyyy-mm-dd,time_utc,fc,lat,lon
+20:32:40 STARTING LOOP...
+20:32:40 STATUS fix=0 sats=0 anchor=0 speed_mps=0.00 sd=0 log=1
+20:32:40 KF origin set
+20:32:41 STATUS fix=1 sats=10 anchor=1 speed_mps=0.05 sd=0 log=1
+20:32:42 STATUS fix=1 sats=10 anchor=1 speed_mps=0.04 sd=0 log=1
+20:32:43 STATUS fix=1 sats=10 anchor=1 speed_mps=0.03 sd=0 log=1
+20:32:44 STATUS fix=1 sats=10 anchor=1 speed_mps=0.04 sd=0 log=1
+20:32:45 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:46 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:47 STATUS fix=1 sats=10 anchor=1 speed_mps=0.09 sd=0 log=1
+20:32:48 STATUS fix=1 sats=10 anchor=1 speed_mps=0.25 sd=0 log=1
+20:32:49 STATUS fix=1 sats=10 anchor=1 speed_mps=0.05 sd=0 log=1
+20:32:50 STATUS fix=1 sats=10 anchor=1 speed_mps=0.29 sd=0 log=1
+20:32:51 STATUS fix=1 sats=10 anchor=1 speed_mps=0.03 sd=0 log=1
+20:32:52 STATUS fix=1 sats=10 anchor=1 speed_mps=0.02 sd=0 log=1
+20:32:53 STATUS fix=1 sats=10 anchor=1 speed_mps=0.03 sd=0 log=1
+20:32:54 STATUS fix=1 sats=10 anchor=1 speed_mps=0.06 sd=0 log=1
+20:32:55 STATUS fix=1 sats=10 anchor=1 speed_mps=0.04 sd=0 log=1
+20:32:56 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:57 STATUS fix=1 sats=10 anchor=1 speed_mps=0.01 sd=0 log=1
+20:32:58 STATUS fix=1 sats=10 anchor=1 speed_mps=0.09 sd=0 log=1
+20:32:59 STATUS fix=1 sats=10 anchor=1 speed_mps=0.15 sd=0 log=1
+20:33:00 STATUS fix=1 sats=10 anchor=1 speed_mps=0.07 sd=0 log=1
