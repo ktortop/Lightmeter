@@ -2,7 +2,7 @@
   (version 20231120)
   (generator "gen_sch")
   (generator_version "8.0")
-  (uuid "c2bbf3a4-0feb-487f-a48b-031ce3cac9c4")
+  (uuid "04157218-f20d-42f1-8ffd-77fc56494495")
   (paper "A2")
   (title_block
     (title "EVEI Light Meter - Mega 2560 Shield")
@@ -5509,7 +5509,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "10a90b06-07d5-4255-a0bd-6d1f2f3c97d6")
+    (uuid "2311509b-c9f9-4ebe-8dff-15f4c674ce5e")
     (property "Reference" "A1"
       (at 77.47 162.56 0)
       (effects
@@ -5559,281 +5559,281 @@
       )
     )
     (pin "5V1"
-      (uuid "81340592-23be-4ac8-acd8-69ed4127fccd")
+      (uuid "0272ae43-a776-4fab-b709-48213fd75064")
     )
     (pin "5V3"
-      (uuid "eefb4267-d974-474b-86ca-ed00dd515526")
+      (uuid "9d2b1086-d5f4-40e4-97ec-ef9e958248d1")
     )
     (pin "5V4"
-      (uuid "cf5f9c08-449b-4078-b6f5-b3500aed8553")
+      (uuid "61ed7c23-fb94-4352-b7d9-18c480c44b90")
     )
     (pin "3V3"
-      (uuid "ca88e91c-ca81-4751-887c-626e283d171a")
+      (uuid "453685c6-a6ec-4b1e-bc92-ebfde8b8dc88")
     )
     (pin "VIN"
-      (uuid "52e13be6-133c-49ae-a252-40f163799cab")
+      (uuid "ee795f70-e228-4964-9897-118347708104")
     )
     (pin "IORF"
-      (uuid "a3dda0b9-77af-4e8d-84b7-60c0969f6206")
+      (uuid "d693bab9-48ad-4d27-893b-103b32e9dacc")
     )
     (pin "GND1"
-      (uuid "25a1f486-0047-4f31-8fbf-66e3c287090d")
+      (uuid "e9bd2073-fb6c-4a44-9317-091cdfbad280")
     )
     (pin "GND2"
-      (uuid "3f96cfec-588f-4746-84a9-ab592c271f92")
+      (uuid "b2d9c4e9-00e6-45d9-85a5-150291d0d332")
     )
     (pin "GND3"
-      (uuid "ff88903c-a45f-4154-8dc7-6a60f9d9fb9e")
+      (uuid "4567e35f-711d-4567-8564-5a593ca9c115")
     )
     (pin "GND5"
-      (uuid "a7a5ba7c-2537-4274-a1ae-8cfdfbd04701")
+      (uuid "99b7f98d-a394-45b2-be6a-4fe8a97e1111")
     )
     (pin "GND6"
-      (uuid "73106a4e-5fe6-44c1-bb96-99af1d463372")
+      (uuid "36900937-7e40-4083-90fc-2e142a1a28f0")
     )
     (pin "RST1"
-      (uuid "f6c4aa86-191b-4b13-9231-2355c8906af4")
+      (uuid "72c860db-06ef-485a-b111-55b99b76ad0f")
     )
     (pin "AREF"
-      (uuid "5594c83d-b7cf-4a57-b4c6-c4c4a5c65520")
+      (uuid "3c28df6a-a0af-4f5c-8a72-3bb2466e9e28")
     )
     (pin "A0"
-      (uuid "0c7e5730-311c-442c-af63-086278f809eb")
+      (uuid "69e35260-7d60-45c1-82d8-83d4bbcf0479")
     )
     (pin "A1"
-      (uuid "da19e759-7bcf-4401-bb35-1cc9f35e850e")
+      (uuid "38ba5436-4ed1-4c7e-b59d-756de00d9b59")
     )
     (pin "A2"
-      (uuid "cdedbe5b-c6d3-429e-9e42-bc33ca005c75")
+      (uuid "86c4ec82-66bb-4560-baf2-c948fc317efb")
     )
     (pin "A3"
-      (uuid "b5367c06-e76d-494d-ab8e-8ac48984c0f1")
+      (uuid "982af7a4-088c-4258-9319-bc7fce6e7f7f")
     )
     (pin "A4"
-      (uuid "25dcc327-2e98-49e3-8d2c-59b0e14f9224")
+      (uuid "1fb21890-9d64-46d1-a6bd-a5d818ac82e5")
     )
     (pin "A5"
-      (uuid "fd3b66bf-5e7b-4fb3-a6a9-70724209596d")
+      (uuid "b7525478-0ed5-4dd4-845b-95c9133eaf4c")
     )
     (pin "A6"
-      (uuid "bc43bde1-fcd2-4edf-972a-f0b20d288da3")
+      (uuid "5b38d850-8966-4d8a-a1f2-382124aaa9b4")
     )
     (pin "A7"
-      (uuid "91a31907-fe5f-4660-a37d-a5f82a2c4d89")
+      (uuid "4905584c-96ac-40a1-8dcf-38b28132d699")
     )
     (pin "A8"
-      (uuid "0676123a-30bf-40b3-96ec-18d5a0b6fb50")
+      (uuid "fec0c4ed-abf0-4e1e-b343-74ad5152732b")
     )
     (pin "A9"
-      (uuid "8ef9780c-2726-4ee4-af5b-81e91c7eb8f9")
+      (uuid "7dc7e282-fc5e-4f7a-85d9-64be2db44fe4")
     )
     (pin "A10"
-      (uuid "057b9970-f91e-40e9-85a7-f6cea9056f3a")
+      (uuid "9cf04b9c-f7b9-495e-922c-631d9e2064fb")
     )
     (pin "A11"
-      (uuid "7ba29c80-d297-4525-9859-af8e8edb8bc8")
+      (uuid "2d35d1cf-9940-4326-b112-121a39fc5b2a")
     )
     (pin "A12"
-      (uuid "87369057-15ca-410f-b0a6-52999e8485fb")
+      (uuid "03e56a06-ffda-4b0f-b454-73d014c73c52")
     )
     (pin "A13"
-      (uuid "dd91e091-b163-4559-8b94-6a48703253ee")
+      (uuid "0fc97fdb-9b8e-46e3-9bf8-f03065e0cca0")
     )
     (pin "A14"
-      (uuid "f8adacde-6823-4b30-ae16-dd0e053fded1")
+      (uuid "e6d7e1ff-e25c-4fe1-8f1c-551e91d1f983")
     )
     (pin "A15"
-      (uuid "ead2662c-1380-445f-b051-017316ec73ef")
+      (uuid "440e2d5e-952c-4ba2-ac61-5356aaf48563")
     )
     (pin "D0"
-      (uuid "09942269-fb5f-46d1-b82e-e87e0c2f1990")
+      (uuid "48cf2400-3a65-466b-8145-9dae412dd150")
     )
     (pin "D1"
-      (uuid "4b519960-dfbe-4c72-96b9-df713704aa1e")
+      (uuid "02fcc372-7012-4c94-99ef-af67e69c1c27")
     )
     (pin "D2"
-      (uuid "963fd8b5-2bdc-4fdc-a7ac-18a32203912d")
+      (uuid "68d28c3f-8999-4f16-a736-f7e46c144571")
     )
     (pin "D3"
-      (uuid "f6ad8b67-5034-4890-9cc7-4b560257343e")
+      (uuid "76160727-314a-4d9e-90a5-4e5bfb3921fd")
     )
     (pin "D4"
-      (uuid "15c9ee62-57e8-4365-9e44-8f4fb6d82ba6")
+      (uuid "fda7ad9c-594c-4b22-a6e3-d0bf2eb0ee02")
     )
     (pin "D5"
-      (uuid "cb7fceb5-4b12-4bb1-bedb-857d35023bc8")
+      (uuid "f852b9ed-7889-4f61-b513-6933ada1435e")
     )
     (pin "D6"
-      (uuid "4e953ed9-58f5-4dd9-91fe-ccdc450b26ed")
+      (uuid "de322e8e-0602-4eb9-bac1-83968d2ef3e3")
     )
     (pin "D7"
-      (uuid "43085acf-81ef-4b5b-858f-f7e61b9abcc1")
+      (uuid "751fb920-7260-416e-9816-c557566adf55")
     )
     (pin "D8"
-      (uuid "35c039e4-0dde-4a01-a474-836efeca1dc9")
+      (uuid "cf538160-bae0-4e15-a4e8-f4461b6aa3b9")
     )
     (pin "D9"
-      (uuid "d097a013-9fc4-4029-af27-2116d6c3ad66")
+      (uuid "136e4e84-1d1f-41d5-a3bf-e4f46f483bad")
     )
     (pin "D10"
-      (uuid "f8d0dd9f-6837-427a-80e5-82800a21cae4")
+      (uuid "e3430f07-8810-4aa3-a303-4290988eb64e")
     )
     (pin "D11"
-      (uuid "ff3ba572-a148-4ad4-8bf9-35e44cd923a4")
+      (uuid "d0fce84e-6fdc-4218-819b-b8ba926fbab6")
     )
     (pin "D12"
-      (uuid "249776c0-d5cc-42dd-b032-3fc95f6153b5")
+      (uuid "baaa3548-9f7f-42b2-b06e-91df9f670faa")
     )
     (pin "D13"
-      (uuid "339a1416-c1fe-4189-b9a9-0cd4eeda59f0")
+      (uuid "db30de24-33c9-4e02-b668-a92616b8081d")
     )
     (pin "D14"
-      (uuid "15fbfb2d-ae5f-4075-8390-037dde661a20")
+      (uuid "7df7bf45-88fa-4e9e-aee3-b4e8445ad7d0")
     )
     (pin "D15"
-      (uuid "91e7a409-9ecb-418b-bf2e-55041d332efd")
+      (uuid "a0f8469d-11cc-4d93-88de-0ad202962dac")
     )
     (pin "D16"
-      (uuid "6395c32e-980f-4691-8ae8-d214464b2d75")
+      (uuid "26db2397-ba5c-46fd-a150-1db85592d52c")
     )
     (pin "D17"
-      (uuid "f9a9150c-064b-4a2f-9859-a303fae24463")
+      (uuid "ffc6370b-793a-478a-a1cc-c7d732bfc922")
     )
     (pin "D18"
-      (uuid "e9b19de8-b24c-4e99-b1c6-d4966262b980")
+      (uuid "5da10f5c-e6c2-41e0-9a0c-84959c3f2757")
     )
     (pin "D19"
-      (uuid "01ff531f-5bf9-4df9-b197-82ea66451c13")
+      (uuid "f34c4128-fdbb-4d8c-955c-0ec7d6c3c307")
     )
     (pin "D20"
-      (uuid "9e9cc5a6-8a4d-4219-8a17-7bf494a06b25")
+      (uuid "feb10aae-759b-4db5-8588-af6da3d61964")
     )
     (pin "D21"
-      (uuid "d1249b4d-e7a2-43af-87a7-b572f42138ee")
+      (uuid "a99b29da-26e2-4fd8-973b-ce245065e3f3")
     )
     (pin "D22"
-      (uuid "77fafe0e-8e4b-4c4d-9d3e-4d52bbf59977")
+      (uuid "059d258c-2384-4ee7-85c8-0fac6e0000d9")
     )
     (pin "D23"
-      (uuid "fa41c3f9-756c-4e6d-858f-c6410eebe311")
+      (uuid "49dfb365-427e-452b-8a50-8a70a4ebd18e")
     )
     (pin "D24"
-      (uuid "a482332e-ef5b-4720-bb03-faa7ce9405d8")
+      (uuid "75b11d1a-e7ee-4653-8b5f-561d4dbbece3")
     )
     (pin "D25"
-      (uuid "683aa7e6-39c2-4771-9552-aa54793e141b")
+      (uuid "817dd31e-c516-4e96-95b8-0a09017292e5")
     )
     (pin "D26"
-      (uuid "e49492cf-5729-4a0f-81aa-a9d28ccd5b5a")
+      (uuid "5a03948f-b196-4be8-a55b-baaceb5b4ad4")
     )
     (pin "D27"
-      (uuid "2a55629c-86d1-4911-b024-3a88714bf978")
+      (uuid "917fc18b-9a31-4f51-9377-016e846881f4")
     )
     (pin "D28"
-      (uuid "2030e2d1-7269-4f8a-a5f8-e062a5e4a28b")
+      (uuid "1ab01f33-e6ba-4484-9f93-3aa24432c83f")
     )
     (pin "D29"
-      (uuid "e23952bc-72d8-4930-ab3e-341e18a4005b")
+      (uuid "3d4cede1-75c8-41e6-a198-28554742dbdb")
     )
     (pin "D30"
-      (uuid "30be28e9-a1dd-48c5-a609-ecba8a76e824")
+      (uuid "ecde8aa1-6f9a-4a83-bb4e-4f07d9a0dd4c")
     )
     (pin "D31"
-      (uuid "eb1acb64-a9c8-4470-91a6-d1cc769cc60e")
+      (uuid "3757cbd5-4c96-4e4a-825a-673bd8454c00")
     )
     (pin "D32"
-      (uuid "02694874-ad5a-4f18-af32-6013a0a561fa")
+      (uuid "b5eacdab-76b2-42a7-ba8a-ccaea3033676")
     )
     (pin "D33"
-      (uuid "6c638a2e-8e8d-4009-b7a7-c3ac856afeb5")
+      (uuid "244b61fc-c17e-4956-8fa9-9f414567b0db")
     )
     (pin "D34"
-      (uuid "e981b285-20e6-4f1c-acbe-2a5f1744916c")
+      (uuid "466c97f6-7812-4d76-afba-b1a9b1522bd3")
     )
     (pin "D35"
-      (uuid "3a75df54-f514-494c-8f0b-58836364ce10")
+      (uuid "7c66e049-9cf2-49c6-8152-d5bf9d46234b")
     )
     (pin "D36"
-      (uuid "d823a55f-df23-4516-9886-7da855ee74e5")
+      (uuid "1cf01e8d-57c0-47d1-aea6-757a290f1335")
     )
     (pin "D37"
-      (uuid "f67cf8a2-36e3-4a51-be78-f883491bf7ff")
+      (uuid "32f6ba7a-2dd7-41e7-a794-535a6b98584a")
     )
     (pin "D38"
-      (uuid "08f33d7e-ee8a-4c0f-af18-f08eda760849")
+      (uuid "73605bc4-0f5f-4eb6-b907-b121ab546ce9")
     )
     (pin "D39"
-      (uuid "786f5710-bac3-45c2-8c9c-c75a3d591363")
+      (uuid "0c55f6c0-f1b3-4ecb-9f50-10c415131dbb")
     )
     (pin "D40"
-      (uuid "1dcaf35b-a39c-48a7-875b-d298a9b15d0f")
+      (uuid "b29acd1f-21f3-4359-9fea-dd82f1d4bdfe")
     )
     (pin "D41"
-      (uuid "8abaa34e-eab4-4c74-bac3-816ca84b5371")
+      (uuid "93c58e84-64cd-46c8-b6a0-2313a096cf22")
     )
     (pin "D42"
-      (uuid "39684774-692a-4a5f-b01b-31402e069145")
+      (uuid "fa3261e1-80d9-4a84-89f9-98644e3e24f2")
     )
     (pin "D43"
-      (uuid "9c734a7e-4ecb-43c2-88a5-582da3852f82")
+      (uuid "d1612a6c-080a-4201-aae3-86de8216cc3c")
     )
     (pin "D44"
-      (uuid "4a34a18f-540f-4069-a1a2-12e9d608ff98")
+      (uuid "30a44174-d94d-4e02-a29a-c9d98011dc1f")
     )
     (pin "D45"
-      (uuid "3a3f7a5e-85ac-4e75-9ee1-c43670aa6afa")
+      (uuid "bb247592-8678-4b16-a247-b0e8c4a8fdeb")
     )
     (pin "D46"
-      (uuid "59337496-9694-45f1-94be-a4357218e6ee")
+      (uuid "13c486aa-80ac-41c8-a37f-035466cb6fca")
     )
     (pin "D47"
-      (uuid "65f8ac00-06cd-402b-9a36-767f0a58815e")
+      (uuid "9479cc4c-36fd-4728-aded-ea9a24a19296")
     )
     (pin "D48"
-      (uuid "9f4cc37e-64eb-4a60-8963-a049ad082da7")
+      (uuid "eda4fd03-e20d-46fd-8035-6c2eb4c760a2")
     )
     (pin "D49"
-      (uuid "5ceb1c85-3a4e-4ace-b3bc-88cef45d7ebe")
+      (uuid "5d207e70-ea98-417a-8049-5ed825c0c377")
     )
     (pin "D50"
-      (uuid "28e51470-6c07-43ee-8f7a-81c385528081")
+      (uuid "f01dfd87-5501-491e-a6ce-5dd5d40a48de")
     )
     (pin "D51"
-      (uuid "c7435386-afef-46e7-ab64-13cf016fff49")
+      (uuid "1b5ba199-342b-48b4-8ef2-997ec3eab2d7")
     )
     (pin "D52"
-      (uuid "dc70e131-7307-4806-a71c-3a99795e3686")
+      (uuid "8dcde015-5fe4-4aa7-a3e0-f2386a630cd5")
     )
     (pin "D53"
-      (uuid "f9472f43-b92b-4a96-a948-9939f00eba31")
+      (uuid "97f759dc-c4c1-4d33-b032-78ff00186c65")
     )
     (pin "SCL"
-      (uuid "f0651a48-7d82-4fdb-abef-fd6536c44cdc")
+      (uuid "29d69c7c-8bf7-4bdf-8762-c25b6b8a3eb6")
     )
     (pin "SDA"
-      (uuid "5c59e4e3-14b7-455e-98f2-348b48caf558")
+      (uuid "39a71477-2263-495b-a7e9-4093120f6b33")
     )
     (pin "MISO"
-      (uuid "2500c40b-5f3a-4066-81ec-52782922fb66")
+      (uuid "b61ff76b-8ed2-4862-b65b-d0750901b5ca")
     )
     (pin "MOSI"
-      (uuid "aa8790a8-6614-4c16-b1b3-2158aeafe908")
+      (uuid "b77131c2-70f4-4461-be0d-157a1ed7181c")
     )
     (pin "SCK"
-      (uuid "94d7ec80-c54f-45a6-9f41-851ec3086312")
+      (uuid "076a1a52-0318-4859-a261-2679d5f0a013")
     )
     (pin "RST2"
-      (uuid "d94662cb-aca6-434e-92be-0081ec779419")
+      (uuid "2cceee50-5aa3-4955-bfac-9d30397ed75e")
     )
     (pin "5V2"
-      (uuid "fb6d1f0a-a0fb-41a4-8f34-3d9ac4b331f6")
+      (uuid "1dccc1ed-b7d2-4ac6-8ffd-aeacf18da58e")
     )
     (pin "GND4"
-      (uuid "a3f60238-dcc4-4a1e-aca5-f4c288653726")
+      (uuid "647fe97e-7e8f-47f7-9964-96e571be9cd5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "A1")
           (unit 1)
         )
@@ -5849,7 +5849,7 @@
       (width 0)
       (type default)
     )
-    (uuid "e33aaf24-507d-4675-8ee9-0eed13435de7")
+    (uuid "e4759d04-10b5-4f6e-99a0-1bfdeac4a57f")
   )
   (symbol
     (lib_id "power:+5V")
@@ -5859,7 +5859,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6befca38-7952-4fc0-ae28-5cabac914207")
+    (uuid "5c095271-cd77-48da-b92d-21623e9485e9")
     (property "Reference" "#PWR2"
       (at 46.99 85.09 0)
       (effects
@@ -5909,11 +5909,11 @@
       )
     )
     (pin "1"
-      (uuid "35ae5d10-1152-49ea-b6c7-bf62d11ca78b")
+      (uuid "349d870e-43b7-4a7a-b934-e0df7b0ecc72")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR2")
           (unit 1)
         )
@@ -5929,7 +5929,7 @@
       (width 0)
       (type default)
     )
-    (uuid "a610aea2-36ef-4e2c-ba60-f6616dae055a")
+    (uuid "0067015f-f623-480c-95d2-aec07a6162a5")
   )
   (symbol
     (lib_id "power:+5V")
@@ -5939,7 +5939,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "90a0748b-2a14-419e-bbeb-4cd4b6b5a707")
+    (uuid "4c679222-7e84-4253-ae8e-aa641dcc90d3")
     (property "Reference" "#PWR4"
       (at 46.99 87.63 0)
       (effects
@@ -5989,11 +5989,11 @@
       )
     )
     (pin "1"
-      (uuid "72cbafc1-6ade-49ef-b3b2-0e224a6b3cde")
+      (uuid "12152ff1-da7a-40f5-9c7c-ae91f17b8293")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR4")
           (unit 1)
         )
@@ -6009,7 +6009,7 @@
       (width 0)
       (type default)
     )
-    (uuid "2fb99947-e9a9-49e6-a3f4-ad6707b6034b")
+    (uuid "04387bf9-0450-4730-be4d-40d0d596ee02")
   )
   (symbol
     (lib_id "power:+5V")
@@ -6019,7 +6019,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d508fbb9-b4bb-479a-bfab-051e93c32f66")
+    (uuid "805edfe0-c1fb-4870-88b3-c876941f0222")
     (property "Reference" "#PWR6"
       (at 46.99 90.17 0)
       (effects
@@ -6069,11 +6069,11 @@
       )
     )
     (pin "1"
-      (uuid "95dddf97-2841-4282-b360-f5d67c95fb90")
+      (uuid "f2b7d159-48a2-4d9f-8fca-967b3811b197")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR6")
           (unit 1)
         )
@@ -6082,15 +6082,15 @@
   )
   (no_connect
     (at 49.53 95.25)
-    (uuid "37506a44-de62-41b4-9cc1-54ebe2257fb8")
+    (uuid "3fe7e656-5243-4fd4-8a36-b0201b420c58")
   )
   (no_connect
     (at 49.53 97.79)
-    (uuid "88ac3a6e-5024-45ec-b550-f02c07fc1156")
+    (uuid "b0d76dfb-e259-4fbd-a6ef-422ef9bf2ddf")
   )
   (no_connect
     (at 49.53 100.33)
-    (uuid "58bc284e-acb2-407f-8498-dbb73deb8a86")
+    (uuid "ebcaf44b-107f-4f0d-b6cb-4a51931d7b55")
   )
   (wire
     (pts
@@ -6101,7 +6101,7 @@
       (width 0)
       (type default)
     )
-    (uuid "66cb8d29-ada4-452c-84cd-1393e0d4fd20")
+    (uuid "e47cc5de-c032-4763-a9c6-7b60f099fbdc")
   )
   (symbol
     (lib_id "power:GND")
@@ -6111,7 +6111,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "4d49e219-119f-4768-bceb-00a25066dfc1")
+    (uuid "0906df3f-ecda-433d-9618-c877df65adaf")
     (property "Reference" "#PWR11"
       (at 46.99 100.33 0)
       (effects
@@ -6161,11 +6161,11 @@
       )
     )
     (pin "1"
-      (uuid "4a74f0ae-bf70-46c4-8348-3e1f35295f37")
+      (uuid "3bcf9bef-1106-4069-a47f-ff618c0e1a6f")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR11")
           (unit 1)
         )
@@ -6181,7 +6181,7 @@
       (width 0)
       (type default)
     )
-    (uuid "db15e35a-86ff-43d2-a937-84ea01cd3a6a")
+    (uuid "b81b0c60-449a-47c3-aa3a-e213e9d27d61")
   )
   (symbol
     (lib_id "power:GND")
@@ -6191,7 +6191,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b1654ace-56eb-473b-8abe-4a2830cb5766")
+    (uuid "b8973500-a5aa-4f5e-b3f1-ea4b87d8efba")
     (property "Reference" "#PWR13"
       (at 46.99 102.87 0)
       (effects
@@ -6241,11 +6241,11 @@
       )
     )
     (pin "1"
-      (uuid "60cc8d48-e785-4a39-84a9-1abc725e18f4")
+      (uuid "dd1817a0-416a-4468-8fa9-95f9ae4b9130")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR13")
           (unit 1)
         )
@@ -6261,7 +6261,7 @@
       (width 0)
       (type default)
     )
-    (uuid "bca27fd0-12b7-4667-88e8-3ad2ab7d3a35")
+    (uuid "9f192b6a-1b88-4ebf-9539-518dbe397743")
   )
   (symbol
     (lib_id "power:GND")
@@ -6271,7 +6271,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "5f843bef-21f8-4ad7-bb12-ffbe9f917697")
+    (uuid "cb82d26e-1758-4b6f-b6fc-29c6b73dee01")
     (property "Reference" "#PWR15"
       (at 46.99 105.41 0)
       (effects
@@ -6321,11 +6321,11 @@
       )
     )
     (pin "1"
-      (uuid "8cc6792c-8416-4842-8e0f-f48e9b769588")
+      (uuid "75ae744c-d1eb-48a4-987b-83e0b3f43d34")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR15")
           (unit 1)
         )
@@ -6341,7 +6341,7 @@
       (width 0)
       (type default)
     )
-    (uuid "451cc40c-ed75-4dd9-a69a-9495471b1476")
+    (uuid "7f823dd8-46b3-48cc-a48d-6006eb4afe04")
   )
   (symbol
     (lib_id "power:GND")
@@ -6351,7 +6351,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b8e78be3-8a41-4614-b53a-82ca632bb38b")
+    (uuid "ce1369df-dfe5-4af7-ab1a-b3d28f970a21")
     (property "Reference" "#PWR17"
       (at 46.99 107.95 0)
       (effects
@@ -6401,11 +6401,11 @@
       )
     )
     (pin "1"
-      (uuid "a1020307-d2c8-4344-8413-3163487883b3")
+      (uuid "c7dcf4e5-b12f-4c6d-87b3-637f8b3491e9")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR17")
           (unit 1)
         )
@@ -6421,7 +6421,7 @@
       (width 0)
       (type default)
     )
-    (uuid "180aad42-b9e2-4ac4-9112-d70aa49796a6")
+    (uuid "fce3d689-5100-44ba-b1ea-36f3a592013f")
   )
   (symbol
     (lib_id "power:GND")
@@ -6431,7 +6431,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "2ec6da61-ee12-490c-bb06-29d0c6f07fdf")
+    (uuid "afc53fc7-3a6d-495d-a3d9-04dc40e06666")
     (property "Reference" "#PWR19"
       (at 46.99 110.49 0)
       (effects
@@ -6481,11 +6481,11 @@
       )
     )
     (pin "1"
-      (uuid "c17889bb-dd10-4563-b722-9ef4ade028dc")
+      (uuid "aa073902-4556-4ec5-888b-cfec9d436f82")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR19")
           (unit 1)
         )
@@ -6494,83 +6494,83 @@
   )
   (no_connect
     (at 49.53 115.57)
-    (uuid "18bb0296-5fa5-4c4c-8f4b-156ee3919151")
+    (uuid "f43b1b98-8f04-4abe-a073-64c14fcfe077")
   )
   (no_connect
     (at 49.53 118.11)
-    (uuid "4f985e2d-fb69-441f-bfe5-c48452006419")
+    (uuid "f7d6cc0b-0d1c-46aa-8aa6-b71a24faebc4")
   )
   (no_connect
     (at 49.53 120.65)
-    (uuid "499127b5-9660-42cc-a787-be3d4228ff3f")
+    (uuid "7ed501aa-0e7b-4171-923d-60d36406a825")
   )
   (no_connect
     (at 49.53 123.19)
-    (uuid "146d6799-0ffb-4a9b-a3dd-f115e1dfd122")
+    (uuid "9a1350d3-772e-4b68-94dd-dce58de69705")
   )
   (no_connect
     (at 49.53 125.73)
-    (uuid "b2e270bf-b23b-472d-8c6b-3168e22615a0")
+    (uuid "b6ffbc3f-0888-48b6-9150-be5b0929895d")
   )
   (no_connect
     (at 49.53 128.27)
-    (uuid "968adfca-877a-4d01-b583-c9f0a5b79895")
+    (uuid "d741174e-04ec-4d95-b250-85417feb147c")
   )
   (no_connect
     (at 49.53 130.81)
-    (uuid "df1f5e8e-efce-4721-a667-24dd6f1ac041")
+    (uuid "65f3df13-2ff4-4e8d-8471-2e6e0d009050")
   )
   (no_connect
     (at 49.53 133.35)
-    (uuid "7fd7f2d6-cf71-4529-943a-431ba081f817")
+    (uuid "6b71202a-9d9b-447b-b0b4-b5b05aa772e4")
   )
   (no_connect
     (at 49.53 135.89)
-    (uuid "9b479f27-507a-42ab-a05f-da6521b7e576")
+    (uuid "2b848bb0-0b35-4335-83de-55aac324ece0")
   )
   (no_connect
     (at 49.53 138.43)
-    (uuid "b6538cc0-9834-4f69-9cf5-b9bc7eb28824")
+    (uuid "65f1999e-7543-4cc4-8bb5-1277784078d7")
   )
   (no_connect
     (at 49.53 140.97)
-    (uuid "aa0b3cb4-5c88-4d3e-bc37-7b6221b9d0e1")
+    (uuid "53319a0e-1d53-4797-9e75-ca25f46d5c2f")
   )
   (no_connect
     (at 49.53 143.51)
-    (uuid "7dcf3c14-8688-4efb-8c31-db7ee5c0940c")
+    (uuid "0f3f61e7-1873-46fe-8666-b999dad22fca")
   )
   (no_connect
     (at 49.53 146.05)
-    (uuid "ff8d4755-7a7d-4602-a7e0-65bbaac56cd3")
+    (uuid "716a9a2e-b5ac-4944-9883-08b573bf1bc6")
   )
   (no_connect
     (at 49.53 148.59)
-    (uuid "463da93b-ebe9-473f-8681-304598aac5fd")
+    (uuid "7ade8014-4285-421b-9cbb-48d8472866d6")
   )
   (no_connect
     (at 49.53 151.13)
-    (uuid "408c58a8-7847-4414-bb00-d2742feaf6b9")
+    (uuid "4de1088f-8e07-42ca-a585-851268dbfd4b")
   )
   (no_connect
     (at 49.53 153.67)
-    (uuid "ada22548-a975-44cc-9999-1e0587c2899a")
+    (uuid "cfaf4512-c364-4357-b191-a5c13f787fa1")
   )
   (no_connect
     (at 49.53 156.21)
-    (uuid "bcb3b9c9-f1ea-4408-8273-18924d02e359")
+    (uuid "314572a0-f94b-4018-8dd9-495385c357aa")
   )
   (no_connect
     (at 49.53 158.75)
-    (uuid "c97f4041-688b-4520-93c8-39163b49869e")
+    (uuid "c2c68901-3400-4250-bd04-1e5cd620ef1d")
   )
   (no_connect
     (at 100.33 87.63)
-    (uuid "04a8b889-8e95-4a04-8785-6b4fc8232666")
+    (uuid "033ce594-cd24-4008-999d-394d88552baf")
   )
   (no_connect
     (at 100.33 90.17)
-    (uuid "bc091f97-c3cd-49dc-8e8b-0e981513b133")
+    (uuid "bcb859f6-9118-4fd5-a501-510a050ad0dc")
   )
   (wire
     (pts
@@ -6581,7 +6581,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c48ec7dd-3f4d-4bcb-9d26-0fac92001a15")
+    (uuid "3773948c-6abd-4e85-9ddc-bcdcb9d02fe4")
   )
   (global_label "ENC_A_MCU"
     (shape passive)
@@ -6593,7 +6593,7 @@
       )
       (justify left)
     )
-    (uuid "4f6a9630-ecee-4e37-96f0-435927ed6668")
+    (uuid "7b554eff-a6a0-434e-bd9c-68edd3a1af5e")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 92.71 0)
       (effects
@@ -6613,7 +6613,7 @@
       (width 0)
       (type default)
     )
-    (uuid "0680d6fe-5de7-4186-99da-40895ed8d26b")
+    (uuid "6b01539a-02a6-4a92-9f5e-370579d9d813")
   )
   (global_label "ENC_B_MCU"
     (shape passive)
@@ -6625,7 +6625,7 @@
       )
       (justify left)
     )
-    (uuid "7d1ded32-093a-4175-99b5-58dd4419626d")
+    (uuid "37965ee7-b6ae-4e34-88af-574a2be32465")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 95.25 0)
       (effects
@@ -6645,7 +6645,7 @@
       (width 0)
       (type default)
     )
-    (uuid "eeba5fc2-86e4-428b-8418-58d7dbb13472")
+    (uuid "3436a1cf-439e-4a36-a238-4343496f8c40")
   )
   (global_label "LED1_R_MCU"
     (shape passive)
@@ -6657,7 +6657,7 @@
       )
       (justify left)
     )
-    (uuid "9910874e-ff67-4592-b439-df6f31afb1bf")
+    (uuid "c288ef78-b8fe-4193-8bcc-3c75e2bc64c5")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 97.79 0)
       (effects
@@ -6677,7 +6677,7 @@
       (width 0)
       (type default)
     )
-    (uuid "95557a8c-a6ad-47ca-913a-72f49013cec1")
+    (uuid "63df53bf-dbaa-43fb-b660-e0e3871ced38")
   )
   (global_label "LED2_R_MCU"
     (shape passive)
@@ -6689,7 +6689,7 @@
       )
       (justify left)
     )
-    (uuid "9ff80ca2-de24-44f6-875f-72fcc3c1a557")
+    (uuid "ec4d456d-7206-4ead-a8c3-d30c88120cac")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 100.33 0)
       (effects
@@ -6709,7 +6709,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9c91d9ea-330d-4776-b1c4-3757f3ae7716")
+    (uuid "f7c7574f-ea31-4a1b-a9e9-fa9b43e04285")
   )
   (global_label "LED2_G_MCU"
     (shape passive)
@@ -6721,7 +6721,7 @@
       )
       (justify left)
     )
-    (uuid "5e782599-9942-492f-ab04-afa8ebb055db")
+    (uuid "06f12236-d348-4502-bdfe-61b261218b00")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 102.87 0)
       (effects
@@ -6741,7 +6741,7 @@
       (width 0)
       (type default)
     )
-    (uuid "7df2fd61-d9e3-44c5-a9fd-1574c43a603c")
+    (uuid "f72a79f8-e681-4318-bce1-64dd72627061")
   )
   (global_label "LED1_G_MCU"
     (shape passive)
@@ -6753,7 +6753,7 @@
       )
       (justify left)
     )
-    (uuid "26e96262-9da6-4bc0-b8f8-a75ac3abaec2")
+    (uuid "f8bf86ae-7402-444d-a5cf-98b18c4e490d")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 105.41 0)
       (effects
@@ -6773,7 +6773,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9064df51-1a52-4259-8a65-639e1a3bdccc")
+    (uuid "1405fe4f-b750-44a4-a833-47b3bd4e6daa")
   )
   (global_label "LED3_R_MCU"
     (shape passive)
@@ -6785,7 +6785,7 @@
       )
       (justify left)
     )
-    (uuid "7fc34fa5-1b6b-4d80-9934-53d41106d376")
+    (uuid "e19b6fd3-c934-4f33-af92-cc618ad74bd8")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 107.95 0)
       (effects
@@ -6805,7 +6805,7 @@
       (width 0)
       (type default)
     )
-    (uuid "58606fa4-5cdd-439a-8042-d8a83f4239f4")
+    (uuid "1269f9c4-3e48-4350-8eb9-622cb53b5be1")
   )
   (global_label "LED3_G_MCU"
     (shape passive)
@@ -6817,7 +6817,7 @@
       )
       (justify left)
     )
-    (uuid "6a47ec74-eb39-484d-8546-ad1980d97b7c")
+    (uuid "06704de6-8919-49a8-9eea-39dae14365cb")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 110.49 0)
       (effects
@@ -6837,7 +6837,7 @@
       (width 0)
       (type default)
     )
-    (uuid "a8395bfe-e6ae-41a8-827e-dd4b069acc35")
+    (uuid "e81334bc-6ca1-41d4-afcc-c10c12d18299")
   )
   (global_label "BTN_SLEEP"
     (shape passive)
@@ -6849,7 +6849,7 @@
       )
       (justify left)
     )
-    (uuid "90decd72-9744-459d-b710-43f6dc680e2a")
+    (uuid "a5fd1297-f452-4c19-afea-47a19339cad9")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 113.03 0)
       (effects
@@ -6869,7 +6869,7 @@
       (width 0)
       (type default)
     )
-    (uuid "839f392d-bb9f-4e7d-b8ba-e76aac8c5ec1")
+    (uuid "3b18efef-6846-4c68-b5fd-7c63da97a035")
   )
   (global_label "BTN_LOG"
     (shape passive)
@@ -6881,7 +6881,7 @@
       )
       (justify left)
     )
-    (uuid "f641c70d-a5c2-4c9e-9ab9-7a090e38860c")
+    (uuid "9bd763df-d958-406b-a180-a03078648de6")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 115.57 0)
       (effects
@@ -6901,7 +6901,7 @@
       (width 0)
       (type default)
     )
-    (uuid "90c748ae-47cc-4d9c-879f-5b5d25ea6315")
+    (uuid "520b7d36-c202-43b0-8809-eb073bf7de8a")
   )
   (global_label "BTN_FORCE"
     (shape passive)
@@ -6913,7 +6913,7 @@
       )
       (justify left)
     )
-    (uuid "cab4a05a-0522-4441-9274-d8d43568866d")
+    (uuid "a72f26e0-b679-4c22-ac01-ac1e4484ef4e")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 118.11 0)
       (effects
@@ -6926,15 +6926,15 @@
   )
   (no_connect
     (at 100.33 120.65)
-    (uuid "5355d0c8-20db-43f4-aecf-dc18ddaaf0b8")
+    (uuid "c115fa4d-8f0d-4bcf-87eb-03807b0687c2")
   )
   (no_connect
     (at 100.33 123.19)
-    (uuid "56f03e8f-3ec1-4173-b07f-c141df17ae42")
+    (uuid "6904cee4-04c3-4b03-93e7-1f70d2f52bcc")
   )
   (no_connect
     (at 100.33 125.73)
-    (uuid "ea2e638b-5f25-4fca-b8dc-90a8be2ca015")
+    (uuid "e7594356-313c-43f0-9421-6e9764105316")
   )
   (wire
     (pts
@@ -6945,7 +6945,7 @@
       (width 0)
       (type default)
     )
-    (uuid "7922cd82-8628-45d4-ac53-d413dd9e0874")
+    (uuid "5773b141-078d-4e1e-a5b4-9e3f5a6da740")
   )
   (global_label "IMU_RX"
     (shape passive)
@@ -6957,7 +6957,7 @@
       )
       (justify left)
     )
-    (uuid "ceffb3ac-181b-4411-a903-e92d8d17315f")
+    (uuid "4d415265-bfa6-494f-9031-404d20c2239f")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 128.27 0)
       (effects
@@ -6977,7 +6977,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6d20f318-33b3-4d9e-b5f6-2af4b1544424")
+    (uuid "6a3a64da-a3a3-400c-9b06-619ee520f00c")
   )
   (global_label "IMU_TX"
     (shape passive)
@@ -6989,7 +6989,7 @@
       )
       (justify left)
     )
-    (uuid "bc07ed47-c618-488c-92b5-9380dc1c3755")
+    (uuid "6f8bba9d-7ebf-4e2f-bbad-4f1e2ae0d28d")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 130.81 0)
       (effects
@@ -7009,7 +7009,7 @@
       (width 0)
       (type default)
     )
-    (uuid "dc57ad50-af59-4fb0-a3f9-2f7ff40717df")
+    (uuid "e722c537-a949-4241-8b15-7f1085d4a5c3")
   )
   (global_label "GPS_RX"
     (shape passive)
@@ -7021,7 +7021,7 @@
       )
       (justify left)
     )
-    (uuid "e8423407-0010-4911-955b-aef66e193463")
+    (uuid "45d5ea4f-bd76-473e-b08c-2673bfa2e331")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 133.35 0)
       (effects
@@ -7041,7 +7041,7 @@
       (width 0)
       (type default)
     )
-    (uuid "aa1e1296-e225-484f-88d7-ba7844b11712")
+    (uuid "1e62fe7e-fd06-4ea7-b7f4-4a3e625fc642")
   )
   (global_label "GPS_TX"
     (shape passive)
@@ -7053,7 +7053,7 @@
       )
       (justify left)
     )
-    (uuid "285763b1-2b31-477a-bef1-cba3c3377762")
+    (uuid "ead90061-3891-4809-83c8-e6aa64f550ed")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 135.89 0)
       (effects
@@ -7073,7 +7073,7 @@
       (width 0)
       (type default)
     )
-    (uuid "157e2e2e-dc9a-4d11-b244-12ced5adb40b")
+    (uuid "eb98f401-75f8-40e5-ab47-db322b1e9529")
   )
   (global_label "SDA"
     (shape passive)
@@ -7085,7 +7085,7 @@
       )
       (justify left)
     )
-    (uuid "cdf069a2-ab6f-47ff-8b1e-82ac0dfa9951")
+    (uuid "840a0336-88ae-44b4-b87a-017eb0adf95b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 138.43 0)
       (effects
@@ -7105,7 +7105,7 @@
       (width 0)
       (type default)
     )
-    (uuid "44442c2c-e0ce-4c7e-9761-29c39f41790b")
+    (uuid "03edee18-4ad8-4491-a1da-82d96baf81b7")
   )
   (global_label "SCL"
     (shape passive)
@@ -7117,7 +7117,7 @@
       )
       (justify left)
     )
-    (uuid "44346943-fa9c-4002-855e-0d8f235c7e6f")
+    (uuid "153e3121-f480-4386-855e-3c50513e2b87")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 140.97 0)
       (effects
@@ -7130,115 +7130,115 @@
   )
   (no_connect
     (at 100.33 143.51)
-    (uuid "91a23414-4d40-4ae9-998c-243367173ea9")
+    (uuid "983f6a78-f636-4c36-b65f-1ba07074b6f0")
   )
   (no_connect
     (at 100.33 146.05)
-    (uuid "576c0079-4153-4a1a-977f-3189e72594ce")
+    (uuid "26031252-02d6-418a-acdb-6abeab8a020a")
   )
   (no_connect
     (at 100.33 148.59)
-    (uuid "2fb9545c-fa2b-48b1-b532-144a467f5a25")
+    (uuid "b4fec484-9e4d-4661-aa36-ee7802ea7de2")
   )
   (no_connect
     (at 100.33 151.13)
-    (uuid "9798b2d7-6c49-4235-979b-ef28522935bd")
+    (uuid "08e3b7fd-0ba7-4a2a-93d1-9b0df01bf9e8")
   )
   (no_connect
     (at 100.33 153.67)
-    (uuid "b5d3ccf1-1163-4cfb-801c-ae724466c19b")
+    (uuid "cc9ed7db-ead7-4c17-b7fc-ea4b83404088")
   )
   (no_connect
     (at 100.33 156.21)
-    (uuid "f39ba74f-606b-4eba-850b-9b31722f6b6b")
+    (uuid "cf240d39-1d65-4f37-b6d1-013d3185bd93")
   )
   (no_connect
     (at 100.33 158.75)
-    (uuid "81e2ca09-6ae5-49c6-a8c9-3e179c16ea6f")
+    (uuid "15957c79-41e6-4dc6-9583-bcaf02a2be0b")
   )
   (no_connect
     (at 100.33 161.29)
-    (uuid "c87a9e81-f929-4b2a-8d80-d6fc02852ac4")
+    (uuid "c2c0368b-9deb-4a98-b715-6873ce3d47d2")
   )
   (no_connect
     (at 100.33 163.83)
-    (uuid "652d1d90-619d-4b45-bfe0-a297907d4936")
+    (uuid "1414ff62-a529-4478-b38f-5c88280f841e")
   )
   (no_connect
     (at 100.33 166.37)
-    (uuid "2274a5f8-463b-4983-8b5c-67db1c0adf45")
+    (uuid "f1b110d5-e960-4bcb-aee2-9ed01e610875")
   )
   (no_connect
     (at 100.33 168.91)
-    (uuid "c4cf2d32-5098-4431-8801-e64a2a41c878")
+    (uuid "afb2d8fb-5cfd-433a-8815-7de6e87f4b50")
   )
   (no_connect
     (at 100.33 171.45)
-    (uuid "8ae841b4-267b-4556-90a1-ca61b1ab6fb5")
+    (uuid "3643a9e8-ce7d-4b97-b89b-2e178b03de2f")
   )
   (no_connect
     (at 100.33 173.99)
-    (uuid "69b22d01-c528-454b-925b-9965d913454b")
+    (uuid "3a8cacb4-6510-4b08-8a75-fa98b2ab0640")
   )
   (no_connect
     (at 100.33 176.53)
-    (uuid "fd99c9ce-c215-4836-b372-7969e92cf492")
+    (uuid "f3549e70-5439-4ea1-8bb4-9c95f5247b2b")
   )
   (no_connect
     (at 100.33 179.07)
-    (uuid "d965099a-3825-4bb5-a0f8-7f34cc032871")
+    (uuid "c53b1749-89fb-44bf-82cd-6d8b4617859f")
   )
   (no_connect
     (at 100.33 181.61)
-    (uuid "f6fd69c6-5761-4193-9c08-b2fe648f3f34")
+    (uuid "2595a1c5-f812-417a-ba21-4bf5230465f1")
   )
   (no_connect
     (at 100.33 184.15)
-    (uuid "cc02523f-a37c-443a-9b32-cddc98bdee81")
+    (uuid "476a8c6c-63d0-433a-aa1d-4ef56823f33a")
   )
   (no_connect
     (at 100.33 186.69)
-    (uuid "bf56b4a9-4fd5-47f2-9e55-76a164ae93e9")
+    (uuid "bb8d40c9-9782-46aa-9ca5-5fc8ffd61b6c")
   )
   (no_connect
     (at 100.33 189.23)
-    (uuid "0145e611-58e0-4ca9-9089-a75cdbbc9192")
+    (uuid "08e4e329-d87f-4891-b491-b5d732e5be7d")
   )
   (no_connect
     (at 100.33 191.77)
-    (uuid "74262c81-4da2-4b06-904f-d9f14b14b24c")
+    (uuid "a31189cf-8f18-48a4-9381-dc554b2b2565")
   )
   (no_connect
     (at 100.33 194.31)
-    (uuid "c8bb8621-b400-4080-8570-3242c5539974")
+    (uuid "89a77dff-eeac-4666-bb70-b71de56a045f")
   )
   (no_connect
     (at 100.33 196.85)
-    (uuid "6cd06e88-e63a-4be1-a9db-6ec97f67b719")
+    (uuid "f935e5fc-810b-4146-af70-24f08deaae21")
   )
   (no_connect
     (at 100.33 199.39)
-    (uuid "5bab6c07-27fd-4d68-8708-56b0af7b36dd")
+    (uuid "c31e2b05-07cf-46ba-bd7c-acee93a4be5a")
   )
   (no_connect
     (at 100.33 201.93)
-    (uuid "21ce10c6-4d27-48c3-bbb7-e58a0bd89e90")
+    (uuid "0b567cb5-8123-40ea-97de-1a626694f8e7")
   )
   (no_connect
     (at 100.33 204.47)
-    (uuid "37458f02-8a53-4cf2-bae9-7100b857ad83")
+    (uuid "ab82c042-13f1-46d9-867b-35679b164ecc")
   )
   (no_connect
     (at 100.33 207.01)
-    (uuid "2187845d-fb82-43ce-a482-5ac0f71a2401")
+    (uuid "97b4e7c9-12f7-446e-a065-3ad48bac7adc")
   )
   (no_connect
     (at 100.33 209.55)
-    (uuid "38f63473-b1d0-4ca3-b58a-ea015641f29f")
+    (uuid "e1215234-dd1c-4caa-a789-4fe8c7f03f43")
   )
   (no_connect
     (at 100.33 212.09)
-    (uuid "831ff218-9924-4be1-821f-8e98513519ed")
+    (uuid "369879ba-1de0-4b71-b65c-7da2b97ce5c8")
   )
   (wire
     (pts
@@ -7249,7 +7249,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f5525a0f-4915-4f11-99fb-a31d4430c4c7")
+    (uuid "36885e66-9709-449c-8c96-a50a8f52cc08")
   )
   (global_label "SPI_MISO"
     (shape passive)
@@ -7261,7 +7261,7 @@
       )
       (justify left)
     )
-    (uuid "abbdd44f-69d0-4509-9d11-20d4857d8e28")
+    (uuid "87fc9875-da2d-478f-8eb4-ba18ad1c472a")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 214.63 0)
       (effects
@@ -7281,7 +7281,7 @@
       (width 0)
       (type default)
     )
-    (uuid "ba6613c7-a13b-417f-acaf-f282a7d3bda1")
+    (uuid "df53f477-d372-4bd1-91e9-a1d95a4f3c69")
   )
   (global_label "SPI_MOSI"
     (shape passive)
@@ -7293,7 +7293,7 @@
       )
       (justify left)
     )
-    (uuid "08476f87-6cf1-46ee-b938-3fa623ef080a")
+    (uuid "894835c8-8630-44cf-8d65-9796eb46560e")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 217.17 0)
       (effects
@@ -7313,7 +7313,7 @@
       (width 0)
       (type default)
     )
-    (uuid "e087994f-cfd0-4868-96dd-46c001825565")
+    (uuid "c11d70ac-7e0f-4236-904b-7ff613c316ee")
   )
   (global_label "SPI_SCK"
     (shape passive)
@@ -7325,7 +7325,7 @@
       )
       (justify left)
     )
-    (uuid "a15a9e07-b873-42c1-800e-d5159dbfc8ca")
+    (uuid "1bbde205-82ec-4694-9f24-dfef5d32ee5e")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 219.71 0)
       (effects
@@ -7345,7 +7345,7 @@
       (width 0)
       (type default)
     )
-    (uuid "0d239bfb-fed9-4322-8593-01970f716545")
+    (uuid "95dc80b3-711c-4747-8a65-ab3f7c49cf70")
   )
   (global_label "SD_CS_5V"
     (shape passive)
@@ -7357,7 +7357,7 @@
       )
       (justify left)
     )
-    (uuid "a4d182f0-3074-421d-9233-9a043278dd99")
+    (uuid "b044bb83-25ba-4131-9fb1-786291c24ff7")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 105.41 222.25 0)
       (effects
@@ -7370,35 +7370,35 @@
   )
   (no_connect
     (at 100.33 224.79)
-    (uuid "9e50c363-3547-4122-8d83-d86d73ea22d2")
+    (uuid "4fd03d62-c129-4a47-b560-d90f642664b4")
   )
   (no_connect
     (at 100.33 227.33)
-    (uuid "419c1c45-d5d9-4289-ab07-a0376e91e5ed")
+    (uuid "0a95f156-9788-40b3-b83d-22a5ffdffd0f")
   )
   (no_connect
     (at 100.33 229.87)
-    (uuid "28ff1cd6-6b4e-4781-bc36-5e53c2e3d5f5")
+    (uuid "123eb87f-22de-484f-8db0-bfc2828ce4e6")
   )
   (no_connect
     (at 100.33 232.41)
-    (uuid "1d3808f2-9bbc-4428-9526-ec98f8677fd4")
+    (uuid "ea26396d-f4c5-49e8-9099-def5b7271fdc")
   )
   (no_connect
     (at 100.33 234.95)
-    (uuid "3f6f53c1-7ad0-4bd3-bcb3-120e02c08e6d")
+    (uuid "13e96cab-eebb-44f1-8bd8-9a936722ce79")
   )
   (no_connect
     (at 100.33 237.49)
-    (uuid "18d23901-ee1c-49ab-b446-e764264d78ea")
+    (uuid "d91dbbc8-214e-4435-8cb2-d5c3a35474c5")
   )
   (no_connect
     (at 100.33 240.03)
-    (uuid "769d58d0-c677-4d19-b4e1-ee8cfbf5de30")
+    (uuid "f547b6f2-73b6-4e87-b303-35c179068e2d")
   )
   (no_connect
     (at 100.33 242.57)
-    (uuid "4f4dfc67-65c8-407f-8d1c-b5a6e37ba94f")
+    (uuid "bbea45e4-d88c-40e4-80fb-2b8632d14519")
   )
   (symbol
     (lib_id "LightMeter:Adafruit_UltimateGPS_v3")
@@ -7408,7 +7408,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "512b07e8-fc35-4264-a9ca-25aa6cb36b45")
+    (uuid "d4688f61-f900-4f9d-b395-aff576c4af24")
     (property "Reference" "GPS1"
       (at 201.93 187.96 0)
       (effects
@@ -7458,35 +7458,35 @@
       )
     )
     (pin "PPS"
-      (uuid "0366e083-20d1-4c0e-9d01-06e63bcd4b5e")
+      (uuid "1c8b068f-f408-438c-b0c4-694daebf179d")
     )
     (pin "VIN"
-      (uuid "0f862886-649c-41f1-a134-d1070b9c5ba3")
+      (uuid "29375839-4854-4c7a-b00a-6859db314d1b")
     )
     (pin "GND"
-      (uuid "fc5b0414-2148-4fdc-a10d-036422b1bfe8")
+      (uuid "5474f0f3-4f96-4d51-b17e-1818c21da388")
     )
     (pin "RX"
-      (uuid "b5105d1f-1557-4c54-8d7c-5f7d6e33415e")
+      (uuid "ab42b514-625d-4e54-a33f-279c3dc06a18")
     )
     (pin "TX"
-      (uuid "5e9bdf65-f93b-437a-b6be-a8cfe064f297")
+      (uuid "8af29296-fa64-4477-af08-5e960e2683fa")
     )
     (pin "FIX"
-      (uuid "a08f3ff8-40de-459e-9076-93105a9407a2")
+      (uuid "9929fdc1-87d9-465a-abd1-2fa40fb675ee")
     )
     (pin "VBAT"
-      (uuid "274599bb-791d-480b-87c5-dd5d3e8df714")
+      (uuid "0832f5eb-b749-45b2-b3ff-6c9066cf0414")
     )
     (pin "EN"
-      (uuid "ccb7b12d-a365-43d8-9903-67715236a2a7")
+      (uuid "f7f266c7-5ec4-439a-a067-7e141bae1433")
     )
     (pin "3V3"
-      (uuid "32c57f9b-df9f-43fa-be55-077edce9816c")
+      (uuid "290d5b97-e095-472c-98ea-7ae3c1ce9c17")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "GPS1")
           (unit 1)
         )
@@ -7495,7 +7495,7 @@
   )
   (no_connect
     (at 181.61 180.34)
-    (uuid "656bb62f-0cb7-4181-bc8f-1e783a223728")
+    (uuid "0ed1c03b-5ad5-4c8e-95c6-b368161f36f1")
   )
   (wire
     (pts
@@ -7506,7 +7506,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c91b8b81-93f7-4fa2-95c2-620bc29ba86c")
+    (uuid "ae0670cc-a8b1-4612-b8f9-8f397d4f4fef")
   )
   (symbol
     (lib_id "power:+5V")
@@ -7516,7 +7516,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "ef76061a-0147-4615-a4ee-6cf8638f5804")
+    (uuid "346d1c47-c326-450e-b938-0bb198a00307")
     (property "Reference" "#PWR124"
       (at 179.07 180.34 0)
       (effects
@@ -7566,11 +7566,11 @@
       )
     )
     (pin "1"
-      (uuid "12b25764-81db-4e3f-922c-0fe5b5b9bd94")
+      (uuid "f91ad7d7-18d2-4e4e-99fe-e5c277bce8c2")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR124")
           (unit 1)
         )
@@ -7586,7 +7586,7 @@
       (width 0)
       (type default)
     )
-    (uuid "23ab04f0-5e31-4d77-bf2f-b5f78af56cd1")
+    (uuid "4575f2fb-4667-4e34-a20e-496b2a6a834e")
   )
   (symbol
     (lib_id "power:GND")
@@ -7596,7 +7596,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "99ef7185-34a2-4836-8e26-dc40c53f442d")
+    (uuid "e04546a3-3efa-4d0b-81a7-8fca9b223e81")
     (property "Reference" "#PWR126"
       (at 179.07 182.88 0)
       (effects
@@ -7646,11 +7646,11 @@
       )
     )
     (pin "1"
-      (uuid "15ee4b5e-0498-409d-a366-cbdb43da50c5")
+      (uuid "b1c9092e-2022-4ffb-b6e7-9996e784a26e")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR126")
           (unit 1)
         )
@@ -7666,7 +7666,7 @@
       (width 0)
       (type default)
     )
-    (uuid "5e3d8aa9-e8cd-4a44-8be8-c14a91811ce8")
+    (uuid "24915f14-9910-4f24-815a-85ffcc26901e")
   )
   (global_label "GPS_RX"
     (shape passive)
@@ -7678,7 +7678,7 @@
       )
       (justify right)
     )
-    (uuid "7b849255-608a-402b-8747-0a3ff6d3dfdd")
+    (uuid "8372e51a-d850-4efb-a1a7-8e35498be60f")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 176.53 187.96 0)
       (effects
@@ -7698,7 +7698,7 @@
       (width 0)
       (type default)
     )
-    (uuid "865d5f0f-a591-4c2a-837d-2bb7d0949d95")
+    (uuid "e8c2f8dd-7ead-44d2-8636-5b661caa3702")
   )
   (global_label "GPS_TX"
     (shape passive)
@@ -7710,7 +7710,7 @@
       )
       (justify right)
     )
-    (uuid "a787221d-52ad-465f-8243-71b60451bf47")
+    (uuid "a05ffdc2-fab9-43bf-97b0-22f3c7af975b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 176.53 190.5 0)
       (effects
@@ -7723,19 +7723,19 @@
   )
   (no_connect
     (at 181.61 193.04)
-    (uuid "dd59729a-3760-47c5-b9f9-ac8628c00449")
+    (uuid "16fdf163-4126-4031-bfcc-c7ae5cf85ff5")
   )
   (no_connect
     (at 181.61 195.58)
-    (uuid "a1cdb491-739e-4186-b469-2a892351d7de")
+    (uuid "ce33eea4-413f-4ad1-8dfb-702e71718371")
   )
   (no_connect
     (at 181.61 198.12)
-    (uuid "994355ff-8b5b-4146-acd6-acbe65527fe0")
+    (uuid "c444e86c-0eaf-4fc7-b9fb-36f858fd7c80")
   )
   (no_connect
     (at 181.61 200.66)
-    (uuid "c6b0f3c0-747c-451e-b9c5-1981dc3d483a")
+    (uuid "7fab7eb4-b8d5-4844-a3ca-f95bcd26620b")
   )
   (symbol
     (lib_id "LightMeter:Adafruit_BNO055_2472")
@@ -7745,7 +7745,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "89285660-550a-42fe-ae9c-c3ac397f438e")
+    (uuid "bbea1e93-c57b-4c69-8844-96580ddb0dfa")
     (property "Reference" "IMU1"
       (at 201.93 237.49 0)
       (effects
@@ -7795,38 +7795,38 @@
       )
     )
     (pin "VIN"
-      (uuid "e4fb257d-6fe1-41a7-a2f0-9ffb9382281c")
+      (uuid "6651a819-dc85-4ef0-8fd5-0f09817195ba")
     )
     (pin "3VO"
-      (uuid "809b7bdc-efa3-4e4d-b9e9-5416c679d092")
+      (uuid "d804400c-ba1a-46d4-adae-308f41f2ac36")
     )
     (pin "GND"
-      (uuid "60c870b3-3e60-454c-88c4-9bd64a3fffdc")
+      (uuid "ba615b76-f3b6-481f-a971-6d0f0d71530c")
     )
     (pin "SDA"
-      (uuid "63221485-1dc2-49da-8dff-29ea392eedff")
+      (uuid "301898f0-90ed-4a61-9093-dd4e6b5d1c91")
     )
     (pin "SCL"
-      (uuid "79863196-fb13-4eb6-abcd-e9dcc4c5302c")
+      (uuid "1a2c17dc-72ec-4139-bc8b-fdcbf93af61b")
     )
     (pin "RST"
-      (uuid "79ffbfb7-b744-4e0c-a59f-06061b713ff2")
+      (uuid "79c36b77-8e9a-47ae-951f-5dee55a1ec9d")
     )
     (pin "PS0"
-      (uuid "39086f7d-94bc-424f-ab26-3a94fb02152e")
+      (uuid "4b972913-c522-483f-8d9b-2549eb8df621")
     )
     (pin "PS1"
-      (uuid "1ac807fe-1436-4a1b-983a-04eb956f7e85")
+      (uuid "0b3e9cad-44b0-4a15-9c13-325644bd1fa4")
     )
     (pin "INT"
-      (uuid "8fd498ef-e130-4479-aa1d-4f636f29b60c")
+      (uuid "a369c645-1b0d-426e-b479-853ba05759d3")
     )
     (pin "ADR"
-      (uuid "50bc5644-e099-4341-94fe-23b4cc5f7860")
+      (uuid "29b5f461-8af8-4efd-a84a-69b0bce32ad6")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "IMU1")
           (unit 1)
         )
@@ -7842,7 +7842,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8c9020a9-3ab9-40e7-aa22-5196e22c0943")
+    (uuid "16d3e889-1a49-4eb5-a9ef-341eac47e1a9")
   )
   (symbol
     (lib_id "power:+5V")
@@ -7852,7 +7852,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "696e0438-a99b-46bc-a936-8db6faf1c015")
+    (uuid "d916f469-5849-465d-8d6a-1f6e30284d4d")
     (property "Reference" "#PWR137"
       (at 179.07 226.06 0)
       (effects
@@ -7902,11 +7902,11 @@
       )
     )
     (pin "1"
-      (uuid "0b80bb58-70db-46d0-84d5-3099eff21a06")
+      (uuid "e7554433-011c-467e-aaaf-c773134b362c")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR137")
           (unit 1)
         )
@@ -7922,7 +7922,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6f39f865-ad74-4e33-9b60-ca003ef73879")
+    (uuid "da627e94-e4ba-47da-90fc-79d8e2c150ea")
   )
   (global_label "IMU_3V3"
     (shape passive)
@@ -7934,7 +7934,7 @@
       )
       (justify right)
     )
-    (uuid "7c5eb258-7b6e-4734-baca-73a2180608d3")
+    (uuid "15e5102c-7482-4c98-866b-ef2e2d3efdf6")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 176.53 231.14 0)
       (effects
@@ -7954,7 +7954,7 @@
       (width 0)
       (type default)
     )
-    (uuid "e03d44e5-5057-4b69-b266-e4954411ad30")
+    (uuid "f1ecd7c6-f346-4a5c-a08b-7a9b66ab5d6b")
   )
   (symbol
     (lib_id "power:GND")
@@ -7964,7 +7964,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e1f64027-da70-49d5-8968-f2b699b8e660")
+    (uuid "84ed1607-5746-42d0-b5a3-a475e6a92021")
     (property "Reference" "#PWR141"
       (at 179.07 231.14 0)
       (effects
@@ -8014,11 +8014,11 @@
       )
     )
     (pin "1"
-      (uuid "1c5b2b24-7ebc-4640-9097-4ff9afdb4ab7")
+      (uuid "5dfec65f-057d-442b-92dd-73dbc836b200")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR141")
           (unit 1)
         )
@@ -8034,7 +8034,7 @@
       (width 0)
       (type default)
     )
-    (uuid "1db806a0-67fa-4428-b977-5de6de675b0c")
+    (uuid "ad40c51d-c1fe-431b-9450-07d6d0b11eb2")
   )
   (global_label "IMU_TX"
     (shape passive)
@@ -8046,7 +8046,7 @@
       )
       (justify right)
     )
-    (uuid "b6f296af-c873-470d-924e-462f450fdf81")
+    (uuid "89e36acc-81f3-4a09-a3d7-8cf858a81d9f")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 176.53 236.22 0)
       (effects
@@ -8066,7 +8066,7 @@
       (width 0)
       (type default)
     )
-    (uuid "63b84038-cc3c-41a1-bab3-93e82eb5ad8b")
+    (uuid "7c95007a-2d18-4e7d-8ae6-ec57a95d5feb")
   )
   (global_label "IMU_RX"
     (shape passive)
@@ -8078,7 +8078,7 @@
       )
       (justify right)
     )
-    (uuid "a1e44cdf-dd8c-4115-95cb-d7cec4052858")
+    (uuid "37b4829b-739f-44ff-bbcf-1f668435e9a8")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 176.53 238.76 0)
       (effects
@@ -8091,11 +8091,11 @@
   )
   (no_connect
     (at 181.61 241.3)
-    (uuid "69508a20-0932-4f7f-805d-c90f6a419776")
+    (uuid "581c29f5-022c-4555-bea5-ceb2afddac7e")
   )
   (no_connect
     (at 181.61 243.84)
-    (uuid "f9a6a0a9-2ab1-4715-afec-291a70f10b55")
+    (uuid "8794beb9-eadd-4ec5-be36-372d61420d32")
   )
   (wire
     (pts
@@ -8106,7 +8106,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d3eccd74-9200-40da-b37c-003c11f4a6c0")
+    (uuid "baa99bba-f58a-4a72-a3a4-8922069f990a")
   )
   (global_label "IMU_PS1"
     (shape passive)
@@ -8118,7 +8118,7 @@
       )
       (justify right)
     )
-    (uuid "58bbbb01-27f9-4e16-be83-01f777adc3f9")
+    (uuid "a1a16483-205b-4bab-987d-c4fb364aa666")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 176.53 246.38 0)
       (effects
@@ -8131,11 +8131,11 @@
   )
   (no_connect
     (at 181.61 248.92)
-    (uuid "70c51ab7-88dd-4aff-bc6a-6695e8f2fef1")
+    (uuid "ef31c832-0fe2-4e50-b9a7-7105f0a43a8f")
   )
   (no_connect
     (at 181.61 251.46)
-    (uuid "bb3e61ab-4c23-4471-b294-c00867b23342")
+    (uuid "81e28e77-7736-4fbb-bf87-b48600027f6c")
   )
   (symbol
     (lib_id "74xx:74LVC125")
@@ -8145,7 +8145,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "93f32b11-ea39-4deb-8931-d358adedcae7")
+    (uuid "e2b0abc5-7406-4b69-9472-8436e179151c")
     (property "Reference" "U1"
       (at 177.8 82.55 0)
       (effects
@@ -8195,17 +8195,17 @@
       )
     )
     (pin "1"
-      (uuid "d34ba7a6-bc48-4467-8f6d-880a50b72973")
+      (uuid "e6ab959a-9941-4be8-a634-4d25e3521506")
     )
     (pin "2"
-      (uuid "1f96d733-f9f0-4d2e-9966-cdfbd01c252e")
+      (uuid "ba2749d0-9149-4402-a2a9-aea04d3bfa4f")
     )
     (pin "3"
-      (uuid "3b911596-660d-42da-a370-5349762b127b")
+      (uuid "5f09b878-4540-44e4-b8ad-c7e37a3822b9")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U1")
           (unit 1)
         )
@@ -8221,7 +8221,7 @@
       (width 0)
       (type default)
     )
-    (uuid "779e9c2a-3017-4b68-a5ba-8d4fd493d544")
+    (uuid "bc53b9e6-ec58-46f1-aef8-9e340a73b5af")
   )
   (symbol
     (lib_id "power:GND")
@@ -8231,7 +8231,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "c96c86d0-04bc-452a-bb2d-17e487890d64")
+    (uuid "add7acba-8c56-4e1f-a6df-e9fe00ba5bc3")
     (property "Reference" "#PWR154"
       (at 177.8 93.98 0)
       (effects
@@ -8281,11 +8281,11 @@
       )
     )
     (pin "1"
-      (uuid "8db15dbc-d67e-42a9-9e45-ef418e4f6c18")
+      (uuid "9f8406c0-67af-48ac-bec4-16fe38e1500d")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR154")
           (unit 1)
         )
@@ -8301,7 +8301,7 @@
       (width 0)
       (type default)
     )
-    (uuid "ed0fe6c7-adf8-4663-83b2-671c1faf7e09")
+    (uuid "8dfb48fd-912f-499d-817e-76beeb693747")
   )
   (global_label "SPI_MOSI"
     (shape passive)
@@ -8313,7 +8313,7 @@
       )
       (justify right)
     )
-    (uuid "854b9ea8-f6fb-483f-a789-fce383930a4d")
+    (uuid "9373bdfb-ddb9-442a-88ab-6b72be4e70fe")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 162.56 85.09 0)
       (effects
@@ -8333,7 +8333,7 @@
       (width 0)
       (type default)
     )
-    (uuid "bd1c1c25-eb44-4da9-9b34-4e6d1df60982")
+    (uuid "7d07eec3-5e76-4943-9ef6-a7af94c3de7c")
   )
   (global_label "SD_DI"
     (shape passive)
@@ -8345,7 +8345,7 @@
       )
       (justify left)
     )
-    (uuid "6d5c51cf-3039-4468-95bb-5f026ef0a575")
+    (uuid "d9905724-5b56-4cea-8972-d5646c65e677")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 187.96 85.09 0)
       (effects
@@ -8364,7 +8364,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "bb1ac32e-97f1-42d6-9b8b-ebd8a83a5b5c")
+    (uuid "49744422-6f5a-4b2b-84b4-a066ad8347de")
     (property "Reference" "U1"
       (at 177.8 105.41 0)
       (effects
@@ -8414,17 +8414,17 @@
       )
     )
     (pin "4"
-      (uuid "9e7abb74-bf3f-494d-baf3-db59cc3452c0")
+      (uuid "51b1d4f4-26f6-4dd2-b271-c9252628a3d6")
     )
     (pin "5"
-      (uuid "938ee190-dadb-42fc-bf67-37355eb91963")
+      (uuid "325ceb34-1e26-4027-97a7-a4a6b61964c2")
     )
     (pin "6"
-      (uuid "ff0f60bd-978f-4b23-bf82-0d4e452c4a19")
+      (uuid "831197ef-d09a-4346-994b-fecfe111ccfa")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U1")
           (unit 2)
         )
@@ -8440,7 +8440,7 @@
       (width 0)
       (type default)
     )
-    (uuid "acd1d209-bfe7-4b70-9b5a-6b871175c3a1")
+    (uuid "d17330dc-4f00-4ab6-82a4-bc4fecc2e570")
   )
   (symbol
     (lib_id "power:GND")
@@ -8450,7 +8450,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "476c15f6-f137-454e-8e00-e0c7d2a27100")
+    (uuid "380ff0e2-1bb9-45b5-a124-e7c9c294b1b4")
     (property "Reference" "#PWR161"
       (at 177.8 114.3 0)
       (effects
@@ -8500,11 +8500,11 @@
       )
     )
     (pin "1"
-      (uuid "b1f93370-a19a-4b16-9fdd-b5e811a21db8")
+      (uuid "603e58de-c296-4d98-8a04-209f76c8032d")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR161")
           (unit 1)
         )
@@ -8520,7 +8520,7 @@
       (width 0)
       (type default)
     )
-    (uuid "898ea117-265c-4703-b0f6-a50481a6e487")
+    (uuid "5ec3a436-8442-4cf8-aa67-bc4e81c8f641")
   )
   (global_label "SPI_SCK"
     (shape passive)
@@ -8532,7 +8532,7 @@
       )
       (justify right)
     )
-    (uuid "18408a88-c60c-478c-8e4d-8f29c0e4b345")
+    (uuid "415557ed-54c2-426f-980d-7e005f766898")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 162.56 105.41 0)
       (effects
@@ -8552,7 +8552,7 @@
       (width 0)
       (type default)
     )
-    (uuid "3e1f18ac-c067-4de3-959e-c4b45bed9848")
+    (uuid "1db47884-3b35-4712-91ab-a59ffb8e2cd6")
   )
   (global_label "SD_CLK"
     (shape passive)
@@ -8564,7 +8564,7 @@
       )
       (justify left)
     )
-    (uuid "77775b8d-17b7-4889-b6fd-27bddba320ae")
+    (uuid "de2b9002-5b19-4ee2-a30a-179c1cf994e1")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 187.96 105.41 0)
       (effects
@@ -8583,7 +8583,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "ef581e19-21bf-457e-acbc-45b4ea402d50")
+    (uuid "c4e1676e-4758-435b-9458-d1eae2da3393")
     (property "Reference" "U1"
       (at 177.8 124.46 0)
       (effects
@@ -8633,17 +8633,17 @@
       )
     )
     (pin "8"
-      (uuid "d7932f12-6e3c-4bba-8d4d-a3c7160bacc2")
+      (uuid "a6ab3140-84a2-4bf9-add2-a3fa2636b88c")
     )
     (pin "9"
-      (uuid "bf872fb5-be78-42d1-8dcd-f78ceae99595")
+      (uuid "6476d548-c77a-44ec-b371-0e779da094ba")
     )
     (pin "10"
-      (uuid "18288c43-c5f8-4c2e-a3ad-8bb80779e72a")
+      (uuid "ce216a56-5bef-482f-ac9e-e4e61be6ce7c")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U1")
           (unit 3)
         )
@@ -8659,7 +8659,7 @@
       (width 0)
       (type default)
     )
-    (uuid "506d56a4-71b4-423a-8f03-e4060f5a775a")
+    (uuid "f53a0c38-cfd9-4a6c-b9f7-9395a676650a")
   )
   (global_label "SD_CS"
     (shape passive)
@@ -8671,7 +8671,7 @@
       )
       (justify left)
     )
-    (uuid "68e674fc-da92-4dba-bee8-8646d8579ea6")
+    (uuid "2cea61d7-59d5-424e-b3ff-131f84450605")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 187.96 124.46 0)
       (effects
@@ -8691,7 +8691,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9f0cd3d3-dce7-4c09-a419-b0930c5c58b2")
+    (uuid "5b507fa2-67d0-44e3-8bec-c40ee1a19c23")
   )
   (global_label "SD_CS_5V"
     (shape passive)
@@ -8703,7 +8703,7 @@
       )
       (justify right)
     )
-    (uuid "c5473e65-13fe-4a10-ac95-4c43a70485cb")
+    (uuid "458c099b-9591-45ef-a45d-9796218fb7ce")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 162.56 124.46 0)
       (effects
@@ -8723,7 +8723,7 @@
       (width 0)
       (type default)
     )
-    (uuid "036cecff-1f54-43e2-aa43-6ecf3ef96405")
+    (uuid "0ae5f569-1e69-4687-a99a-1e04a033ad29")
   )
   (symbol
     (lib_id "power:GND")
@@ -8733,7 +8733,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9819f61f-e78d-4e30-94b6-8ca87e46f47b")
+    (uuid "5ab9e24b-3409-4df5-84ca-446b66f0bf84")
     (property "Reference" "#PWR172"
       (at 177.8 133.35 0)
       (effects
@@ -8783,11 +8783,11 @@
       )
     )
     (pin "1"
-      (uuid "9d441f85-18b5-4524-9d59-0976384c0ec8")
+      (uuid "af5356d1-11d2-4a02-9ef8-61867a67da2d")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR172")
           (unit 1)
         )
@@ -8802,7 +8802,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "aba84284-cf28-43c0-b202-f6e0659aa2f1")
+    (uuid "0d670e36-266e-4fa3-aa63-2d3f47f692a6")
     (property "Reference" "U1"
       (at 177.8 144.78 0)
       (effects
@@ -8852,17 +8852,17 @@
       )
     )
     (pin "11"
-      (uuid "1f6b0c9b-ae0a-4f94-8f43-2427aac5b9f0")
+      (uuid "856f6a6d-2760-441e-894c-0f4a19ddc0ed")
     )
     (pin "12"
-      (uuid "37971245-1ec3-4121-ac75-29829c123b57")
+      (uuid "bbe08cbb-b839-4662-87d6-71b37556f134")
     )
     (pin "13"
-      (uuid "67697ff3-e347-42ae-a272-25f2385bf234")
+      (uuid "8102ce60-7229-4f29-83b1-079a1eb20ed5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U1")
           (unit 4)
         )
@@ -8871,7 +8871,7 @@
   )
   (no_connect
     (at 182.88 144.78)
-    (uuid "1995a9b7-5ee3-42d0-b71e-83a2f0aedfeb")
+    (uuid "1aa7bc9c-5737-4d90-b518-3e973ac38d21")
   )
   (wire
     (pts
@@ -8882,7 +8882,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6faa2c36-2417-403d-87e5-88e96f2ea82f")
+    (uuid "dad3358d-92f7-4491-9f4a-9ee8ff787b95")
   )
   (symbol
     (lib_id "power:GND")
@@ -8892,7 +8892,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "a06fbf1c-3964-485f-94ec-6f95d497f33a")
+    (uuid "fd646964-094f-4bb6-9c31-844bcd212d41")
     (property "Reference" "#PWR176"
       (at 165.1 142.24 0)
       (effects
@@ -8942,11 +8942,11 @@
       )
     )
     (pin "1"
-      (uuid "ba543099-4ea3-462a-b3c8-e3b5054b8e0f")
+      (uuid "274197f1-f127-4a98-90b0-693d7ae8f934")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR176")
           (unit 1)
         )
@@ -8962,7 +8962,7 @@
       (width 0)
       (type default)
     )
-    (uuid "34271804-2c38-4dcb-bb8b-91ac6febd3a9")
+    (uuid "3cc4d96c-26d4-46b3-8b0c-ccb416728d6b")
   )
   (symbol
     (lib_id "power:GND")
@@ -8972,7 +8972,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "2754761e-188e-4cff-a2bf-c5fcff0a7aca")
+    (uuid "b9671be9-ed52-42b5-b2e8-5c3a0cd9fc96")
     (property "Reference" "#PWR178"
       (at 177.8 153.67 0)
       (effects
@@ -9022,11 +9022,11 @@
       )
     )
     (pin "1"
-      (uuid "7b20b96f-b8db-4984-bfda-05327f6e8b9c")
+      (uuid "814a71d6-3287-43a0-83c9-32a1024589f5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR178")
           (unit 1)
         )
@@ -9041,7 +9041,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "00fed8eb-3a6d-4a3c-ab65-4576ba49e513")
+    (uuid "a5b04feb-8dac-4fc9-bcf2-18b54a2945d1")
     (property "Reference" "U1"
       (at 227.33 54.61 0)
       (effects
@@ -9091,14 +9091,14 @@
       )
     )
     (pin "7"
-      (uuid "b0afa084-973c-4442-a6d5-06210c6f2852")
+      (uuid "a432ca56-e42e-494a-96e0-b2cf3c6e32bd")
     )
     (pin "14"
-      (uuid "8d3f640f-ecca-43d4-8f39-813a300bdb81")
+      (uuid "84fac627-b72a-4514-b68d-1e424b339def")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U1")
           (unit 5)
         )
@@ -9114,7 +9114,7 @@
       (width 0)
       (type default)
     )
-    (uuid "eb1170ea-9395-43f8-b87f-b0d3453dc499")
+    (uuid "60bfab85-4683-43f3-a91c-70ae58bf878b")
   )
   (symbol
     (lib_id "power:GND")
@@ -9124,7 +9124,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "8394ca2c-63e5-47a5-a548-3054f066dd38")
+    (uuid "e5e07874-1d5d-480d-8edb-45926eb770bb")
     (property "Reference" "#PWR181"
       (at 227.33 69.85 0)
       (effects
@@ -9174,11 +9174,11 @@
       )
     )
     (pin "1"
-      (uuid "6f2723a6-97c6-4579-8873-1a37ef4528ce")
+      (uuid "6608fea0-dfe9-49f3-a515-b3b6c77af2b9")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR181")
           (unit 1)
         )
@@ -9194,7 +9194,7 @@
       (width 0)
       (type default)
     )
-    (uuid "863d2514-18b3-4b37-8ddb-b007a6d2ac1d")
+    (uuid "bbc60438-c7a5-466d-86f9-d68d0fc8a62c")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -9204,7 +9204,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "290ca3e9-8bc5-4276-b8cb-ea2c61cbe138")
+    (uuid "9341f404-e345-406d-bf75-84cb2a6ed311")
     (property "Reference" "#PWR183"
       (at 227.33 34.29 0)
       (effects
@@ -9254,11 +9254,11 @@
       )
     )
     (pin "1"
-      (uuid "a7802492-8a96-4ccb-b1a1-6b55dc3996c9")
+      (uuid "4f9f4e61-3790-41a4-a470-ee233605c2e5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR183")
           (unit 1)
         )
@@ -9273,7 +9273,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "453429af-b9d0-4a71-ae1c-ac5c8cad94b4")
+    (uuid "02309dba-4ddf-4c7e-b31d-535f55d4b298")
     (property "Reference" "U2"
       (at 177.8 36.83 0)
       (effects
@@ -9323,17 +9323,17 @@
       )
     )
     (pin "1"
-      (uuid "cf2606ef-262f-431d-bd07-f8ff5ba87625")
+      (uuid "b5b79151-a78f-442f-86cc-2d60b8857213")
     )
     (pin "2"
-      (uuid "2bcbf436-1f8c-4246-a639-f04419395a1a")
+      (uuid "6523c530-6fb2-445a-b59b-909737538a59")
     )
     (pin "3"
-      (uuid "61666350-b236-4991-b1dd-d7f43d0eb6e8")
+      (uuid "964671e4-690f-4d4a-8c0e-699c0d595211")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U2")
           (unit 1)
         )
@@ -9349,7 +9349,7 @@
       (width 0)
       (type default)
     )
-    (uuid "517d3e8c-f48f-45e4-bc1d-71ac09e84a7a")
+    (uuid "3df24dac-21c2-449f-ac4c-2af3375bf951")
   )
   (symbol
     (lib_id "power:GND")
@@ -9359,7 +9359,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9b7e782a-851a-4777-9aac-b6bf71d359ec")
+    (uuid "c6fe1a14-e3c1-437f-8978-8ad2fc367a24")
     (property "Reference" "#PWR186"
       (at 177.8 49.53 0)
       (effects
@@ -9409,11 +9409,11 @@
       )
     )
     (pin "1"
-      (uuid "02120b15-e400-491b-9809-5fde9a14888f")
+      (uuid "f83ee645-74c5-45a4-9abd-526b1ee4f1b3")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR186")
           (unit 1)
         )
@@ -9429,7 +9429,7 @@
       (width 0)
       (type default)
     )
-    (uuid "36690cf5-4264-45da-8d5a-b1e19b44f110")
+    (uuid "9538e684-5d8e-4454-b9d7-530dd236f2f7")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -9439,7 +9439,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "27e12add-4e7a-451e-81c0-79aba9aa33c9")
+    (uuid "1b37cf92-efdf-4c89-9b13-bf08c263c8c0")
     (property "Reference" "#PWR188"
       (at 190.5 36.83 0)
       (effects
@@ -9489,11 +9489,11 @@
       )
     )
     (pin "1"
-      (uuid "9eb80a4e-8c78-45a7-9dd4-fbcbd473054d")
+      (uuid "ca16437a-f029-48df-82c0-850add04128a")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR188")
           (unit 1)
         )
@@ -9509,7 +9509,7 @@
       (width 0)
       (type default)
     )
-    (uuid "958865e7-3994-4f17-ab81-6d6ebb8bb38f")
+    (uuid "429a6c03-13b5-4fc0-ba64-a14457e10171")
   )
   (symbol
     (lib_id "power:+5V")
@@ -9519,7 +9519,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "ae75f59a-caa8-4e6c-821c-2867181445bc")
+    (uuid "57db3603-1d21-4416-9c27-ee9aa856405b")
     (property "Reference" "#PWR190"
       (at 165.1 36.83 0)
       (effects
@@ -9569,11 +9569,11 @@
       )
     )
     (pin "1"
-      (uuid "943e5e50-741a-47c0-a8d0-ff3cadd7aac5")
+      (uuid "34866382-6a20-45d1-bae0-7c47843f23c5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR190")
           (unit 1)
         )
@@ -9588,7 +9588,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "187d4065-8667-4f64-a6f1-9d4aac67fe9b")
+    (uuid "98c216a4-408a-49cf-b7f0-ce9e1f6a1955")
     (property "Reference" "J1"
       (at 287.02 97.79 0)
       (effects
@@ -9638,41 +9638,41 @@
       )
     )
     (pin "1"
-      (uuid "330b6bd1-369c-40ed-884e-ed8111f49866")
+      (uuid "e99131ae-45fd-4129-bde5-c6c175b394c3")
     )
     (pin "2"
-      (uuid "11648808-ea7d-4cf7-9d11-87694a0afbec")
+      (uuid "94b3dc27-0678-4e19-86ba-d3832b3a36e0")
     )
     (pin "3"
-      (uuid "2720df31-3d32-4696-8e4e-2ee5883cf268")
+      (uuid "953f9b3a-2f9d-4863-adb1-a3fe0de75f6d")
     )
     (pin "4"
-      (uuid "296ad2f5-64fd-40bd-8e9a-262b7ed2f641")
+      (uuid "650c424e-3e6b-46c9-8a91-d134df830af5")
     )
     (pin "5"
-      (uuid "eb0b67e9-df93-489c-8581-9f9be2e06696")
+      (uuid "acfd816f-2011-4c2b-8b48-4d9120a892d1")
     )
     (pin "6"
-      (uuid "7bf2af59-79f3-4195-bee2-ed8c69169b0a")
+      (uuid "041e086e-c205-4e12-8db5-b280b5d61751")
     )
     (pin "7"
-      (uuid "b67b4e8e-6e66-4875-bf17-56235d312b63")
+      (uuid "2f0f8794-6caf-402e-95ba-13ea08b5d7ba")
     )
     (pin "8"
-      (uuid "352d3149-8f6e-456c-a2fc-833679fadf35")
+      (uuid "a4dccd7d-12fd-4f9c-915d-210785116e10")
     )
     (pin "9"
-      (uuid "563347c8-f72b-4adb-87a4-b70c442643d8")
+      (uuid "7d3db6e8-de36-4883-b0ae-a5284ab384fb")
     )
     (pin "10"
-      (uuid "a8b5dde7-a0b2-4aab-bf95-67a445b1304f")
+      (uuid "608c9be3-5e64-47cd-80cb-2a80c9194c88")
     )
     (pin "SH"
-      (uuid "20936bba-fe55-476e-bad1-b6ac16bb3c73")
+      (uuid "817e6150-2433-4336-b422-311b4446fecf")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J1")
           (unit 1)
         )
@@ -9688,7 +9688,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f4bee35e-013c-4377-82f6-5eda84f81b43")
+    (uuid "d0c2e3ac-7cc0-4e52-b137-6da17645252f")
   )
   (global_label "SD_DAT2"
     (shape passive)
@@ -9700,7 +9700,7 @@
       )
       (justify right)
     )
-    (uuid "34b84b39-8b20-47fe-965f-013e3d3e73d0")
+    (uuid "b48234cc-1e72-4ab8-b607-fa37809a71f3")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 256.54 90.17 0)
       (effects
@@ -9720,7 +9720,7 @@
       (width 0)
       (type default)
     )
-    (uuid "46f51eee-83e1-4b77-ba26-9707c6b6eda1")
+    (uuid "2505e232-f524-4e9d-a19d-8a9c569d0f14")
   )
   (global_label "SD_CS"
     (shape passive)
@@ -9732,7 +9732,7 @@
       )
       (justify right)
     )
-    (uuid "302a2055-b6f9-490f-a207-4a6b6c977095")
+    (uuid "555e9a2c-3dac-4dfb-9133-27a800c6412b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 256.54 92.71 0)
       (effects
@@ -9752,7 +9752,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6d0cd957-c3a6-48fc-a9c1-c97d2f43caad")
+    (uuid "37cd9aeb-6736-425f-805d-f48ca9563f9b")
   )
   (global_label "SD_DI"
     (shape passive)
@@ -9764,7 +9764,7 @@
       )
       (justify right)
     )
-    (uuid "0a441375-33b9-4f8f-aaf9-a8b3d2cb2431")
+    (uuid "620dc390-1644-41cb-9798-0787d8672e52")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 256.54 95.25 0)
       (effects
@@ -9784,7 +9784,7 @@
       (width 0)
       (type default)
     )
-    (uuid "a038ee71-362a-495f-9209-7e9602fd6283")
+    (uuid "73dd0233-1885-4392-919d-4152a0899816")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -9794,7 +9794,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "cc5efe6f-f737-426a-85b6-810cc19253f5")
+    (uuid "62df7e51-1c3b-4bef-a42c-90d309d7c1eb")
     (property "Reference" "#PWR199"
       (at 259.08 95.25 0)
       (effects
@@ -9844,11 +9844,11 @@
       )
     )
     (pin "1"
-      (uuid "cfc1fc0c-db1b-43ce-a57c-23287beeb852")
+      (uuid "7e7878fb-3aa1-4f2b-ba51-2718b09e95f0")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR199")
           (unit 1)
         )
@@ -9864,7 +9864,7 @@
       (width 0)
       (type default)
     )
-    (uuid "e3fa22ab-9fb4-4dae-9e44-7a0053eaed45")
+    (uuid "affc97a4-ee83-44a3-9906-392111f657a9")
   )
   (global_label "SD_CLK"
     (shape passive)
@@ -9876,7 +9876,7 @@
       )
       (justify right)
     )
-    (uuid "710674ac-f771-4cef-919e-36ca1303a2b7")
+    (uuid "a4c961cd-0bd2-4b49-acc5-33ff818dd374")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 256.54 100.33 0)
       (effects
@@ -9896,7 +9896,7 @@
       (width 0)
       (type default)
     )
-    (uuid "86dfdee8-66ad-480d-9e8c-fb86009edded")
+    (uuid "e24c1d67-86b0-4b40-9242-0da9e9b73deb")
   )
   (symbol
     (lib_id "power:GND")
@@ -9906,7 +9906,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "882bc1e5-27ca-49b7-abd4-787c58631c6e")
+    (uuid "3da87510-b70b-4665-8b86-5753d617f28c")
     (property "Reference" "#PWR203"
       (at 259.08 100.33 0)
       (effects
@@ -9956,11 +9956,11 @@
       )
     )
     (pin "1"
-      (uuid "d4f8124a-354a-4917-96ba-8050e5305041")
+      (uuid "19e777db-bde7-4cf5-b5f0-4848da3586a9")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#PWR203")
           (unit 1)
         )
@@ -9976,7 +9976,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d77239f4-f665-4b95-b64e-fa8b809c0275")
+    (uuid "72b82730-665e-4f49-8fe0-e621c895c631")
   )
   (global_label "SPI_MISO"
     (shape passive)
@@ -9988,7 +9988,7 @@
       )
       (justify right)
     )
-    (uuid "7370d631-eb9a-48d8-9aaa-dba7875639c7")
+    (uuid "9db0fd91-a279-437e-b7fc-ff38a8e57897")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 256.54 105.41 0)
       (effects
@@ -10008,7 +10008,7 @@
       (width 0)
       (type default)
     )
-    (uuid "7b095bd8-2730-49ec-b182-67c054b75a16")
+    (uuid "ea5c044e-0cdd-424b-8628-9c3af95a1c45")
   )
   (global_label "SD_DAT1"
     (shape passive)
@@ -10020,7 +10020,7 @@
       )
       (justify right)
     )
-    (uuid "c6edb830-25d1-4be5-b20f-8e31fab9234a")
+    (uuid "a168cf08-9b12-4ecf-9b05-52ec35486b70")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 256.54 107.95 0)
       (effects
@@ -10031,89 +10031,13 @@
       )
     )
   )
-  (wire
-    (pts
-      (xy 261.62 113.03)
-      (xy 256.54 113.03)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "04b484b2-85d4-4a6b-a5f7-f9564b2be0a2")
-  )
-  (symbol
-    (lib_id "power:GND")
-    (at 256.54 113.03 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "a063b9bf-f04c-4d37-805a-6598c07810a4")
-    (property "Reference" "#PWR209"
-      (at 259.08 110.49 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Value" "GND"
-      (at 259.08 113.03 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Footprint" ""
-      (at 256.54 113.03 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-        (hide yes)
-      )
-    )
-    (property "Datasheet" ""
-      (at 256.54 113.03 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-        (hide yes)
-      )
-    )
-    (property "Description" ""
-      (at 256.54 113.03 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-        (hide yes)
-      )
-    )
-    (pin "1"
-      (uuid "1d30a222-2474-44d3-bf9b-547fea7c4185")
-    )
-    (instances
-      (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR209")
-          (unit 1)
-        )
-      )
-    )
+  (no_connect
+    (at 261.62 113.03)
+    (uuid "2b95cccd-f4d1-4c2c-a0af-215a09cb9339")
   )
   (no_connect
     (at 261.62 110.49)
-    (uuid "c38c5254-2cc0-45a2-aa43-788c9d5ab7f2")
+    (uuid "a63c7180-cd20-456f-8598-fac7d2d6d30e")
   )
   (wire
     (pts
@@ -10124,7 +10048,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c0b4b69f-a06e-42d7-a873-9657bda8a381")
+    (uuid "dfa50847-34dc-4d90-8433-5da89b600816")
   )
   (symbol
     (lib_id "power:GND")
@@ -10134,8 +10058,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "5105d236-d105-4405-9515-498945b24e77")
-    (property "Reference" "#PWR212"
+    (uuid "949d8492-0584-4706-8ed9-95f0d5cd2a8f")
+    (property "Reference" "#PWR211"
       (at 312.42 110.49 0)
       (effects
         (font
@@ -10184,12 +10108,12 @@
       )
     )
     (pin "1"
-      (uuid "6ac53398-caf2-46be-b739-9e08b4e350fc")
+      (uuid "8d12c3fb-537b-4f26-a145-e5258fb4d263")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR212")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR211")
           (unit 1)
         )
       )
@@ -10203,7 +10127,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "715c0696-0b11-4a5b-9aa3-78adb30571a3")
+    (uuid "4bcabe08-d631-4679-8ba3-f9fcaa0eab8c")
     (property "Reference" "J2"
       (at 382.27 41.91 0)
       (effects
@@ -10253,20 +10177,20 @@
       )
     )
     (pin "1"
-      (uuid "153ed228-ff5d-4bcc-8e4a-0eed8d9d7558")
+      (uuid "146d8ddf-685a-48eb-b7e9-ad6ca0931229")
     )
     (pin "2"
-      (uuid "a4fee1a9-16be-491c-81b3-5b585d90aea7")
+      (uuid "8e06622e-5973-412f-a691-c7fd7ccd58f0")
     )
     (pin "3"
-      (uuid "19d5eb9f-b7f3-4372-ad01-986829f6ed08")
+      (uuid "bddfd931-0521-423e-864c-b343b674d0d0")
     )
     (pin "4"
-      (uuid "99e8c56f-eb08-4b98-b5e2-459cfc2d06e1")
+      (uuid "97398f6f-fbe6-468f-bfac-7774de3f5528")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J2")
           (unit 1)
         )
@@ -10282,7 +10206,7 @@
       (width 0)
       (type default)
     )
-    (uuid "b6445865-ac7c-4eae-9fe7-a862e6df7dfb")
+    (uuid "d188a0b1-18d5-4115-be7b-9f96f882d679")
   )
   (symbol
     (lib_id "power:GND")
@@ -10292,8 +10216,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6e964891-ba27-420c-a820-e05b5858fa33")
-    (property "Reference" "#PWR215"
+    (uuid "dd5c168b-193c-4b6a-8848-6caad4d3e621")
+    (property "Reference" "#PWR214"
       (at 392.43 39.37 0)
       (effects
         (font
@@ -10342,12 +10266,12 @@
       )
     )
     (pin "1"
-      (uuid "65d14ae6-7aa7-48cb-9d2c-d566d6642ba6")
+      (uuid "d4f44ac9-e664-443e-8e3a-aa7a74255dca")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR215")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR214")
           (unit 1)
         )
       )
@@ -10362,7 +10286,7 @@
       (width 0)
       (type default)
     )
-    (uuid "a12b0a1e-1d1d-401b-84e2-740a6265a713")
+    (uuid "9627d071-2568-4cf7-965b-e45aa8787438")
   )
   (symbol
     (lib_id "power:+5V")
@@ -10372,8 +10296,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6d08afe3-5636-49b2-b3ac-c798857b9283")
-    (property "Reference" "#PWR217"
+    (uuid "6ef0f85d-c986-4ce8-bfac-d5e6e14e98df")
+    (property "Reference" "#PWR216"
       (at 392.43 41.91 0)
       (effects
         (font
@@ -10422,12 +10346,12 @@
       )
     )
     (pin "1"
-      (uuid "74bc91d9-7be4-4841-aa2c-43c23b0a1de8")
+      (uuid "ed81cd93-1770-4d78-b5e5-1838f7983d89")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR217")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR216")
           (unit 1)
         )
       )
@@ -10442,7 +10366,7 @@
       (width 0)
       (type default)
     )
-    (uuid "77daf96e-f626-4b5b-9df7-fb85ebff7b33")
+    (uuid "e0c42f00-34e4-461e-828a-3958ede202ed")
   )
   (global_label "SDA"
     (shape passive)
@@ -10454,7 +10378,7 @@
       )
       (justify left)
     )
-    (uuid "fcd4876f-2fe5-43cf-b007-b18c8568ae5f")
+    (uuid "d7c5cb2e-7d64-427a-a171-f11bc32935dd")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 46.99 0)
       (effects
@@ -10474,7 +10398,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d9e5f070-5d49-4a66-8d5b-d0eae20d5b72")
+    (uuid "8e3b9e9c-a446-4a85-ba71-1322b138b9c7")
   )
   (global_label "SCL"
     (shape passive)
@@ -10486,7 +10410,7 @@
       )
       (justify left)
     )
-    (uuid "cc94ebab-a5f3-4c16-9775-5d8c90cae63f")
+    (uuid "f590c34a-d2f4-4743-8406-1fdc001a583b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 49.53 0)
       (effects
@@ -10505,7 +10429,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9e42b8b5-fb3e-4c33-90f2-041bbee00f5e")
+    (uuid "1bbbb2dd-c34e-4e9a-8b73-c3b476baed87")
     (property "Reference" "J3"
       (at 382.27 62.23 0)
       (effects
@@ -10555,20 +10479,20 @@
       )
     )
     (pin "1"
-      (uuid "eaf679a9-c6d1-41f4-93d8-477bcd86b3ad")
+      (uuid "5e2d80d0-d9ad-4fee-8236-2569a787d8f9")
     )
     (pin "2"
-      (uuid "135db584-1b69-4785-8641-44a6260e39eb")
+      (uuid "0e6a6fee-8cbd-4389-acfd-b499e982ebf5")
     )
     (pin "3"
-      (uuid "dbe55cdd-2988-413f-8ad1-5c9ee566a9b9")
+      (uuid "b4e91523-be21-4963-8215-4636242a3ebe")
     )
     (pin "4"
-      (uuid "4907f5ae-7df5-4d33-8280-e95a2cc3c178")
+      (uuid "5e4eb121-f080-4643-8414-854f7cc855ce")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J3")
           (unit 1)
         )
@@ -10584,7 +10508,7 @@
       (width 0)
       (type default)
     )
-    (uuid "774aeea3-5136-48b9-adcb-d8ff91957c63")
+    (uuid "9723f281-6f49-45f9-b034-f8fdc11cf1f2")
   )
   (symbol
     (lib_id "power:GND")
@@ -10594,8 +10518,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "1b734168-7f9f-4a4e-a889-745a264fa75b")
-    (property "Reference" "#PWR224"
+    (uuid "badf1fe5-382e-4bff-8c2a-28c93060edc8")
+    (property "Reference" "#PWR223"
       (at 392.43 59.69 0)
       (effects
         (font
@@ -10644,12 +10568,12 @@
       )
     )
     (pin "1"
-      (uuid "bb50c2cf-3c19-4281-9878-1e87eaf0a919")
+      (uuid "4944af94-50b7-4475-9439-b51f65374683")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR224")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR223")
           (unit 1)
         )
       )
@@ -10664,7 +10588,7 @@
       (width 0)
       (type default)
     )
-    (uuid "faa2398d-547c-42fd-b6d7-dec85fbe98c1")
+    (uuid "18b92cf9-f597-45b5-8958-9ed4244ba3db")
   )
   (symbol
     (lib_id "power:+5V")
@@ -10674,8 +10598,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "ae564f7b-96e6-4f47-a12c-a35694177987")
-    (property "Reference" "#PWR226"
+    (uuid "ba29959c-0910-4b63-9b2d-dd0f3f966fb8")
+    (property "Reference" "#PWR225"
       (at 392.43 62.23 0)
       (effects
         (font
@@ -10724,12 +10648,12 @@
       )
     )
     (pin "1"
-      (uuid "2cc3b6bd-374d-4f9a-a98c-965761880eed")
+      (uuid "ce710130-cac4-4f22-8a66-3cfaf8209eed")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR226")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR225")
           (unit 1)
         )
       )
@@ -10744,7 +10668,7 @@
       (width 0)
       (type default)
     )
-    (uuid "1dbd58b8-e705-479d-9726-36a814d94062")
+    (uuid "639712f0-a83a-49dc-ac22-88a03ba292c1")
   )
   (global_label "SDA"
     (shape passive)
@@ -10756,7 +10680,7 @@
       )
       (justify left)
     )
-    (uuid "7862f4c7-f2e1-4756-92c7-39c7283b89df")
+    (uuid "451b8792-6edb-4f6e-841e-c20aaa496362")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 67.31 0)
       (effects
@@ -10776,7 +10700,7 @@
       (width 0)
       (type default)
     )
-    (uuid "cc386e98-a746-4e2a-b37b-ba583a54f434")
+    (uuid "7ad56375-15e0-4cf9-984c-13383444cdfe")
   )
   (global_label "SCL"
     (shape passive)
@@ -10788,7 +10712,7 @@
       )
       (justify left)
     )
-    (uuid "7327c1b6-7ed5-42d1-8850-debd3436a712")
+    (uuid "5ba63b51-8c38-40bf-b8b9-31abc234ef2d")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 69.85 0)
       (effects
@@ -10807,7 +10731,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "145daba7-9b4f-426f-83e1-b4d67e4aa953")
+    (uuid "878393dd-6080-4a49-a8b7-a714774ff8b7")
     (property "Reference" "J4"
       (at 382.27 92.71 0)
       (effects
@@ -10857,17 +10781,17 @@
       )
     )
     (pin "1"
-      (uuid "084d1c24-bd2a-47ce-8f8f-1aad1cd98070")
+      (uuid "5e52d283-f463-4feb-bad7-5f9f707452d7")
     )
     (pin "2"
-      (uuid "078d1c9d-c4d5-4b1f-80cf-139c9161181a")
+      (uuid "a3a11614-affd-4374-a9c6-7339fadde16c")
     )
     (pin "3"
-      (uuid "f9d83a05-aa61-4cc2-8f00-b10c96854d29")
+      (uuid "1a56c721-e7a9-4396-857d-1fd25db90321")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J4")
           (unit 1)
         )
@@ -10883,7 +10807,7 @@
       (width 0)
       (type default)
     )
-    (uuid "399ae8cf-3c52-47b3-b689-27ea7da9d827")
+    (uuid "51ea7f49-5f78-4a39-a00a-423301f01b72")
   )
   (symbol
     (lib_id "power:GND")
@@ -10893,8 +10817,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e5889729-eabc-48c8-aee3-4672ba619856")
-    (property "Reference" "#PWR233"
+    (uuid "e93fa7af-ff1d-47f7-960d-65710599cdb3")
+    (property "Reference" "#PWR232"
       (at 392.43 90.17 0)
       (effects
         (font
@@ -10943,12 +10867,12 @@
       )
     )
     (pin "1"
-      (uuid "e293f786-7377-4cbd-87c5-c219db41e834")
+      (uuid "69166a8f-c829-49a2-81af-f85654bff46d")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR233")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR232")
           (unit 1)
         )
       )
@@ -10963,7 +10887,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8e87d842-7e5f-4ca1-9ca2-e0a443e21793")
+    (uuid "e324c6ef-fb10-4017-86c7-c68cece1bdfd")
   )
   (global_label "LED1_R"
     (shape passive)
@@ -10975,7 +10899,7 @@
       )
       (justify left)
     )
-    (uuid "18063882-1e53-4e81-899a-ee804cf4bcad")
+    (uuid "26af8834-c776-49cb-a0f7-9439ea385dca")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 95.25 0)
       (effects
@@ -10995,7 +10919,7 @@
       (width 0)
       (type default)
     )
-    (uuid "cfb207c5-ced7-4cd0-850b-166aa4a84c2c")
+    (uuid "a8985d46-0b51-472b-9e72-9974deeb3af8")
   )
   (global_label "LED1_G"
     (shape passive)
@@ -11007,7 +10931,7 @@
       )
       (justify left)
     )
-    (uuid "23e4b0c3-390f-4f0c-a82d-be9996afc995")
+    (uuid "f51cc19d-6094-4e42-b12b-d38df4cbd331")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 97.79 0)
       (effects
@@ -11026,7 +10950,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9fcf4b3e-594d-4c43-87e0-b5732d4252ec")
+    (uuid "24465722-be77-4a5f-9ced-2b1306b13d14")
     (property "Reference" "J5"
       (at 382.27 113.03 0)
       (effects
@@ -11076,17 +11000,17 @@
       )
     )
     (pin "1"
-      (uuid "0a7831eb-124f-4bee-8a67-96e8087a45e3")
+      (uuid "504cf578-62cf-4130-bdd3-66b1cb8556ed")
     )
     (pin "2"
-      (uuid "f9dd3251-93d4-4241-94d8-477c0f028c23")
+      (uuid "a7a814d8-b2c3-4314-ae15-5101a101eb1a")
     )
     (pin "3"
-      (uuid "6290594c-5ff4-4ee8-8e2b-d615f7b6fbf8")
+      (uuid "1b2f622d-55b5-43fe-9a1a-5a256a66a1c6")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J5")
           (unit 1)
         )
@@ -11102,7 +11026,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d7e473c7-f5c3-42f9-aeb5-a4f792418940")
+    (uuid "dcd9841d-8af5-42a1-bd02-8bebd993aa41")
   )
   (symbol
     (lib_id "power:GND")
@@ -11112,8 +11036,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6405c2dd-5491-442d-94bf-7e50c3954c4b")
-    (property "Reference" "#PWR240"
+    (uuid "719ad9e4-db93-49b0-981e-075ea2234bc5")
+    (property "Reference" "#PWR239"
       (at 392.43 110.49 0)
       (effects
         (font
@@ -11162,12 +11086,12 @@
       )
     )
     (pin "1"
-      (uuid "37d7ed89-1e3d-4eec-9219-bd8273dc8aaf")
+      (uuid "9fe37db5-3175-4017-9da1-549e2d64e340")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR240")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR239")
           (unit 1)
         )
       )
@@ -11182,7 +11106,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6d539e47-54f2-4251-a4e5-d8d19cd8cae0")
+    (uuid "26fd41b1-bd17-4f06-affd-16740193d61e")
   )
   (global_label "LED2_R"
     (shape passive)
@@ -11194,7 +11118,7 @@
       )
       (justify left)
     )
-    (uuid "e1731d6e-bb58-4c0d-8c1e-7802da4e1227")
+    (uuid "650c7e81-9cc2-40a3-82be-c5676308f215")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 115.57 0)
       (effects
@@ -11214,7 +11138,7 @@
       (width 0)
       (type default)
     )
-    (uuid "250e484e-80c4-4351-8024-2b88622fc8d3")
+    (uuid "9da3f5b2-0cd0-4584-93da-2ec809f2db0e")
   )
   (global_label "LED2_G"
     (shape passive)
@@ -11226,7 +11150,7 @@
       )
       (justify left)
     )
-    (uuid "5a51c125-4de1-4be9-aafa-df2d2f9f86b5")
+    (uuid "909af713-9bab-453d-81ab-0c7de4236033")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 118.11 0)
       (effects
@@ -11245,7 +11169,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d301fd52-033f-404e-834a-3d94cdd753e2")
+    (uuid "ed6ce3b6-c234-4d21-9ff3-c48ca339a5d7")
     (property "Reference" "J6"
       (at 382.27 132.08 0)
       (effects
@@ -11295,17 +11219,17 @@
       )
     )
     (pin "1"
-      (uuid "75ce63bb-aefc-4194-966a-4057db1611a4")
+      (uuid "d5428658-ac8a-43bb-a3da-377dc71abbe3")
     )
     (pin "2"
-      (uuid "a253dcc7-ed22-4488-bdb6-9f229f6eac32")
+      (uuid "aee89ef3-1a83-4cb2-b724-0427f455ee14")
     )
     (pin "3"
-      (uuid "70efd983-b552-4e4e-905d-21df3912a2e3")
+      (uuid "4671c187-8734-47fa-8315-02f094cfc86b")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J6")
           (unit 1)
         )
@@ -11321,7 +11245,7 @@
       (width 0)
       (type default)
     )
-    (uuid "35214de8-e65d-46e2-9916-a890e597022f")
+    (uuid "2183c5d8-988b-4f7e-ac9a-03efa9fb8628")
   )
   (symbol
     (lib_id "power:GND")
@@ -11331,8 +11255,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6fc42628-4037-49ec-bff6-249ff658a38e")
-    (property "Reference" "#PWR247"
+    (uuid "362b7d8a-e01c-42ee-9b2e-0704a022b427")
+    (property "Reference" "#PWR246"
       (at 392.43 129.54 0)
       (effects
         (font
@@ -11381,12 +11305,12 @@
       )
     )
     (pin "1"
-      (uuid "83f88215-63fc-4736-9e27-35e8f92043a3")
+      (uuid "dff31642-9e8f-4781-af21-18d088a5796c")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR247")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR246")
           (unit 1)
         )
       )
@@ -11401,7 +11325,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6eac440b-9eb7-468d-8b80-c3ff9fdfaed9")
+    (uuid "d98eb6c2-d0c7-41bf-993b-717822cd4157")
   )
   (global_label "LED3_R"
     (shape passive)
@@ -11413,7 +11337,7 @@
       )
       (justify left)
     )
-    (uuid "eef06a6a-7a75-4a78-82ce-c647d3fb63c6")
+    (uuid "b5df0f5a-749e-4737-a619-d297071323b6")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 134.62 0)
       (effects
@@ -11433,7 +11357,7 @@
       (width 0)
       (type default)
     )
-    (uuid "04428635-2570-4727-b163-571c84334276")
+    (uuid "440b2d82-0c5a-4f22-baf1-2e8d266128fa")
   )
   (global_label "LED3_G"
     (shape passive)
@@ -11445,7 +11369,7 @@
       )
       (justify left)
     )
-    (uuid "bb13bccd-b98c-43e1-a775-eb34c230a50e")
+    (uuid "849eedbb-6a1b-4168-b6ea-8ee87c52fe33")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 137.16 0)
       (effects
@@ -11464,7 +11388,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6a245add-ca98-4d75-a990-3d428505fdf4")
+    (uuid "3a157208-8a93-45be-9a6c-7701b9e59b23")
     (property "Reference" "J7"
       (at 382.27 167.64 0)
       (effects
@@ -11514,17 +11438,17 @@
       )
     )
     (pin "1"
-      (uuid "5f2a8423-254a-4ab0-be5f-f26374cdd026")
+      (uuid "ca2c3674-3b39-44df-8f62-e810fa669973")
     )
     (pin "2"
-      (uuid "ffcf6bd5-242d-4b28-b523-5c4ca9e158b1")
+      (uuid "9ab1607b-4d2a-4ef7-a6e0-55b0dd8807a6")
     )
     (pin "3"
-      (uuid "0528917b-5925-43d5-8a92-5af971a74090")
+      (uuid "fc42f8cf-1364-49f5-91cc-d1da56d837e6")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J7")
           (unit 1)
         )
@@ -11540,7 +11464,7 @@
       (width 0)
       (type default)
     )
-    (uuid "837b1163-461b-4914-bef1-29737afa6248")
+    (uuid "5ca5249f-ab3e-4619-aa38-0a11f1b45514")
   )
   (symbol
     (lib_id "power:GND")
@@ -11550,8 +11474,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "7132b638-c1e9-4355-9d9b-67e031dc7573")
-    (property "Reference" "#PWR254"
+    (uuid "e454a0e1-602a-461f-90a9-58850cf37fc6")
+    (property "Reference" "#PWR253"
       (at 392.43 165.1 0)
       (effects
         (font
@@ -11600,12 +11524,12 @@
       )
     )
     (pin "1"
-      (uuid "70320c61-e9b7-4693-8765-5292cccbad4b")
+      (uuid "51fdf7cd-21ad-41b5-b3fa-367075e0926a")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR254")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR253")
           (unit 1)
         )
       )
@@ -11620,7 +11544,7 @@
       (width 0)
       (type default)
     )
-    (uuid "3e9ea6ac-c150-4b3b-bedc-d051ca2752ad")
+    (uuid "561983c5-816b-42fb-a7c9-a96807b833d9")
   )
   (global_label "BTN_SLEEP"
     (shape passive)
@@ -11632,7 +11556,7 @@
       )
       (justify left)
     )
-    (uuid "0b8d58aa-aab1-417b-a2cf-565311c4d048")
+    (uuid "54c8fefb-2ed9-4302-ad86-929769115c2b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 170.18 0)
       (effects
@@ -11652,7 +11576,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f4968ef6-6650-423a-b204-ba9c4e09424b")
+    (uuid "733ea7d0-efed-47a9-8959-6777cfd95631")
   )
   (symbol
     (lib_id "power:+5V")
@@ -11662,8 +11586,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "20515105-2fba-4cd2-bd6b-daddfbc04973")
-    (property "Reference" "#PWR258"
+    (uuid "94a7d449-8044-4c4c-a66d-132a5f641df5")
+    (property "Reference" "#PWR257"
       (at 392.43 170.18 0)
       (effects
         (font
@@ -11712,12 +11636,12 @@
       )
     )
     (pin "1"
-      (uuid "49987118-e080-43c0-9b6b-370540a6e51f")
+      (uuid "d0e29e26-3e6b-4c06-ace6-8259834599c6")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR258")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR257")
           (unit 1)
         )
       )
@@ -11731,7 +11655,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "35b5ac88-61d7-4c09-a302-b1126702d306")
+    (uuid "8bdb547d-976a-4c6e-bf29-de2a1492ae59")
     (property "Reference" "J8"
       (at 382.27 187.96 0)
       (effects
@@ -11781,17 +11705,17 @@
       )
     )
     (pin "1"
-      (uuid "22c73633-404a-4fc3-9f9d-438c16f020de")
+      (uuid "33598cdb-26df-4671-b6eb-85cc25aadb32")
     )
     (pin "2"
-      (uuid "a5a4a3a6-3e85-4866-9d21-8cc73253e38d")
+      (uuid "392d8014-caa7-4e38-9032-99f1b3c18941")
     )
     (pin "3"
-      (uuid "adde82fe-0195-43e6-a5b0-032654b95215")
+      (uuid "24a8d570-7a1e-4d02-84f7-484bdcb9685b")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J8")
           (unit 1)
         )
@@ -11807,7 +11731,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8b8ab99c-07c8-490c-9d8b-ed5daf1a7052")
+    (uuid "fb1bb753-977e-4e94-84a3-a144b8639152")
   )
   (symbol
     (lib_id "power:GND")
@@ -11817,8 +11741,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d5570a48-7dc9-4493-9213-3fd6ebf2bcb9")
-    (property "Reference" "#PWR261"
+    (uuid "5ef517d8-a64e-445f-b059-8770b5b56ca8")
+    (property "Reference" "#PWR260"
       (at 392.43 185.42 0)
       (effects
         (font
@@ -11867,12 +11791,12 @@
       )
     )
     (pin "1"
-      (uuid "1cf341d2-0c4a-46c3-8981-0d27e63c90de")
+      (uuid "e3669778-15a8-4dd6-8852-5eb069fc8160")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR261")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR260")
           (unit 1)
         )
       )
@@ -11887,7 +11811,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8f2fdf8f-e1b6-436a-95c8-275c66952e76")
+    (uuid "fa448696-1989-4742-99b1-4ed3094f628d")
   )
   (global_label "BTN_LOG"
     (shape passive)
@@ -11899,7 +11823,7 @@
       )
       (justify left)
     )
-    (uuid "c47be545-85e2-4411-a189-0f691513e888")
+    (uuid "dc7468a6-b841-409d-94ac-1f4510046d2f")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 190.5 0)
       (effects
@@ -11919,7 +11843,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d1c0b812-e2fe-49ed-af67-efea89605902")
+    (uuid "51c80ee4-8268-4ffd-a491-7e6c94629dea")
   )
   (symbol
     (lib_id "power:+5V")
@@ -11929,8 +11853,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "31f36d2c-e98f-4ed3-ac7a-6faeab5ee0a2")
-    (property "Reference" "#PWR265"
+    (uuid "ec4c1417-e0a4-435c-ba4f-0e5ad91f1233")
+    (property "Reference" "#PWR264"
       (at 392.43 190.5 0)
       (effects
         (font
@@ -11979,12 +11903,12 @@
       )
     )
     (pin "1"
-      (uuid "b7e664fe-cc8a-4b4c-8168-858ebc2e4bdd")
+      (uuid "a9996ccb-8379-4794-988a-eacab444640e")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR265")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR264")
           (unit 1)
         )
       )
@@ -11998,7 +11922,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "29ce85ff-2385-4eb8-80ce-9f3b17b44197")
+    (uuid "41aa7e57-7068-4da2-a08f-aa6c2d454249")
     (property "Reference" "J9"
       (at 382.27 207.01 0)
       (effects
@@ -12048,17 +11972,17 @@
       )
     )
     (pin "1"
-      (uuid "ff518b75-fe34-4271-81ea-a002259a9fd9")
+      (uuid "fc95e762-28d6-4ef2-aa6f-883a7fb94a4b")
     )
     (pin "2"
-      (uuid "b19f686f-2c61-4f2e-9cfa-51d66f9951c0")
+      (uuid "67f983a4-7f55-41ec-bffa-49f8cff2c59b")
     )
     (pin "3"
-      (uuid "17237af4-efa1-4d6a-8564-3bea6f96ff88")
+      (uuid "687f9a63-85f4-442f-8532-c3b3b82c5243")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J9")
           (unit 1)
         )
@@ -12074,7 +11998,7 @@
       (width 0)
       (type default)
     )
-    (uuid "4c7fc0fd-f6f2-43d8-b862-2f36ed0a9cef")
+    (uuid "7943924d-fc33-4859-a72a-e2b8e64cf34f")
   )
   (symbol
     (lib_id "power:GND")
@@ -12084,8 +12008,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "aca163c6-7ccf-4a5e-94fb-367672925f69")
-    (property "Reference" "#PWR268"
+    (uuid "72073a6d-151e-42ae-877e-eafe429c72c9")
+    (property "Reference" "#PWR267"
       (at 392.43 204.47 0)
       (effects
         (font
@@ -12134,12 +12058,12 @@
       )
     )
     (pin "1"
-      (uuid "584490ec-d4ba-479a-a7b6-8b24f91d7d32")
+      (uuid "3566af30-396a-4799-b889-d47bdf1d74b5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR268")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR267")
           (unit 1)
         )
       )
@@ -12154,7 +12078,7 @@
       (width 0)
       (type default)
     )
-    (uuid "533854ea-4762-4080-b607-5e42d621ea51")
+    (uuid "14616eb0-fea1-488e-b485-c1a61698f061")
   )
   (global_label "BTN_FORCE"
     (shape passive)
@@ -12166,7 +12090,7 @@
       )
       (justify left)
     )
-    (uuid "98dee875-3bd9-45f6-a0ed-77eb4216a00e")
+    (uuid "20b86896-6ea6-4ec3-8127-e78d3305ee86")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 389.89 209.55 0)
       (effects
@@ -12186,7 +12110,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f11ef7d6-bac9-4adb-af06-914aad6e8b5f")
+    (uuid "c9bccc75-635b-4711-a95b-bc3722a94fe9")
   )
   (symbol
     (lib_id "power:+5V")
@@ -12196,8 +12120,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "244a02c3-6ef8-496e-a521-629396ff059e")
-    (property "Reference" "#PWR272"
+    (uuid "ea10e1ca-4528-45ed-ad51-a7c81ffc76f8")
+    (property "Reference" "#PWR271"
       (at 392.43 209.55 0)
       (effects
         (font
@@ -12246,12 +12170,12 @@
       )
     )
     (pin "1"
-      (uuid "761d3a85-06b0-4ad4-8e4b-7996ca2b6272")
+      (uuid "3565a11a-7512-44e3-8131-e0f0b8eecfca")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR272")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR271")
           (unit 1)
         )
       )
@@ -12265,7 +12189,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "205c1662-b20f-49de-8a89-a97423867e21")
+    (uuid "5b86c300-f278-4ac1-9cf6-f4783ca9909f")
     (property "Reference" "R1"
       (at 347.98 97.79 0)
       (effects
@@ -12315,14 +12239,14 @@
       )
     )
     (pin "1"
-      (uuid "085f0cfa-fa62-4939-8234-c8016a1a544b")
+      (uuid "9135c615-620c-4db6-b708-747786606943")
     )
     (pin "2"
-      (uuid "170fd512-6e12-47b6-a2ed-8ea159ee1b0d")
+      (uuid "b4611842-702e-4e27-829b-a46620eca555")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R1")
           (unit 1)
         )
@@ -12338,7 +12262,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f13d66ae-2610-42a6-b590-c8f9f539945a")
+    (uuid "e9e57a28-a1fb-4b73-961a-2f7d3e0b6e38")
   )
   (global_label "LED1_R"
     (shape passive)
@@ -12350,7 +12274,7 @@
       )
       (justify left)
     )
-    (uuid "cc8061bc-42d7-4ac0-82ad-fe65bd26a27f")
+    (uuid "87f3de01-125f-45a4-a354-3509ea3234a0")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 91.44 0)
       (effects
@@ -12370,7 +12294,7 @@
       (width 0)
       (type default)
     )
-    (uuid "2a2faa1b-c124-48a9-9024-b42369d8fb84")
+    (uuid "ab8c26cb-29cf-4721-ae44-0228e669c0ea")
   )
   (global_label "LED1_R_MCU"
     (shape passive)
@@ -12382,7 +12306,7 @@
       )
       (justify left)
     )
-    (uuid "ace0a0b1-641a-42fa-8460-2a20dd303dd8")
+    (uuid "3319942e-5d20-4555-8b52-359fc523083f")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 109.22 0)
       (effects
@@ -12401,7 +12325,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "5e0cd45b-d132-4fec-8b6e-b43eefcdaa43")
+    (uuid "fd208d1f-1f32-425b-932c-cd77355fd567")
     (property "Reference" "R2"
       (at 358.14 97.79 0)
       (effects
@@ -12451,14 +12375,14 @@
       )
     )
     (pin "1"
-      (uuid "532995ce-543d-4ec7-9e12-ce8f9fc6cc84")
+      (uuid "7788aa87-0d96-48b4-9d22-5bc1a91cbf31")
     )
     (pin "2"
-      (uuid "5f1202ae-ac4d-48c5-af98-84270933f79d")
+      (uuid "f068be36-501b-448a-b469-e1fa42cf1337")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R2")
           (unit 1)
         )
@@ -12474,7 +12398,7 @@
       (width 0)
       (type default)
     )
-    (uuid "3e24ac63-d848-43d2-97ce-e044ba12dadd")
+    (uuid "f9f0b36f-82b7-463e-b1c9-822dc6e4ea18")
   )
   (global_label "LED1_G"
     (shape passive)
@@ -12486,7 +12410,7 @@
       )
       (justify left)
     )
-    (uuid "455f3b65-d1f8-4e11-8e1c-7ed0833766d4")
+    (uuid "80acb4d7-0aee-4878-b0e4-f284fb05c641")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 91.44 0)
       (effects
@@ -12506,7 +12430,7 @@
       (width 0)
       (type default)
     )
-    (uuid "83717937-0b70-4169-9a8f-ef24e91e4671")
+    (uuid "ccb2cebd-6330-4d45-b3e5-0e782f285297")
   )
   (global_label "LED1_G_MCU"
     (shape passive)
@@ -12518,7 +12442,7 @@
       )
       (justify left)
     )
-    (uuid "b2aca296-3129-4688-a605-d0c8bfdddbf8")
+    (uuid "b729f6d1-c012-46fa-a337-b38134fc1f37")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 109.22 0)
       (effects
@@ -12537,7 +12461,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "6f366e4e-55c7-4ff5-921a-15c5c6997089")
+    (uuid "2c2064f4-b8fb-45c3-b546-269a36fddbc5")
     (property "Reference" "R3"
       (at 347.98 116.84 0)
       (effects
@@ -12587,14 +12511,14 @@
       )
     )
     (pin "1"
-      (uuid "1982216a-0cbc-402a-8482-2917635cba71")
+      (uuid "8629eeae-366f-456f-9811-d99446454cf2")
     )
     (pin "2"
-      (uuid "61aa875b-2450-480c-ac92-a9de90ed94e9")
+      (uuid "31adf7e2-a536-4b4d-bd55-857d5c19daaa")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R3")
           (unit 1)
         )
@@ -12610,7 +12534,7 @@
       (width 0)
       (type default)
     )
-    (uuid "0a6aa58c-bb0a-4975-bfae-9bd2f361abd3")
+    (uuid "29bc43c1-d73c-4e6e-abca-9db72ed720a9")
   )
   (global_label "LED2_R"
     (shape passive)
@@ -12622,7 +12546,7 @@
       )
       (justify left)
     )
-    (uuid "48e1f2f1-155e-4ef8-adf5-4b79e812ff6b")
+    (uuid "354c989e-f9c0-4d35-b860-15465454e760")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 110.49 0)
       (effects
@@ -12642,7 +12566,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c1bd0a45-9878-46de-9732-26f611fed8fe")
+    (uuid "350a82c8-9c99-4e68-ab41-407b78d85158")
   )
   (global_label "LED2_R_MCU"
     (shape passive)
@@ -12654,7 +12578,7 @@
       )
       (justify left)
     )
-    (uuid "56c6bd13-cd3b-4897-a871-af7a41fa1b03")
+    (uuid "bb7f7841-43f9-4743-89cd-74937158ff4b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 128.27 0)
       (effects
@@ -12673,7 +12597,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "435efc17-57cd-41ee-bdf1-eaaa8225a9a7")
+    (uuid "7ac9ba5e-9cd5-4bb4-a650-75fa2635b13b")
     (property "Reference" "R4"
       (at 358.14 116.84 0)
       (effects
@@ -12723,14 +12647,14 @@
       )
     )
     (pin "1"
-      (uuid "691fa79c-a6e4-48a2-a42b-365747e3f8b0")
+      (uuid "eb92df18-3d01-4ad0-a29e-0f963f544e92")
     )
     (pin "2"
-      (uuid "1a146170-414e-4591-99ad-e2f0d37720b8")
+      (uuid "72ce370b-7d3d-41dd-ae6c-d0b78a8d0129")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R4")
           (unit 1)
         )
@@ -12746,7 +12670,7 @@
       (width 0)
       (type default)
     )
-    (uuid "cf1b404d-81a0-4446-aeba-4908238c7ecb")
+    (uuid "64554742-4f81-472f-a250-fc483864b62c")
   )
   (global_label "LED2_G"
     (shape passive)
@@ -12758,7 +12682,7 @@
       )
       (justify left)
     )
-    (uuid "6b5746cd-3118-420d-be27-89f2ece17183")
+    (uuid "9c8b790b-1ae0-476e-9298-c2f130d16c9c")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 110.49 0)
       (effects
@@ -12778,7 +12702,7 @@
       (width 0)
       (type default)
     )
-    (uuid "2f3e1968-ab38-474f-8f82-c28b0619c1a5")
+    (uuid "fcc28381-1f71-4dd8-8a04-423c136638c7")
   )
   (global_label "LED2_G_MCU"
     (shape passive)
@@ -12790,7 +12714,7 @@
       )
       (justify left)
     )
-    (uuid "9d8d5fda-9968-4448-9519-477f2a91d060")
+    (uuid "afaed05f-a9db-48e3-ab31-a1eb7032bb9a")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 128.27 0)
       (effects
@@ -12809,7 +12733,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e000f944-3805-4ca4-8549-a78079432d78")
+    (uuid "c98b99e0-d2c4-4e49-a18f-37a41fdd89a0")
     (property "Reference" "R5"
       (at 347.98 137.16 0)
       (effects
@@ -12859,14 +12783,14 @@
       )
     )
     (pin "1"
-      (uuid "8cf1f8c3-9664-45c8-a6ae-8a0a5cdf082e")
+      (uuid "2d88a6c4-f323-443f-9227-c38df8b18157")
     )
     (pin "2"
-      (uuid "23590bae-a1d1-4104-b0b3-3f41895a35fb")
+      (uuid "5a072138-4284-4b44-bda9-78cb5c0b38ac")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R5")
           (unit 1)
         )
@@ -12882,7 +12806,7 @@
       (width 0)
       (type default)
     )
-    (uuid "eea9cbc1-2bb5-466b-b48f-f2d68d13e516")
+    (uuid "e9ebc091-8b81-422d-bcb2-0b70fe249377")
   )
   (global_label "LED3_R"
     (shape passive)
@@ -12894,7 +12818,7 @@
       )
       (justify left)
     )
-    (uuid "182b0071-ffb6-4392-8909-66399437968f")
+    (uuid "47a67dc5-aa8a-4da1-8af3-bc2c041823e1")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 130.81 0)
       (effects
@@ -12914,7 +12838,7 @@
       (width 0)
       (type default)
     )
-    (uuid "b13fa46a-c0f8-4352-9ad7-6be26ced34ca")
+    (uuid "542f8a26-5eb3-4a16-982a-937837f27a6e")
   )
   (global_label "LED3_R_MCU"
     (shape passive)
@@ -12926,7 +12850,7 @@
       )
       (justify left)
     )
-    (uuid "6d86c0dc-ccd9-43dd-a0cf-37975d27d4d8")
+    (uuid "bb65a043-fd44-4076-a128-a0c0d9281618")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 148.59 0)
       (effects
@@ -12945,7 +12869,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "30989c0e-a772-4c4b-ab67-bce85560a1db")
+    (uuid "a341f4c1-5325-43f1-8fef-f2cbcd643cbe")
     (property "Reference" "R6"
       (at 358.14 137.16 0)
       (effects
@@ -12995,14 +12919,14 @@
       )
     )
     (pin "1"
-      (uuid "7d1c2c5d-16f4-48bb-90e1-2884a8969e58")
+      (uuid "51c908b2-c734-4376-a985-1900b0de8a31")
     )
     (pin "2"
-      (uuid "81b2e552-fc46-4769-9c58-ecdfb27113b5")
+      (uuid "7430e102-8849-4045-a35a-258a5b06673a")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R6")
           (unit 1)
         )
@@ -13018,7 +12942,7 @@
       (width 0)
       (type default)
     )
-    (uuid "5238a160-2eaa-4fee-8cd1-756ae7106d63")
+    (uuid "cde9fa6d-7f19-4fdc-b74a-79f2449adb14")
   )
   (global_label "LED3_G"
     (shape passive)
@@ -13030,7 +12954,7 @@
       )
       (justify left)
     )
-    (uuid "e79f3bd5-8d24-466d-8274-bea6bd4128dc")
+    (uuid "af94b5fb-5235-4fa5-9b8c-81646ade54b3")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 130.81 0)
       (effects
@@ -13050,7 +12974,7 @@
       (width 0)
       (type default)
     )
-    (uuid "68c8f00d-8fe0-4685-9cc3-b4f44d5c073f")
+    (uuid "159e345a-1862-4b18-9958-7bea61c48bb1")
   )
   (global_label "LED3_G_MCU"
     (shape passive)
@@ -13062,7 +12986,7 @@
       )
       (justify left)
     )
-    (uuid "de7292c9-9c09-487e-b2d3-fc34e2b2b418")
+    (uuid "e8625685-857c-4b08-a4bb-91ab67e98a0c")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 355.6 148.59 0)
       (effects
@@ -13081,7 +13005,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f60cbea3-baf0-467a-bbdb-6b7706190f39")
+    (uuid "ae2a2277-1f7c-472e-9a25-7105818dd725")
     (property "Reference" "R7"
       (at 317.5 57.15 0)
       (effects
@@ -13131,14 +13055,14 @@
       )
     )
     (pin "1"
-      (uuid "23724e4d-fb9d-4b08-b35f-75e15e1b0e37")
+      (uuid "13114522-0b59-4f49-acb4-b5996943d0f5")
     )
     (pin "2"
-      (uuid "f2bc0345-5b18-492b-a97c-cd0e5f5b5434")
+      (uuid "9a19b722-1af8-4a6a-b709-5c8ea388314f")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R7")
           (unit 1)
         )
@@ -13154,7 +13078,7 @@
       (width 0)
       (type default)
     )
-    (uuid "bb788de8-8e3e-4299-8975-69f8aafc9605")
+    (uuid "652c1cd9-92ee-4bbd-a7ab-576281b46d78")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -13164,8 +13088,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "adb51ec8-0ef6-4707-bef5-2496c115ba79")
-    (property "Reference" "#PWR305"
+    (uuid "3a3a9a77-a5e0-4fb5-a941-f56179396861")
+    (property "Reference" "#PWR304"
       (at 317.5 48.26 0)
       (effects
         (font
@@ -13214,12 +13138,12 @@
       )
     )
     (pin "1"
-      (uuid "86ae33e5-5a89-4264-9a8e-bcf8f53afa00")
+      (uuid "d45e20f5-be11-4372-bfd5-3dae7b2b4419")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR305")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR304")
           (unit 1)
         )
       )
@@ -13234,7 +13158,7 @@
       (width 0)
       (type default)
     )
-    (uuid "cfd16cc6-d9b3-446b-a5ac-96aec91e541b")
+    (uuid "82c5f1ec-9628-4815-85ae-378ecdf5bd2f")
   )
   (global_label "SD_CS"
     (shape passive)
@@ -13246,7 +13170,7 @@
       )
       (justify left)
     )
-    (uuid "937a8be6-7432-4e44-9727-205777795f44")
+    (uuid "144075c4-c1ac-42d0-b89f-aaa3ad3c1314")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 314.96 68.58 0)
       (effects
@@ -13265,7 +13189,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f0f600fc-9a47-47d9-aa9b-d67bbd54f643")
+    (uuid "295eb545-208d-48cc-8c6e-ff640ef9fa7b")
     (property "Reference" "R8"
       (at 327.66 57.15 0)
       (effects
@@ -13315,14 +13239,14 @@
       )
     )
     (pin "1"
-      (uuid "d6d96413-2a28-4175-b825-6ac37aa6a956")
+      (uuid "89a20ca5-e36a-4beb-b278-cfd2ac8f1448")
     )
     (pin "2"
-      (uuid "c8fba867-3076-4b4e-8d9c-7e8ed3853fb6")
+      (uuid "373809ee-62c7-420e-81ce-f4f6122969eb")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R8")
           (unit 1)
         )
@@ -13338,7 +13262,7 @@
       (width 0)
       (type default)
     )
-    (uuid "4a1166b4-5ba7-4b96-bb07-0f7d7617af29")
+    (uuid "adc914b1-a70c-4c54-8787-a37670859d43")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -13348,8 +13272,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "c07fa11e-8e3c-4e56-9177-13c8ef52e937")
-    (property "Reference" "#PWR310"
+    (uuid "da18dfb5-531a-4c6b-babf-8396c6a2eeb7")
+    (property "Reference" "#PWR309"
       (at 327.66 48.26 0)
       (effects
         (font
@@ -13398,12 +13322,12 @@
       )
     )
     (pin "1"
-      (uuid "90938ac4-02c2-46c1-9945-be537edcfecc")
+      (uuid "a8151b09-ca47-44f1-98dd-71c952b19e12")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR310")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR309")
           (unit 1)
         )
       )
@@ -13418,7 +13342,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8e7a39d6-d497-4711-ac14-2724b13069b0")
+    (uuid "18ea21f8-0247-4326-bef1-e1f9f2d240b2")
   )
   (global_label "SPI_MISO"
     (shape passive)
@@ -13430,7 +13354,7 @@
       )
       (justify left)
     )
-    (uuid "713afcc2-a5cd-4bab-b6f7-708811657d2a")
+    (uuid "dd1442ed-8e75-435b-afd2-a175215809d4")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 325.12 68.58 0)
       (effects
@@ -13449,7 +13373,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f18599b9-bf65-4203-88be-6345c3f6e990")
+    (uuid "6f8186f9-9ca2-4ba2-87ba-65009382b773")
     (property "Reference" "R9"
       (at 337.82 57.15 0)
       (effects
@@ -13499,14 +13423,14 @@
       )
     )
     (pin "1"
-      (uuid "0ef09599-6e1d-49ff-b3a6-e6ec558fe92f")
+      (uuid "a850a818-c6b2-4447-9800-20e0689b05b6")
     )
     (pin "2"
-      (uuid "d31e1244-343e-4bdd-9e08-896f3e6882bc")
+      (uuid "7cc66a77-884d-4bc1-97a0-3f4121944f23")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R9")
           (unit 1)
         )
@@ -13522,7 +13446,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9189350a-86a1-4938-9870-818ced65ae39")
+    (uuid "d72ad7da-ca19-4e19-ac94-67702e620238")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -13532,8 +13456,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "bceff077-9763-4dd5-a7d7-21f115394c2f")
-    (property "Reference" "#PWR315"
+    (uuid "77f61794-c4df-48a8-9651-4124469ae036")
+    (property "Reference" "#PWR314"
       (at 337.82 48.26 0)
       (effects
         (font
@@ -13582,12 +13506,12 @@
       )
     )
     (pin "1"
-      (uuid "2858059d-0aaf-4d94-8e7d-8dde7aa0e0ea")
+      (uuid "da9bd6e5-afa6-409b-89dc-0cacdd3bdb38")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR315")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR314")
           (unit 1)
         )
       )
@@ -13602,7 +13526,7 @@
       (width 0)
       (type default)
     )
-    (uuid "b21797f7-3e63-4b81-b977-8ad42f8e0c1c")
+    (uuid "846b8dbf-3f2a-49e1-ba09-514681139cec")
   )
   (global_label "SD_DAT1"
     (shape passive)
@@ -13614,7 +13538,7 @@
       )
       (justify left)
     )
-    (uuid "7f309565-9c82-4726-bcb7-342488b40e17")
+    (uuid "bf2e83b9-317a-4c15-9da7-58b8daa0e3e4")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 335.28 68.58 0)
       (effects
@@ -13633,7 +13557,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "1b393e90-d509-4361-ab0f-87a7be5e2a41")
+    (uuid "1a0dd43a-e352-4b4f-a183-53c92638e388")
     (property "Reference" "R10"
       (at 347.98 57.15 0)
       (effects
@@ -13683,14 +13607,14 @@
       )
     )
     (pin "1"
-      (uuid "f430017c-dba1-4b21-a0a6-dc729e0d4b3f")
+      (uuid "5d0afbc7-e045-4993-8189-a080bbace351")
     )
     (pin "2"
-      (uuid "f92547d2-9152-4c78-9100-f61d0d3cb75d")
+      (uuid "cbb4bcce-81a6-4c98-ac25-50ce973d55e7")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R10")
           (unit 1)
         )
@@ -13706,7 +13630,7 @@
       (width 0)
       (type default)
     )
-    (uuid "de9471b4-ba31-44cf-b133-5ad8ac353664")
+    (uuid "33bf253b-f5e5-4d80-8589-dce9f1dac973")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -13716,8 +13640,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9a054722-fb65-4a33-a087-4148e020579f")
-    (property "Reference" "#PWR320"
+    (uuid "c657dcb6-599c-4bad-bafe-42a8109b66d9")
+    (property "Reference" "#PWR319"
       (at 347.98 48.26 0)
       (effects
         (font
@@ -13766,12 +13690,12 @@
       )
     )
     (pin "1"
-      (uuid "cc23c426-ad70-434d-9551-e4deaf7dae41")
+      (uuid "ed47727a-0bd4-4e92-86ec-2224df6f817e")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR320")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR319")
           (unit 1)
         )
       )
@@ -13786,7 +13710,7 @@
       (width 0)
       (type default)
     )
-    (uuid "130290da-6f9d-4317-aa9a-d4d8d017819c")
+    (uuid "d2196de1-eb94-4efc-b80f-1c8dae3b876e")
   )
   (global_label "SD_DAT2"
     (shape passive)
@@ -13798,7 +13722,7 @@
       )
       (justify left)
     )
-    (uuid "84a8bde1-88cd-459a-8c3f-fdfd3730c2fd")
+    (uuid "daa99eec-117d-4805-bdc4-82db3a2184eb")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 345.44 68.58 0)
       (effects
@@ -13817,7 +13741,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b6ae2ce2-35cc-448f-bcd1-02d52b9b2720")
+    (uuid "49f80601-c849-4c14-b51d-2eb48ffddfe3")
     (property "Reference" "C1"
       (at 152.4 45.72 0)
       (effects
@@ -13867,14 +13791,14 @@
       )
     )
     (pin "1"
-      (uuid "75d99449-2f59-43f3-a40d-7999f0b37510")
+      (uuid "c5b4168f-fbd9-4a28-84c8-9cd0e4864793")
     )
     (pin "2"
-      (uuid "84eafd15-8091-499b-95bb-1e65c972fed9")
+      (uuid "5373df1c-c8b7-4e22-80a2-a64f2e1b7014")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C1")
           (unit 1)
         )
@@ -13890,7 +13814,7 @@
       (width 0)
       (type default)
     )
-    (uuid "0cec86d3-9bd1-4dff-973a-41809225f80e")
+    (uuid "097f33f5-c688-40d6-a8c9-5fd29ab5e8ec")
   )
   (symbol
     (lib_id "power:+5V")
@@ -13900,8 +13824,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "19fc55ec-961a-4acb-b38d-b93b4ea761e5")
-    (property "Reference" "#PWR325"
+    (uuid "57e7392a-272f-464e-8fb8-c6a27deed7ef")
+    (property "Reference" "#PWR324"
       (at 152.4 36.83 0)
       (effects
         (font
@@ -13950,12 +13874,12 @@
       )
     )
     (pin "1"
-      (uuid "66f71972-f240-40c1-8f93-0108d7fb87db")
+      (uuid "4c0a0b52-eecd-463e-94a4-8eab0becc075")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR325")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR324")
           (unit 1)
         )
       )
@@ -13970,7 +13894,7 @@
       (width 0)
       (type default)
     )
-    (uuid "41bfc92f-784b-48e1-bc04-22a36c8a81cf")
+    (uuid "e7b765d7-0db0-449c-9f95-a442fdd4e8e4")
   )
   (symbol
     (lib_id "power:GND")
@@ -13980,8 +13904,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e2ec9a7e-f9cc-40a4-ba40-5475adc78405")
-    (property "Reference" "#PWR327"
+    (uuid "d2b6e5ce-ddb2-40af-8394-7ddf181adcd4")
+    (property "Reference" "#PWR326"
       (at 152.4 54.61 0)
       (effects
         (font
@@ -14030,12 +13954,12 @@
       )
     )
     (pin "1"
-      (uuid "eaaac37b-71b2-4ed2-9591-31365f49db91")
+      (uuid "a184206a-f5b5-4d25-a834-52401ac20d3d")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR327")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR326")
           (unit 1)
         )
       )
@@ -14049,7 +13973,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "2907a3bd-e6a3-42e3-a5f1-46449db45858")
+    (uuid "c1df7917-c0bc-4387-8060-8ad15f45acf6")
     (property "Reference" "C2"
       (at 201.93 45.72 0)
       (effects
@@ -14099,14 +14023,14 @@
       )
     )
     (pin "1"
-      (uuid "59c3a67d-8717-4407-b448-28826f3583a6")
+      (uuid "dedb4a4d-5e88-444a-b480-9b98dcfda7aa")
     )
     (pin "2"
-      (uuid "06364429-d4bc-42ac-b543-2434cdc41d47")
+      (uuid "9d6e7d39-39c0-401c-8233-745a733710ff")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C2")
           (unit 1)
         )
@@ -14122,7 +14046,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d046b35f-a78b-4481-b1a7-f9ebbbd37dc0")
+    (uuid "4e8521ac-dce6-4197-94a4-8f71ee7f3eb6")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -14132,8 +14056,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9ba28028-474d-4f64-9935-3912dbdff32a")
-    (property "Reference" "#PWR330"
+    (uuid "4e428dba-e9db-4111-aee9-919ed272b63e")
+    (property "Reference" "#PWR329"
       (at 201.93 36.83 0)
       (effects
         (font
@@ -14182,12 +14106,12 @@
       )
     )
     (pin "1"
-      (uuid "0b7d14b2-1c38-4c60-90e7-2265f77805d1")
+      (uuid "dc208c9a-5b89-4ea7-b47d-b3ff97e5c6b5")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR330")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR329")
           (unit 1)
         )
       )
@@ -14202,7 +14126,7 @@
       (width 0)
       (type default)
     )
-    (uuid "82bd2b60-eff9-49cd-9a8e-9d03cd3ac30d")
+    (uuid "33256b78-05a0-41c0-a57b-a5466a894d14")
   )
   (symbol
     (lib_id "power:GND")
@@ -14212,8 +14136,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "75af1abf-1077-4e6b-964c-8e2abbb94cf6")
-    (property "Reference" "#PWR332"
+    (uuid "47f06126-a2b7-4a19-bc17-17ef148f9521")
+    (property "Reference" "#PWR331"
       (at 201.93 54.61 0)
       (effects
         (font
@@ -14262,12 +14186,12 @@
       )
     )
     (pin "1"
-      (uuid "a9454b49-5461-463c-84ff-67ef0198832d")
+      (uuid "d387264e-de62-4b7b-b926-e1a99b765bb6")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR332")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR331")
           (unit 1)
         )
       )
@@ -14281,7 +14205,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "49c45358-4693-463c-8a94-acaa77eb550c")
+    (uuid "cd4a1173-93f9-4e4e-93da-1dde271fa691")
     (property "Reference" "C3"
       (at 252.73 45.72 0)
       (effects
@@ -14331,14 +14255,14 @@
       )
     )
     (pin "1"
-      (uuid "ce77af5d-da6e-461c-929d-64e0cfcd844f")
+      (uuid "018eb04c-1ea6-4218-baf2-0670e1e77bbb")
     )
     (pin "2"
-      (uuid "a5cc22c2-8f5f-4dcb-a9b1-e44edc9e9df8")
+      (uuid "cd9bccdb-0b26-4de3-92f5-8867ee835c18")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C3")
           (unit 1)
         )
@@ -14354,7 +14278,7 @@
       (width 0)
       (type default)
     )
-    (uuid "7d8852c7-516b-4f65-81c9-24936dbc87c3")
+    (uuid "b680bef5-3a1f-46a2-aadd-04bf2d0998b8")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -14364,8 +14288,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d6f16b4d-07c1-4368-a96f-ef16f54d509b")
-    (property "Reference" "#PWR335"
+    (uuid "bf4683a1-d7c8-415b-827c-7541fa2d94ac")
+    (property "Reference" "#PWR334"
       (at 252.73 36.83 0)
       (effects
         (font
@@ -14414,12 +14338,12 @@
       )
     )
     (pin "1"
-      (uuid "9f134f29-75c3-4fb7-91d7-16cf82394964")
+      (uuid "98cbcb4e-7f31-4e58-9677-20f2d943ce78")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR335")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR334")
           (unit 1)
         )
       )
@@ -14434,7 +14358,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f2d2a30c-a173-4323-88e6-35fc037f3ddf")
+    (uuid "85278416-68dc-445b-9da0-4d1c0e38080e")
   )
   (symbol
     (lib_id "power:GND")
@@ -14444,8 +14368,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f46a32e0-2287-48ac-87de-99927d729fed")
-    (property "Reference" "#PWR337"
+    (uuid "a28fc4a3-677e-4167-a0cf-243e117e7cf7")
+    (property "Reference" "#PWR336"
       (at 252.73 54.61 0)
       (effects
         (font
@@ -14494,12 +14418,12 @@
       )
     )
     (pin "1"
-      (uuid "4c4c4fc3-c052-48cf-9bc9-bb68941697a9")
+      (uuid "19fcb8a1-7900-4270-83a8-0db54d0ac9fe")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR337")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR336")
           (unit 1)
         )
       )
@@ -14513,7 +14437,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "a1c89c43-8db3-431f-a1e1-7f2c48a372e4")
+    (uuid "3cfb26c6-51bb-4610-a6b0-61f85c2f95ce")
     (property "Reference" "C4"
       (at 317.5 127 0)
       (effects
@@ -14563,14 +14487,14 @@
       )
     )
     (pin "1"
-      (uuid "de291549-aa21-4bc3-a53b-a56f608c06c3")
+      (uuid "4d9a8662-148e-49ec-b1ef-88482a89f765")
     )
     (pin "2"
-      (uuid "a9aebc6e-789e-4f2b-a6f1-62bd70f4bfef")
+      (uuid "4ed76a58-9a8e-4dfc-8be7-51179dc713fa")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C4")
           (unit 1)
         )
@@ -14586,7 +14510,7 @@
       (width 0)
       (type default)
     )
-    (uuid "ec327e05-062a-44fa-882e-06d8d940fe6e")
+    (uuid "4ed49669-7da9-4d3f-82ff-93ad723b8a29")
   )
   (symbol
     (lib_id "power:+3V3")
@@ -14596,8 +14520,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "469e6ebd-6857-40e8-8566-04dbf44da97b")
-    (property "Reference" "#PWR340"
+    (uuid "d4f5a71a-e245-4e79-8f6c-d56ef38aafe7")
+    (property "Reference" "#PWR339"
       (at 317.5 118.11 0)
       (effects
         (font
@@ -14646,12 +14570,12 @@
       )
     )
     (pin "1"
-      (uuid "81b81473-bb4b-4582-baed-37fba9b84cc0")
+      (uuid "b06ca0a6-d856-4572-a888-8078a9e7da88")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR340")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR339")
           (unit 1)
         )
       )
@@ -14666,7 +14590,7 @@
       (width 0)
       (type default)
     )
-    (uuid "375954d7-ad34-4f80-bd86-8e0103abcf19")
+    (uuid "004171e9-a191-4525-92df-b5fc73bef90c")
   )
   (symbol
     (lib_id "power:GND")
@@ -14676,8 +14600,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "63f660f4-28d3-4f83-8bea-53b611640896")
-    (property "Reference" "#PWR342"
+    (uuid "316301ee-a591-4128-9931-646c9ccdf82e")
+    (property "Reference" "#PWR341"
       (at 317.5 135.89 0)
       (effects
         (font
@@ -14726,12 +14650,12 @@
       )
     )
     (pin "1"
-      (uuid "ecddb7ae-ed1c-400f-93e3-1b06afdc5d7d")
+      (uuid "0c1807c1-fc20-465b-a21d-9fca3db1d81f")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR342")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR341")
           (unit 1)
         )
       )
@@ -14745,7 +14669,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "5227e665-c46f-46e5-b433-3dbe553ebe76")
+    (uuid "2acc03a7-6c4a-4e44-bf84-1dd3f74c9a03")
     (property "Reference" "C5"
       (at 132.08 45.72 0)
       (effects
@@ -14764,7 +14688,7 @@
         (justify left)
       )
     )
-    (property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
+    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
       (at 129.54 48.26 0)
       (effects
         (font
@@ -14784,7 +14708,7 @@
         (hide yes)
       )
     )
-    (property "Description" "5V bulk"
+    (property "Description" "5V bulk, 6.3 mm radial, 2.5 mm pitch (5 mm parts fit too)"
       (at 129.54 48.26 0)
       (effects
         (font
@@ -14795,14 +14719,14 @@
       )
     )
     (pin "1"
-      (uuid "c148e837-ee45-4e2a-bcfe-790a974e2a58")
+      (uuid "580c8dfe-7307-41f8-98df-d7845422d168")
     )
     (pin "2"
-      (uuid "04e196b9-ee4b-46be-81a0-1283fd68409e")
+      (uuid "2a31c2f7-18e2-4112-b5e1-54aca6ec9ac9")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C5")
           (unit 1)
         )
@@ -14818,7 +14742,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9f425fca-1ef9-4ea4-af2f-a49000a84eb1")
+    (uuid "346c9a49-7823-4716-b9de-79c25ca78f93")
   )
   (symbol
     (lib_id "power:+5V")
@@ -14828,8 +14752,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f41ed2ac-aa48-44c8-88de-9fcfbdaf69c4")
-    (property "Reference" "#PWR345"
+    (uuid "de980a6a-8175-4cac-8ce7-da9ef2ae7695")
+    (property "Reference" "#PWR344"
       (at 132.08 36.83 0)
       (effects
         (font
@@ -14878,12 +14802,12 @@
       )
     )
     (pin "1"
-      (uuid "3ec84fc6-5895-414b-af72-f14fcad3a817")
+      (uuid "1ab27825-7c42-4e29-addc-4278cc8b1f2f")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR345")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR344")
           (unit 1)
         )
       )
@@ -14898,7 +14822,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d3127fe5-f43f-4072-be9b-5c0ebc73a3db")
+    (uuid "6ab6dde3-7d40-4f8c-b8e1-63f3441b0949")
   )
   (symbol
     (lib_id "power:GND")
@@ -14908,8 +14832,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "1d97c7e3-b1ef-44c2-a74c-8c4441d063e1")
-    (property "Reference" "#PWR347"
+    (uuid "dfd0289e-8083-45db-8e3e-d11a51090c16")
+    (property "Reference" "#PWR346"
       (at 132.08 54.61 0)
       (effects
         (font
@@ -14958,12 +14882,12 @@
       )
     )
     (pin "1"
-      (uuid "9fa0120a-e4ea-4fbe-9653-093cfc8a12cc")
+      (uuid "3edf6505-72a8-4927-86f7-011b6ba60410")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR347")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR346")
           (unit 1)
         )
       )
@@ -14977,7 +14901,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "c09926bf-70c4-424a-9a6c-a652ff4481cf")
+    (uuid "ebddddd7-3edd-4959-8aeb-4079b21cc572")
     (property "Reference" "C6"
       (at 353.06 172.72 0)
       (effects
@@ -15027,14 +14951,14 @@
       )
     )
     (pin "1"
-      (uuid "a86c75c7-b23f-4a3d-8adc-595ce88379a9")
+      (uuid "6e7fa806-ced8-4a25-8a6e-1859d532ebae")
     )
     (pin "2"
-      (uuid "c15f31c7-635c-4e4c-a1ae-f55f10b363a3")
+      (uuid "4cf50e98-e994-479a-aaff-32e2987753d1")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C6")
           (unit 1)
         )
@@ -15050,7 +14974,7 @@
       (width 0)
       (type default)
     )
-    (uuid "63cce6b9-7488-4dcc-a24a-45925bfb0507")
+    (uuid "c7848c0f-914c-4bb2-a7c5-1b355af32aa4")
   )
   (global_label "BTN_SLEEP"
     (shape passive)
@@ -15062,7 +14986,7 @@
       )
       (justify left)
     )
-    (uuid "33a46564-d31e-4b76-b89a-c13a04dcf718")
+    (uuid "13a19799-48a2-4940-9933-fca6c8ee439c")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 350.52 166.37 0)
       (effects
@@ -15082,7 +15006,7 @@
       (width 0)
       (type default)
     )
-    (uuid "5bcee049-f05f-4900-b396-7091eca728b5")
+    (uuid "6187d03c-796b-4788-a824-14eff4780d33")
   )
   (symbol
     (lib_id "power:GND")
@@ -15092,8 +15016,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "81a6d809-0c2f-474b-90d4-cc5f89ace81b")
-    (property "Reference" "#PWR352"
+    (uuid "6831a99b-0618-430d-89dd-d36e35996612")
+    (property "Reference" "#PWR351"
       (at 353.06 181.61 0)
       (effects
         (font
@@ -15142,12 +15066,12 @@
       )
     )
     (pin "1"
-      (uuid "8524f64b-9160-4eb5-b778-b4737aacfcb2")
+      (uuid "31583442-cdb4-493c-ab36-0c78cf254885")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR352")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR351")
           (unit 1)
         )
       )
@@ -15161,7 +15085,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e764bf71-11a6-42bc-91f1-9a63a14cb788")
+    (uuid "1cf66fe1-8c75-4d10-82bf-dfc092ef952e")
     (property "Reference" "C7"
       (at 353.06 193.04 0)
       (effects
@@ -15211,14 +15135,14 @@
       )
     )
     (pin "1"
-      (uuid "f4a9e005-3a5d-467e-bf43-89104f9d8b2e")
+      (uuid "5258a85a-8395-4f23-87ae-27a135bc65b4")
     )
     (pin "2"
-      (uuid "016ecec3-b9a8-4ee7-b9b8-0a6804c1e1f3")
+      (uuid "b164e580-f3f6-4b49-b34c-e1f3af1fd2d3")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C7")
           (unit 1)
         )
@@ -15234,7 +15158,7 @@
       (width 0)
       (type default)
     )
-    (uuid "1fce9915-7b69-4b4e-9d6a-9b41350ede13")
+    (uuid "de078ad1-f346-4798-b7a2-f4e6e6b5ac8c")
   )
   (global_label "BTN_LOG"
     (shape passive)
@@ -15246,7 +15170,7 @@
       )
       (justify left)
     )
-    (uuid "3732ba1e-bb1a-43c0-ada6-b38983eb4971")
+    (uuid "ad851d86-5985-4729-bc87-de634ba83ddb")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 350.52 186.69 0)
       (effects
@@ -15266,7 +15190,7 @@
       (width 0)
       (type default)
     )
-    (uuid "a511f966-6515-44ca-9eb5-ffd53e86e414")
+    (uuid "aba05b31-b75a-4294-b1cf-6230022730d9")
   )
   (symbol
     (lib_id "power:GND")
@@ -15276,8 +15200,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d1b31b95-e1af-41a2-a580-4ab3314277c2")
-    (property "Reference" "#PWR357"
+    (uuid "c3cddfb8-e1b6-4078-b4d8-cd7c46e96c97")
+    (property "Reference" "#PWR356"
       (at 353.06 201.93 0)
       (effects
         (font
@@ -15326,12 +15250,12 @@
       )
     )
     (pin "1"
-      (uuid "6949e30f-1f4e-4967-aa20-6eaffb7870bd")
+      (uuid "91ff714d-064f-4dbd-b481-dd2f4f80aaa8")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR357")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR356")
           (unit 1)
         )
       )
@@ -15345,7 +15269,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "a6c53032-3707-429d-b714-bfb972513773")
+    (uuid "019b6cb3-871a-47a2-932d-235b85751da9")
     (property "Reference" "C8"
       (at 353.06 212.09 0)
       (effects
@@ -15395,14 +15319,14 @@
       )
     )
     (pin "1"
-      (uuid "c549582d-3e39-43bb-90d3-29ee4a4a51fe")
+      (uuid "02eede00-3baf-49df-961f-8cfabcbf4d0e")
     )
     (pin "2"
-      (uuid "f6f65f66-40b9-4da1-8414-804102d651f9")
+      (uuid "62a959f3-e501-45ba-8e03-110f263e94ca")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C8")
           (unit 1)
         )
@@ -15418,7 +15342,7 @@
       (width 0)
       (type default)
     )
-    (uuid "4d73716d-4801-4427-8d3c-05de72c7376b")
+    (uuid "fcdf5fff-aab6-42ea-b7bf-0b4e2b2b2929")
   )
   (global_label "BTN_FORCE"
     (shape passive)
@@ -15430,7 +15354,7 @@
       )
       (justify left)
     )
-    (uuid "a4a04420-788c-477e-9d90-4ec7405ac269")
+    (uuid "5b58b601-f73d-45cd-a328-978d7e27c068")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 350.52 205.74 0)
       (effects
@@ -15450,7 +15374,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c38104b0-5140-416c-a27b-92c4ae75f81a")
+    (uuid "b86e99ef-5578-483f-b5f4-f82da2a20479")
   )
   (symbol
     (lib_id "power:GND")
@@ -15460,8 +15384,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "08063b71-b79c-4037-b879-7a41edd32076")
-    (property "Reference" "#PWR362"
+    (uuid "39599b33-bcc8-4d1b-b1a9-bee3c895e702")
+    (property "Reference" "#PWR361"
       (at 353.06 220.98 0)
       (effects
         (font
@@ -15510,12 +15434,12 @@
       )
     )
     (pin "1"
-      (uuid "2dc7e2b4-b635-4d57-b87d-e0244ada37c0")
+      (uuid "7c5d66fb-579d-4960-9c7e-da8b13388d57")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR362")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR361")
           (unit 1)
         )
       )
@@ -15529,7 +15453,7 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "1be5ffef-eaca-4ff4-811a-36f56f555759")
+    (uuid "d8801e3f-fb1f-44b0-baf9-2fdaf3983f7f")
     (property "Reference" "JP1"
       (at 252.73 247.65 0)
       (effects
@@ -15579,14 +15503,14 @@
       )
     )
     (pin "1"
-      (uuid "efc84138-6720-4c3d-ba2f-ef92a9b876ec")
+      (uuid "88165ee3-a0bc-40d1-8dff-05e7319c13e8")
     )
     (pin "2"
-      (uuid "29bb7b62-2755-4ea2-b8c3-53fcb121a126")
+      (uuid "221d6f9e-a654-4274-8514-a791382a7316")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "JP1")
           (unit 1)
         )
@@ -15602,7 +15526,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6d5cf15d-8894-48ab-9e79-c8fc05b5848a")
+    (uuid "2c9e292f-a713-4cbc-82b8-c8679b4b6156")
   )
   (global_label "IMU_3V3"
     (shape passive)
@@ -15614,7 +15538,7 @@
       )
       (justify right)
     )
-    (uuid "15ba0781-913f-4ba3-a619-03925ec7d00d")
+    (uuid "ef4a6886-c6d2-4a78-840e-eefcc6b3a489")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 240.03 250.19 0)
       (effects
@@ -15634,7 +15558,7 @@
       (width 0)
       (type default)
     )
-    (uuid "2415fc69-217f-4d52-b96b-3d3b6170bee5")
+    (uuid "c3555ea9-0c78-4078-8572-5cb8353ab44c")
   )
   (global_label "IMU_PS1"
     (shape passive)
@@ -15646,7 +15570,7 @@
       )
       (justify left)
     )
-    (uuid "3a9bb704-737b-4de7-8dbc-635aed3587a1")
+    (uuid "e01ea332-e2db-4510-a5d3-f50a689a2526")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 260.35 250.19 0)
       (effects
@@ -15665,7 +15589,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "64392726-a2bf-434d-955b-ffe763082fec")
+    (uuid "f9a4a446-46e7-4e25-a33a-bff4af87ebca")
     (property "Reference" "J10"
       (at 562.61 87.63 0)
       (effects
@@ -15715,20 +15639,20 @@
       )
     )
     (pin "1"
-      (uuid "6bf02696-3b03-4703-9959-7a327761fd61")
+      (uuid "bdacfa28-4709-4216-8120-48868dd60061")
     )
     (pin "2"
-      (uuid "5097a3bc-8e46-47cf-8d69-c4c4c363013d")
+      (uuid "8e841e88-2252-481a-a73e-388622192a5e")
     )
     (pin "3"
-      (uuid "c6e4f3d9-9a00-4533-977c-1177a32a55f9")
+      (uuid "c7817713-0aa3-4250-af64-4aa127da65bd")
     )
     (pin "4"
-      (uuid "bb30c6cd-6c53-46c9-abae-288df9816a9a")
+      (uuid "cdc6c66c-ef19-4962-9d3b-563d6bfb66db")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J10")
           (unit 1)
         )
@@ -15744,7 +15668,7 @@
       (width 0)
       (type default)
     )
-    (uuid "b30139ca-94ac-4fdb-89df-095e138154c9")
+    (uuid "6b89fbdb-4f72-4ba9-952a-72958fc1d4d0")
   )
   (symbol
     (lib_id "power:GND")
@@ -15754,8 +15678,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "acd245c7-0a37-4bb2-9219-a4bcb92b8ae9")
-    (property "Reference" "#PWR370"
+    (uuid "15b074d3-f134-4bb0-b5a4-983740454764")
+    (property "Reference" "#PWR369"
       (at 572.77 85.09 0)
       (effects
         (font
@@ -15804,12 +15728,12 @@
       )
     )
     (pin "1"
-      (uuid "6ab6f4f7-3999-4189-8b9c-f6d4fead0d97")
+      (uuid "33eaf309-eee8-4095-8c08-52c18e89d4b1")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR370")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR369")
           (unit 1)
         )
       )
@@ -15824,7 +15748,7 @@
       (width 0)
       (type default)
     )
-    (uuid "db910e0c-934a-4125-b93a-7315d9f8ddf2")
+    (uuid "1486af99-e5e2-4b38-a533-4bb4b592d428")
   )
   (symbol
     (lib_id "power:+5V")
@@ -15834,8 +15758,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "3ed62bf5-1823-49c0-8d14-ef9f1942aaa4")
-    (property "Reference" "#PWR372"
+    (uuid "8085c412-702a-4034-bfba-fa57958b6582")
+    (property "Reference" "#PWR371"
       (at 572.77 87.63 0)
       (effects
         (font
@@ -15884,12 +15808,12 @@
       )
     )
     (pin "1"
-      (uuid "9863b7fe-c911-4b28-9a38-1fcd5a93ae6f")
+      (uuid "b9b71727-9d18-4f41-b7c2-a19c5c264fd3")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR372")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR371")
           (unit 1)
         )
       )
@@ -15904,7 +15828,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8abab165-a324-437c-98d6-6bfd69da4375")
+    (uuid "cd975360-2f94-4e2f-a901-b5c0ae06d27f")
   )
   (global_label "LUX2_SDA"
     (shape passive)
@@ -15916,7 +15840,7 @@
       )
       (justify left)
     )
-    (uuid "bb1058a8-6268-44d8-864d-667a7c8d2820")
+    (uuid "68e1fed3-d5d9-4ab1-b5bd-7336ec90e132")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 570.23 92.71 0)
       (effects
@@ -15936,7 +15860,7 @@
       (width 0)
       (type default)
     )
-    (uuid "98566300-7ed6-488e-aba4-038d4960e34f")
+    (uuid "c45fa913-2376-4815-b1d1-06097d6ba302")
   )
   (global_label "LUX2_SCL"
     (shape passive)
@@ -15948,7 +15872,7 @@
       )
       (justify left)
     )
-    (uuid "4b1b21d3-4af1-4fc0-a03d-cfaf618e299a")
+    (uuid "8afb87e7-e37c-4dab-931d-eb502ea55310")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 570.23 95.25 0)
       (effects
@@ -15967,7 +15891,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "09207c10-8022-438d-9e2f-4d8e2ed6ad08")
+    (uuid "0c98c80c-1bec-48f2-975f-7b72aec20013")
     (property "Reference" "J11"
       (at 562.61 167.64 0)
       (effects
@@ -16017,20 +15941,20 @@
       )
     )
     (pin "1"
-      (uuid "e5317e3c-f91c-4528-a243-0a9463ed9da4")
+      (uuid "8aba83dc-e419-4dcc-ab7b-73e6b8b25e71")
     )
     (pin "2"
-      (uuid "44c8e9ef-e7f3-4dd5-9cc5-793b1f6e77bf")
+      (uuid "223532c5-2e2b-4e4c-ad76-fe8bc140fc97")
     )
     (pin "3"
-      (uuid "7a4e0a7b-9617-4af0-ade4-da129ba164ff")
+      (uuid "b3d38f00-ec5d-4349-bfed-649e14cd445a")
     )
     (pin "4"
-      (uuid "edce7db3-72b0-42a1-afd3-2b1f648dcafd")
+      (uuid "fc17d8a0-52ce-4126-9291-0792f2561efa")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "J11")
           (unit 1)
         )
@@ -16046,7 +15970,7 @@
       (width 0)
       (type default)
     )
-    (uuid "6a2ab7be-2316-4873-ac53-b784f54e88bc")
+    (uuid "57d078c4-1b06-419a-a615-931245b9cdb1")
   )
   (symbol
     (lib_id "power:GND")
@@ -16056,8 +15980,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "7759bd98-7e7a-48ed-8968-51bd86ab2c96")
-    (property "Reference" "#PWR379"
+    (uuid "47ba5cfc-4111-487a-8eba-5c5ade09f437")
+    (property "Reference" "#PWR378"
       (at 572.77 165.1 0)
       (effects
         (font
@@ -16106,12 +16030,12 @@
       )
     )
     (pin "1"
-      (uuid "d9df4fcf-8c09-4b5c-9bb7-fb8d5597e80a")
+      (uuid "2eefc16a-0d65-49eb-9847-c85b190f6044")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR379")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR378")
           (unit 1)
         )
       )
@@ -16126,7 +16050,7 @@
       (width 0)
       (type default)
     )
-    (uuid "2055e9b7-443c-47c1-be1e-8ea5df9726cf")
+    (uuid "a7dadf36-337e-4bf2-8934-ffc6bcc169a2")
   )
   (symbol
     (lib_id "power:+5V")
@@ -16136,8 +16060,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f2303a95-1e68-481e-bbbf-f393bb6ccab5")
-    (property "Reference" "#PWR381"
+    (uuid "3850a1a9-e003-4809-ae7f-8cd6c15278af")
+    (property "Reference" "#PWR380"
       (at 572.77 167.64 0)
       (effects
         (font
@@ -16186,12 +16110,12 @@
       )
     )
     (pin "1"
-      (uuid "38a76c7a-2776-49db-918f-65d44760eda2")
+      (uuid "ed179aec-d363-4fb9-8738-ee4dc2dc59a8")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR381")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR380")
           (unit 1)
         )
       )
@@ -16206,7 +16130,7 @@
       (width 0)
       (type default)
     )
-    (uuid "60a731df-a3a5-46a7-b824-8e8c3b367041")
+    (uuid "43575e2a-6ef3-4eeb-a93f-cdf3c01c0000")
   )
   (global_label "ENC_A"
     (shape passive)
@@ -16218,7 +16142,7 @@
       )
       (justify left)
     )
-    (uuid "64f4cce4-a521-457e-b4fa-031b49f85169")
+    (uuid "8d19f96e-f089-453a-b541-0a404d88a6a0")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 570.23 172.72 0)
       (effects
@@ -16238,7 +16162,7 @@
       (width 0)
       (type default)
     )
-    (uuid "e03d20fc-e9ce-44bc-9407-805bb8992312")
+    (uuid "a3aac5e9-4bd9-4a46-9e31-89962365ea3a")
   )
   (global_label "ENC_B"
     (shape passive)
@@ -16250,7 +16174,7 @@
       )
       (justify left)
     )
-    (uuid "992b4ffc-0946-449b-8354-6d1635522ff4")
+    (uuid "fd0fe04e-1dfb-4d71-8ad6-ce5c926eea93")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 570.23 175.26 0)
       (effects
@@ -16269,7 +16193,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "1bbaa1cb-d8d7-4479-84d9-c98cb6904ae0")
+    (uuid "c6d6f69a-d5dc-4cb6-b221-e04d98a9f7c6")
     (property "Reference" "U3"
       (at 482.6 87.63 0)
       (effects
@@ -16319,80 +16243,80 @@
       )
     )
     (pin "1"
-      (uuid "2dec1013-c7bd-4ab3-8dd6-f3ba185157e7")
+      (uuid "5fab88cd-86e9-4c28-9672-ff1333c42b17")
     )
     (pin "2"
-      (uuid "f5039154-4d2c-4374-b1ca-a660a2684496")
+      (uuid "ff21497e-52d3-414a-baae-081da0e6fadb")
     )
     (pin "3"
-      (uuid "5ae859be-5dce-43eb-8299-f7c3117f1717")
+      (uuid "b7cc5ebd-11c8-4dd1-994a-d128a7d83f7d")
     )
     (pin "4"
-      (uuid "8b280cd8-1908-4e71-b7ab-5ed5c4eea6d5")
+      (uuid "f6fdf685-9488-4c5f-8c5d-743b8a82ecb2")
     )
     (pin "5"
-      (uuid "feeeb7d5-1bb5-4aa4-8158-da9f39efc79d")
+      (uuid "8530afc4-e0eb-42d3-8663-92a39dded9e9")
     )
     (pin "6"
-      (uuid "61859ba4-5276-41f2-8674-b09d09bec634")
+      (uuid "733e336e-6fc1-408e-8d9d-8a23dc1af2ac")
     )
     (pin "7"
-      (uuid "23b02a48-718f-43d4-bf3d-13a753bd0c85")
+      (uuid "40ed8120-0120-438d-99da-3f529069efaa")
     )
     (pin "8"
-      (uuid "08f8bff0-6364-4f19-90bc-31226d8c2c0f")
+      (uuid "8bebef08-a986-40c7-9df3-f4f4dfddcde3")
     )
     (pin "9"
-      (uuid "5a290537-4f9f-451b-924a-ab498d9c8d98")
+      (uuid "f2be9590-355b-4a7b-8327-6735df626494")
     )
     (pin "10"
-      (uuid "ddd3c197-18ec-4ad8-9a83-9ca607d9933e")
+      (uuid "f631303d-b08b-407b-9148-3bab2fc82314")
     )
     (pin "11"
-      (uuid "54dceb8b-33e6-486d-acf2-fab0fdc4d809")
+      (uuid "dac1fed1-302a-48cd-aaa8-fcccb593dc6d")
     )
     (pin "12"
-      (uuid "c8bc75ee-3080-4429-a2cb-1cc0b904214b")
+      (uuid "f313996d-a7d2-4bee-83c6-b74622d242bf")
     )
     (pin "13"
-      (uuid "9b665622-9fa7-4941-a3ed-3358f4d9ab65")
+      (uuid "173de83d-b8cb-43ba-871d-0943218942de")
     )
     (pin "14"
-      (uuid "9f050895-a9c5-4e28-9661-629635bdaca9")
+      (uuid "b07c1c8e-64d2-441d-8321-9036fde1b773")
     )
     (pin "15"
-      (uuid "8d448808-10fb-4b97-8d01-8e1e22d5041f")
+      (uuid "929db59d-ebdf-4df7-b04a-85976c285109")
     )
     (pin "16"
-      (uuid "635da52c-2a60-4976-bd75-118b4065423d")
+      (uuid "6a521e7e-2a6b-40f1-bbc2-00b32810c16a")
     )
     (pin "17"
-      (uuid "359b5b46-ba8d-4545-871f-6c1e1642e8fa")
+      (uuid "956c8c29-7c89-4f2c-aad7-57081aff6c56")
     )
     (pin "18"
-      (uuid "4ec424f8-8b53-4343-b3a7-22b237652d46")
+      (uuid "27a9c718-0ed9-40a2-a91e-9a1f579c3931")
     )
     (pin "19"
-      (uuid "c0752545-e845-4d96-b88a-3c15aadba2ea")
+      (uuid "c3c60dbb-af3c-4078-9158-fa082dea57f5")
     )
     (pin "20"
-      (uuid "d6eb954d-792e-401d-9fa4-f1c9099c0cbd")
+      (uuid "abd7a6d8-bbe5-401a-9e01-8cb55d521e21")
     )
     (pin "21"
-      (uuid "63d0268d-a9dc-4b2c-badd-95f0aae0d35f")
+      (uuid "8e741b83-c0a5-4e84-a628-0f84e71c7156")
     )
     (pin "22"
-      (uuid "3516b1a9-8e14-47f7-80c8-5e6a93979328")
+      (uuid "1df6322d-8a92-4ecf-92e0-a1c913ba393c")
     )
     (pin "23"
-      (uuid "6d3a6ab7-d0b3-4728-9333-19b23c82e3f9")
+      (uuid "7e57ab3e-1bd1-4450-858c-9e8083fa67fe")
     )
     (pin "24"
-      (uuid "37dd1732-fb5d-4b72-b524-fdaa1690f442")
+      (uuid "69b48de9-b63f-4b60-b4e8-7224a9fd54e4")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "U3")
           (unit 1)
         )
@@ -16408,7 +16332,7 @@
       (width 0)
       (type default)
     )
-    (uuid "647f0891-2062-4e05-b65b-21510d8953ad")
+    (uuid "4d1d649d-eab2-4e8e-a44c-af2bf5012afd")
   )
   (symbol
     (lib_id "power:GND")
@@ -16418,8 +16342,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "3ed812d3-7231-4e21-b59c-db3f78aef844")
-    (property "Reference" "#PWR388"
+    (uuid "c24d5d04-d759-42e8-b29f-ecc1d034d3a9")
+    (property "Reference" "#PWR387"
       (at 467.36 100.33 0)
       (effects
         (font
@@ -16468,12 +16392,12 @@
       )
     )
     (pin "1"
-      (uuid "dc27b249-b3b9-4852-8557-5342d8806e54")
+      (uuid "a64cc186-1b71-406f-8c85-f35273d4f349")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR388")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR387")
           (unit 1)
         )
       )
@@ -16488,7 +16412,7 @@
       (width 0)
       (type default)
     )
-    (uuid "a2c9422e-93f0-4f03-967c-0891998c436e")
+    (uuid "a82095f1-20e1-4430-8c04-831465aab1aa")
   )
   (symbol
     (lib_id "power:GND")
@@ -16498,8 +16422,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "25796a4e-db4d-4573-8be9-da49a72794d2")
-    (property "Reference" "#PWR390"
+    (uuid "cecbdd9c-dbda-4130-9a45-97ca9f63764c")
+    (property "Reference" "#PWR389"
       (at 467.36 97.79 0)
       (effects
         (font
@@ -16548,12 +16472,12 @@
       )
     )
     (pin "1"
-      (uuid "767326b7-c220-44d2-b4f3-75fff74ee519")
+      (uuid "201c8ef7-d87d-4cf8-b077-b02bbe76748a")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR390")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR389")
           (unit 1)
         )
       )
@@ -16568,7 +16492,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9380523d-6e39-4e91-8bea-d74f2727852f")
+    (uuid "d96e40a6-b6a3-4a30-acc0-664a2a661eda")
   )
   (global_label "MUX_RST"
     (shape passive)
@@ -16580,7 +16504,7 @@
       )
       (justify right)
     )
-    (uuid "fa479ced-97c8-40ec-87e0-d13dfba48954")
+    (uuid "5a542457-8cf6-47ad-9b83-b2fce23c96b8")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 464.82 85.09 0)
       (effects
@@ -16600,7 +16524,7 @@
       (width 0)
       (type default)
     )
-    (uuid "553b497a-f41d-4861-a431-96d4e97aef39")
+    (uuid "d9fae487-adc8-4944-86d7-6ae1eba7e230")
   )
   (global_label "LUX2_SDA"
     (shape passive)
@@ -16612,7 +16536,7 @@
       )
       (justify left)
     )
-    (uuid "1a7db829-a957-4b51-93c6-44b255642841")
+    (uuid "fc6a5e30-1e48-4633-8fb6-642fdb6e9ee2")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 495.3 74.93 0)
       (effects
@@ -16632,7 +16556,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9b7d743f-cd9b-491b-8f15-bd4268313b68")
+    (uuid "f8dad54a-eaac-488c-9f46-4b778ebec8c5")
   )
   (global_label "LUX2_SCL"
     (shape passive)
@@ -16644,7 +16568,7 @@
       )
       (justify left)
     )
-    (uuid "91c44590-ad66-4e91-a043-80fdcd6ec4cc")
+    (uuid "eff4f37b-6ac5-4a24-95a8-6b61bab9cff1")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 495.3 72.39 0)
       (effects
@@ -16657,27 +16581,27 @@
   )
   (no_connect
     (at 490.22 80.01)
-    (uuid "9187a175-5949-484a-a61e-17cb7ea6920e")
+    (uuid "6568b97b-e1ef-411e-ad0c-17d546ae8e6b")
   )
   (no_connect
     (at 490.22 77.47)
-    (uuid "12269439-1fbf-4f57-be67-ddb709d85575")
+    (uuid "2dd5ec83-d798-43cd-97e8-b6b498065058")
   )
   (no_connect
     (at 490.22 85.09)
-    (uuid "b85d3290-afd8-48fa-8ea0-f6ab5560998c")
+    (uuid "6ec0babf-4a04-47b7-8c22-28de8502db2a")
   )
   (no_connect
     (at 490.22 82.55)
-    (uuid "f43f2381-a6f5-43b8-91a8-624d637df271")
+    (uuid "02e4e9a4-4dfe-4b40-bb31-c009aeab011f")
   )
   (no_connect
     (at 490.22 90.17)
-    (uuid "64474ee3-39ef-4639-9ff1-92386e405538")
+    (uuid "e9aa2a15-52fe-4584-adb2-5b64f669171c")
   )
   (no_connect
     (at 490.22 87.63)
-    (uuid "d358f192-99fe-4358-adb5-854bb7364368")
+    (uuid "9a0c699d-1873-4da0-8638-5fb9b5fa1f66")
   )
   (wire
     (pts
@@ -16688,7 +16612,7 @@
       (width 0)
       (type default)
     )
-    (uuid "44cc8300-66ea-480b-b253-ea01d1851547")
+    (uuid "569f1781-cabf-4aff-89e7-4bc12b43b7a1")
   )
   (symbol
     (lib_id "power:GND")
@@ -16698,8 +16622,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b00af217-33ef-4727-be5e-4e71aa230a1f")
-    (property "Reference" "#PWR404"
+    (uuid "d0e8eb0c-a2b6-4c60-b6f5-57b46f2e7744")
+    (property "Reference" "#PWR403"
       (at 482.6 118.11 0)
       (effects
         (font
@@ -16748,12 +16672,12 @@
       )
     )
     (pin "1"
-      (uuid "9e9da0e7-332f-4b7e-83ef-c315450a774c")
+      (uuid "99a4b150-ec0f-421d-bf37-8612b1b83964")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR404")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR403")
           (unit 1)
         )
       )
@@ -16761,35 +16685,35 @@
   )
   (no_connect
     (at 490.22 95.25)
-    (uuid "50943cf6-5f7d-4d10-9bd8-b5afb1b82ab0")
+    (uuid "a5a3e54e-5246-4276-939f-427c22d596cb")
   )
   (no_connect
     (at 490.22 92.71)
-    (uuid "af64edef-9af1-4e1f-850d-086953bd2b4e")
+    (uuid "f1f7b103-1c0e-4bb5-812f-92e851844545")
   )
   (no_connect
     (at 490.22 100.33)
-    (uuid "87204a36-0040-4d02-bb47-9535bccbb7c4")
+    (uuid "80c1390e-c75f-4b6a-95d0-726541fc7aa0")
   )
   (no_connect
     (at 490.22 97.79)
-    (uuid "0af1eb12-d23a-40db-9800-956a384f47ea")
+    (uuid "43d52fee-18bc-408a-accb-843614fef368")
   )
   (no_connect
     (at 490.22 105.41)
-    (uuid "f2a8236f-2366-4b72-b39e-ece83e9c52e0")
+    (uuid "50ff3036-3a67-4cb6-83e2-634849518607")
   )
   (no_connect
     (at 490.22 102.87)
-    (uuid "1192641e-bd44-4f63-ba31-8b9e9988ac9c")
+    (uuid "b071b076-01eb-46ec-bd54-6221f54d1f24")
   )
   (no_connect
     (at 490.22 110.49)
-    (uuid "aa7068f0-99aa-432b-b5c7-05f960ff5d0f")
+    (uuid "54d82e9c-a006-4e82-b128-84ead1148efc")
   )
   (no_connect
     (at 490.22 107.95)
-    (uuid "d76095de-5b53-406e-84d2-7f78b85cd1f8")
+    (uuid "36bddbfd-f5b2-4e58-8726-dcde6a48a280")
   )
   (wire
     (pts
@@ -16800,7 +16724,7 @@
       (width 0)
       (type default)
     )
-    (uuid "54bd56af-1917-4cf1-b0c6-6294e4e16f47")
+    (uuid "db8fa266-8712-4bac-9ce1-46882258ecda")
   )
   (symbol
     (lib_id "power:GND")
@@ -16810,8 +16734,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "8d293ac5-e952-4ca5-8518-1a5839af116e")
-    (property "Reference" "#PWR414"
+    (uuid "0258cb2e-6a08-4fbf-a4a4-80a84db50d46")
+    (property "Reference" "#PWR413"
       (at 467.36 95.25 0)
       (effects
         (font
@@ -16860,12 +16784,12 @@
       )
     )
     (pin "1"
-      (uuid "f1b41166-8b71-49c1-b202-e5f135941a61")
+      (uuid "1064cc2a-9dc6-4f54-b5de-8c6592982687")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR414")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR413")
           (unit 1)
         )
       )
@@ -16880,7 +16804,7 @@
       (width 0)
       (type default)
     )
-    (uuid "3e54e850-57f2-4754-a5be-55ca071be25e")
+    (uuid "dd4d7c34-803c-4477-b938-8cb773a466b1")
   )
   (global_label "SCL"
     (shape passive)
@@ -16892,7 +16816,7 @@
       )
       (justify right)
     )
-    (uuid "6677ef21-1a74-4125-baab-3c13f0ac05dd")
+    (uuid "8192809a-813d-4b91-a3e2-696294e8c9f9")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 464.82 72.39 0)
       (effects
@@ -16912,7 +16836,7 @@
       (width 0)
       (type default)
     )
-    (uuid "47d3e751-f498-42b0-9e44-68abd38d3f40")
+    (uuid "b63730a9-cdb2-42af-8d8a-c08137846076")
   )
   (global_label "SDA"
     (shape passive)
@@ -16924,7 +16848,7 @@
       )
       (justify right)
     )
-    (uuid "dbbc1f5b-4362-40a3-918c-265aa06a81b7")
+    (uuid "008f8a60-85cb-4dd4-b591-5fa222fa6062")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 464.82 74.93 0)
       (effects
@@ -16944,7 +16868,7 @@
       (width 0)
       (type default)
     )
-    (uuid "bdf13251-af51-4c6e-ac94-8f0a5288f3a0")
+    (uuid "011af437-2ef0-4044-b648-d61547e799e4")
   )
   (symbol
     (lib_id "power:+5V")
@@ -16954,8 +16878,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "bc313ec9-7e42-428e-b7d7-324934132f60")
-    (property "Reference" "#PWR420"
+    (uuid "1c29699d-3909-44f7-932c-df0d75566658")
+    (property "Reference" "#PWR419"
       (at 482.6 59.69 0)
       (effects
         (font
@@ -17004,12 +16928,12 @@
       )
     )
     (pin "1"
-      (uuid "6dd713b4-fc55-4ae2-a6ec-74b78b00a46b")
+      (uuid "62097516-06a6-406e-9e0a-ec73eb81d8ed")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR420")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR419")
           (unit 1)
         )
       )
@@ -17023,7 +16947,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "df7a3c66-d2cf-4409-8099-12fb09ca791f")
+    (uuid "481a9f44-9866-488c-87ca-1004eed5b744")
     (property "Reference" "R11"
       (at 518.16 67.31 0)
       (effects
@@ -17073,14 +16997,14 @@
       )
     )
     (pin "1"
-      (uuid "6e884df7-71aa-4a23-980d-5fc9fc6bcf3d")
+      (uuid "92abe800-2aaf-409a-a90c-c01aded2c566")
     )
     (pin "2"
-      (uuid "1a8f398e-a3fd-4a0e-b09b-bef3c4287739")
+      (uuid "21177fe2-6767-45e2-bcb5-2fda39fdfbe6")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R11")
           (unit 1)
         )
@@ -17096,7 +17020,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c1622e0c-5cb8-42aa-b526-287b589a2b40")
+    (uuid "3f9eed08-8c31-4409-91bd-c00fdf4cf416")
   )
   (symbol
     (lib_id "power:+5V")
@@ -17106,8 +17030,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "173316fd-9d3b-4833-bc1f-2fa25985730d")
-    (property "Reference" "#PWR423"
+    (uuid "eed1d8f8-4da3-4fc6-8470-282a820f2429")
+    (property "Reference" "#PWR422"
       (at 518.16 58.42 0)
       (effects
         (font
@@ -17156,12 +17080,12 @@
       )
     )
     (pin "1"
-      (uuid "dd851981-03a6-4b6e-ad94-7507b1cd904b")
+      (uuid "18162c9f-e8d9-4461-b106-e91ec95a41ab")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR423")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR422")
           (unit 1)
         )
       )
@@ -17176,7 +17100,7 @@
       (width 0)
       (type default)
     )
-    (uuid "0de1e335-168d-4708-89f4-2be7543416a4")
+    (uuid "95b4f74f-f6d0-487c-b200-ffd14b9cf811")
   )
   (global_label "LUX2_SDA"
     (shape passive)
@@ -17188,7 +17112,7 @@
       )
       (justify left)
     )
-    (uuid "4dce1534-7023-4746-b1bb-d5d6b599e48a")
+    (uuid "061b5571-babf-4f90-9ee1-90487c5eb440")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 515.62 78.74 0)
       (effects
@@ -17207,7 +17131,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "739b6867-ad2e-4ab5-9dc4-5f1530ca849f")
+    (uuid "48778c23-b13b-46c8-a78d-5a7d1ec80f86")
     (property "Reference" "R12"
       (at 527.05 67.31 0)
       (effects
@@ -17257,14 +17181,14 @@
       )
     )
     (pin "1"
-      (uuid "ccc3aacb-606c-43ae-9df5-e2495974bcdc")
+      (uuid "e593b652-af34-4272-8aa8-4a09cd386c35")
     )
     (pin "2"
-      (uuid "3d1b9420-4333-4726-b8e2-d4f4e29531ad")
+      (uuid "fd19e0a6-fc12-4936-a7c9-ec23baf494f4")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R12")
           (unit 1)
         )
@@ -17280,7 +17204,7 @@
       (width 0)
       (type default)
     )
-    (uuid "4e19e6e6-ef8c-497d-abcf-e6d60971fc26")
+    (uuid "15adc16c-2f49-47a3-a61e-acf8c8c3596f")
   )
   (symbol
     (lib_id "power:+5V")
@@ -17290,8 +17214,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f30d4b27-12b2-49b9-8b2e-927e4425847c")
-    (property "Reference" "#PWR428"
+    (uuid "dc5798f7-75bd-4ff6-8b82-e83e44798e0e")
+    (property "Reference" "#PWR427"
       (at 527.05 58.42 0)
       (effects
         (font
@@ -17340,12 +17264,12 @@
       )
     )
     (pin "1"
-      (uuid "8d0922f1-9ad8-408e-b832-7d761a36f6a5")
+      (uuid "8e9484d0-61d0-4646-aa76-fe3727799600")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR428")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR427")
           (unit 1)
         )
       )
@@ -17360,7 +17284,7 @@
       (width 0)
       (type default)
     )
-    (uuid "82ff2181-2970-4a2a-9c43-fc22faf5e954")
+    (uuid "be23066b-0130-4f0e-9703-45a43c4be500")
   )
   (global_label "LUX2_SCL"
     (shape passive)
@@ -17372,7 +17296,7 @@
       )
       (justify left)
     )
-    (uuid "2ab34b0e-9aaf-4ef0-b332-05cf9806a058")
+    (uuid "14eee5ea-8c87-47a5-8e39-38582fe93c56")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 524.51 78.74 0)
       (effects
@@ -17391,7 +17315,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d5381ba4-ad75-4dc7-ad51-72414f50df13")
+    (uuid "c5f02bad-2daf-4581-81f4-f466b351490d")
     (property "Reference" "R13"
       (at 447.04 107.95 0)
       (effects
@@ -17441,14 +17365,14 @@
       )
     )
     (pin "1"
-      (uuid "21646683-a717-406b-9a4a-e26a9db6a59d")
+      (uuid "c930182e-26c2-48c2-87d3-1460272a78e0")
     )
     (pin "2"
-      (uuid "729d0d7d-6eb8-487b-8c49-b3231b9fa066")
+      (uuid "fbdb3dc6-1221-4f9a-af9d-fc169d9d6336")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R13")
           (unit 1)
         )
@@ -17464,7 +17388,7 @@
       (width 0)
       (type default)
     )
-    (uuid "78e8c791-a59a-4f9e-a397-cd28d8c95fda")
+    (uuid "8152063c-3d03-4031-85f7-2e61b9b92b4c")
   )
   (symbol
     (lib_id "power:+5V")
@@ -17474,8 +17398,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "5c274bf9-fe00-48de-8c8f-108cd7582882")
-    (property "Reference" "#PWR433"
+    (uuid "939384be-f2db-462b-8f64-b4fd82459f73")
+    (property "Reference" "#PWR432"
       (at 447.04 99.06 0)
       (effects
         (font
@@ -17524,12 +17448,12 @@
       )
     )
     (pin "1"
-      (uuid "8d3172ad-5255-4d61-9d68-075ecb76883c")
+      (uuid "71264ce0-8553-466e-a9da-0ce11618fd53")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR433")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR432")
           (unit 1)
         )
       )
@@ -17544,7 +17468,7 @@
       (width 0)
       (type default)
     )
-    (uuid "2399cf71-23ea-46ef-88f5-5bfc54d0f801")
+    (uuid "04383461-a9e0-4c76-a493-e9a944a7c467")
   )
   (global_label "MUX_RST"
     (shape passive)
@@ -17556,7 +17480,7 @@
       )
       (justify left)
     )
-    (uuid "233354db-23de-43b5-9314-f2b5ad4d4190")
+    (uuid "8203c8dd-924b-416f-aeb2-753a21424ea5")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 444.5 119.38 0)
       (effects
@@ -17575,7 +17499,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "137f85a9-bd1c-4ac6-a7ac-5ddc14a4c5ac")
+    (uuid "3be0bf80-67a1-4021-84b9-2cdb55548fbd")
     (property "Reference" "R14"
       (at 467.36 167.64 0)
       (effects
@@ -17625,14 +17549,14 @@
       )
     )
     (pin "1"
-      (uuid "757e238b-987e-4a95-9501-ea502a21126b")
+      (uuid "efc0ed7f-cd72-43b6-83ea-6e5c278022b3")
     )
     (pin "2"
-      (uuid "62052bc8-8767-4822-9168-7ea638961975")
+      (uuid "60b79461-c139-483d-a2fd-b9c606f44e0a")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R14")
           (unit 1)
         )
@@ -17648,7 +17572,7 @@
       (width 0)
       (type default)
     )
-    (uuid "aa41d5d7-c39f-4967-bd3b-e45cf1bbcce1")
+    (uuid "19ebbe3d-30fa-4462-9fc7-6366b2b7e2ca")
   )
   (symbol
     (lib_id "power:+5V")
@@ -17658,8 +17582,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9722eec6-708b-44f2-846a-8c55983a2f09")
-    (property "Reference" "#PWR438"
+    (uuid "af1621c0-1dbf-49b6-9ec3-8b931c6ac310")
+    (property "Reference" "#PWR437"
       (at 467.36 158.75 0)
       (effects
         (font
@@ -17708,12 +17632,12 @@
       )
     )
     (pin "1"
-      (uuid "1d422b77-18ab-4d91-8e1d-83d4bc038b91")
+      (uuid "c54b20f9-43cf-467c-8131-18d738e67484")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR438")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR437")
           (unit 1)
         )
       )
@@ -17728,7 +17652,7 @@
       (width 0)
       (type default)
     )
-    (uuid "4344561a-7b51-4b67-aea5-c811d4cb038f")
+    (uuid "58d52582-06db-4320-a2fa-0de08e78e8d8")
   )
   (global_label "ENC_A"
     (shape passive)
@@ -17740,7 +17664,7 @@
       )
       (justify left)
     )
-    (uuid "b4ca243f-5d1e-4d3e-a347-074e57e5dae2")
+    (uuid "3c99d614-c4ea-4154-86c8-cc62df0e0163")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 464.82 179.07 0)
       (effects
@@ -17759,7 +17683,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "922d7f87-958d-43d1-b5b6-6ce5e00a46d5")
+    (uuid "161b9f4e-9d70-4302-81fe-c17eecc52033")
     (property "Reference" "R15"
       (at 477.52 167.64 0)
       (effects
@@ -17809,14 +17733,14 @@
       )
     )
     (pin "1"
-      (uuid "3de42f4d-0483-4871-9d75-2403262e5ed3")
+      (uuid "33f3b737-e53a-4bf9-89cf-2deec9cd719a")
     )
     (pin "2"
-      (uuid "59cc73f0-5e59-4626-8ac4-41f9975b8e0e")
+      (uuid "63fa93a4-951c-4d17-a5dd-2cb0d3be74d2")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R15")
           (unit 1)
         )
@@ -17832,7 +17756,7 @@
       (width 0)
       (type default)
     )
-    (uuid "ecc7eecb-62ef-437e-adac-affcb1c21f7d")
+    (uuid "8d487bf2-100e-4287-89cb-6cf7781d660a")
   )
   (symbol
     (lib_id "power:+5V")
@@ -17842,8 +17766,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "af36ec82-5be3-4aa8-9f87-606cb9951122")
-    (property "Reference" "#PWR443"
+    (uuid "254005bc-ebb8-4991-9e19-de286922faca")
+    (property "Reference" "#PWR442"
       (at 477.52 158.75 0)
       (effects
         (font
@@ -17892,12 +17816,12 @@
       )
     )
     (pin "1"
-      (uuid "4c874e41-81e6-4e11-9a3c-980ada9a26db")
+      (uuid "df04d0c1-ae38-4b39-9bd1-224a4f554994")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR443")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR442")
           (unit 1)
         )
       )
@@ -17912,7 +17836,7 @@
       (width 0)
       (type default)
     )
-    (uuid "c250ddd9-abf7-48d5-ad70-0eb6c78903de")
+    (uuid "75f1725c-1c3c-43ce-a410-095df36ee03c")
   )
   (global_label "ENC_B"
     (shape passive)
@@ -17924,7 +17848,7 @@
       )
       (justify left)
     )
-    (uuid "3bb79efe-6008-471f-aae7-3e83a5b57c11")
+    (uuid "6b30fac8-978d-48d3-8417-d4fed5f10ad5")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 474.98 179.07 0)
       (effects
@@ -17943,7 +17867,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "01afbf63-58d6-4277-b5b9-f8b2e6f55ddc")
+    (uuid "9e495908-8196-4335-9eb9-23d3fdcfa302")
     (property "Reference" "R16"
       (at 492.76 167.64 0)
       (effects
@@ -17993,14 +17917,14 @@
       )
     )
     (pin "1"
-      (uuid "a8da39dd-9ba5-4ac4-ba7a-9b6b8d72ac19")
+      (uuid "a0c9a229-76c6-4090-9a17-a9ebcd5f1305")
     )
     (pin "2"
-      (uuid "47c8b8e0-36b7-43df-b792-44d07964e784")
+      (uuid "aad7299d-c901-4344-9f8a-d644a9e9d3ca")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R16")
           (unit 1)
         )
@@ -18016,7 +17940,7 @@
       (width 0)
       (type default)
     )
-    (uuid "3e1c5374-c49e-4353-a16a-d04f770a1a92")
+    (uuid "68e57ac9-0119-4951-9ea9-f90529cd256c")
   )
   (global_label "ENC_A"
     (shape passive)
@@ -18028,7 +17952,7 @@
       )
       (justify left)
     )
-    (uuid "39a5471c-9962-4ea6-abd7-43ba7fb5fdd0")
+    (uuid "8654d3fa-fd61-4166-ae50-aff1e9ae59cb")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 490.22 161.29 0)
       (effects
@@ -18048,7 +17972,7 @@
       (width 0)
       (type default)
     )
-    (uuid "d6aa9b48-70c4-4e6d-98f8-43c81cb66dc9")
+    (uuid "7256a0e4-7fb0-4445-a714-70d3adaab0a4")
   )
   (global_label "ENC_A_MCU"
     (shape passive)
@@ -18060,7 +17984,7 @@
       )
       (justify left)
     )
-    (uuid "1c3ef9b7-c022-4857-a23d-c4456b57c2c6")
+    (uuid "e182d280-cae9-4bcd-a68e-cf8f9dfd262b")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 490.22 179.07 0)
       (effects
@@ -18079,7 +18003,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "dd29b4e1-30c5-47bb-95e7-c92d9fb1989d")
+    (uuid "9d3db2b7-1769-4fa2-91e1-d42ceb9c7727")
     (property "Reference" "R17"
       (at 502.92 167.64 0)
       (effects
@@ -18129,14 +18053,14 @@
       )
     )
     (pin "1"
-      (uuid "e3d56c69-f156-4bf8-99bf-a8ad9e7cb41f")
+      (uuid "9741561d-fd79-4181-abc9-9f8d004efd7f")
     )
     (pin "2"
-      (uuid "818303e3-364e-427a-855a-2fdbc9ebfe73")
+      (uuid "c78e7673-d69b-421b-a6d5-47c2b0c68349")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R17")
           (unit 1)
         )
@@ -18152,7 +18076,7 @@
       (width 0)
       (type default)
     )
-    (uuid "61dd03ad-4963-4df8-a08b-d503f1b67f9b")
+    (uuid "da317bed-a9a4-4c3f-970d-552839724fba")
   )
   (global_label "ENC_B"
     (shape passive)
@@ -18164,7 +18088,7 @@
       )
       (justify left)
     )
-    (uuid "9db776b4-116d-4a79-b161-1a3c749d1be3")
+    (uuid "bc72ae6a-82ce-44b4-ba1b-8603f035b47d")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 500.38 161.29 0)
       (effects
@@ -18184,7 +18108,7 @@
       (width 0)
       (type default)
     )
-    (uuid "f30b3630-8c35-4939-aa99-f957edb93b5b")
+    (uuid "2a38c064-48ee-4f27-80f3-d70826457328")
   )
   (global_label "ENC_B_MCU"
     (shape passive)
@@ -18196,7 +18120,7 @@
       )
       (justify left)
     )
-    (uuid "f8b6472c-5122-4264-bc2c-e486feb766f7")
+    (uuid "7b0ee7ff-e2bc-49c7-82fc-78768b8c1311")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 500.38 179.07 0)
       (effects
@@ -18215,7 +18139,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b37276d9-5281-4858-8d05-6337e8690399")
+    (uuid "b2e5e0e9-c24c-4b18-8444-90d7c2b19afc")
     (property "Reference" "R18"
       (at 447.04 127 0)
       (effects
@@ -18265,14 +18189,14 @@
       )
     )
     (pin "1"
-      (uuid "75aeb696-77a0-4b23-9a48-fd7392a40892")
+      (uuid "ab446b93-fc4a-432f-a9ea-cb5e18b72b1b")
     )
     (pin "2"
-      (uuid "dc9b22f9-a29c-4658-8bf8-dbf8657af698")
+      (uuid "e8b7cc37-1e45-4118-966c-01add455c049")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "R18")
           (unit 1)
         )
@@ -18288,7 +18212,7 @@
       (width 0)
       (type default)
     )
-    (uuid "bb636915-c60d-44a4-a582-a83a67634b20")
+    (uuid "4c94081f-0a46-400f-9424-222d425ed299")
   )
   (symbol
     (lib_id "power:+5V")
@@ -18298,8 +18222,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "64987a4a-bb86-412f-be00-837decdaf915")
-    (property "Reference" "#PWR458"
+    (uuid "2590c455-768b-457a-ba5c-e70fd0bc9373")
+    (property "Reference" "#PWR457"
       (at 447.04 118.11 0)
       (effects
         (font
@@ -18348,12 +18272,12 @@
       )
     )
     (pin "1"
-      (uuid "8beb9eb7-49b4-418c-b9b1-d2aaf15519b9")
+      (uuid "eb67be80-5344-4d34-bf36-645f4d90c6a9")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR458")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR457")
           (unit 1)
         )
       )
@@ -18368,7 +18292,7 @@
       (width 0)
       (type default)
     )
-    (uuid "0d11cf03-386d-4e7c-8d91-59a1975fb6e2")
+    (uuid "e6820810-2935-4e22-9abd-b4a0d01fcc66")
   )
   (global_label "SD_CS_5V"
     (shape passive)
@@ -18380,7 +18304,7 @@
       )
       (justify left)
     )
-    (uuid "c6583263-82b4-413f-b37d-60e43729d5a2")
+    (uuid "cf03ac18-5911-4d4b-9605-ee9e42715918")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 444.5 138.43 0)
       (effects
@@ -18399,7 +18323,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "2df0e9a7-e36a-4a72-9173-3b69cdc6b940")
+    (uuid "4e785826-9513-498d-b06c-298d7f2c3c6a")
     (property "Reference" "C9"
       (at 447.04 67.31 0)
       (effects
@@ -18449,14 +18373,14 @@
       )
     )
     (pin "1"
-      (uuid "088f7b82-c00a-4387-9d71-5c8cc8ce5880")
+      (uuid "ce30ba6e-f5ad-4cb8-8c2e-23b6fe5b068a")
     )
     (pin "2"
-      (uuid "0f76f54a-18ed-46bc-94b2-3eb7b44d8192")
+      (uuid "cfa24b33-7c3a-4fd0-981c-41edaee9717d")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C9")
           (unit 1)
         )
@@ -18472,7 +18396,7 @@
       (width 0)
       (type default)
     )
-    (uuid "45c96bb5-7763-499d-acab-15aa2c8fe257")
+    (uuid "de64d028-3d66-4487-bebe-48668424c3d0")
   )
   (symbol
     (lib_id "power:+5V")
@@ -18482,8 +18406,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "43af0768-b807-4b05-9fe3-b95081175ade")
-    (property "Reference" "#PWR463"
+    (uuid "309a0707-f72b-4c49-b6be-1f5e1897f3fa")
+    (property "Reference" "#PWR462"
       (at 447.04 58.42 0)
       (effects
         (font
@@ -18532,12 +18456,12 @@
       )
     )
     (pin "1"
-      (uuid "2b833a43-eb51-4f1e-b170-f35426bce3b2")
+      (uuid "c4096e8e-3695-42ab-b60e-ece59c41f66f")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR463")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR462")
           (unit 1)
         )
       )
@@ -18552,7 +18476,7 @@
       (width 0)
       (type default)
     )
-    (uuid "1c53384e-8d04-4979-9192-82105c5d2d38")
+    (uuid "12f69acb-70f2-46ad-941c-e975f9f88972")
   )
   (symbol
     (lib_id "power:GND")
@@ -18562,8 +18486,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "dd073e0e-ded3-45be-8f25-5598bc6ab159")
-    (property "Reference" "#PWR465"
+    (uuid "c508fa87-6641-4c59-951f-0a2ebb617b2a")
+    (property "Reference" "#PWR464"
       (at 447.04 76.2 0)
       (effects
         (font
@@ -18612,12 +18536,12 @@
       )
     )
     (pin "1"
-      (uuid "94ed9a51-2fb7-45d6-b8fd-3d4836721556")
+      (uuid "c018e37d-bda5-43a9-8d41-43ee20afd618")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR465")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR464")
           (unit 1)
         )
       )
@@ -18631,7 +18555,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9bab8e5b-7de0-4256-bd8f-3ac4655d1e0a")
+    (uuid "98527fa6-1e78-4d67-97e1-b1947a9995ad")
     (property "Reference" "C10"
       (at 518.16 167.64 0)
       (effects
@@ -18681,14 +18605,14 @@
       )
     )
     (pin "1"
-      (uuid "38074505-cf3b-408f-bf5b-a9ec9e091723")
+      (uuid "36c27845-3981-444a-ac41-e148bae7563b")
     )
     (pin "2"
-      (uuid "9d0e3772-b4c7-4744-8177-cc6cecb26551")
+      (uuid "0dae2c2f-fd14-470e-892a-4e59e72d6451")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C10")
           (unit 1)
         )
@@ -18704,7 +18628,7 @@
       (width 0)
       (type default)
     )
-    (uuid "8a2ac740-fca1-4df2-9754-fe41ac5c2bdc")
+    (uuid "44b2bea3-6b1f-4ee6-9b11-822e81cb03e6")
   )
   (global_label "ENC_A_MCU"
     (shape passive)
@@ -18716,7 +18640,7 @@
       )
       (justify left)
     )
-    (uuid "cdf5c092-d64a-4ab9-88d9-6460738292a6")
+    (uuid "c00a5f80-03ed-4d85-b896-525499b65af0")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 515.62 161.29 0)
       (effects
@@ -18736,7 +18660,7 @@
       (width 0)
       (type default)
     )
-    (uuid "9a676b06-1994-4870-89c3-a7e881bddd7a")
+    (uuid "507157ed-4a57-4fcf-8d38-5848b5867094")
   )
   (symbol
     (lib_id "power:GND")
@@ -18746,8 +18670,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "395392cd-bb41-482a-8314-107a5626295c")
-    (property "Reference" "#PWR470"
+    (uuid "4a409877-67fa-4c6f-b1dd-1de89e40008a")
+    (property "Reference" "#PWR469"
       (at 518.16 176.53 0)
       (effects
         (font
@@ -18796,12 +18720,12 @@
       )
     )
     (pin "1"
-      (uuid "ecac94bd-bdac-4cc3-b12c-c7433163fa8b")
+      (uuid "533f883f-3a81-4a79-b849-463fc7a72298")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR470")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR469")
           (unit 1)
         )
       )
@@ -18815,7 +18739,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d4c18e2e-90a4-4c46-86c7-46dccd77198d")
+    (uuid "ce320947-d6bc-4ed4-9fbe-fd901f20db83")
     (property "Reference" "C11"
       (at 527.05 167.64 0)
       (effects
@@ -18865,14 +18789,14 @@
       )
     )
     (pin "1"
-      (uuid "3b4ca18c-bc28-4075-8c99-14b03d9fb1b4")
+      (uuid "36b49fbf-d1ce-4741-9a46-26ade738f657")
     )
     (pin "2"
-      (uuid "5f39fe10-6438-408d-9f3b-9544f83a8d12")
+      (uuid "f1ec10c4-24b1-451d-a985-150559874328")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "C11")
           (unit 1)
         )
@@ -18888,7 +18812,7 @@
       (width 0)
       (type default)
     )
-    (uuid "1c1b561a-b138-4ed1-b0a5-42dc09386915")
+    (uuid "78d3d33d-9a6a-4fd0-8a57-4d1142df6bd6")
   )
   (global_label "ENC_B_MCU"
     (shape passive)
@@ -18900,7 +18824,7 @@
       )
       (justify left)
     )
-    (uuid "e406a52b-bb0c-4c44-91c9-89365e952033")
+    (uuid "64aa1abb-eb5b-4478-ae0a-36a3a504c2d1")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 524.51 161.29 0)
       (effects
@@ -18920,7 +18844,7 @@
       (width 0)
       (type default)
     )
-    (uuid "bd7afa87-e92e-4070-bbb8-889218321594")
+    (uuid "a0364e94-ed46-433c-baad-702ccbef75ae")
   )
   (symbol
     (lib_id "power:GND")
@@ -18930,8 +18854,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "5447b32d-7b70-4d26-869c-c4d6f6d63bb5")
-    (property "Reference" "#PWR475"
+    (uuid "152eeff6-c675-4c00-b18e-10c7ab9afcce")
+    (property "Reference" "#PWR474"
       (at 527.05 176.53 0)
       (effects
         (font
@@ -18980,12 +18904,12 @@
       )
     )
     (pin "1"
-      (uuid "6589c527-917a-42a1-8a30-9859db643da2")
+      (uuid "a59f8627-7052-4fd9-98ae-b4fcc96f3c7a")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR475")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR474")
           (unit 1)
         )
       )
@@ -18999,7 +18923,7 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "b9d0cf40-f3f4-4971-bc07-57c75781546e")
+    (uuid "7ad51578-11b4-4653-af9d-58c056150e22")
     (property "Reference" "H1"
       (at 302.26 247.65 0)
       (effects
@@ -19050,7 +18974,7 @@
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "H1")
           (unit 1)
         )
@@ -19065,7 +18989,7 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "c45e814b-d1a9-42b5-9c36-132fbe378c0b")
+    (uuid "36fa997f-ec47-43a6-8457-09c0b3ee84b1")
     (property "Reference" "H2"
       (at 317.5 247.65 0)
       (effects
@@ -19116,7 +19040,7 @@
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "H2")
           (unit 1)
         )
@@ -19131,7 +19055,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "c2b64acd-a233-465a-b73b-cc0c49171358")
+    (uuid "ccd62a7e-b1f1-48c0-bf9f-89c08be8f80e")
     (property "Reference" "#FLG01"
       (at 121.92 257.81 0)
       (effects
@@ -19181,11 +19105,11 @@
       )
     )
     (pin "1"
-      (uuid "01cb5ec8-e2db-4d3e-8341-0054809e8349")
+      (uuid "ed31a5f7-2a32-4614-8820-2eeb09d9de69")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#FLG01")
           (unit 1)
         )
@@ -19201,7 +19125,7 @@
       (width 0)
       (type default)
     )
-    (uuid "825ec9d4-eee9-42bc-9a77-d9a89dc820dc")
+    (uuid "c30a63d3-a3dd-4935-b0c9-3ddf919b70ba")
   )
   (symbol
     (lib_id "power:+5V")
@@ -19211,8 +19135,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "2442c839-32ed-4fc8-b5ef-462a92d1eff3")
-    (property "Reference" "#PWR480"
+    (uuid "5edc0206-0127-44bf-bc14-839b50fccc30")
+    (property "Reference" "#PWR479"
       (at 121.92 262.89 0)
       (effects
         (font
@@ -19261,12 +19185,12 @@
       )
     )
     (pin "1"
-      (uuid "9ec965ce-7e39-4ac1-9c4d-b6006a4be2dd")
+      (uuid "c4cc135c-5475-4a49-ae1e-afe2ea1df980")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR480")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR479")
           (unit 1)
         )
       )
@@ -19280,7 +19204,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d1a0386f-6b06-486a-b01e-d3e8eac3b85b")
+    (uuid "4e2c14db-95be-4982-8798-22041928bf61")
     (property "Reference" "#FLG02"
       (at 142.24 257.81 0)
       (effects
@@ -19330,11 +19254,11 @@
       )
     )
     (pin "1"
-      (uuid "b9b9027c-3bd1-49ad-8153-95a8b9c33c80")
+      (uuid "fc948c58-8ea9-47ed-bdaf-92675fd1adf0")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
           (reference "#FLG02")
           (unit 1)
         )
@@ -19350,7 +19274,7 @@
       (width 0)
       (type default)
     )
-    (uuid "4c591c06-1085-447d-9580-8956a385d762")
+    (uuid "d34e473d-3774-495a-97a2-4ad354a06cfc")
   )
   (symbol
     (lib_id "power:GND")
@@ -19360,8 +19284,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d9dd6dac-f291-4f8b-b84b-4ba6b5c1ce15")
-    (property "Reference" "#PWR483"
+    (uuid "9fb6f2dc-ec90-4f48-bc49-c3b3c6bd4144")
+    (property "Reference" "#PWR482"
       (at 142.24 262.89 0)
       (effects
         (font
@@ -19410,12 +19334,12 @@
       )
     )
     (pin "1"
-      (uuid "bdba2406-37ac-4947-8a08-0d7b84e1d843")
+      (uuid "bf4d03f6-8e8f-4b8f-9a13-29c8a3bf2eb0")
     )
     (instances
       (project "LightMeter_MegaShield"
-        (path "/c2bbf3a4-0feb-487f-a48b-031ce3cac9c4"
-          (reference "#PWR483")
+        (path "/04157218-f20d-42f1-8ffd-77fc56494495"
+          (reference "#PWR482")
           (unit 1)
         )
       )
@@ -19430,7 +19354,7 @@
       )
       (justify left bottom)
     )
-    (uuid "e687c114-d997-4213-8049-c2b0074b8cd1")
+    (uuid "8bae18e5-89f0-40c0-bdc2-9ef3f3a32386")
   )
   (text "Pin map from the team sketch (Lightmeter_Week8.ino): SD CS=D53 (HW SPI 50/51/52), GPS=Serial1 (D18/D19), IMU=Serial2 (D16/D17), I2C=D20/D21,\nLEDs common-cathode to GND, active HIGH (setLED() in Week 5-8 sketches: YELLOW = both HIGH): GPS R=D4 G=D7, LUX R=D5 G=D6, IMU R=D8 G=D9; buttons to GND with INPUT_PULLUP: sleep D10, log toggle D11, force log D12."
     (exclude_from_sim no)
@@ -19441,7 +19365,7 @@
       )
       (justify left bottom)
     )
-    (uuid "2f65a50a-e05c-458b-ab5b-f2c82d3b6e05")
+    (uuid "a7031281-6f6b-4c25-bc12-2cc082401435")
   )
   (text "microSD: on-board socket, 3.3V LDO, 74LVC125 shifts MOSI/SCK/CS 5V->3.3V; MISO (3.3V) goes straight to D50 (same as Adafruit 254 breakout)."
     (exclude_from_sim no)
@@ -19452,7 +19376,7 @@
       )
       (justify left bottom)
     )
-    (uuid "1a6d6a1e-d97f-4cbe-9eab-f3ff698bedf0")
+    (uuid "790dc3d5-7a7b-4136-a742-192561f2c36f")
   )
   (text "IMU in UART mode: PS1 tied to breakout 3Vo via JP1. BNO SDA pin = UART TX -> Mega RX2 (D17); BNO SCL pin = UART RX -> Mega TX2 (D16)."
     (exclude_from_sim no)
@@ -19463,7 +19387,7 @@
       )
       (justify left bottom)
     )
-    (uuid "cbd01661-3ecf-4372-ba35-49fc3c840929")
+    (uuid "ed05ed0c-56a6-4088-9f64-8df73f19f804")
   )
   (text "REV B ADDITIONS"
     (exclude_from_sim no)
@@ -19474,7 +19398,7 @@
       )
       (justify left bottom)
     )
-    (uuid "27b4d92a-489c-4800-9321-19ad83fa44c0")
+    (uuid "9010127c-e981-403b-9098-443da09c18e9")
   )
   (text "Second TSL2591 (J10): fixed I2C address 0x29 clashes with LUX1, so it sits behind PCA9548A (U3, addr 0x70) channel 0.\nMux powers up with all channels off, so LUX1 on the main bus works with unchanged firmware. To read LUX2: write 0x01 to 0x70, read, write 0x00."
     (exclude_from_sim no)
@@ -19485,7 +19409,7 @@
       )
       (justify left bottom)
     )
-    (uuid "f3f5ef6a-bfc5-4d19-9450-f16f1621b264")
+    (uuid "fc506ea6-04cd-47cb-9241-04b5ff985f7f")
   )
   (text "Encoder (J11): A -> D2 (INT4), B -> D3 (INT5). 10k pull-ups for open-collector encoders, 1k + 1nF filter and pin protection.\nGPS LED moved from D2/D3 to D4/D7 to free both interrupt pins: change gps_red = 4, gps_green = 7 in the sketch."
     (exclude_from_sim no)
@@ -19496,7 +19420,7 @@
       )
       (justify left bottom)
     )
-    (uuid "56185cd0-70cb-40bd-8bb3-7127b8e3ac97")
+    (uuid "b52d6c31-cd33-41e9-bcfa-5c50c8687739")
   )
   (text "Connector pinouts (JST-XH): LCD/LUX = GND,5V,SDA,SCL   LEDx = GND(common cathode),RED,GREEN   BTNx = GND,SW,5V(lamp)"
     (exclude_from_sim no)
@@ -19507,7 +19431,7 @@
       )
       (justify left bottom)
     )
-    (uuid "b84cb16b-ff0e-45bd-9096-ee8c545d2c7f")
+    (uuid "fa8f79ed-5cc9-48d3-9ea9-3b3958a5d7ae")
   )
   (sheet_instances
     (path "/"

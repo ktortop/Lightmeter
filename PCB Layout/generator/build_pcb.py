@@ -169,6 +169,7 @@ for ref, fp in fps.items():
         fp.Reference().SetTextSize(VECTOR2I(FromMM(0.8), FromMM(0.8))); fp.Reference().SetTextThickness(FromMM(0.15))
 text("GPS v3 (antenna up)", 27.0, -47.0, 0.9); text("BNO055 IMU (UART)", 51.5, -43.5, 0.9)
 fps["GPS1"].Reference().SetPosition(VECTOR2I_MM(27.0, -30.0)); fps["IMU1"].Reference().SetPosition(VECTOR2I_MM(51.5, -37.5))
+fps["C5"].Reference().SetPosition(VECTOR2I_MM(D.PLACE["C5"][0] + 1.25, D.PLACE["C5"][1] + 4.4))
 text("JP1 PS1->3V3", 84.0, -25.5, 0.8)
 text("LED R 220", 73.0, -18.0, 0.8, rot=90); text("BTN C 100n", 87.0, -12.5, 0.8, rot=90)
 bt = text("EVEI Light Meter shield - 2026", 56, -44, 1.2, layer=pcbnew.B_SilkS); bt.SetMirrored(True)
@@ -222,6 +223,24 @@ edge_keepout(xn, yn, xn + KO, y1); edge_keepout(x0, yn - KO, xn, yn)
 # no tracks or vias under the BNO055: DC current near the magnetometer bends the compass heading
 _ix, _iy = D.PLACE["IMU1"][0], D.PLACE["IMU1"][1]
 edge_keepout(_ix - 6.5, _iy - 10.0, _ix + 6.5, _iy + 10.0)
+# no tracks or vias under screw heads, washers and standoffs: M3 holes r = 3.3 mm, M2.5 holes r = 2.9 mm
+def hole_keepout(cx, cy, r, n=24):
+    k = pcbnew.ZONE(board)
+    k.SetIsRuleArea(True)
+    k.SetDoNotAllowTracks(True); k.SetDoNotAllowVias(True)
+    k.SetDoNotAllowPads(False); k.SetDoNotAllowFootprints(False); k.SetDoNotAllowZoneFills(False)
+    ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); ls.AddLayer(pcbnew.B_Cu); k.SetLayerSet(ls)
+    o = k.Outline(); o.NewOutline()
+    for i in range(n):
+        a = 2 * math.pi * i / n
+        o.Append(int(FromMM(cx + r * math.cos(a))), int(FromMM(cy + r * math.sin(a))))
+    board.Add(k)
+import math
+for _fp in board.GetFootprints():
+    for _p in _fp.Pads():
+        if _p.GetAttribute() == pcbnew.PAD_ATTRIB_NPTH:
+            _d = _p.GetDrillSize().x / 1e6
+            hole_keepout(_p.GetPosition().x / 1e6, _p.GetPosition().y / 1e6, (3.0 if _fp.GetReference() == "A1" else 3.3) if _d > 3.0 else 2.9)  # Mega holes: screw head only
 # SD cluster under the socket: references go in a neat vertical row below the parts
 for r in ("R10", "R7", "C4", "R8", "R9"):
     if r in fps:

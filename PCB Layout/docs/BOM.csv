@@ -3,7 +3,7 @@
 "C1","10uF","Capacitor_SMD:C_0805_2012Metric","LDO input","1"
 "C2","22uF tantalum 10V","Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B","LDO output; tantalum ESR keeps AMS1117 stable","1"
 "C3,C4,C6-C9","100nF","Capacitor_SMD:C_0805_2012Metric","BTN force debounce,BTN log debounce,BTN sleep debounce,SD VDD decoupling,U1 decoupling,U3 decoupling","6"
-"C5","100uF/16V","Capacitor_THT:CP_Radial_D5.0mm_P2.00mm","5V bulk","1"
+"C5","100uF/16V","Capacitor_THT:CP_Radial_D6.3mm_P2.50mm","5V bulk, 6.3 mm radial, 2.5 mm pitch (5 mm parts fit too)","1"
 "C10,C11","1nF","Capacitor_SMD:C_0805_2012Metric","encoder A filter, 1 us with R16,encoder B filter","2"
 "GPS1","Adafruit Ultimate GPS v3 (746)","LightMeter:Adafruit_UltimateGPS_v3","GPS breakout soldered to board via 1x9 header","1"
 "IMU1","Adafruit BNO055 (2472)","LightMeter:Adafruit_BNO055_2472","IMU breakout soldered to board, UART mode","1"

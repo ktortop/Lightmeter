@@ -91,11 +91,25 @@ footprint but are left unconnected; do not fit a header there.
 LED polarity matches `setLED()` in Week 5-8: output HIGH = die on, both HIGH = yellow, both LOW = off. Wire each LED's common cathode (usually the middle leg of a 3-leg bi-colour LED; check its datasheet) to pin 1, its red leg to pin 2 and its green leg to pin 3, as the silkscreen says (`GND R G`). Two separate red and green LEDs work too: both cathodes to pin 1. Common-anode LEDs will not work on this board.
 Buttons go to GND (active LOW), matching `digitalRead(...) == LOW`.
 
+### Cable pinouts (board side is always pin 1 = square pad = left end of the label)
+
+| Port | Pin 1 | Pin 2 | Pin 3 | Pin 4 | Far end |
+|---|---|---|---|---|---|
+| LCD (J2) | GND | 5V | SDA | SCL | I2C backpack: GND, VCC, SDA, SCL (same order) |
+| LUX1 (J3), LUX2 (J10) | GND | 5V | SDA | SCL | Adafruit TSL2591: GND, VIN, SDA, SCL (leave 3Vo and INT unconnected) |
+| ENCODER (J11) | GND | 5V | A | B | encoder GND, VCC (5 V encoders only), channel A, channel B |
+| GPS/LUX/IMU LED (J4-J6) | GND | red | green | | LED common cathode, red anode, green anode (no resistor needed, 220 Ω is on the board) |
+| SLEEP/LOG/FORCE (J7-J9) | GND | SW | 5V | | switch between SW and GND; lamp (optional) between 5V and GND |
+
+**Do not swap LED and button cables.** Both are 3-pin JST-XH, so either fits either port. A button in an LED port is harmless, but an LED in a button port puts 5 V straight onto its green leg with no resistor and burns it out. Label or colour-code the six 3-pin cables. The 4-pin ports are safe to mix up: GND and 5V are on the same pins everywhere.
+
 ## Assembly and soldering
 
-Checked against the layout: nothing sits under the GPS or IMU breakouts, no part is in the path of the
-Mega header bodies, and every surface-mount pad has at least 1.5 mm of iron clearance from the tall
-connectors. Ground pads use thermal reliefs so they take solder with an ordinary iron.
+Checked against the layout: all parts are on the top side, nothing sits under the GPS or IMU breakouts, no part is in
+the path of the Mega header bodies, and the surface-mount parts are all soldered before anything tall goes on
+(the closest, R14, is 0.8 mm from C5). Ground pads use thermal reliefs so they take solder with an ordinary iron.
+No tracks run under any screw head, washer or standoff. The only pad gap under 0.4 mm is the microSD's unused
+card-detect pad (pin 9), left unconnected so a bridge there does no harm.
 
 **Tools:** temperature-controlled iron with a 1–1.6 mm chisel tip, 0.5 mm flux-core solder, a flux pen,
 solder wick, fine tweezers, a magnifier or phone camera, a multimeter.
@@ -104,6 +118,22 @@ solder wick, fine tweezers, a magnifier or phone camera, a multimeter.
 two 1x40 strips (cut into 1x10, 5 x 1x8) plus one 2x18 (or a 2x20 cut down). They hold the shield
 2.5 mm higher than stacking headers do, which adds clearance over the Mega's USB jack, barrel jack and
 USB-chip ICSP pins. A "Mega stacking header set" also fits; no part is in the way of either.
+
+### Buy list (not on the BOM)
+
+| Item | Qty | Notes |
+|---|---|---|
+| Male pin headers, 2.54 mm, 1x40 | 2 | cut into 1x10 + 5 x 1x8 for the Mega |
+| Male pin header, 2.54 mm, 2x18 (or 2x20 cut down) | 1 | Mega double row |
+| M2.5 nylon hex standoffs, 5 mm | 2 | GPS (the coin-cell holder needs the height) |
+| M2.5 nylon screws, 6 mm | 4 | GPS (2 standoffs, both ends) |
+| M2.5 nylon screws + nuts | 4 | IMU (optional, the headers hold it) |
+| M3 nylon standoffs, 11 mm, + screws | up to 5 | Mega to shield (optional); 11 mm = 8.5 mm female header + 2.5 mm male header spacer |
+| JST-XH housings XHP-4 / XHP-3 | 4 / 6 | cable ends |
+| JST-XH crimp contacts SXH-001T-P0.6 | about 40 | needs a JST-type crimper (for example Engineer PA-09); pre-crimped XH leads avoid the tool |
+| 5 mm bi-colour red/green LED, common cathode | 3 | or separate red + green LEDs |
+| microSD card, 32 GB or less, FAT32 | 1 | the SD library only reads FAT16/FAT32 |
+| CR1220 coin cell | 1 | optional, keeps the GPS almanac for faster fixes |
 
 ### Solder order (smallest and hardest first)
 
@@ -120,14 +150,19 @@ USB-chip ICSP pins. A "Mega stacking header set" also fits; no part is in the wa
 5. **C2 tantalum.** Polarized: the stripe on the part goes to the side marked on the silkscreen (+3.3 V).
 6. **Short test before anything else.** With the multimeter, check there is no short between 5V and GND,
    or between 3.3V and GND. It is much easier to fix now.
-7. **C5 electrolytic.** Long leg (+) to the square pad, stripe (–) to the round pad.
+7. **C5 electrolytic** (100 µF/16 V, 6.3 mm or 5 mm diameter). Long leg (+) to the square pad, stripe (–) to the round pad.
 8. **JST connectors J2–J11.** Push fully down; the outline on the silkscreen shows which way the housing faces.
 9. **Mega headers.** Plug the headers into the Mega first, lay the shield on top, then solder from the top.
    This guarantees they line up with the Mega. Unplug the shield before the next steps.
-10. **GPS breakout.** Fit the two M2.5 nylon standoffs (4–5 mm, the coin-cell holder is on the GPS's back),
-    put the 1x9 header through the shield and the GPS, then solder both ends. Antenna faces up.
-11. **IMU breakout.** Same method with nylon or brass hardware (steel affects the compass). Align its +X
-    axis with the cart's direction of travel when the board is mounted.
+10. **GPS breakout.** The CR1220 holder on the GPS's underside is taller than a header's 2.5 mm plastic spacer, so
+    the GPS sits on 5 mm standoffs. Screw the two 5 mm nylon standoffs to the shield (holes at the far end from the
+    header). Push the **short** pins of the 1x9 header up into the GPS from below (plastic spacer against the GPS),
+    lower the long pins through the shield, screw the GPS to the standoffs, then solder on top of the GPS and under
+    the shield. About 1.9 mm of pin comes through the shield. Antenna (ceramic patch) faces up.
+11. **IMU breakout.** Nothing on its underside, so the headers' own 2.5 mm spacers set the height: short pins into
+    the IMU (1x6 and 1x4), long pins through the shield, solder both ends. Nylon hardware only if you add screws
+    (steel or brass near the magnetometer affects the heading). The +X arrow on the BNO055 must point along
+    the cart's direction of travel when the board is mounted.
 12. **Trim** the GPS and IMU header pins that stick out under the shield flush, so they cannot touch the Mega.
     Do **not** trim the Mega header pins: they are what plugs into the Mega.
 
@@ -148,8 +183,13 @@ JP1 needs no soldering: it ships bridged by a copper trace. Only cut it to move 
   heading and forward acceleration (`linX`) assume the BNO's +X axis points along the cart's travel. Mount the board
   so the +X arrow printed on the BNO055 breakout points forward (the shield silkscreen says so). If the board has to be
   mounted 90° off, swap roll and pitch (and use `linY`) in the sketch instead.
-- MISO comes back to D50 at 3.3 V without shifting, the same as the Adafruit SD breakout used today.
-- Power: about 300 mA worst case from the Mega's 5 V rail. Use USB or at most 9 V on the barrel jack.
+- MISO comes back to D50 at 3.3 V without shifting, the same as the Adafruit SD breakout used today. The ATmega2560
+  reads HIGH from 3.0 V, so the margin is small; real cards drive close to 3.3 V at this light load. If a card is
+  flaky, try another brand before suspecting the board.
+- Power budget from the Mega's 5 V rail: Mega about 80 mA, 20x4 LCD backlight about 100 mA, LEDs up to 80 mA (all
+  yellow), SD card up to 100 mA while writing, GPS 30 mA, BNO055 12 mA, encoder and button lamps 20-60 mA:
+  about 400-450 mA worst case. USB (500 mA fuse) or a 5 V supply into USB is fine. On the barrel jack use about 7 V:
+  at 9 V the Mega's regulator dissipates about 1.8 W and will overheat.
 
 ## Design decisions / assumptions worth reviewing
 
@@ -174,7 +214,10 @@ Automated: ERC 0, DRC 0 errors / 0 warnings, 0 unconnected, schematic-parity 0, 
 
 Against OSH Park's 2-layer rules: track 0.30 mm (min 0.152), clearance 0.20 mm (min 0.152), drill 0.40 mm (min 0.33),
 annular ring 0.20 mm (min 0.178), copper to edge 0.40 mm (min 0.38). Gerber mask and drill files cross-checked against the board:
-274 pad openings, 193 plated holes (147 pins + 46 vias), 13 unplated holes.
+274 pad openings, 199 plated holes (147 pins + 52 vias), 13 unplated holes.
+A second pass also ran DRC with every check enabled (only the expected Mega "no courtyard" and the 74LVC125 symbol's
+DIP-only footprint filter came up), checked every net pin by pin against `design.py`, and checked the GPS, BNO055 and
+Mega footprints against Adafruit's board files and KiCad's Arduino Mega template.
 
 Check during the 1:1 paper test-fit, because only the physical parts can confirm them:
 - the Mega's barrel jack clears the notch and the USB jack clears the left edge;
@@ -182,7 +225,7 @@ Check during the 1:1 paper test-fit, because only the physical parts can confirm
 - the GPS and IMU header pins are trimmed flush underneath so they cannot touch the Mega.
 
 Not board issues, but decide before use:
-- Power the Mega from USB or a 7 to 9 V input; at 12 V its regulator overheats at this load (about 300 mA).
-- Use nylon or brass standoffs and screws near the IMU, not steel.
+- Power the Mega from USB (a USB power bank works) or about 7 V on the barrel jack; 9 V and above overheat its regulator at this load.
+- Use nylon standoffs and screws near the IMU, not steel or brass.
 - Long I2C cables to the LCD and lux sensors (over about 1 m) may need slower I2C (`Wire.setClock(50000)`).
 - Arcade-button lamps are often rated 12 V; at 5 V they are dim but safe.
